@@ -27,7 +27,7 @@ PerfectServer.initializeServices()
 // Create our webroot
 // This will serve all static content by default
 let webRoot = "./webroot"
-let production = false
+var production = false
 try Dir(webRoot).create()
 
 // Add our routes and such

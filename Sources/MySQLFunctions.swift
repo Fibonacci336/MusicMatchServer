@@ -55,16 +55,7 @@ func initializeUserLogInData(){
         defer {
             mysql.close()
         }
-        let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS UserLogInData (id INT(11) AUTO_INCREMENT, Content varchar(255), PRIMARY KEY (id))")
-        print(mysql.query(statement: "ALTER TABLE UserLogInData ADD UUID TEXT"))
-        print(mysql.query(statement: "ALTER TABLE UserLogInData ADD FullName TEXT"))
-        print(mysql.query(statement: "ALTER TABLE UserLogInData ADD Email TEXT"))
-        print(mysql.query(statement: "ALTER TABLE UserLogInData ADD Password TEXT"))
-        deleteColumn("id", mysql: mysql, table: "UserLogInData")
-        deleteColumn("Content", mysql: mysql, table: "UserLogInData")
-        
-        
-        print(mysql.query(statement: "INSERT INTO UserLogInData (UUID, FullName, Email, Password) VALUES (\"iUser*ben*perkins*10*8*2000\", \"Ben Perkins\", \"bcarlson336@gmail.com\", \"123qweasdzxC\");"))
+        let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS UserLogInData (UUID TEXT, FullName TEXT, Email TEXT, ADD Password TEXT)")
         guard tableSuccess else {
             print(mysql.errorMessage())
             return
@@ -82,19 +73,8 @@ func initializeMessagesData(){
         defer {
             mysql.close()
         }
-        let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS Messages (id INT(11) AUTO_INCREMENT, Content varchar(255), PRIMARY KEY (id))")
-        print(mysql.query(statement: "ALTER TABLE Messages ADD MessageUUID TEXT"))
-        print(mysql.query(statement: "ALTER TABLE Messages ADD Sender TEXT"))
-        print(mysql.query(statement: "ALTER TABLE Messages ADD Recipient TEXT"))
-        print(mysql.query(statement: "ALTER TABLE Messages ADD MessageContent TEXT"))
-        print(mysql.query(statement: "ALTER TABLE Messages ADD SendDate DATETIME"))
-        print(mysql.query(statement: "ALTER TABLE Messages ADD Status TEXT"))
-        print(mysql.query(statement: "ALTER TABLE Messages ADD MessageType TEXT"))
-        deleteColumn("id", mysql: mysql, table: "Messages")
-        deleteColumn("Content", mysql: mysql, table: "Messages")
+        let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS Messages (MessageUUID TEXT, Sender TEXT, Recipient TEXT, MessageContent TEXT, SendDate DATETIME, Status TEXT, MessageType TEXT)")
         
-        
-        print(mysql.query(statement: "INSERT INTO Messages (MessageUUID, Sender, Recipient, MessageContent, SendDate, Status, MessageType) VALUES (\"message12345\", \"iUser*erica*riley*15*2*1964\", \"iUser*ben*perkins*10*8*2000\", \"Hey Ben What's Up\", \"2016-7-8 10:0:0\", \"read\", \"text\");"))
         guard tableSuccess else {
             print(mysql.errorMessage())
             return
@@ -111,24 +91,8 @@ func initializeUserData(){
             mysql.close()
         }
         //FIX
-        let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS Users (id INT(11) AUTO_INCREMENT, Content varchar(255), PRIMARY KEY (id))")
-        print(mysql.query(statement: "ALTER TABLE Users ADD UserType TEXT"))
-        print(mysql.query(statement: "ALTER TABLE Users ADD UserName TEXT"))
-        print(mysql.query(statement: "ALTER TABLE Users ADD UUID TEXT"))
-        print(mysql.query(statement: "ALTER TABLE Users ADD BirthDate DATE"))
-        print(mysql.query(statement: "ALTER TABLE Users ADD MusicType TEXT"))
-        print(mysql.query(statement: "ALTER TABLE Users ADD BandPosition TEXT"))
-        print(mysql.query(statement: "ALTER TABLE Users ADD VideoName TEXT"))
-        print(mysql.query(statement: "ALTER TABLE Users ADD CurrentLat DOUBLE"))
-        print(mysql.query(statement: "ALTER TABLE Users ADD CurrentLong DOUBLE"))
-        print(mysql.query(statement: "ALTER TABLE Users ADD Available INT"))
-        print(mysql.query(statement: "ALTER TABLE Users ADD Bio TEXT"))
-        deleteColumn("id", mysql: mysql, table: "Users")
-        deleteColumn("Content", mysql: mysql, table: "Users")
+        let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS Users (UserType TEXT, UserName TEXT, UUID TEXT, BirthDate DATE, MusicType TEXT, BandPosition TEXT, VideoName TEXT, CurrentLat DOUBLE, CurrentLong DOUBLE, Available INT, Bio TEXT)")
         
-        print(mysql.query(statement: "INSERT INTO Users (UserType, UserName, UUID, BirthDate, MusicType, BandPosition, VideoName, Available) VALUES (\"individual\", \"Erica Riley\", \"iUser*erica*riley*15*2*1964\", \"1964-02-15\", \"Classical\", \"Harpist\", \"toystory\", 1);"))
-        print(mysql.query(statement: "INSERT INTO Users (UserType, UserName, UUID, BirthDate, MusicType, BandPosition, VideoName, Available) VALUES (\"individual\", \"Frank Riley\", \"iUser*frank*riley*15*6*1964\", \"1964-06-15\", \"Classic Rock\", \"Drummer\", \"talkinghead\", 1);"))
-        print(mysql.query(statement: "INSERT INTO Users (UserType, UserName, UUID, BirthDate, MusicType, BandPosition, VideoName, Available) VALUES (\"individual\", \"Ben Perkins\", \"iUser*ben*perkins*10*8*2000\", \"2000-08-10\", \"Classic Rock\", \"Drummer\", \"small\", 1);"))
         guard tableSuccess else {
             print(mysql.errorMessage())
             return
