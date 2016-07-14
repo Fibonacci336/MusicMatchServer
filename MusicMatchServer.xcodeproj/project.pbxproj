@@ -1,0 +1,928 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 46;
+    rootObject = __RootObject_;
+    objects = {
+        __RootObject_ = {
+            isa = PBXProject;
+            attributes = {LastUpgradeCheck = 9999;};
+            buildConfigurationList = ___RootConfs_;
+            compatibilityVersion = 'Xcode 3.2';
+            developmentRegion = English;
+            hasScannedForEncodings = 0;
+            knownRegions = (en);
+            mainGroup = ___RootGroup_;
+            productRefGroup = ____Products_;
+            projectDirPath = '';
+            projectRoot = '';
+            targets = (______Target_PerfectThread, ______Target_PerfectNet, ______Target_PerfectLib, ______Target_PerfectHTTP, ______Target_PerfectHTTPServer, ______Target_MySQL, ______Target_MusicMatchServer);
+        };
+        '__PBXFileRef_Package.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Package.swift';
+            path = 'Package.swift';
+            sourceTree = '<group>';
+        };
+        ___RootGroup_ = {
+            isa = PBXGroup;
+            children = ('__PBXFileRef_Package.swift', _____Configs_, _____Sources_, Dependencies_, _______Tests_, ____Products_);
+            sourceTree = '<group>';
+        };
+        __PBXFileRef_PerfectThread_Info.plist = {
+            isa = PBXFileReference;
+            lastKnownFileType = text.plist.xml;
+            name = 'PerfectThread_Info.plist';
+            path = 'MusicMatchServer.xcodeproj/PerfectThread_Info.plist';
+            sourceTree = SOURCE_ROOT;
+        };
+        _______Group_PerfectThread = {
+            isa = PBXGroup;
+            name = PerfectThread;
+            path = 'Packages/PerfectThread-0.10.0/Sources';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Packages/PerfectThread-0.10.0/Sources/Threading.swift', '__PBXFileRef_Packages/PerfectThread-0.10.0/Sources/ThreadQueue.swift', __PBXFileRef_PerfectThread_Info.plist);
+        };
+        '__PBXFileRef_Packages/PerfectThread-0.10.0/Sources/Threading.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Threading.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectThread-0.10.0/Sources/ThreadQueue.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'ThreadQueue.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_PerfectThread = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_PerfectThread;
+            buildPhases = (CompilePhase_PerfectThread, ___LinkPhase_PerfectThread);
+            buildRules = ();
+            dependencies = ();
+            name = PerfectThread;
+            productName = PerfectThread;
+            productReference = _____Product_PerfectThread;
+            productType = 'com.apple.product-type.framework';
+        };
+        _____Product_PerfectThread = {
+            isa = PBXFileReference;
+            explicitFileType = 'wrapper.framework';
+            path = 'PerfectThread.framework';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_PerfectThread = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Packages/PerfectThread-0.10.0/Sources/Threading.swift', '__src_cc_ref_Packages/PerfectThread-0.10.0/Sources/ThreadQueue.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Packages/PerfectThread-0.10.0/Sources/Threading.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectThread-0.10.0/Sources/Threading.swift';
+        };
+        '__src_cc_ref_Packages/PerfectThread-0.10.0/Sources/ThreadQueue.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectThread-0.10.0/Sources/ThreadQueue.swift';
+        };
+        ___LinkPhase_PerfectThread = {
+            isa = PBXFrameworksBuildPhase;
+            files = ();
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _______Confs_PerfectThread = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_PerfectThread, _ReleaseConf_PerfectThread);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_PerfectThread = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'MusicMatchServer.xcodeproj/PerfectThread_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; OTHER_LDFLAGS = '$(inherited)'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; };
+            name = Debug;
+        };
+        _ReleaseConf_PerfectThread = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited)'; INFOPLIST_FILE = 'MusicMatchServer.xcodeproj/PerfectThread_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; OTHER_LDFLAGS = '$(inherited)'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; };
+            name = Release;
+        };
+        __Dependency_PerfectThread = {
+            isa = PBXTargetDependency;
+            target = ______Target_PerfectThread;
+        };
+        __PBXFileRef_PerfectNet_Info.plist = {
+            isa = PBXFileReference;
+            lastKnownFileType = text.plist.xml;
+            name = 'PerfectNet_Info.plist';
+            path = 'MusicMatchServer.xcodeproj/PerfectNet_Info.plist';
+            sourceTree = SOURCE_ROOT;
+        };
+        _______Group_PerfectNet = {
+            isa = PBXGroup;
+            name = PerfectNet;
+            path = 'Packages/PerfectNet-0.17.0/Sources';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/Net.swift', '__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/NetEvent.swift', '__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/NetNamedPipe.swift', '__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/NetTCP.swift', '__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/NetTCPSSL.swift', __PBXFileRef_PerfectNet_Info.plist);
+        };
+        '__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/Net.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Net.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/NetEvent.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'NetEvent.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/NetNamedPipe.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'NetNamedPipe.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/NetTCP.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'NetTCP.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/NetTCPSSL.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'NetTCPSSL.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_PerfectNet = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_PerfectNet;
+            buildPhases = (CompilePhase_PerfectNet, ___LinkPhase_PerfectNet);
+            buildRules = ();
+            dependencies = (__Dependency_PerfectThread);
+            name = PerfectNet;
+            productName = PerfectNet;
+            productReference = _____Product_PerfectNet;
+            productType = 'com.apple.product-type.framework';
+        };
+        _____Product_PerfectNet = {
+            isa = PBXFileReference;
+            explicitFileType = 'wrapper.framework';
+            path = 'PerfectNet.framework';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_PerfectNet = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Packages/PerfectNet-0.17.0/Sources/Net.swift', '__src_cc_ref_Packages/PerfectNet-0.17.0/Sources/NetEvent.swift', '__src_cc_ref_Packages/PerfectNet-0.17.0/Sources/NetNamedPipe.swift', '__src_cc_ref_Packages/PerfectNet-0.17.0/Sources/NetTCP.swift', '__src_cc_ref_Packages/PerfectNet-0.17.0/Sources/NetTCPSSL.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Packages/PerfectNet-0.17.0/Sources/Net.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/Net.swift';
+        };
+        '__src_cc_ref_Packages/PerfectNet-0.17.0/Sources/NetEvent.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/NetEvent.swift';
+        };
+        '__src_cc_ref_Packages/PerfectNet-0.17.0/Sources/NetNamedPipe.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/NetNamedPipe.swift';
+        };
+        '__src_cc_ref_Packages/PerfectNet-0.17.0/Sources/NetTCP.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/NetTCP.swift';
+        };
+        '__src_cc_ref_Packages/PerfectNet-0.17.0/Sources/NetTCPSSL.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectNet-0.17.0/Sources/NetTCPSSL.swift';
+        };
+        ___LinkPhase_PerfectNet = {
+            isa = PBXFrameworksBuildPhase;
+            files = (_LinkFileRef_PerfectThread_via_PerfectNet);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _LinkFileRef_PerfectThread_via_PerfectNet = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectThread;
+        };
+        _______Confs_PerfectNet = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_PerfectNet, _ReleaseConf_PerfectNet);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_PerfectNet = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/openssl/1.0.2e/include -I/usr/local/Cellar/openssl/1.0.2e/include'; INFOPLIST_FILE = 'MusicMatchServer.xcodeproj/PerfectNet_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; HEADER_SEARCH_PATHS = '/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/openssl/1.0.2e/lib -lssl -L/usr/local/Cellar/openssl/1.0.2e/lib -lcrypto'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; };
+            name = Debug;
+        };
+        _ReleaseConf_PerfectNet = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/openssl/1.0.2e/include -I/usr/local/Cellar/openssl/1.0.2e/include'; INFOPLIST_FILE = 'MusicMatchServer.xcodeproj/PerfectNet_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/openssl/1.0.2e/lib -lssl -L/usr/local/Cellar/openssl/1.0.2e/lib -lcrypto'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; };
+            name = Release;
+        };
+        __Dependency_PerfectNet = {
+            isa = PBXTargetDependency;
+            target = ______Target_PerfectNet;
+        };
+        __PBXFileRef_PerfectLib_Info.plist = {
+            isa = PBXFileReference;
+            lastKnownFileType = text.plist.xml;
+            name = 'PerfectLib_Info.plist';
+            path = 'MusicMatchServer.xcodeproj/PerfectLib_Info.plist';
+            sourceTree = SOURCE_ROOT;
+        };
+        _______Group_PerfectLib = {
+            isa = PBXGroup;
+            name = PerfectLib;
+            path = 'Packages/PerfectLib-0.50.0/Sources/PerfectLib';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Bytes.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Dir.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/DynamicLoader.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/File.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/JSONConvertible.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Log.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectError.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectServer.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SwiftCompatibility.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SysProcess.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Utilities.swift', __PBXFileRef_PerfectLib_Info.plist);
+        };
+        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Bytes.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Bytes.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Dir.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Dir.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/DynamicLoader.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'DynamicLoader.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/File.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'File.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/JSONConvertible.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'JSONConvertible.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Log.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Log.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectError.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'PerfectError.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectServer.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'PerfectServer.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SwiftCompatibility.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'SwiftCompatibility.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SysProcess.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'SysProcess.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Utilities.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Utilities.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_PerfectLib = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_PerfectLib;
+            buildPhases = (CompilePhase_PerfectLib, ___LinkPhase_PerfectLib);
+            buildRules = ();
+            dependencies = (__Dependency_PerfectThread, __Dependency_PerfectNet);
+            name = PerfectLib;
+            productName = PerfectLib;
+            productReference = _____Product_PerfectLib;
+            productType = 'com.apple.product-type.framework';
+        };
+        _____Product_PerfectLib = {
+            isa = PBXFileReference;
+            explicitFileType = 'wrapper.framework';
+            path = 'PerfectLib.framework';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_PerfectLib = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Bytes.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Dir.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/DynamicLoader.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/File.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/JSONConvertible.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Log.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectError.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectServer.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SwiftCompatibility.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SysProcess.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Utilities.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Bytes.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Bytes.swift';
+        };
+        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Dir.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Dir.swift';
+        };
+        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/DynamicLoader.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/DynamicLoader.swift';
+        };
+        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/File.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/File.swift';
+        };
+        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/JSONConvertible.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/JSONConvertible.swift';
+        };
+        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Log.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Log.swift';
+        };
+        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectError.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectError.swift';
+        };
+        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectServer.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectServer.swift';
+        };
+        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SwiftCompatibility.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SwiftCompatibility.swift';
+        };
+        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SysProcess.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SysProcess.swift';
+        };
+        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Utilities.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Utilities.swift';
+        };
+        ___LinkPhase_PerfectLib = {
+            isa = PBXFrameworksBuildPhase;
+            files = (_LinkFileRef_PerfectThread_via_PerfectLib, _LinkFileRef_PerfectNet_via_PerfectLib);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _LinkFileRef_PerfectThread_via_PerfectLib = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectThread;
+        };
+        _LinkFileRef_PerfectNet_via_PerfectLib = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectNet;
+        };
+        _______Confs_PerfectLib = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_PerfectLib, _ReleaseConf_PerfectLib);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_PerfectLib = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/openssl/1.0.2e/include -I/usr/local/Cellar/openssl/1.0.2e/include'; INFOPLIST_FILE = 'MusicMatchServer.xcodeproj/PerfectLib_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; HEADER_SEARCH_PATHS = '/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/openssl/1.0.2e/lib -lssl -L/usr/local/Cellar/openssl/1.0.2e/lib -lcrypto'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; };
+            name = Debug;
+        };
+        _ReleaseConf_PerfectLib = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/openssl/1.0.2e/include -I/usr/local/Cellar/openssl/1.0.2e/include'; INFOPLIST_FILE = 'MusicMatchServer.xcodeproj/PerfectLib_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/openssl/1.0.2e/lib -lssl -L/usr/local/Cellar/openssl/1.0.2e/lib -lcrypto'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; };
+            name = Release;
+        };
+        __Dependency_PerfectLib = {
+            isa = PBXTargetDependency;
+            target = ______Target_PerfectLib;
+        };
+        __PBXFileRef_PerfectHTTP_Info.plist = {
+            isa = PBXFileReference;
+            lastKnownFileType = text.plist.xml;
+            name = 'PerfectHTTP_Info.plist';
+            path = 'MusicMatchServer.xcodeproj/PerfectHTTP_Info.plist';
+            sourceTree = SOURCE_ROOT;
+        };
+        _______Group_PerfectHTTP = {
+            isa = PBXGroup;
+            name = PerfectHTTP;
+            path = 'Packages/PerfectHTTP-0.8.0/Sources';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPFilter.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPHeaders.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPMethod.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPRequest.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPResponse.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/MimeReader.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/MimeType.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/Routing.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/StaticFileHandler.swift', __PBXFileRef_PerfectHTTP_Info.plist);
+        };
+        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPFilter.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'HTTPFilter.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPHeaders.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'HTTPHeaders.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPMethod.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'HTTPMethod.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPRequest.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'HTTPRequest.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPResponse.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'HTTPResponse.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/MimeReader.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'MimeReader.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/MimeType.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'MimeType.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/Routing.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'Routing.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/StaticFileHandler.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'StaticFileHandler.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_PerfectHTTP = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_PerfectHTTP;
+            buildPhases = (CompilePhase_PerfectHTTP, ___LinkPhase_PerfectHTTP);
+            buildRules = ();
+            dependencies = (__Dependency_PerfectThread, __Dependency_PerfectNet, __Dependency_PerfectLib);
+            name = PerfectHTTP;
+            productName = PerfectHTTP;
+            productReference = _____Product_PerfectHTTP;
+            productType = 'com.apple.product-type.framework';
+        };
+        _____Product_PerfectHTTP = {
+            isa = PBXFileReference;
+            explicitFileType = 'wrapper.framework';
+            path = 'PerfectHTTP.framework';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_PerfectHTTP = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPFilter.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPHeaders.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPMethod.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPRequest.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPResponse.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/MimeReader.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/MimeType.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/Routing.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/StaticFileHandler.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPFilter.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPFilter.swift';
+        };
+        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPHeaders.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPHeaders.swift';
+        };
+        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPMethod.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPMethod.swift';
+        };
+        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPRequest.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPRequest.swift';
+        };
+        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPResponse.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPResponse.swift';
+        };
+        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/MimeReader.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/MimeReader.swift';
+        };
+        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/MimeType.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/MimeType.swift';
+        };
+        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/Routing.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/Routing.swift';
+        };
+        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/StaticFileHandler.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/StaticFileHandler.swift';
+        };
+        ___LinkPhase_PerfectHTTP = {
+            isa = PBXFrameworksBuildPhase;
+            files = (_LinkFileRef_PerfectThread_via_PerfectHTTP, _LinkFileRef_PerfectNet_via_PerfectHTTP, _LinkFileRef_PerfectLib_via_PerfectHTTP);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _LinkFileRef_PerfectThread_via_PerfectHTTP = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectThread;
+        };
+        _LinkFileRef_PerfectNet_via_PerfectHTTP = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectNet;
+        };
+        _LinkFileRef_PerfectLib_via_PerfectHTTP = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectLib;
+        };
+        _______Confs_PerfectHTTP = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_PerfectHTTP, _ReleaseConf_PerfectHTTP);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_PerfectHTTP = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/openssl/1.0.2e/include -I/usr/local/Cellar/openssl/1.0.2e/include'; INFOPLIST_FILE = 'MusicMatchServer.xcodeproj/PerfectHTTP_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; HEADER_SEARCH_PATHS = '/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/openssl/1.0.2e/lib -lssl -L/usr/local/Cellar/openssl/1.0.2e/lib -lcrypto'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; };
+            name = Debug;
+        };
+        _ReleaseConf_PerfectHTTP = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/openssl/1.0.2e/include -I/usr/local/Cellar/openssl/1.0.2e/include'; INFOPLIST_FILE = 'MusicMatchServer.xcodeproj/PerfectHTTP_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/openssl/1.0.2e/lib -lssl -L/usr/local/Cellar/openssl/1.0.2e/lib -lcrypto'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; };
+            name = Release;
+        };
+        __Dependency_PerfectHTTP = {
+            isa = PBXTargetDependency;
+            target = ______Target_PerfectHTTP;
+        };
+        __PBXFileRef_PerfectHTTPServer_Info.plist = {
+            isa = PBXFileReference;
+            lastKnownFileType = text.plist.xml;
+            name = 'PerfectHTTPServer_Info.plist';
+            path = 'MusicMatchServer.xcodeproj/PerfectHTTPServer_Info.plist';
+            sourceTree = SOURCE_ROOT;
+        };
+        _______Group_PerfectHTTPServer = {
+            isa = PBXGroup;
+            name = PerfectHTTPServer;
+            path = 'Packages/PerfectHTTPServer-0.4.0/Sources';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HPACK.swift', '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Request.swift', '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Response.swift', '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP2.swift', '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTPServer.swift', __PBXFileRef_PerfectHTTPServer_Info.plist);
+        };
+        '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HPACK.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'HPACK.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Request.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'HTTP11Request.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Response.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'HTTP11Response.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP2.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'HTTP2.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTPServer.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'HTTPServer.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_PerfectHTTPServer = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_PerfectHTTPServer;
+            buildPhases = (CompilePhase_PerfectHTTPServer, ___LinkPhase_PerfectHTTPServer);
+            buildRules = ();
+            dependencies = (__Dependency_PerfectThread, __Dependency_PerfectNet, __Dependency_PerfectLib, __Dependency_PerfectHTTP);
+            name = PerfectHTTPServer;
+            productName = PerfectHTTPServer;
+            productReference = _____Product_PerfectHTTPServer;
+            productType = 'com.apple.product-type.framework';
+        };
+        _____Product_PerfectHTTPServer = {
+            isa = PBXFileReference;
+            explicitFileType = 'wrapper.framework';
+            path = 'PerfectHTTPServer.framework';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_PerfectHTTPServer = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HPACK.swift', '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Request.swift', '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Response.swift', '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP2.swift', '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTPServer.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HPACK.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HPACK.swift';
+        };
+        '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Request.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Request.swift';
+        };
+        '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Response.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Response.swift';
+        };
+        '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP2.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP2.swift';
+        };
+        '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTPServer.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTPServer.swift';
+        };
+        ___LinkPhase_PerfectHTTPServer = {
+            isa = PBXFrameworksBuildPhase;
+            files = (_LinkFileRef_PerfectThread_via_PerfectHTTPServer, _LinkFileRef_PerfectNet_via_PerfectHTTPServer, _LinkFileRef_PerfectLib_via_PerfectHTTPServer, _LinkFileRef_PerfectHTTP_via_PerfectHTTPServer);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _LinkFileRef_PerfectThread_via_PerfectHTTPServer = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectThread;
+        };
+        _LinkFileRef_PerfectNet_via_PerfectHTTPServer = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectNet;
+        };
+        _LinkFileRef_PerfectLib_via_PerfectHTTPServer = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectLib;
+        };
+        _LinkFileRef_PerfectHTTP_via_PerfectHTTPServer = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectHTTP;
+        };
+        _______Confs_PerfectHTTPServer = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_PerfectHTTPServer, _ReleaseConf_PerfectHTTPServer);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_PerfectHTTPServer = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/openssl/1.0.2e/include -I/usr/local/Cellar/openssl/1.0.2e/include'; INFOPLIST_FILE = 'MusicMatchServer.xcodeproj/PerfectHTTPServer_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; HEADER_SEARCH_PATHS = '/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/openssl/1.0.2e/lib -lssl -L/usr/local/Cellar/openssl/1.0.2e/lib -lcrypto'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; };
+            name = Debug;
+        };
+        _ReleaseConf_PerfectHTTPServer = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/openssl/1.0.2e/include -I/usr/local/Cellar/openssl/1.0.2e/include'; INFOPLIST_FILE = 'MusicMatchServer.xcodeproj/PerfectHTTPServer_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/openssl/1.0.2e/lib -lssl -L/usr/local/Cellar/openssl/1.0.2e/lib -lcrypto'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; };
+            name = Release;
+        };
+        __Dependency_PerfectHTTPServer = {
+            isa = PBXTargetDependency;
+            target = ______Target_PerfectHTTPServer;
+        };
+        __PBXFileRef_MySQL_Info.plist = {
+            isa = PBXFileReference;
+            lastKnownFileType = text.plist.xml;
+            name = 'MySQL_Info.plist';
+            path = 'MusicMatchServer.xcodeproj/MySQL_Info.plist';
+            sourceTree = SOURCE_ROOT;
+        };
+        _______Group_MySQL = {
+            isa = PBXGroup;
+            name = MySQL;
+            path = 'Packages/MySQL-0.5.0/Sources/MySQL';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Packages/MySQL-0.5.0/Sources/MySQL/MySQL.swift', __PBXFileRef_MySQL_Info.plist);
+        };
+        '__PBXFileRef_Packages/MySQL-0.5.0/Sources/MySQL/MySQL.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'MySQL.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_MySQL = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_MySQL;
+            buildPhases = (CompilePhase_MySQL, ___LinkPhase_MySQL);
+            buildRules = ();
+            dependencies = ();
+            name = MySQL;
+            productName = MySQL;
+            productReference = _____Product_MySQL;
+            productType = 'com.apple.product-type.framework';
+        };
+        _____Product_MySQL = {
+            isa = PBXFileReference;
+            explicitFileType = 'wrapper.framework';
+            path = 'MySQL.framework';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_MySQL = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Packages/MySQL-0.5.0/Sources/MySQL/MySQL.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Packages/MySQL-0.5.0/Sources/MySQL/MySQL.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Packages/MySQL-0.5.0/Sources/MySQL/MySQL.swift';
+        };
+        ___LinkPhase_MySQL = {
+            isa = PBXFrameworksBuildPhase;
+            files = ();
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _______Confs_MySQL = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_MySQL, _ReleaseConf_MySQL);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_MySQL = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/mysql/5.7.10/include/mysql'; INFOPLIST_FILE = 'MusicMatchServer.xcodeproj/MySQL_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; HEADER_SEARCH_PATHS = '/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/mysql/5.7.10/lib -lmysqlclient'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; };
+            name = Debug;
+        };
+        _ReleaseConf_MySQL = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx'; PRODUCT_MODULE_NAME = '$(TARGET_NAME:c99extidentifier)'; ENABLE_TESTABILITY = 'YES'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/mysql/5.7.10/include/mysql'; INFOPLIST_FILE = 'MusicMatchServer.xcodeproj/MySQL_Info.plist'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/mysql/5.7.10/lib -lmysqlclient'; PRODUCT_NAME = '$(TARGET_NAME:c99extidentifier)'; };
+            name = Release;
+        };
+        __Dependency_MySQL = {
+            isa = PBXTargetDependency;
+            target = ______Target_MySQL;
+        };
+        _______Group_MusicMatchServer = {
+            isa = PBXGroup;
+            name = MusicMatchServer;
+            path = 'Sources';
+            sourceTree = '<group>';
+            children = ('__PBXFileRef_Sources/main.swift', '__PBXFileRef_Sources/MySQLFunctions.swift', '__PBXFileRef_Sources/PerfectHandlers.swift');
+        };
+        '__PBXFileRef_Sources/main.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'main.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/MySQLFunctions.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'MySQLFunctions.swift';
+            sourceTree = '<group>';
+        };
+        '__PBXFileRef_Sources/PerfectHandlers.swift' = {
+            isa = PBXFileReference;
+            lastKnownFileType = sourcecode.swift;
+            name = 'PerfectHandlers.swift';
+            sourceTree = '<group>';
+        };
+        ______Target_MusicMatchServer = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = _______Confs_MusicMatchServer;
+            buildPhases = (CompilePhase_MusicMatchServer, ___LinkPhase_MusicMatchServer);
+            buildRules = ();
+            dependencies = (__Dependency_PerfectThread, __Dependency_PerfectNet, __Dependency_PerfectLib, __Dependency_PerfectHTTP, __Dependency_MySQL, __Dependency_PerfectHTTPServer);
+            name = MusicMatchServer;
+            productName = MusicMatchServer;
+            productReference = _____Product_MusicMatchServer;
+            productType = 'com.apple.product-type.tool';
+        };
+        _____Product_MusicMatchServer = {
+            isa = PBXFileReference;
+            explicitFileType = 'compiled.mach-o.executable';
+            path = 'MusicMatchServer';
+            sourceTree = BUILT_PRODUCTS_DIR;
+        };
+        CompilePhase_MusicMatchServer = {
+            isa = PBXSourcesBuildPhase;
+            files = ('__src_cc_ref_Sources/main.swift', '__src_cc_ref_Sources/MySQLFunctions.swift', '__src_cc_ref_Sources/PerfectHandlers.swift');
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        '__src_cc_ref_Sources/main.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/main.swift';
+        };
+        '__src_cc_ref_Sources/MySQLFunctions.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/MySQLFunctions.swift';
+        };
+        '__src_cc_ref_Sources/PerfectHandlers.swift' = {
+            isa = PBXBuildFile;
+            fileRef = '__PBXFileRef_Sources/PerfectHandlers.swift';
+        };
+        ___LinkPhase_MusicMatchServer = {
+            isa = PBXFrameworksBuildPhase;
+            files = (_LinkFileRef_PerfectThread_via_MusicMatchServer, _LinkFileRef_PerfectNet_via_MusicMatchServer, _LinkFileRef_PerfectLib_via_MusicMatchServer, _LinkFileRef_PerfectHTTP_via_MusicMatchServer, _LinkFileRef_MySQL_via_MusicMatchServer, _LinkFileRef_PerfectHTTPServer_via_MusicMatchServer);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        _LinkFileRef_PerfectThread_via_MusicMatchServer = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectThread;
+        };
+        _LinkFileRef_PerfectNet_via_MusicMatchServer = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectNet;
+        };
+        _LinkFileRef_PerfectLib_via_MusicMatchServer = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectLib;
+        };
+        _LinkFileRef_PerfectHTTP_via_MusicMatchServer = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectHTTP;
+        };
+        _LinkFileRef_MySQL_via_MusicMatchServer = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_MySQL;
+        };
+        _LinkFileRef_PerfectHTTPServer_via_MusicMatchServer = {
+            isa = PBXBuildFile;
+            fileRef = _____Product_PerfectHTTPServer;
+        };
+        _______Confs_MusicMatchServer = {
+            isa = XCConfigurationList;
+            buildConfigurations = (___DebugConf_MusicMatchServer, _ReleaseConf_MusicMatchServer);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+        ___DebugConf_MusicMatchServer = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0 /Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/openssl/1.0.2e/include -I/usr/local/Cellar/openssl/1.0.2e/include -I/usr/local/Cellar/mysql/5.7.10/include/mysql'; SWIFT_FORCE_STATIC_LINK_STDLIB = 'NO'; SWIFT_FORCE_DYNAMIC_LINK_STDLIB = 'YES'; SWIFT_OPTIMIZATION_LEVEL = '-Onone'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/openssl/1.0.2e/lib -lssl -L/usr/local/Cellar/openssl/1.0.2e/lib -lcrypto -L/usr/local/Cellar/mysql/5.7.10/lib -lmysqlclient'; };
+            name = Debug;
+        };
+        _ReleaseConf_MusicMatchServer = {
+            isa = XCBuildConfiguration;
+            buildSettings = { LD_RUNPATH_SEARCH_PATHS = '$(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path'; FRAMEWORK_SEARCH_PATHS = '$(PLATFORM_DIR)/Developer/Library/Frameworks'; HEADER_SEARCH_PATHS = '/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0 /Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0'; OTHER_SWIFT_FLAGS = '$(inherited) -I/usr/local/Cellar/openssl/1.0.2e/include -I/usr/local/Cellar/openssl/1.0.2e/include -I/usr/local/Cellar/mysql/5.7.10/include/mysql'; SWIFT_FORCE_STATIC_LINK_STDLIB = 'NO'; SWIFT_FORCE_DYNAMIC_LINK_STDLIB = 'YES'; OTHER_LDFLAGS = '$(inherited) -L/usr/local/Cellar/openssl/1.0.2e/lib -lssl -L/usr/local/Cellar/openssl/1.0.2e/lib -lcrypto -L/usr/local/Cellar/mysql/5.7.10/lib -lmysqlclient'; };
+            name = Release;
+        };
+        __Dependency_MusicMatchServer = {
+            isa = PBXTargetDependency;
+            target = ______Target_MusicMatchServer;
+        };
+        '__PBXFileRef_MusicMatchServer.xcodeproj/Configs/Project.xcconfig' = {
+            isa = PBXFileReference;
+            lastKnownFileType = text.xcconfig;
+            name = 'Project.xcconfig';
+            path = 'MusicMatchServer.xcodeproj/Configs/Project.xcconfig';
+            sourceTree = '<group>';
+        };
+        _____Configs_ = {
+            isa = PBXGroup;
+            children = ('__PBXFileRef_MusicMatchServer.xcodeproj/Configs/Project.xcconfig');
+            name = Configs;
+            sourceTree = '<group>';
+        };
+        _____Sources_ = {
+            isa = PBXGroup;
+            children = (_______Group_PerfectThread, _______Group_PerfectNet, _______Group_PerfectLib, _______Group_PerfectHTTP, _______Group_PerfectHTTPServer, _______Group_MySQL, _______Group_MusicMatchServer);
+            name = Sources;
+            sourceTree = '<group>';
+        };
+        Dependencies_ = {
+            isa = PBXGroup;
+            children = (_______Group_PerfectThread, _______Group_PerfectNet, _______Group_PerfectLib, _______Group_PerfectHTTP, _______Group_PerfectHTTPServer, _______Group_MySQL);
+            name = Dependencies;
+            sourceTree = '<group>';
+        };
+        ____Products_ = {
+            isa = PBXGroup;
+            children = (_____Product_PerfectThread, _____Product_PerfectNet, _____Product_PerfectLib, _____Product_PerfectHTTP, _____Product_PerfectHTTPServer, _____Product_MySQL, _____Product_MusicMatchServer);
+            name = Products;
+            sourceTree = '<group>';
+        };
+        _______Debug_ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = '__PBXFileRef_MusicMatchServer.xcodeproj/Configs/Project.xcconfig';
+            buildSettings = {};
+            name = Debug;
+        };
+        _____Release_ = {
+            isa = XCBuildConfiguration;
+            baseConfigurationReference = '__PBXFileRef_MusicMatchServer.xcodeproj/Configs/Project.xcconfig';
+            buildSettings = {};
+            name = Release;
+        };
+        ___RootConfs_ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (_______Debug_, _____Release_);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Debug;
+        };
+    };
+}

@@ -1,0 +1,65 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B5FE85F6C5ED6BD4652F7DA5C117FE25153DA58D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6F1260245BD69EFA9A05D126763C86280510C6E1" : 0,
+    "9197B75B1BC29921D6E3B1CCDC2B258350009F3A" : 0,
+    "E2306DAE0C98D148736A05084B6FAB44F03B4909" : 0,
+    "C4127C9B9C8FDF608B532AD72407863CE2797629" : 0,
+    "615FD99B652E80AC2E813EEEE7964BA10A9886D5" : 0,
+    "0B9B07A57A7603A158703662ACDD6F3ABAA339F4" : 0,
+    "B5FE85F6C5ED6BD4652F7DA5C117FE25153DA58D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8EF9708F-C45D-4C6E-B827-430D909EBC98",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6F1260245BD69EFA9A05D126763C86280510C6E1" : "PerfectTemplate\/Packages\/PerfectNet-0.13.0\/",
+    "9197B75B1BC29921D6E3B1CCDC2B258350009F3A" : "PerfectTemplate-MusicMatch\/Packages\/PerfectHTTP-0.4.0\/",
+    "E2306DAE0C98D148736A05084B6FAB44F03B4909" : "MusicMatchServer\/Packages\/PerfectLib-0.50.0\/",
+    "C4127C9B9C8FDF608B532AD72407863CE2797629" : "PerfectTemplate-MusicMatch\/Packages\/PerfectHTTPServer-0.1.0\/",
+    "615FD99B652E80AC2E813EEEE7964BA10A9886D5" : "PerfectTemplate\/Packages\/PerfectThread-0.10.0\/",
+    "0B9B07A57A7603A158703662ACDD6F3ABAA339F4" : "PerfectTemplate\/",
+    "B5FE85F6C5ED6BD4652F7DA5C117FE25153DA58D" : "MusicMatchServer\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MusicMatchServer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MusicMatchServer.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PerfectlySoft\/PerfectTemplate.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0B9B07A57A7603A158703662ACDD6F3ABAA339F4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PerfectlySoft\/Perfect-Thread.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "615FD99B652E80AC2E813EEEE7964BA10A9886D5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PerfectlySoft\/Perfect-Net.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6F1260245BD69EFA9A05D126763C86280510C6E1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PerfectlySoft\/Perfect-HTTP.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9197B75B1BC29921D6E3B1CCDC2B258350009F3A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/FibonacciRedstone\/MusicMatchServer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B5FE85F6C5ED6BD4652F7DA5C117FE25153DA58D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PerfectlySoft\/Perfect-HTTPServer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C4127C9B9C8FDF608B532AD72407863CE2797629"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PerfectlySoft\/Perfect.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2306DAE0C98D148736A05084B6FAB44F03B4909"
+    }
+  ]
+}
