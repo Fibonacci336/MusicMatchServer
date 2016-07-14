@@ -1,0 +1,23 @@
+{
+  "": {
+    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/master.swiftdeps"
+  },
+  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/main.swift": {
+    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/main.d",
+    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/main.swift.o",
+    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/main.swiftdeps"
+  },
+  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/MySQLFunctions.swift": {
+    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/MySQLFunctions.d",
+    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/MySQLFunctions.swift.o",
+    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/MySQLFunctions~partial.swiftmodule",
+    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/MySQLFunctions.swiftdeps"
+  },
+  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/PerfectHandlers.swift": {
+    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/PerfectHandlers.d",
+    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/PerfectHandlers.swift.o",
+    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/PerfectHandlers~partial.swiftmodule",
+    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/PerfectHandlers.swiftdeps"
+  }
+}

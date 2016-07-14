@@ -31,7 +31,7 @@ let PASSWORD = "123qweasdzxC"
 // database name
 let SCHEMA = "MusicMatch"
 
-let currentURL = "http://0.0.0.0:8181/"
+var currentURL = "http://0.0.0.0:8181/"
 //public method that is being called by the server framework to initialise your module.
 public func PerfectServerModuleInit() {
     
@@ -50,6 +50,10 @@ public func PerfectServerModuleInit() {
     //initializeUserData()
     //initializeMessagesData()
     //initializeUserLogInData()
+    
+    if(production){
+        currentURL = "http://www.lassoconsulting.com:8183"
+    }
 
 }
 
@@ -171,7 +175,7 @@ func thumbHandler(_ request: HTTPRequest, response: HTTPResponse) {
     response.completed()
     }
 func getDocumentsDirectory() -> NSString {
-    let fileManager = FileManager.default()
+    let fileManager = FileManager.default
     let documentsDirectory = fileManager.currentDirectoryPath
     return documentsDirectory
 }
@@ -198,7 +202,7 @@ func saveImage(_ image : NSImage, locationPath : String){
     let newRep: NSBitmapImageRep = NSBitmapImageRep(cgImage: cgRef)
     newRep.size = image.size
     // if you want the same resolution
-    let fileManager = FileManager.default()
+    let fileManager = FileManager.default
     let pngData = newRep.representation(using: NSBitmapImageFileType.PNG, properties: [:])
     guard fileManager.createFile(atPath: locationPath, contents: pngData, attributes: [:]) else{
         print("Could not write to PNG file")
@@ -317,6 +321,7 @@ func initializeUserData(){
         print(mysql.query(statement: "ALTER TABLE Users ADD CurrentLat DOUBLE"))
         print(mysql.query(statement: "ALTER TABLE Users ADD CurrentLong DOUBLE"))
         print(mysql.query(statement: "ALTER TABLE Users ADD Available INT"))
+        print(mysql.query(statement: "ALTER TABLE Users ADD Bio TEXT"))
         deleteColumn("id", mysql: mysql, table: "Users")
         deleteColumn("Content", mysql: mysql, table: "Users")
         

@@ -26,7 +26,7 @@ func performRequest(_ command : String, requestData : [String : AnyObject]?, met
             let bodyData = try JSONSerialization.data(withJSONObject: requestData as! AnyObject, options: JSONSerialization.WritingOptions.prettyPrinted)
             request.httpBody = bodyData
         }
-        URLSession.shared().dataTask(with: request, completionHandler: {
+        URLSession.shared.dataTask(with: request, completionHandler: {
             (data, response, error) -> Void in
             print(error?.localizedDescription)
             guard response == nil else{

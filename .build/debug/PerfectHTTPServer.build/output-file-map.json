@@ -1,0 +1,35 @@
+{
+  "": {
+    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/master.swiftdeps"
+  },
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.4.0/Sources/HPACK.swift": {
+    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HPACK.d",
+    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HPACK.swift.o",
+    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HPACK~partial.swiftmodule",
+    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HPACK.swiftdeps"
+  },
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Request.swift": {
+    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Request.d",
+    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Request.swift.o",
+    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Request~partial.swiftmodule",
+    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Request.swiftdeps"
+  },
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Response.swift": {
+    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Response.d",
+    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Response.swift.o",
+    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Response~partial.swiftmodule",
+    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Response.swiftdeps"
+  },
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.4.0/Sources/HTTP2.swift": {
+    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP2.d",
+    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP2.swift.o",
+    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP2~partial.swiftmodule",
+    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP2.swiftdeps"
+  },
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.4.0/Sources/HTTPServer.swift": {
+    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTPServer.d",
+    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTPServer.swift.o",
+    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTPServer~partial.swiftmodule",
+    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTPServer.swiftdeps"
+  }
+}

@@ -26,7 +26,8 @@ PerfectServer.initializeServices()
 
 // Create our webroot
 // This will serve all static content by default
-let webRoot = "/Users/Fibonacci/Documents/MusicMatchServer/webroot"
+let webRoot = "./webroot"
+let production = false
 try Dir(webRoot).create()
 
 // Add our routes and such
@@ -37,8 +38,11 @@ do {
     
     // Launch the HTTP server on port 8181
     let server = HTTPServer()
-    server.documentRoot = webRoot
-    server.serverPort = 8181
+    if(production){
+        server.serverPort = 8183
+    }else{
+        server.serverPort = 8181
+    }
     try server.start()
     
 } catch PerfectError.networkError(let err, let msg) {

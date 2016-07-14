@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.33.1 clang-800.0.31)"
+options: "87d8a06cb21ebf7e9e915d8cc3a59228"
+build_time: [521847554, 125540000]
+inputs:
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectThread-0.10.0/Sources/Threading.swift": [521749208, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectThread-0.10.0/Sources/ThreadQueue.swift": [521749208, 0]
