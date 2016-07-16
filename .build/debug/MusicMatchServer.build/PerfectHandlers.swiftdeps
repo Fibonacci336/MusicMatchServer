@@ -13,72 +13,59 @@ provides-top-level:
 - "getDocumentsDirectory"
 - "getVideoThumbnail"
 - "saveImage"
-- "initializeDatabaseConnection"
-- "DatabaseError"
-- "deleteColumn"
-- "initializeUserLogInData"
-- "initializeMessagesData"
-- "initializeUserData"
 - "getUsersInArea"
 provides-nominal:
-- "O16MusicMatchServer13DatabaseError"
 provides-member:
-- ["O16MusicMatchServer13DatabaseError", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Int"
-- "DatabaseError"
-- "USER"
-- !private "NSBitmapImageFileType"
-- !private "webRoot"
-- "indexHandler"
-- "Double"
-- "HOST"
+- "HTTPResponse"
+- !private "Routing"
 - "HTTPRequest"
+- "SCHEMA"
+- !private "NSBitmapImageFileType"
+- "String"
+- !private "AVAssetImageGenerator"
+- "restJSONHandler"
 - !private "Array"
 - !private "NSSize"
-- "StringLiteralType"
-- !private "..<"
-- !private "FileManager"
-- !private "AVAssetImageGenerator"
-- !private "JSONConversionError"
-- !private "Routing"
-- "PASSWORD"
-- !private "+"
-- "MySQL"
-- "distanceCheck"
-- !private "!"
-- !private "HTTPMethod"
-- "saveImage"
-- !private "AVError"
-- !private "URL"
-- !private "NSBitmapImageRep"
-- "initializeDatabaseConnection"
-- !private "UnicodeScalarType"
-- !private "AVAsset"
-- "initializeUserLogInData"
-- "CLLocation"
-- "currentURL"
-- "getUsersInArea"
-- !private "+="
-- "String"
-- "initializeUserData"
-- "getDocumentsDirectory"
-- "restJSONHandler"
-- "NSString"
-- "getVideoThumbnail"
-- !private "print"
-- "SCHEMA"
-- "deleteColumn"
-- "ErrorProtocol"
-- "NSImage"
-- !private "/="
-- "HTTPResponse"
-- "=="
 - "PerfectServerModuleInit"
-- "thumbHandler"
+- "CLLocation"
+- !private "UnicodeScalarType"
+- "getUsersInArea"
 - !private "Dictionary"
-- "initializeMessagesData"
+- "currentURL"
+- "saveImage"
+- !private "initializeDatabaseConnection"
+- !private "FileManager"
+- !private "URL"
+- "distanceCheck"
+- !private "+"
+- !private "HTTPMethod"
+- !private "..<"
+- "PASSWORD"
+- "getVideoThumbnail"
+- !private "initializeUserData"
+- !private "AVError"
+- !private "production"
+- "NSImage"
+- "NSString"
+- !private "AVAsset"
+- "getDocumentsDirectory"
+- !private "JSONConversionError"
+- !private "initializeMessagesData"
+- "indexHandler"
+- !private "initializeUserLogInData"
+- !private "webRoot"
+- !private "/="
+- "thumbHandler"
+- "HOST"
+- !private "NSBitmapImageRep"
+- "StringLiteralType"
+- "Double"
+- !private "+="
+- "USER"
+- "Int"
+- !private "print"
 depends-member:
 - !private ["CSo7AVAsset", "duration"]
 - !private ["CSo7AVAsset", "init"]
@@ -93,14 +80,12 @@ depends-member:
 - !private ["Ps9AnyObject", "cgImage"]
 - !private ["Ps9AnyObject", "close"]
 - !private ["Ps9AnyObject", "components"]
-- !private ["Ps9AnyObject", "connect"]
 - !private ["Ps9AnyObject", "coordinate"]
 - !private ["Ps9AnyObject", "copyCGImage"]
 - !private ["Ps9AnyObject", "createFile"]
 - !private ["Ps9AnyObject", "currentDirectoryPath"]
 - !private ["Ps9AnyObject", "default"]
 - !private ["Ps9AnyObject", "duration"]
-- !private ["Ps9AnyObject", "errorMessage"]
 - !private ["Ps9AnyObject", "forEachRow"]
 - !private ["Ps9AnyObject", "height"]
 - !private ["Ps9AnyObject", "init"]
@@ -108,7 +93,6 @@ depends-member:
 - !private ["Ps9AnyObject", "numRows"]
 - !private ["Ps9AnyObject", "query"]
 - !private ["Ps9AnyObject", "representation"]
-- !private ["Ps9AnyObject", "selectDatabase"]
 - !private ["Ps9AnyObject", "size"]
 - !private ["Ps9AnyObject", "storeResults"]
 - !private ["Ps9AnyObject", "width"]
@@ -143,7 +127,6 @@ depends-member:
 - !private ["Ps17BitwiseOperations", "Stride"]
 - !private ["Ps17BitwiseOperations", "_DisabledRangeIndex"]
 - !private ["Ps17BitwiseOperations", "_DisallowMixedSignArithmetic"]
-- !private ["Ps17BitwiseOperations", "hashValue"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Sb", "deinit"]
 - !private ["Ps7Boolean", "_getBuiltinLogicValue"]
@@ -174,7 +157,6 @@ depends-member:
 - !private ["Ps7CVarArg", "currentDirectoryPath"]
 - !private ["Ps7CVarArg", "default"]
 - !private ["Ps7CVarArg", "duration"]
-- !private ["Ps7CVarArg", "hashValue"]
 - !private ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "representation"]
 - !private ["Ps7CVarArg", "size"]
@@ -200,7 +182,6 @@ depends-member:
 - !private ["Ps10Comparable", "_DisabledRangeIndex"]
 - !private ["Ps10Comparable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps10Comparable", "components"]
-- !private ["Ps10Comparable", "hashValue"]
 - !private ["Ps10Comparable", "init"]
 - !private ["Ps10Comparable", "value"]
 - !private ["Vs14CountableRange", "Iterator"]
@@ -236,7 +217,6 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "components"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "hashValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "init"]
 - !private ["Ps17CustomReflectable", "Element"]
 - !private ["Ps17CustomReflectable", "Index"]
@@ -252,7 +232,6 @@ depends-member:
 - !private ["Ps17CustomReflectable", "_Element"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "components"]
-- !private ["Ps17CustomReflectable", "hashValue"]
 - !private ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "jsonEncodedString"]
 - !private ["Ps17CustomReflectable", "keys"]
@@ -281,19 +260,12 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "description"]
 - !private ["Ps23CustomStringConvertible", "duration"]
 - !private ["Ps23CustomStringConvertible", "get"]
-- !private ["Ps23CustomStringConvertible", "hashValue"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "jsonEncodedString"]
 - !private ["Ps23CustomStringConvertible", "keys"]
 - !private ["Ps23CustomStringConvertible", "representation"]
 - !private ["Ps23CustomStringConvertible", "size"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
-- ["O16MusicMatchServer13DatabaseError", "_code"]
-- ["O16MusicMatchServer13DatabaseError", "_domain"]
-- ["O16MusicMatchServer13DatabaseError", "connectionError"]
-- ["O16MusicMatchServer13DatabaseError", "deinit"]
-- ["O16MusicMatchServer13DatabaseError", "hashValue"]
-- ["O16MusicMatchServer13DatabaseError", "schemaCreationError"]
 - !private ["V10Foundation4Date", "deinit"]
 - !private ["VSC7Decimal", "Stride"]
 - !private ["VSC7Decimal", "deinit"]
@@ -331,12 +303,9 @@ depends-member:
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
 - !private ["Ps9Equatable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps9Equatable", "_Element"]
-- ["Ps9Equatable", "_code"]
-- ["Ps9Equatable", "_domain"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "cgImage"]
 - !private ["Ps9Equatable", "components"]
-- !private ["Ps9Equatable", "connectionError"]
 - !private ["Ps9Equatable", "coordinate"]
 - !private ["Ps9Equatable", "copyCGImage"]
 - !private ["Ps9Equatable", "createFile"]
@@ -345,22 +314,13 @@ depends-member:
 - !private ["Ps9Equatable", "duration"]
 - !private ["Ps9Equatable", "exportFailed"]
 - !private ["Ps9Equatable", "get"]
-- ["Ps9Equatable", "hashValue"]
 - !private ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "representation"]
-- !private ["Ps9Equatable", "schemaCreationError"]
 - !private ["Ps9Equatable", "size"]
 - !private ["Ps9Equatable", "value"]
-- ["Ps9Equatable", ""]
-- ["Ps13ErrorProtocol", "_code"]
-- ["Ps13ErrorProtocol", "_domain"]
-- !private ["Ps13ErrorProtocol", "connectionError"]
 - !private ["Ps13ErrorProtocol", "exportFailed"]
-- ["Ps13ErrorProtocol", "hashValue"]
 - ["Ps13ErrorProtocol", "invalidKey"]
 - ["Ps13ErrorProtocol", "notConvertible"]
-- !private ["Ps13ErrorProtocol", "schemaCreationError"]
-- ["Ps13ErrorProtocol", ""]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "Element"]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "components"]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
@@ -386,12 +346,9 @@ depends-member:
 - !private ["Ps8Hashable", "Stride"]
 - !private ["Ps8Hashable", "_DisabledRangeIndex"]
 - !private ["Ps8Hashable", "_DisallowMixedSignArithmetic"]
-- ["Ps8Hashable", "_code"]
-- ["Ps8Hashable", "_domain"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "cgImage"]
 - !private ["Ps8Hashable", "components"]
-- !private ["Ps8Hashable", "connectionError"]
 - !private ["Ps8Hashable", "coordinate"]
 - !private ["Ps8Hashable", "copyCGImage"]
 - !private ["Ps8Hashable", "createFile"]
@@ -400,12 +357,9 @@ depends-member:
 - !private ["Ps8Hashable", "duration"]
 - !private ["Ps8Hashable", "exportFailed"]
 - !private ["Ps8Hashable", "get"]
-- ["Ps8Hashable", "hashValue"]
 - !private ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "representation"]
-- !private ["Ps8Hashable", "schemaCreationError"]
 - !private ["Ps8Hashable", "size"]
-- ["Ps8Hashable", ""]
 - !private ["V10Foundation9IndexPath", "deinit"]
 - !private ["Ps9Indexable", "Element"]
 - !private ["Ps9Indexable", "Index"]
@@ -440,7 +394,6 @@ depends-member:
 - !private ["Si", "Stride"]
 - !private ["Si", "_DisabledRangeIndex"]
 - !private ["Si", "deinit"]
-- !private ["Si", "hashValue"]
 - !private ["Vs5Int16", "Stride"]
 - !private ["Vs5Int16", "deinit"]
 - !private ["Vs5Int32", "Stride"]
@@ -453,17 +406,14 @@ depends-member:
 - !private ["Ps7Integer", "Stride"]
 - !private ["Ps7Integer", "_DisabledRangeIndex"]
 - !private ["Ps7Integer", "_DisallowMixedSignArithmetic"]
-- !private ["Ps7Integer", "hashValue"]
 - !private ["Ps17IntegerArithmetic", "IntegerLiteralType"]
 - !private ["Ps17IntegerArithmetic", "Stride"]
 - !private ["Ps17IntegerArithmetic", "_DisabledRangeIndex"]
 - !private ["Ps17IntegerArithmetic", "_DisallowMixedSignArithmetic"]
-- !private ["Ps17IntegerArithmetic", "hashValue"]
 - !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["Ps25IntegerLiteralConvertible", "Stride"]
 - !private ["Ps25IntegerLiteralConvertible", "_DisabledRangeIndex"]
 - !private ["Ps25IntegerLiteralConvertible", "_DisallowMixedSignArithmetic"]
-- !private ["Ps25IntegerLiteralConvertible", "hashValue"]
 - !private ["Ps25IntegerLiteralConvertible", "init"]
 - !private ["Ps16IteratorProtocol", "Element"]
 - !private ["Ps16IteratorProtocol", "forEachRow"]
@@ -483,7 +433,6 @@ depends-member:
 - !private ["P10PerfectLib15JSONConvertible", "_DisallowMixedSignArithmetic"]
 - !private ["P10PerfectLib15JSONConvertible", "_getBuiltinLogicValue"]
 - !private ["P10PerfectLib15JSONConvertible", "components"]
-- !private ["P10PerfectLib15JSONConvertible", "hashValue"]
 - !private ["P10PerfectLib15JSONConvertible", "init"]
 - !private ["P10PerfectLib15JSONConvertible", "jsonEncodedString"]
 - !private ["P10PerfectLib15JSONConvertible", "keys"]
@@ -500,7 +449,6 @@ depends-member:
 - !private ["Ps10MirrorPath", "Stride"]
 - !private ["Ps10MirrorPath", "_DisabledRangeIndex"]
 - !private ["Ps10MirrorPath", "components"]
-- !private ["Ps10MirrorPath", "hashValue"]
 - !private ["Ps10MirrorPath", "init"]
 - !private ["Ps17MutableCollection", "Element"]
 - !private ["Ps17MutableCollection", "Index"]
@@ -511,11 +459,7 @@ depends-member:
 - !private ["Ps16MutableIndexable", "SubSequence"]
 - !private ["Ps16MutableIndexable", "subscript"]
 - !private ["C5MySQL5MySQL", "close"]
-- !private ["C5MySQL5MySQL", "connect"]
-- !private ["C5MySQL5MySQL", "errorMessage"]
-- !private ["C5MySQL5MySQL", "init"]
 - !private ["C5MySQL5MySQL", "query"]
-- !private ["C5MySQL5MySQL", "selectDatabase"]
 - !private ["C5MySQL5MySQL", "storeResults"]
 - !private ["CSo7NSArray", "Element"]
 - !private ["OSC21NSBitmapImageFileType", "PNG"]
@@ -653,11 +597,9 @@ depends-member:
 - !private ["Ps13SignedInteger", "IntegerLiteralType"]
 - !private ["Ps13SignedInteger", "Stride"]
 - !private ["Ps13SignedInteger", "_DisabledRangeIndex"]
-- !private ["Ps13SignedInteger", "hashValue"]
 - !private ["Ps12SignedNumber", "IntegerLiteralType"]
 - !private ["Ps12SignedNumber", "Stride"]
 - !private ["Ps12SignedNumber", "_DisabledRangeIndex"]
-- !private ["Ps12SignedNumber", "hashValue"]
 - !private ["Ps12SignedNumber", "init"]
 - !private ["Vs5Slice", "Index"]
 - !private ["Vs5Slice", "Iterator"]
@@ -670,7 +612,6 @@ depends-member:
 - !private ["Ps10Strideable", "Stride"]
 - !private ["Ps10Strideable", "_DisabledRangeIndex"]
 - !private ["Ps10Strideable", "_DisallowMixedSignArithmetic"]
-- !private ["Ps10Strideable", "hashValue"]
 - !private ["Ps10Strideable", "init"]
 - !private ["SS", "Element"]
 - !private ["SS", "components"]
@@ -719,7 +660,6 @@ depends-member:
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "Stride"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "_DisabledRangeIndex"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "_DisallowMixedSignArithmetic"]
-- !private ["Ps33_BuiltinIntegerLiteralConvertible", "hashValue"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
 - !private ["Ps32_BuiltinStringLiteralConvertible", "Element"]
 - !private ["Ps32_BuiltinStringLiteralConvertible", "components"]
@@ -749,17 +689,14 @@ depends-member:
 - !private ["Ps14_Incrementable", "Stride"]
 - !private ["Ps14_Incrementable", "_DisabledRangeIndex"]
 - !private ["Ps14_Incrementable", "_DisallowMixedSignArithmetic"]
-- !private ["Ps14_Incrementable", "hashValue"]
 - !private ["Ps8_Integer", "IntegerLiteralType"]
 - !private ["Ps8_Integer", "Stride"]
 - !private ["Ps8_Integer", "_DisabledRangeIndex"]
 - !private ["Ps8_Integer", "_DisallowMixedSignArithmetic"]
-- !private ["Ps8_Integer", "hashValue"]
 - !private ["Ps18_IntegerArithmetic", "IntegerLiteralType"]
 - !private ["Ps18_IntegerArithmetic", "Stride"]
 - !private ["Ps18_IntegerArithmetic", "_DisabledRangeIndex"]
 - !private ["Ps18_IntegerArithmetic", "_DisallowMixedSignArithmetic"]
-- !private ["Ps18_IntegerArithmetic", "hashValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "IndexDistance"]
@@ -772,7 +709,6 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "components"]
-- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "jsonEncodedString"]
 - !private ["Ps21_ObjectiveCBridgeable", "keys"]
@@ -781,12 +717,10 @@ depends-member:
 - !private ["Ps14_SignedInteger", "IntegerLiteralType"]
 - !private ["Ps14_SignedInteger", "Stride"]
 - !private ["Ps14_SignedInteger", "_DisabledRangeIndex"]
-- !private ["Ps14_SignedInteger", "hashValue"]
 - !private ["Ps11_Strideable", "IntegerLiteralType"]
 - !private ["Ps11_Strideable", "Stride"]
 - !private ["Ps11_Strideable", "_DisabledRangeIndex"]
 - !private ["Ps11_Strideable", "_DisallowMixedSignArithmetic"]
-- !private ["Ps11_Strideable", "hashValue"]
 - !private ["Ps11_Strideable", "init"]
 - !private ["Ps14_StringElement", "Stride"]
 - !private ["Ps14_StringElement", "_DisallowMixedSignArithmetic"]
@@ -824,7 +758,6 @@ depends-nominal:
 - !private "Ps29CustomPlaygroundQuickLookable"
 - "Ps17CustomReflectable"
 - !private "Ps23CustomStringConvertible"
-- "O16MusicMatchServer13DatabaseError"
 - !private "V10Foundation4Date"
 - !private "VSC7Decimal"
 - !private "Vs26DefaultRandomAccessIndices"
@@ -834,7 +767,7 @@ depends-nominal:
 - !private "O8Dispatch20DispatchTimeInterval"
 - !private "V8Dispatch16DispatchWallTime"
 - !private "Sd"
-- "Ps9Equatable"
+- !private "Ps9Equatable"
 - "Ps13ErrorProtocol"
 - !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "CSo11FileManager"
@@ -845,7 +778,7 @@ depends-nominal:
 - !private "O11PerfectHTTP10HTTPMethod"
 - !private "P11PerfectHTTP11HTTPRequest"
 - !private "P11PerfectHTTP12HTTPResponse"
-- "Ps8Hashable"
+- !private "Ps8Hashable"
 - !private "V10Foundation9IndexPath"
 - !private "Ps9Indexable"
 - !private "Ps13IndexableBase"
@@ -943,29 +876,14 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTP.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MySQL.swiftmodule"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/psi/psi_base.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/psi/psi_memory.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_alloc.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/typelib.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/plugin_auth_common.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/client_plugin.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_list.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_time.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_command.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/binary_log_types.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_com.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_version.h"
-- "/usr/local/include/mysql/mysql.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/bio.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/opensslconf.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/e_os2.h"
@@ -1006,8 +924,25 @@ depends-external:
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/crypto.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/comp.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MySQL.swiftmodule"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/psi/psi_base.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/psi/psi_memory.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_alloc.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/typelib.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/plugin_auth_common.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/client_plugin.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_list.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_time.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_command.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/binary_log_types.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_com.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_version.h"
+- "/usr/local/include/mysql/mysql.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
@@ -1016,6 +951,4 @@ depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreAudio.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreLocation.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTP.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.swiftmodule"
-interface-hash: "bf1c55c2d23a543520616a6bc05c6258"
+interface-hash: "d22f6a8a59a4e260ba740a92d089e049"

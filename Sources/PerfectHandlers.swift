@@ -47,12 +47,12 @@ public func PerfectServerModuleInit() {
     Routing.Routes["/distcheck/{command}"] = distanceCheck
 
     print("\(Routing.Routes.description)")
-    //initializeUserData()
-    //initializeMessagesData()
-    //initializeUserLogInData()
+    initializeUserData()
+    initializeMessagesData()
+    initializeUserLogInData()
     
     if(production){
-        currentURL = "http://www.lassoconsulting.com:8183"
+        currentURL = "http://www.lassoconsultant.com:8183/"
     }
 
 }

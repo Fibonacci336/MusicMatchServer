@@ -6,34 +6,41 @@ provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
-- "PerfectServer"
-- "UnicodeScalarType"
 - "print"
 - "StringLiteralType"
-- "HTTPServer"
-- "PerfectError"
-- "IntegerLiteralType"
-- "webRoot"
-- "production"
+- "UnicodeScalarType"
 - "PerfectServerModuleInit"
-- "Dir"
+- "HTTPServer"
+- "production"
 - "BooleanLiteralType"
 - "FloatLiteralType"
+- "webRoot"
+- "PerfectError"
+- "PerfectServer"
+- "IntegerLiteralType"
+- "Dir"
 depends-member:
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "serverPort"]
 - ["Ps9AnyObject", "start"]
+- ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
+- ["Ps7Boolean", "_getBuiltinLogicValue"]
+- ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - ["Ps7CVarArg", "init"]
 - ["Vs9Character", "deinit"]
 - ["Ps10Comparable", "init"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - ["Ps29CustomPlaygroundQuickLookable", "init"]
+- ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - ["Ps17CustomReflectable", "init"]
+- ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps23CustomStringConvertible", "init"]
 - ["V10PerfectLib3Dir", "create"]
 - ["V10PerfectLib3Dir", "init"]
 - ["Sd", "deinit"]
+- ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "init"]
 - ["Ps13ErrorProtocol", "networkError"]
 - ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
@@ -41,12 +48,14 @@ depends-member:
 - ["C17PerfectHTTPServer10HTTPServer", "init"]
 - ["C17PerfectHTTPServer10HTTPServer", "serverPort"]
 - ["C17PerfectHTTPServer10HTTPServer", "start"]
+- ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "init"]
 - ["Si", "deinit"]
 - ["Vs5Int16", "deinit"]
 - ["Vs5Int32", "deinit"]
 - ["Vs5Int64", "deinit"]
 - ["Vs4Int8", "deinit"]
+- ["P10PerfectLib15JSONConvertible", "_getBuiltinLogicValue"]
 - ["P10PerfectLib15JSONConvertible", "init"]
 - ["Ps10MirrorPath", "init"]
 - ["PSo8NSCoding", "init"]
@@ -73,14 +82,18 @@ depends-member:
 - ["Vs5UInt8", "deinit"]
 - ["Sc", "deinit"]
 - ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
 - ["Ps32_BuiltinStringLiteralConvertible", "init"]
 - ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
 - ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
 depends-nominal:
 - "Ps9AnyObject"
 - "Sb"
+- "Ps7Boolean"
+- "Ps25BooleanLiteralConvertible"
 - "Ps7CVarArg"
 - "Vs9Character"
 - "Ps10Comparable"
@@ -126,6 +139,7 @@ depends-nominal:
 - "Vs5UInt8"
 - "Sc"
 - "Ps31UnicodeScalarLiteralConvertible"
+- "Ps33_BuiltinBooleanLiteralConvertible"
 - "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
 - "Ps32_BuiltinStringLiteralConvertible"
 - "Ps37_BuiltinUTF16StringLiteralConvertible"
@@ -135,29 +149,14 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTP.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MySQL.swiftmodule"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/psi/psi_base.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/psi/psi_memory.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_alloc.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/typelib.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/plugin_auth_common.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/client_plugin.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_list.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_time.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_command.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/binary_log_types.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_com.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_version.h"
-- "/usr/local/include/mysql/mysql.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/bio.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/opensslconf.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/e_os2.h"
@@ -198,8 +197,25 @@ depends-external:
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/crypto.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/comp.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MySQL.swiftmodule"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/psi/psi_base.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/psi/psi_memory.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_alloc.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/typelib.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/plugin_auth_common.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/client_plugin.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_list.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_time.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_command.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/binary_log_types.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_com.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_version.h"
+- "/usr/local/include/mysql/mysql.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
@@ -208,6 +224,4 @@ depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreAudio.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreLocation.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTP.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.swiftmodule"
-interface-hash: "721c4af3ac70b98d234c823c2637bcd1"
+interface-hash: "83a0356cedea06a66ac5c1c879122659"

@@ -2,6 +2,12 @@
   "": {
     "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/master.swiftdeps"
   },
+  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/arguments.swift": {
+    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/arguments.d",
+    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/arguments.swift.o",
+    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/arguments~partial.swiftmodule",
+    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/arguments.swiftdeps"
+  },
   "/Users/Fibonacci/Documents/MusicMatchServer/Sources/main.swift": {
     "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/main.d",
     "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/main.swift.o",

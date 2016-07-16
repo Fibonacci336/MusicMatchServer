@@ -1,241 +1,155 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "url"
-- "performRequest"
+- "initializeDatabaseConnection"
+- "DatabaseError"
+- "deleteColumn"
+- "initializeUserLogInData"
+- "initializeMessagesData"
+- "initializeUserData"
 provides-nominal:
+- "O16MusicMatchServer13DatabaseError"
 provides-member:
+- ["O16MusicMatchServer13DatabaseError", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "JSONSerialization"
-- "performRequest"
-- "url"
+- "=="
+- "initializeUserData"
+- !private "IntegerLiteralType"
+- "ErrorProtocol"
+- !private "SCHEMA"
+- !private "UnicodeScalarType"
+- "initializeMessagesData"
+- !private "FloatLiteralType"
 - "String"
-- !private "=="
-- !private "Void"
-- !private "URLRequest"
-- "AnyObject"
-- !private "URL"
-- !private "URLSession"
-- !private "+"
+- "initializeDatabaseConnection"
+- !private "HOST"
+- !private "USER"
+- "initializeUserLogInData"
+- "deleteColumn"
 - !private "print"
-- !private "!="
-- "StringLiteralType"
-- "Array"
+- "DatabaseError"
+- !private "!"
+- "MySQL"
+- !private "PASSWORD"
 depends-member:
-- !private ["Ps9AnyObject", "Encoding"]
-- !private ["Ps9AnyObject", "WritingOptions"]
-- !private ["Ps9AnyObject", "data"]
-- !private ["Ps9AnyObject", "dataTask"]
-- ["Ps9AnyObject", "deinit"]
+- !private ["Ps9AnyObject", "close"]
+- !private ["Ps9AnyObject", "connect"]
+- !private ["Ps9AnyObject", "errorMessage"]
 - !private ["Ps9AnyObject", "init"]
-- !private ["Ps9AnyObject", "jsonObject"]
-- !private ["Ps9AnyObject", "localizedDescription"]
-- !private ["Ps9AnyObject", "resume"]
-- !private ["Ps9AnyObject", "shared"]
-- !private ["Ps23ArrayLiteralConvertible", "Element"]
-- !private ["Ps23ArrayLiteralConvertible", "prettyPrinted"]
+- !private ["Ps9AnyObject", "query"]
+- !private ["Ps9AnyObject", "selectDatabase"]
+- !private ["Ps17BitwiseOperations", "hashValue"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Sb", "deinit"]
 - !private ["Ps7Boolean", "_getBuiltinLogicValue"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps7CVarArg", "Encoding"]
-- !private ["Ps7CVarArg", "WritingOptions"]
-- !private ["Ps7CVarArg", "data"]
-- !private ["Ps7CVarArg", "dataTask"]
+- !private ["Ps7CVarArg", "hashValue"]
 - !private ["Ps7CVarArg", "init"]
-- !private ["Ps7CVarArg", "jsonObject"]
-- !private ["Ps7CVarArg", "localizedDescription"]
-- !private ["Ps7CVarArg", "resume"]
-- !private ["Ps7CVarArg", "shared"]
 - !private ["Vs9Character", "deinit"]
-- !private ["Ps10Comparable", "Encoding"]
+- !private ["Ps10Comparable", "hashValue"]
 - !private ["Ps10Comparable", "init"]
-- !private ["Ps28CustomDebugStringConvertible", "Encoding"]
-- !private ["Ps28CustomDebugStringConvertible", "WritingOptions"]
-- !private ["Ps28CustomDebugStringConvertible", "addValue"]
-- !private ["Ps28CustomDebugStringConvertible", "data"]
-- !private ["Ps28CustomDebugStringConvertible", "dataTask"]
-- !private ["Ps28CustomDebugStringConvertible", "httpBody"]
-- !private ["Ps28CustomDebugStringConvertible", "httpMethod"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
-- !private ["Ps28CustomDebugStringConvertible", "jsonObject"]
-- !private ["Ps28CustomDebugStringConvertible", "localizedDescription"]
-- !private ["Ps28CustomDebugStringConvertible", "resume"]
-- !private ["Ps28CustomDebugStringConvertible", "shared"]
-- !private ["Ps28CustomDebugStringConvertible", "some"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "Encoding"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "hashValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "init"]
-- !private ["Ps17CustomReflectable", "Encoding"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "hashValue"]
 - !private ["Ps17CustomReflectable", "init"]
-- !private ["Ps17CustomReflectable", "some"]
-- !private ["Ps23CustomStringConvertible", "Encoding"]
-- !private ["Ps23CustomStringConvertible", "WritingOptions"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps23CustomStringConvertible", "addValue"]
-- !private ["Ps23CustomStringConvertible", "data"]
-- !private ["Ps23CustomStringConvertible", "dataTask"]
-- !private ["Ps23CustomStringConvertible", "httpBody"]
-- !private ["Ps23CustomStringConvertible", "httpMethod"]
+- !private ["Ps23CustomStringConvertible", "hashValue"]
 - !private ["Ps23CustomStringConvertible", "init"]
-- !private ["Ps23CustomStringConvertible", "jsonObject"]
-- !private ["Ps23CustomStringConvertible", "localizedDescription"]
-- !private ["Ps23CustomStringConvertible", "resume"]
-- !private ["Ps23CustomStringConvertible", "shared"]
-- !private ["Ps23CustomStringConvertible", "utf8"]
-- !private ["Vs10Dictionary", "deinit"]
+- ["O16MusicMatchServer13DatabaseError", "_code"]
+- ["O16MusicMatchServer13DatabaseError", "_domain"]
+- ["O16MusicMatchServer13DatabaseError", "connectionError"]
+- ["O16MusicMatchServer13DatabaseError", "deinit"]
+- ["O16MusicMatchServer13DatabaseError", "hashValue"]
+- ["O16MusicMatchServer13DatabaseError", "schemaCreationError"]
 - !private ["Sd", "deinit"]
-- !private ["VE10FoundationSS8Encoding", "utf8"]
-- !private ["Ps9Equatable", "Element"]
-- !private ["Ps9Equatable", "Encoding"]
-- !private ["Ps9Equatable", "WritingOptions"]
+- ["Ps9Equatable", "_code"]
+- ["Ps9Equatable", "_domain"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
-- !private ["Ps9Equatable", "addValue"]
-- !private ["Ps9Equatable", "data"]
-- !private ["Ps9Equatable", "dataTask"]
-- !private ["Ps9Equatable", "httpBody"]
-- !private ["Ps9Equatable", "httpMethod"]
+- !private ["Ps9Equatable", "connectionError"]
+- ["Ps9Equatable", "hashValue"]
 - !private ["Ps9Equatable", "init"]
-- !private ["Ps9Equatable", "jsonObject"]
-- !private ["Ps9Equatable", "localizedDescription"]
-- !private ["Ps9Equatable", "prettyPrinted"]
-- !private ["Ps9Equatable", "resume"]
-- !private ["Ps9Equatable", "shared"]
-- !private ["Ps9Equatable", "utf8"]
-- !private ["Ps13ErrorProtocol", "localizedDescription"]
-- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "Encoding"]
+- !private ["Ps9Equatable", "schemaCreationError"]
+- ["Ps9Equatable", ""]
+- ["Ps13ErrorProtocol", "_code"]
+- ["Ps13ErrorProtocol", "_domain"]
+- !private ["Ps13ErrorProtocol", "connectionError"]
+- ["Ps13ErrorProtocol", "hashValue"]
+- !private ["Ps13ErrorProtocol", "schemaCreationError"]
+- ["Ps13ErrorProtocol", ""]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Sf", "deinit"]
-- !private ["Ps8Hashable", "Encoding"]
-- !private ["Ps8Hashable", "WritingOptions"]
+- ["Ps8Hashable", "_code"]
+- ["Ps8Hashable", "_domain"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
-- !private ["Ps8Hashable", "addValue"]
-- !private ["Ps8Hashable", "data"]
-- !private ["Ps8Hashable", "dataTask"]
-- !private ["Ps8Hashable", "httpBody"]
-- !private ["Ps8Hashable", "httpMethod"]
+- !private ["Ps8Hashable", "connectionError"]
+- ["Ps8Hashable", "hashValue"]
 - !private ["Ps8Hashable", "init"]
-- !private ["Ps8Hashable", "jsonObject"]
-- !private ["Ps8Hashable", "localizedDescription"]
-- !private ["Ps8Hashable", "resume"]
-- !private ["Ps8Hashable", "shared"]
-- !private ["Ps8Hashable", "utf8"]
+- !private ["Ps8Hashable", "schemaCreationError"]
+- ["Ps8Hashable", ""]
 - !private ["Si", "deinit"]
+- !private ["Si", "hashValue"]
 - !private ["Vs5Int16", "deinit"]
 - !private ["Vs5Int32", "deinit"]
 - !private ["Vs5Int64", "deinit"]
 - !private ["Vs4Int8", "deinit"]
-- !private ["P10PerfectLib15JSONConvertible", "Encoding"]
+- !private ["Ps7Integer", "hashValue"]
+- !private ["Ps17IntegerArithmetic", "hashValue"]
+- !private ["Ps25IntegerLiteralConvertible", "hashValue"]
 - !private ["P10PerfectLib15JSONConvertible", "_getBuiltinLogicValue"]
+- !private ["P10PerfectLib15JSONConvertible", "hashValue"]
 - !private ["P10PerfectLib15JSONConvertible", "init"]
-- !private ["P10PerfectLib15JSONConvertible", "some"]
-- !private ["CSo17JSONSerialization", "WritingOptions"]
-- !private ["CSo17JSONSerialization", "data"]
-- !private ["CSo17JSONSerialization", "jsonObject"]
-- !private ["Ps10MirrorPath", "Encoding"]
+- !private ["Ps10MirrorPath", "hashValue"]
 - !private ["Ps10MirrorPath", "init"]
-- !private ["PSo8NSCoding", "Encoding"]
+- !private ["C5MySQL5MySQL", "close"]
+- !private ["C5MySQL5MySQL", "connect"]
+- !private ["C5MySQL5MySQL", "errorMessage"]
+- !private ["C5MySQL5MySQL", "init"]
+- !private ["C5MySQL5MySQL", "query"]
+- !private ["C5MySQL5MySQL", "selectDatabase"]
 - !private ["PSo8NSCoding", "init"]
-- !private ["PSo8NSCoding", "localizedDescription"]
-- !private ["PSo9NSCopying", "Encoding"]
 - !private ["PSo9NSCopying", "init"]
-- !private ["PSo9NSCopying", "localizedDescription"]
-- !private ["PSo9NSCopying", "resume"]
-- !private ["CSo7NSError", "localizedDescription"]
-- !private ["PSo16NSMutableCopying", "Encoding"]
 - !private ["PSo16NSMutableCopying", "init"]
-- !private ["CSo8NSObject", "Encoding"]
-- !private ["CSo8NSObject", "WritingOptions"]
-- !private ["CSo8NSObject", "data"]
-- !private ["CSo8NSObject", "dataTask"]
 - !private ["CSo8NSObject", "init"]
-- !private ["CSo8NSObject", "jsonObject"]
-- !private ["CSo8NSObject", "localizedDescription"]
-- !private ["CSo8NSObject", "resume"]
-- !private ["CSo8NSObject", "shared"]
-- !private ["PSo16NSObjectProtocol", "Encoding"]
-- !private ["PSo16NSObjectProtocol", "WritingOptions"]
-- !private ["PSo16NSObjectProtocol", "data"]
-- !private ["PSo16NSObjectProtocol", "dataTask"]
 - !private ["PSo16NSObjectProtocol", "init"]
-- !private ["PSo16NSObjectProtocol", "jsonObject"]
-- !private ["PSo16NSObjectProtocol", "localizedDescription"]
-- !private ["PSo16NSObjectProtocol", "resume"]
-- !private ["PSo16NSObjectProtocol", "shared"]
-- !private ["PSo19NSPasteboardReading", "Encoding"]
 - !private ["PSo19NSPasteboardReading", "init"]
-- !private ["PSo19NSPasteboardWriting", "Encoding"]
 - !private ["PSo19NSPasteboardWriting", "init"]
-- !private ["PSo14NSSecureCoding", "Encoding"]
 - !private ["PSo14NSSecureCoding", "init"]
-- !private ["PSo14NSSecureCoding", "localizedDescription"]
-- !private ["CSo8NSString", "Encoding"]
-- !private ["CSo8NSString", "deinit"]
 - !private ["CSo8NSString", "init"]
-- !private ["Ps21NilLiteralConvertible", "some"]
-- !private ["Ps9OptionSet", "Element"]
-- !private ["Ps9OptionSet", "prettyPrinted"]
-- !private ["Sq", "deinit"]
-- !private ["Sq", "some"]
-- !private ["Ps12OutputStream", "Encoding"]
 - !private ["Ps12OutputStream", "init"]
-- !private ["Ps16RawRepresentable", "Element"]
-- !private ["Ps16RawRepresentable", "prettyPrinted"]
-- !private ["Ps16RawRepresentable", "utf8"]
-- !private ["VCSo17JSONSerialization14ReadingOptions", "Element"]
-- !private ["P10Foundation20ReferenceConvertible", "addValue"]
-- !private ["P10Foundation20ReferenceConvertible", "httpBody"]
-- !private ["P10Foundation20ReferenceConvertible", "httpMethod"]
-- !private ["P10Foundation20ReferenceConvertible", "init"]
-- !private ["Ps10SetAlgebra", "Element"]
-- !private ["Ps10SetAlgebra", "prettyPrinted"]
-- !private ["Ps10Streamable", "Encoding"]
+- !private ["Ps13SignedInteger", "hashValue"]
+- !private ["Ps12SignedNumber", "hashValue"]
 - !private ["Ps10Streamable", "init"]
-- !private ["SS", "Encoding"]
+- !private ["Ps10Strideable", "hashValue"]
 - !private ["SS", "init"]
-- !private ["Ps30StringInterpolationConvertible", "Encoding"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
-- !private ["Ps24StringLiteralConvertible", "Encoding"]
 - !private ["Ps24StringLiteralConvertible", "init"]
 - !private ["Su", "deinit"]
 - !private ["Vs6UInt16", "deinit"]
 - !private ["Vs6UInt32", "deinit"]
 - !private ["Vs6UInt64", "deinit"]
 - !private ["Vs5UInt8", "deinit"]
-- !private ["V10Foundation3URL", "init"]
-- !private ["V10Foundation10URLRequest", "addValue"]
-- !private ["V10Foundation10URLRequest", "httpBody"]
-- !private ["V10Foundation10URLRequest", "httpMethod"]
-- !private ["V10Foundation10URLRequest", "init"]
-- !private ["CSo10URLSession", "dataTask"]
-- !private ["CSo10URLSession", "shared"]
-- !private ["CSo18URLSessionDataTask", "resume"]
-- !private ["CSo14URLSessionTask", "resume"]
 - !private ["Sc", "deinit"]
-- !private ["Ps31UnicodeScalarLiteralConvertible", "Encoding"]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
-- !private ["VCSo17JSONSerialization14WritingOptions", "prettyPrinted"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "Encoding"]
 - !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
-- !private ["Ps32_BuiltinStringLiteralConvertible", "Encoding"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "hashValue"]
 - !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
-- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "Encoding"]
 - !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
-- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "Encoding"]
 - !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
-- !private ["Ps32_FileReferenceLiteralConvertible", "init"]
-- !private ["Ps21_ObjectiveCBridgeable", "Encoding"]
+- !private ["Ps14_Incrementable", "hashValue"]
+- !private ["Ps8_Integer", "hashValue"]
+- !private ["Ps18_IntegerArithmetic", "hashValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["Ps21_ObjectiveCBridgeable", "addValue"]
-- !private ["Ps21_ObjectiveCBridgeable", "httpBody"]
-- !private ["Ps21_ObjectiveCBridgeable", "httpMethod"]
+- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
-- !private ["Vs26_OptionalNilComparisonType", "deinit"]
+- !private ["Ps14_SignedInteger", "hashValue"]
+- !private ["Ps11_Strideable", "hashValue"]
 depends-nominal:
-- "Ps9AnyObject"
-- !private "Ps23ArrayLiteralConvertible"
+- !private "Ps9AnyObject"
+- !private "Ps17BitwiseOperations"
 - !private "Sb"
 - !private "Ps7Boolean"
 - !private "Ps25BooleanLiteralConvertible"
@@ -246,25 +160,26 @@ depends-nominal:
 - !private "Ps29CustomPlaygroundQuickLookable"
 - !private "Ps17CustomReflectable"
 - !private "Ps23CustomStringConvertible"
-- !private "Vs10Dictionary"
+- "O16MusicMatchServer13DatabaseError"
 - !private "Sd"
-- !private "VE10FoundationSS8Encoding"
-- !private "Ps9Equatable"
-- !private "Ps13ErrorProtocol"
+- "Ps9Equatable"
+- "Ps13ErrorProtocol"
 - !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
 - !private "Sf"
-- !private "Ps8Hashable"
+- "Ps8Hashable"
 - !private "Si"
 - !private "Vs5Int16"
 - !private "Vs5Int32"
 - !private "Vs5Int64"
 - !private "Vs4Int8"
+- !private "Ps7Integer"
+- !private "Ps17IntegerArithmetic"
+- !private "Ps25IntegerLiteralConvertible"
 - !private "P10PerfectLib15JSONConvertible"
-- !private "CSo17JSONSerialization"
 - !private "Ps10MirrorPath"
+- !private "C5MySQL5MySQL"
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
-- !private "CSo7NSError"
 - !private "PSo16NSMutableCopying"
 - !private "CSo8NSObject"
 - !private "PSo16NSObjectProtocol"
@@ -272,15 +187,11 @@ depends-nominal:
 - !private "PSo19NSPasteboardWriting"
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
-- !private "Ps21NilLiteralConvertible"
-- !private "Ps9OptionSet"
-- !private "Sq"
 - !private "Ps12OutputStream"
-- !private "Ps16RawRepresentable"
-- !private "VCSo17JSONSerialization14ReadingOptions"
-- !private "P10Foundation20ReferenceConvertible"
-- !private "Ps10SetAlgebra"
+- !private "Ps13SignedInteger"
+- !private "Ps12SignedNumber"
 - !private "Ps10Streamable"
+- !private "Ps10Strideable"
 - !private "SS"
 - !private "Ps30StringInterpolationConvertible"
 - !private "Ps24StringLiteralConvertible"
@@ -289,49 +200,32 @@ depends-nominal:
 - !private "Vs6UInt32"
 - !private "Vs6UInt64"
 - !private "Vs5UInt8"
-- !private "V10Foundation3URL"
-- !private "V10Foundation10URLRequest"
-- !private "CSo10URLSession"
-- !private "CSo18URLSessionDataTask"
-- !private "CSo14URLSessionTask"
 - !private "Sc"
 - !private "Ps31UnicodeScalarLiteralConvertible"
-- !private "VCSo17JSONSerialization14WritingOptions"
 - !private "Ps33_BuiltinBooleanLiteralConvertible"
 - !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps33_BuiltinIntegerLiteralConvertible"
 - !private "Ps32_BuiltinStringLiteralConvertible"
 - !private "Ps37_BuiltinUTF16StringLiteralConvertible"
 - !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
-- !private "Ps32_FileReferenceLiteralConvertible"
+- !private "Ps14_Incrementable"
+- !private "Ps8_Integer"
+- !private "Ps18_IntegerArithmetic"
 - !private "Ps21_ObjectiveCBridgeable"
-- !private "Vs26_OptionalNilComparisonType"
+- !private "Ps14_SignedInteger"
+- !private "Ps11_Strideable"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTP.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MySQL.swiftmodule"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/psi/psi_base.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/psi/psi_memory.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_alloc.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/typelib.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/plugin_auth_common.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/client_plugin.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_list.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_time.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_command.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/binary_log_types.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_com.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_version.h"
-- "/usr/local/include/mysql/mysql.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/bio.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/opensslconf.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/e_os2.h"
@@ -372,8 +266,25 @@ depends-external:
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/crypto.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/comp.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MySQL.swiftmodule"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/psi/psi_base.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/psi/psi_memory.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_alloc.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/typelib.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/plugin_auth_common.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/client_plugin.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_list.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_time.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_command.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/binary_log_types.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_com.h"
+- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_version.h"
+- "/usr/local/include/mysql/mysql.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
@@ -382,6 +293,4 @@ depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreAudio.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreLocation.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTP.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.swiftmodule"
-interface-hash: "c0340b006434ea68d709a134e97d86f6"
+interface-hash: "1478c820d1da82cd2e8ae9fb258e7057"
