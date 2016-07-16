@@ -1,8 +1,8 @@
 version: "Apple Swift version 3.0 (swiftlang-800.0.33.1 clang-800.0.31)"
 options: "f859d2865e14194b7359ff1f132b1cd8"
-build_time: [521853283, 977180000]
+build_time: [522007300, 864986000]
 inputs:
   "/Users/Fibonacci/Documents/MusicMatchServer/Sources/arguments.swift": [521850997, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/main.swift": [521850953, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/main.swift": [522007295, 0]
   "/Users/Fibonacci/Documents/MusicMatchServer/Sources/MySQLFunctions.swift": [521853220, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/PerfectHandlers.swift": [521852406, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/PerfectHandlers.swift": [522007078, 0]

@@ -18,54 +18,55 @@ provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
-- "HTTPResponse"
-- !private "Routing"
-- "HTTPRequest"
-- "SCHEMA"
-- !private "NSBitmapImageFileType"
-- "String"
-- !private "AVAssetImageGenerator"
 - "restJSONHandler"
+- !private "/="
+- "NSImage"
+- !private "HTTPMethod"
+- !private "initializeDatabaseConnection"
+- "SCHEMA"
+- "getVideoThumbnail"
+- "String"
+- !private "JSONConversionError"
 - !private "Array"
-- !private "NSSize"
-- "PerfectServerModuleInit"
-- "CLLocation"
-- !private "UnicodeScalarType"
-- "getUsersInArea"
+- "StringLiteralType"
+- !private "+"
+- "HTTPResponse"
+- "indexHandler"
+- !private "webRoot"
 - !private "Dictionary"
 - "currentURL"
-- "saveImage"
-- !private "initializeDatabaseConnection"
-- !private "FileManager"
-- !private "URL"
-- "distanceCheck"
-- !private "+"
-- !private "HTTPMethod"
-- !private "..<"
-- "PASSWORD"
-- "getVideoThumbnail"
-- !private "initializeUserData"
-- !private "AVError"
-- !private "production"
-- "NSImage"
-- "NSString"
-- !private "AVAsset"
-- "getDocumentsDirectory"
-- !private "JSONConversionError"
-- !private "initializeMessagesData"
-- "indexHandler"
-- !private "initializeUserLogInData"
-- !private "webRoot"
-- !private "/="
-- "thumbHandler"
-- "HOST"
-- !private "NSBitmapImageRep"
-- "StringLiteralType"
+- "HTTPRequest"
 - "Double"
+- "PASSWORD"
 - !private "+="
+- "distanceCheck"
+- "NSString"
+- "CLLocation"
 - "USER"
+- !private "initializeUserData"
 - "Int"
+- "HOST"
+- !private "NSSize"
+- !private "FileManager"
+- !private "UnicodeScalarType"
+- !private "NSBitmapImageFileType"
+- !private "initializeMessagesData"
+- !private "production"
+- !private "StaticFileHandler"
+- "getUsersInArea"
+- !private "AVAssetImageGenerator"
+- !private "URL"
+- !private "AVError"
+- "PerfectServerModuleInit"
+- !private "AVAsset"
+- "saveImage"
+- "getDocumentsDirectory"
+- !private "initializeUserLogInData"
+- !private "Routing"
+- !private "NSBitmapImageRep"
 - !private "print"
+- !private "..<"
+- "thumbHandler"
 depends-member:
 - !private ["CSo7AVAsset", "duration"]
 - !private ["CSo7AVAsset", "init"]
@@ -263,6 +264,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "jsonEncodedString"]
 - !private ["Ps23CustomStringConvertible", "keys"]
+- !private ["Ps23CustomStringConvertible", "post"]
 - !private ["Ps23CustomStringConvertible", "representation"]
 - !private ["Ps23CustomStringConvertible", "size"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
@@ -315,6 +317,7 @@ depends-member:
 - !private ["Ps9Equatable", "exportFailed"]
 - !private ["Ps9Equatable", "get"]
 - !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "post"]
 - !private ["Ps9Equatable", "representation"]
 - !private ["Ps9Equatable", "size"]
 - !private ["Ps9Equatable", "value"]
@@ -336,6 +339,7 @@ depends-member:
 - !private ["Ps13FloatingPoint", "Stride"]
 - !private ["Ps13FloatingPoint", "init"]
 - !private ["O11PerfectHTTP10HTTPMethod", "get"]
+- !private ["O11PerfectHTTP10HTTPMethod", "post"]
 - !private ["P11PerfectHTTP11HTTPRequest", "postBodyString"]
 - !private ["P11PerfectHTTP11HTTPRequest", "urlVariables"]
 - !private ["P11PerfectHTTP12HTTPResponse", "appendBody"]
@@ -358,6 +362,7 @@ depends-member:
 - !private ["Ps8Hashable", "exportFailed"]
 - !private ["Ps8Hashable", "get"]
 - !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "post"]
 - !private ["Ps8Hashable", "representation"]
 - !private ["Ps8Hashable", "size"]
 - !private ["V10Foundation9IndexPath", "deinit"]
@@ -605,6 +610,8 @@ depends-member:
 - !private ["Vs5Slice", "Iterator"]
 - !private ["Vs5Slice", "SubSequence"]
 - !private ["Vs5Slice", "_Element"]
+- !private ["V11PerfectHTTP17StaticFileHandler", "handleRequest"]
+- !private ["V11PerfectHTTP17StaticFileHandler", "init"]
 - !private ["Ps10Streamable", "Element"]
 - !private ["Ps10Streamable", "components"]
 - !private ["Ps10Streamable", "init"]
@@ -834,6 +841,7 @@ depends-nominal:
 - !private "Ps13SignedInteger"
 - !private "Ps12SignedNumber"
 - !private "Vs5Slice"
+- !private "V11PerfectHTTP17StaticFileHandler"
 - !private "Ps10Streamable"
 - !private "Ps10Strideable"
 - !private "SS"

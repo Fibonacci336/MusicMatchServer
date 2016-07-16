@@ -41,9 +41,9 @@ public func PerfectServerModuleInit() {
     
     // Create Routes
     Routing.Routes[HTTPMethod.get, ["/", "index.html"] ] = indexHandler
-    //Routing.Routes["*"] = { _ in return StaticFileHandler() }
+    Routing.Routes["*"] = StaticFileHandler().handleRequest
     Routing.Routes["/avthumb/{videoname}"] = thumbHandler
-    Routing.Routes["/request/{command}"] = restJSONHandler
+    Routing.Routes[.post, "/request/{command}"] = restJSONHandler
     Routing.Routes["/distcheck/{command}"] = distanceCheck
 
     print("\(Routing.Routes.description)")
@@ -53,6 +53,7 @@ public func PerfectServerModuleInit() {
     
     if(production){
         currentURL = "http://www.lassoconsultant.com:8183/"
+        print("Production")
     }
 
 }

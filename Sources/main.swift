@@ -32,13 +32,16 @@ try Dir(webRoot).create()
 
 // Add our routes and such
 // Register your own routes and handlers
-PerfectServerModuleInit()
+
 
 do {
     
     // Launch the HTTP server on port 8181
     let server = HTTPServer()
+    configureServer(server)
+    PerfectServerModuleInit()
     if(production){
+        server.serverAddress = "http://www.lassoconsultant.com"
         server.serverPort = 8183
     }else{
         server.serverPort = 8181
