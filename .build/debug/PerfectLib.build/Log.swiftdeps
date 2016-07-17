@@ -16,25 +16,25 @@ provides-member:
 - ["V10PerfectLib3Log", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Logger"
-- !private "vsyslog"
-- "String"
-- !private "print"
-- !private "withVaList"
-- "SysLogger"
-- !private "LOG_DEBUG"
-- "CVarArg"
-- !private "LOG_WARNING"
-- !private "LOG_ERR"
-- "Log"
-- "Int32"
-- !private "LOG_INFO"
-- !private "LOG_CRIT"
-- !private "LOG_EMERG"
 - "ConsoleLogger"
-- !private "+"
-- !private "StringLiteralType"
 - !private "fatalError"
+- "SysLogger"
+- !private "LOG_INFO"
+- !private "LOG_WARNING"
+- !private "StringLiteralType"
+- !private "LOG_DEBUG"
+- "Log"
+- !private "LOG_EMERG"
+- !private "+"
+- "CVarArg"
+- !private "withVaList"
+- !private "print"
+- "Int32"
+- !private "LOG_ERR"
+- "String"
+- !private "vsyslog"
+- !private "LOG_CRIT"
+- "Logger"
 depends-member:
 - !private ["Ps9AnyObject", "withCString"]
 - !private ["Ps7CVarArg", "withCString"]
@@ -177,6 +177,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"

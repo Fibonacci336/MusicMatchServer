@@ -1,61 +1,78 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "RouteMap"
-- "Routing"
+- "RequestHandler"
+- "RouteNavigator"
+- "Route"
+- "Routes"
 - "RouteNode"
 - "RoutePath"
 - "RouteWildCard"
 - "RouteTrailingWildCard"
 - "RouteVariable"
+- "compatRoutes"
+- "RouteMap"
+- "Routing"
 provides-nominal:
-- "V11PerfectHTTP8RouteMap"
-- "V11PerfectHTTP7Routing"
+- "P11PerfectHTTP14RouteNavigator"
+- "V11PerfectHTTP5Route"
+- "V11PerfectHTTP6Routes"
+- "VV11PerfectHTTP6Routes9Navigator"
 - "C11PerfectHTTP9RouteNode"
 - "C11PerfectHTTP9RoutePath"
 - "C11PerfectHTTP13RouteWildCard"
 - "C11PerfectHTTP21RouteTrailingWildCard"
 - "C11PerfectHTTP13RouteVariable"
+- "V11PerfectHTTP8RouteMap"
+- "V11PerfectHTTP7Routing"
 provides-member:
+- ["P11PerfectHTTP14RouteNavigator", ""]
+- ["V11PerfectHTTP5Route", ""]
+- ["V11PerfectHTTP6Routes", ""]
+- ["VV11PerfectHTTP6Routes9Navigator", ""]
 - ["SS", ""]
-- ["V11PerfectHTTP8RouteMap", ""]
-- ["V11PerfectHTTP7Routing", ""]
 - ["C11PerfectHTTP9RouteNode", ""]
 - ["C11PerfectHTTP9RoutePath", ""]
 - ["C11PerfectHTTP13RouteWildCard", ""]
 - ["C11PerfectHTTP21RouteTrailingWildCard", ""]
 - ["C11PerfectHTTP13RouteVariable", ""]
+- ["V11PerfectHTTP8RouteMap", ""]
+- ["V11PerfectHTTP7Routing", ""]
 - ["SS", "routePathComponents"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "UnicodeScalarType"
-- !private "!="
-- "RouteTrailingWildCard"
-- "StaticFileHandler"
-- "RouteMap"
-- "RoutePath"
-- "IndexingIterator"
-- !private ">="
 - "String"
-- "HTTPResponse"
-- !private "+"
-- !private "&&"
-- "RouteVariable"
-- "RouteWildCard"
-- "Dictionary"
-- "StringLiteralType"
-- !private "..<"
-- !private "RouteException"
-- !private "!"
-- !private "ErrorProtocol"
-- "CustomStringConvertible"
-- !private "=="
-- "HTTPRequest"
-- "HTTPMethod"
-- "Int"
-- "RouteNode"
-- "Routing"
 - !private "ExtendedGraphemeClusterType"
+- "HTTPRequest"
+- !private "=="
+- "IndexingIterator"
+- !private "..<"
+- "RouteNavigator"
+- "RouteNode"
+- !private "??"
+- "CustomStringConvertible"
+- "RouteTrailingWildCard"
+- !private "UnicodeScalarType"
+- "HTTPMethod"
+- "compatRoutes"
+- "Routing"
+- "Int"
+- !private ">="
+- !private "&&"
+- "RequestHandler"
+- "RouteMap"
+- "Route"
+- !private "!="
+- !private "ErrorProtocol"
+- !private "!"
 - !private "Log"
+- !private "StringLiteralType"
+- "RoutePath"
+- "RouteWildCard"
+- !private "+"
+- "HTTPResponse"
+- !private "RouteException"
+- "RouteVariable"
+- "Routes"
 depends-member:
 - !private ["Vs11AnyIterator", "Element"]
 - !private ["Ps9AnyObject", "RouteException"]
@@ -97,14 +114,16 @@ depends-member:
 - !private ["Sa", "Iterator"]
 - !private ["Sa", "_Element"]
 - !private ["Sa", "append"]
-- ["Sa", "deinit"]
+- !private ["Sa", "deinit"]
 - ["Sa", "init"]
+- !private ["Sa", "joined"]
 - !private ["Sa", "makeIterator"]
 - !private ["Sa", "map"]
 - !private ["Ps23ArrayLiteralConvertible", "Iterator"]
 - !private ["Ps23ArrayLiteralConvertible", "_Element"]
 - !private ["Ps23ArrayLiteralConvertible", "append"]
 - ["Ps23ArrayLiteralConvertible", "init"]
+- !private ["Ps23ArrayLiteralConvertible", "joined"]
 - !private ["Ps23ArrayLiteralConvertible", "makeIterator"]
 - !private ["Ps23ArrayLiteralConvertible", "map"]
 - !private ["Ps23BidirectionalCollection", "IndexDistance"]
@@ -114,6 +133,7 @@ depends-member:
 - !private ["Ps23BidirectionalCollection", "append"]
 - !private ["Ps23BidirectionalCollection", "count"]
 - ["Ps23BidirectionalCollection", "init"]
+- !private ["Ps23BidirectionalCollection", "joined"]
 - !private ["Ps23BidirectionalCollection", "makeIterator"]
 - !private ["Ps23BidirectionalCollection", "map"]
 - !private ["Ps23BidirectionalCollection", "split"]
@@ -124,6 +144,7 @@ depends-member:
 - !private ["Ps22BidirectionalIndexable", "append"]
 - !private ["Ps22BidirectionalIndexable", "count"]
 - ["Ps22BidirectionalIndexable", "init"]
+- !private ["Ps22BidirectionalIndexable", "joined"]
 - !private ["Ps22BidirectionalIndexable", "makeIterator"]
 - !private ["Ps22BidirectionalIndexable", "map"]
 - !private ["Ps22BidirectionalIndexable", "split"]
@@ -166,6 +187,7 @@ depends-member:
 - !private ["Ps10Collection", "append"]
 - !private ["Ps10Collection", "count"]
 - ["Ps10Collection", "init"]
+- !private ["Ps10Collection", "joined"]
 - !private ["Ps10Collection", "makeIterator"]
 - !private ["Ps10Collection", "map"]
 - !private ["Ps10Collection", "split"]
@@ -199,6 +221,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "index"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "isEmpty"]
+- !private ["Ps28CustomDebugStringConvertible", "joined"]
 - !private ["Ps28CustomDebugStringConvertible", "lowercased"]
 - !private ["Ps28CustomDebugStringConvertible", "makeIterator"]
 - !private ["Ps28CustomDebugStringConvertible", "map"]
@@ -241,6 +264,7 @@ depends-member:
 - !private ["Ps17CustomReflectable", "index"]
 - ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "isEmpty"]
+- !private ["Ps17CustomReflectable", "joined"]
 - !private ["Ps17CustomReflectable", "lowercased"]
 - !private ["Ps17CustomReflectable", "makeIterator"]
 - !private ["Ps17CustomReflectable", "map"]
@@ -249,11 +273,10 @@ depends-member:
 - !private ["Ps17CustomReflectable", "startIndex"]
 - !private ["Ps17CustomReflectable", "stringByDecodingURL"]
 - !private ["Ps17CustomReflectable", "subscript"]
-- ["Ps23CustomStringConvertible", "Dictionary"]
+- ["Ps23CustomStringConvertible", "HTTPRequest"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["Ps23CustomStringConvertible", "Iterator"]
-- !private ["Ps23CustomStringConvertible", "Log"]
 - ["Ps23CustomStringConvertible", "RequestHandler"]
 - !private ["Ps23CustomStringConvertible", "RouteException"]
 - ["Ps23CustomStringConvertible", "RouteNode"]
@@ -261,6 +284,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "RouteTrailingWildCard"]
 - !private ["Ps23CustomStringConvertible", "RouteVariable"]
 - !private ["Ps23CustomStringConvertible", "RouteWildCard"]
+- !private ["Ps23CustomStringConvertible", "Routes"]
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
@@ -271,31 +295,30 @@ depends-member:
 - ["Ps23CustomStringConvertible", "addPathSegments"]
 - !private ["Ps23CustomStringConvertible", "append"]
 - !private ["Ps23CustomStringConvertible", "characters"]
+- !private ["Ps23CustomStringConvertible", "compatRoutes"]
 - ["Ps23CustomStringConvertible", "description"]
 - ["Ps23CustomStringConvertible", "descriptionTabbed"]
 - !private ["Ps23CustomStringConvertible", "descriptionTabbedInner"]
 - !private ["Ps23CustomStringConvertible", "endIndex"]
 - ["Ps23CustomStringConvertible", "findHandler"]
-- !private ["Ps23CustomStringConvertible", "formatException"]
+- !private ["Ps23CustomStringConvertible", "get"]
 - !private ["Ps23CustomStringConvertible", "handler"]
 - !private ["Ps23CustomStringConvertible", "hashValue"]
 - !private ["Ps23CustomStringConvertible", "index"]
 - ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "isEmpty"]
+- !private ["Ps23CustomStringConvertible", "joined"]
 - !private ["Ps23CustomStringConvertible", "lowercased"]
 - !private ["Ps23CustomStringConvertible", "makeIterator"]
 - !private ["Ps23CustomStringConvertible", "map"]
-- !private ["Ps23CustomStringConvertible", "methodRoots"]
 - ["Ps23CustomStringConvertible", "name"]
 - !private ["Ps23CustomStringConvertible", "nodeForComponent"]
-- !private ["Ps23CustomStringConvertible", "notFound"]
 - !private ["Ps23CustomStringConvertible", "putTabs"]
-- !private ["Ps23CustomStringConvertible", "root"]
 - !private ["Ps23CustomStringConvertible", "routePathComponents"]
 - !private ["Ps23CustomStringConvertible", "startIndex"]
 - !private ["Ps23CustomStringConvertible", "stringByDecodingURL"]
 - !private ["Ps23CustomStringConvertible", "subNodes"]
-- ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "successfulRoute"]
 - !private ["Ps23CustomStringConvertible", "trailingWildCard"]
 - !private ["Ps23CustomStringConvertible", "variables"]
@@ -325,6 +348,7 @@ depends-member:
 - !private ["Ps9Equatable", "append"]
 - !private ["Ps9Equatable", "characters"]
 - !private ["Ps9Equatable", "endIndex"]
+- !private ["Ps9Equatable", "get"]
 - !private ["Ps9Equatable", "hashValue"]
 - !private ["Ps9Equatable", "index"]
 - !private ["Ps9Equatable", "init"]
@@ -355,14 +379,9 @@ depends-member:
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "subscript"]
 - !private ["Sf", "deinit"]
 - ["O11PerfectHTTP10HTTPMethod", "deinit"]
+- !private ["O11PerfectHTTP10HTTPMethod", "get"]
 - !private ["P11PerfectHTTP11HTTPRequest", "method"]
-- !private ["P11PerfectHTTP11HTTPRequest", "path"]
 - !private ["P11PerfectHTTP11HTTPRequest", "urlVariables"]
-- !private ["P11PerfectHTTP12HTTPResponse", "appendBody"]
-- !private ["P11PerfectHTTP12HTTPResponse", "completed"]
-- !private ["P11PerfectHTTP12HTTPResponse", "request"]
-- !private ["P11PerfectHTTP12HTTPResponse", "status"]
-- !private ["O11PerfectHTTP18HTTPResponseStatus", "notFound"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "Stride"]
 - !private ["Ps8Hashable", "String"]
@@ -373,6 +392,7 @@ depends-member:
 - !private ["Ps8Hashable", "append"]
 - !private ["Ps8Hashable", "characters"]
 - !private ["Ps8Hashable", "endIndex"]
+- !private ["Ps8Hashable", "get"]
 - !private ["Ps8Hashable", "hashValue"]
 - !private ["Ps8Hashable", "index"]
 - !private ["Ps8Hashable", "init"]
@@ -392,6 +412,7 @@ depends-member:
 - !private ["Ps9Indexable", "append"]
 - !private ["Ps9Indexable", "count"]
 - ["Ps9Indexable", "init"]
+- !private ["Ps9Indexable", "joined"]
 - !private ["Ps9Indexable", "makeIterator"]
 - !private ["Ps9Indexable", "map"]
 - !private ["Ps9Indexable", "split"]
@@ -404,6 +425,7 @@ depends-member:
 - !private ["Ps13IndexableBase", "append"]
 - !private ["Ps13IndexableBase", "count"]
 - ["Ps13IndexableBase", "init"]
+- !private ["Ps13IndexableBase", "joined"]
 - !private ["Ps13IndexableBase", "makeIterator"]
 - !private ["Ps13IndexableBase", "map"]
 - !private ["Ps13IndexableBase", "split"]
@@ -449,6 +471,7 @@ depends-member:
 - !private ["P10PerfectLib15JSONConvertible", "index"]
 - ["P10PerfectLib15JSONConvertible", "init"]
 - !private ["P10PerfectLib15JSONConvertible", "isEmpty"]
+- !private ["P10PerfectLib15JSONConvertible", "joined"]
 - !private ["P10PerfectLib15JSONConvertible", "lowercased"]
 - !private ["P10PerfectLib15JSONConvertible", "makeIterator"]
 - !private ["P10PerfectLib15JSONConvertible", "map"]
@@ -478,12 +501,14 @@ depends-member:
 - !private ["Ps17MutableCollection", "_Element"]
 - !private ["Ps17MutableCollection", "append"]
 - ["Ps17MutableCollection", "init"]
+- !private ["Ps17MutableCollection", "joined"]
 - !private ["Ps17MutableCollection", "makeIterator"]
 - !private ["Ps17MutableCollection", "map"]
 - !private ["Ps16MutableIndexable", "Iterator"]
 - !private ["Ps16MutableIndexable", "_Element"]
 - !private ["Ps16MutableIndexable", "append"]
 - ["Ps16MutableIndexable", "init"]
+- !private ["Ps16MutableIndexable", "joined"]
 - !private ["Ps16MutableIndexable", "makeIterator"]
 - !private ["Ps16MutableIndexable", "map"]
 - !private ["PSo8NSCoding", "append"]
@@ -563,6 +588,16 @@ depends-member:
 - !private ["CSo8NSString", "startIndex"]
 - !private ["CSo8NSString", "stringByDecodingURL"]
 - !private ["CSo8NSString", "subscript"]
+- ["VV11PerfectHTTP6Routes9Navigator", "HTTPMethod"]
+- ["VV11PerfectHTTP6Routes9Navigator", "HTTPRequest"]
+- ["VV11PerfectHTTP6Routes9Navigator", "RequestHandler"]
+- ["VV11PerfectHTTP6Routes9Navigator", "RouteNode"]
+- ["VV11PerfectHTTP6Routes9Navigator", "String"]
+- ["VV11PerfectHTTP6Routes9Navigator", "deinit"]
+- ["VV11PerfectHTTP6Routes9Navigator", "description"]
+- ["VV11PerfectHTTP6Routes9Navigator", "findHandler"]
+- ["VV11PerfectHTTP6Routes9Navigator", "init"]
+- ["VV11PerfectHTTP6Routes9Navigator", "map"]
 - ["Ps21NilLiteralConvertible", "some"]
 - !private ["Sq", "deinit"]
 - ["Sq", "some"]
@@ -582,12 +617,14 @@ depends-member:
 - !private ["Ps22RandomAccessCollection", "_Element"]
 - !private ["Ps22RandomAccessCollection", "append"]
 - ["Ps22RandomAccessCollection", "init"]
+- !private ["Ps22RandomAccessCollection", "joined"]
 - !private ["Ps22RandomAccessCollection", "makeIterator"]
 - !private ["Ps22RandomAccessCollection", "map"]
 - !private ["Ps21RandomAccessIndexable", "Iterator"]
 - !private ["Ps21RandomAccessIndexable", "_Element"]
 - !private ["Ps21RandomAccessIndexable", "append"]
 - ["Ps21RandomAccessIndexable", "init"]
+- !private ["Ps21RandomAccessIndexable", "joined"]
 - !private ["Ps21RandomAccessIndexable", "makeIterator"]
 - !private ["Ps21RandomAccessIndexable", "map"]
 - !private ["Vs5Range", "deinit"]
@@ -598,6 +635,7 @@ depends-member:
 - !private ["Ps26RangeReplaceableCollection", "append"]
 - !private ["Ps26RangeReplaceableCollection", "count"]
 - ["Ps26RangeReplaceableCollection", "init"]
+- !private ["Ps26RangeReplaceableCollection", "joined"]
 - !private ["Ps26RangeReplaceableCollection", "makeIterator"]
 - !private ["Ps26RangeReplaceableCollection", "map"]
 - !private ["Ps26RangeReplaceableCollection", "split"]
@@ -608,27 +646,38 @@ depends-member:
 - !private ["Ps25RangeReplaceableIndexable", "append"]
 - !private ["Ps25RangeReplaceableIndexable", "count"]
 - ["Ps25RangeReplaceableIndexable", "init"]
+- !private ["Ps25RangeReplaceableIndexable", "joined"]
 - !private ["Ps25RangeReplaceableIndexable", "makeIterator"]
 - !private ["Ps25RangeReplaceableIndexable", "map"]
 - !private ["Ps25RangeReplaceableIndexable", "split"]
-- ["V11PerfectHTTP8RouteMap", "Dictionary"]
-- !private ["V11PerfectHTTP8RouteMap", "ErrorProtocol"]
+- ["V11PerfectHTTP5Route", "HTTPMethod"]
+- ["V11PerfectHTTP5Route", "RequestHandler"]
+- ["V11PerfectHTTP5Route", "String"]
+- ["V11PerfectHTTP5Route", "handler"]
+- ["V11PerfectHTTP5Route", "init"]
+- ["V11PerfectHTTP5Route", "method"]
+- ["V11PerfectHTTP5Route", "uri"]
 - ["V11PerfectHTTP8RouteMap", "HTTPMethod"]
 - ["V11PerfectHTTP8RouteMap", "HTTPRequest"]
 - ["V11PerfectHTTP8RouteMap", "HTTPResponse"]
-- !private ["V11PerfectHTTP8RouteMap", "Log"]
 - ["V11PerfectHTTP8RouteMap", "RequestHandler"]
-- ["V11PerfectHTTP8RouteMap", "RouteNode"]
+- !private ["V11PerfectHTTP8RouteMap", "Routes"]
 - ["V11PerfectHTTP8RouteMap", "String"]
+- !private ["V11PerfectHTTP8RouteMap", "compatRoutes"]
 - ["V11PerfectHTTP8RouteMap", "deinit"]
 - ["V11PerfectHTTP8RouteMap", "description"]
-- !private ["V11PerfectHTTP8RouteMap", "formatException"]
 - ["V11PerfectHTTP8RouteMap", "init"]
-- !private ["V11PerfectHTTP8RouteMap", "methodRoots"]
-- !private ["V11PerfectHTTP8RouteMap", "root"]
 - ["V11PerfectHTTP8RouteMap", "subscript"]
+- ["P11PerfectHTTP14RouteNavigator", "HTTPRequest"]
+- ["P11PerfectHTTP14RouteNavigator", "RequestHandler"]
+- ["P11PerfectHTTP14RouteNavigator", "String"]
+- ["P11PerfectHTTP14RouteNavigator", "description"]
+- ["P11PerfectHTTP14RouteNavigator", "findHandler"]
+- !private ["P11PerfectHTTP14RouteNavigator", "init"]
+- !private ["P11PerfectHTTP14RouteNavigator", "map"]
+- ["P11PerfectHTTP14RouteNavigator", ""]
 - ["C11PerfectHTTP9RouteNode", "ComponentGenerator"]
-- ["C11PerfectHTTP9RouteNode", "HTTPResponse"]
+- ["C11PerfectHTTP9RouteNode", "HTTPRequest"]
 - ["C11PerfectHTTP9RouteNode", "IndexingIterator"]
 - ["C11PerfectHTTP9RouteNode", "Int"]
 - !private ["C11PerfectHTTP9RouteNode", "RouteException"]
@@ -666,7 +715,7 @@ depends-member:
 - ["C11PerfectHTTP9RoutePath", "init"]
 - ["C11PerfectHTTP9RoutePath", "name"]
 - ["C11PerfectHTTP21RouteTrailingWildCard", "ComponentGenerator"]
-- ["C11PerfectHTTP21RouteTrailingWildCard", "HTTPResponse"]
+- ["C11PerfectHTTP21RouteTrailingWildCard", "HTTPRequest"]
 - ["C11PerfectHTTP21RouteTrailingWildCard", "Int"]
 - !private ["C11PerfectHTTP21RouteTrailingWildCard", "RouteException"]
 - ["C11PerfectHTTP21RouteTrailingWildCard", "RouteMap"]
@@ -678,7 +727,7 @@ depends-member:
 - ["C11PerfectHTTP21RouteTrailingWildCard", "findHandler"]
 - !private ["C11PerfectHTTP21RouteTrailingWildCard", "handler"]
 - ["C11PerfectHTTP21RouteTrailingWildCard", "init"]
-- ["C11PerfectHTTP13RouteVariable", "HTTPResponse"]
+- ["C11PerfectHTTP13RouteVariable", "HTTPRequest"]
 - ["C11PerfectHTTP13RouteVariable", "Int"]
 - ["C11PerfectHTTP13RouteVariable", "RouteMap"]
 - ["C11PerfectHTTP13RouteVariable", "String"]
@@ -690,7 +739,7 @@ depends-member:
 - ["C11PerfectHTTP13RouteVariable", "name"]
 - ["C11PerfectHTTP13RouteVariable", "successfulRoute"]
 - ["C11PerfectHTTP13RouteWildCard", "ComponentGenerator"]
-- ["C11PerfectHTTP13RouteWildCard", "HTTPResponse"]
+- ["C11PerfectHTTP13RouteWildCard", "HTTPRequest"]
 - ["C11PerfectHTTP13RouteWildCard", "Int"]
 - !private ["C11PerfectHTTP13RouteWildCard", "RouteException"]
 - ["C11PerfectHTTP13RouteWildCard", "RouteMap"]
@@ -703,15 +752,27 @@ depends-member:
 - !private ["C11PerfectHTTP13RouteWildCard", "handler"]
 - ["C11PerfectHTTP13RouteWildCard", "init"]
 - ["C11PerfectHTTP13RouteWildCard", ""]
-- ["V11PerfectHTTP7Routing", "HTTPRequest"]
-- ["V11PerfectHTTP7Routing", "HTTPResponse"]
+- !private ["V11PerfectHTTP6Routes", "ErrorProtocol"]
+- ["V11PerfectHTTP6Routes", "HTTPMethod"]
+- ["V11PerfectHTTP6Routes", "HTTPRequest"]
+- !private ["V11PerfectHTTP6Routes", "Log"]
+- ["V11PerfectHTTP6Routes", "Navigator"]
+- ["V11PerfectHTTP6Routes", "RequestHandler"]
+- ["V11PerfectHTTP6Routes", "Route"]
+- ["V11PerfectHTTP6Routes", "RouteNavigator"]
+- ["V11PerfectHTTP6Routes", "RouteNode"]
+- ["V11PerfectHTTP6Routes", "Routes"]
+- ["V11PerfectHTTP6Routes", "String"]
+- ["V11PerfectHTTP6Routes", "add"]
+- ["V11PerfectHTTP6Routes", "baseUri"]
+- !private ["V11PerfectHTTP6Routes", "deinit"]
+- !private ["V11PerfectHTTP6Routes", "formatException"]
+- ["V11PerfectHTTP6Routes", "init"]
+- ["V11PerfectHTTP6Routes", "navigator"]
+- ["V11PerfectHTTP6Routes", "routes"]
+- ["V11PerfectHTTP6Routes", "sanitizeUri"]
 - ["V11PerfectHTTP7Routing", "RouteMap"]
 - ["V11PerfectHTTP7Routing", "Routes"]
-- !private ["V11PerfectHTTP7Routing", "Routing"]
-- ["V11PerfectHTTP7Routing", "StaticFileHandler"]
-- ["V11PerfectHTTP7Routing", "clear"]
-- ["V11PerfectHTTP7Routing", "defaultInit"]
-- ["V11PerfectHTTP7Routing", "handleRequest"]
 - !private ["V11PerfectHTTP7Routing", "init"]
 - !private ["Ps8Sequence", "Element"]
 - !private ["Ps8Sequence", "Index"]
@@ -722,6 +783,7 @@ depends-member:
 - !private ["Ps8Sequence", "append"]
 - !private ["Ps8Sequence", "count"]
 - ["Ps8Sequence", "init"]
+- !private ["Ps8Sequence", "joined"]
 - !private ["Ps8Sequence", "makeIterator"]
 - !private ["Ps8Sequence", "map"]
 - !private ["Ps8Sequence", "next"]
@@ -739,8 +801,6 @@ depends-member:
 - !private ["Vs5Slice", "Iterator"]
 - !private ["Vs5Slice", "SubSequence"]
 - !private ["Vs5Slice", "_Element"]
-- ["V11PerfectHTTP17StaticFileHandler", "handleRequest"]
-- ["V11PerfectHTTP17StaticFileHandler", "init"]
 - !private ["Vs12StaticString", "deinit"]
 - !private ["Ps10Streamable", "String"]
 - !private ["Ps10Streamable", "append"]
@@ -817,6 +877,7 @@ depends-member:
 - !private ["Ps14_ArrayProtocol", "_Element"]
 - !private ["Ps14_ArrayProtocol", "append"]
 - ["Ps14_ArrayProtocol", "init"]
+- !private ["Ps14_ArrayProtocol", "joined"]
 - !private ["Ps14_ArrayProtocol", "makeIterator"]
 - !private ["Ps14_ArrayProtocol", "map"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
@@ -876,6 +937,7 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "_Element"]
 - !private ["Ps24_DestructorSafeContainer", "append"]
 - ["Ps24_DestructorSafeContainer", "init"]
+- !private ["Ps24_DestructorSafeContainer", "joined"]
 - !private ["Ps24_DestructorSafeContainer", "makeIterator"]
 - !private ["Ps24_DestructorSafeContainer", "map"]
 - !private ["Ps14_Incrementable", "IntegerLiteralType"]
@@ -906,6 +968,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "index"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "isEmpty"]
+- !private ["Ps21_ObjectiveCBridgeable", "joined"]
 - !private ["Ps21_ObjectiveCBridgeable", "lowercased"]
 - !private ["Ps21_ObjectiveCBridgeable", "makeIterator"]
 - !private ["Ps21_ObjectiveCBridgeable", "map"]
@@ -954,8 +1017,6 @@ depends-nominal:
 - !private "Sf"
 - "O11PerfectHTTP10HTTPMethod"
 - !private "P11PerfectHTTP11HTTPRequest"
-- !private "P11PerfectHTTP12HTTPResponse"
-- !private "O11PerfectHTTP18HTTPResponseStatus"
 - !private "Ps8Hashable"
 - "Ps9Indexable"
 - "Ps13IndexableBase"
@@ -981,6 +1042,7 @@ depends-nominal:
 - !private "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
+- "VV11PerfectHTTP6Routes9Navigator"
 - "Ps21NilLiteralConvertible"
 - "Sq"
 - !private "Ps12OutputStream"
@@ -989,18 +1051,20 @@ depends-nominal:
 - !private "Vs5Range"
 - "Ps26RangeReplaceableCollection"
 - "Ps25RangeReplaceableIndexable"
+- "V11PerfectHTTP5Route"
 - "V11PerfectHTTP8RouteMap"
+- "P11PerfectHTTP14RouteNavigator"
 - "C11PerfectHTTP9RouteNode"
 - "C11PerfectHTTP9RoutePath"
 - "C11PerfectHTTP21RouteTrailingWildCard"
 - "C11PerfectHTTP13RouteVariable"
 - "C11PerfectHTTP13RouteWildCard"
+- "V11PerfectHTTP6Routes"
 - "V11PerfectHTTP7Routing"
 - "Ps8Sequence"
 - !private "Ps13SignedInteger"
 - !private "Ps12SignedNumber"
 - !private "Vs5Slice"
-- "V11PerfectHTTP17StaticFileHandler"
 - !private "Vs12StaticString"
 - !private "Ps10Streamable"
 - !private "Ps10Strideable"
@@ -1032,6 +1096,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
@@ -1083,4 +1148,4 @@ depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-interface-hash: "afbbad7af231474db9b72c761d6255e6"
+interface-hash: "757bc04f5d18d60654fd1b2e0e06987e"

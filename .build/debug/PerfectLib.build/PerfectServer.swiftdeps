@@ -8,22 +8,22 @@ provides-member:
 - ["V10PerfectLib13PerfectServer", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "Log"
-- !private "setuid"
-- "serverPerfectLibraries"
-- "String"
-- !private "DynamicLoader"
-- "PerfectServer"
-- "StringLiteralType"
-- !private "NetEvent"
 - !private "setgid"
-- !private "UnicodeScalarType"
-- !private "=="
 - !private "||"
-- !private "+"
+- "StringLiteralType"
+- "serverPerfectLibraries"
+- !private "DynamicLoader"
+- !private "setuid"
 - !private "ThrowSystemError"
-- !private "Dir"
+- !private "UnicodeScalarType"
+- !private "Log"
+- !private "=="
+- !private "+"
 - !private "getpwnam"
+- "String"
+- !private "Dir"
+- "PerfectServer"
+- !private "NetEvent"
 depends-member:
 - !private ["Ps9AnyObject", "begins"]
 - !private ["Ps9AnyObject", "ends"]
@@ -248,6 +248,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"

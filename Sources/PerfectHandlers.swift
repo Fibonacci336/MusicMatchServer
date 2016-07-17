@@ -40,13 +40,8 @@ public func PerfectServerModuleInit() {
     //Routing.Handler.registerGlobally()
     
     // Create Routes
-    Routing.Routes[HTTPMethod.get, ["/", "index.html"] ] = indexHandler
-    Routing.Routes["*"] = StaticFileHandler().handleRequest
-    Routing.Routes["/avthumb/{videoname}"] = thumbHandler
-    Routing.Routes[.post, "/request/{command}"] = restJSONHandler
-    Routing.Routes["/distcheck/{command}"] = distanceCheck
-
-    print("\(Routing.Routes.description)")
+    
+    
     initializeUserData()
     initializeMessagesData()
     initializeUserLogInData()

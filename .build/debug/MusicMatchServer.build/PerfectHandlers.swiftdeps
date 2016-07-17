@@ -18,55 +18,53 @@ provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
-- "restJSONHandler"
-- !private "/="
-- "NSImage"
-- !private "HTTPMethod"
-- !private "initializeDatabaseConnection"
-- "SCHEMA"
-- "getVideoThumbnail"
-- "String"
 - !private "JSONConversionError"
-- !private "Array"
-- "StringLiteralType"
-- !private "+"
-- "HTTPResponse"
-- "indexHandler"
+- !private "NSSize"
+- "CLLocation"
+- !private "initializeUserData"
+- !private "production"
 - !private "webRoot"
+- !private "AVAsset"
 - !private "Dictionary"
-- "currentURL"
+- "SCHEMA"
+- "indexHandler"
+- "NSImage"
 - "HTTPRequest"
-- "Double"
-- "PASSWORD"
+- "Int"
+- !private "initializeMessagesData"
+- "restJSONHandler"
+- "HTTPResponse"
 - !private "+="
+- !private "Routes"
+- !private "print"
+- "Double"
+- "getVideoThumbnail"
+- !private "..<"
+- !private "+"
+- !private "FileManager"
+- !private "AVError"
+- !private "NSBitmapImageRep"
+- !private "AVAssetImageGenerator"
+- !private "UnicodeScalarType"
+- "StringLiteralType"
+- "currentURL"
+- !private "initializeUserLogInData"
+- !private "/="
+- !private "URL"
+- "thumbHandler"
+- "HOST"
+- "PerfectServerModuleInit"
 - "distanceCheck"
 - "NSString"
-- "CLLocation"
-- "USER"
-- !private "initializeUserData"
-- "Int"
-- "HOST"
-- !private "NSSize"
-- !private "FileManager"
-- !private "UnicodeScalarType"
-- !private "NSBitmapImageFileType"
-- !private "initializeMessagesData"
-- !private "production"
+- !private "initializeDatabaseConnection"
 - !private "StaticFileHandler"
-- "getUsersInArea"
-- !private "AVAssetImageGenerator"
-- !private "URL"
-- !private "AVError"
-- "PerfectServerModuleInit"
-- !private "AVAsset"
+- "USER"
 - "saveImage"
+- "String"
+- "PASSWORD"
+- "getUsersInArea"
+- !private "NSBitmapImageFileType"
 - "getDocumentsDirectory"
-- !private "initializeUserLogInData"
-- !private "Routing"
-- !private "NSBitmapImageRep"
-- !private "print"
-- !private "..<"
-- "thumbHandler"
 depends-member:
 - !private ["CSo7AVAsset", "duration"]
 - !private ["CSo7AVAsset", "init"]
@@ -77,7 +75,6 @@ depends-member:
 - !private ["OSC7AVError", "exportFailed"]
 - !private ["Ps16AbsoluteValuable", "Stride"]
 - !private ["Ps16AbsoluteValuable", "init"]
-- !private ["Ps9AnyObject", "Element"]
 - !private ["Ps9AnyObject", "cgImage"]
 - !private ["Ps9AnyObject", "close"]
 - !private ["Ps9AnyObject", "components"]
@@ -97,16 +94,12 @@ depends-member:
 - !private ["Ps9AnyObject", "size"]
 - !private ["Ps9AnyObject", "storeResults"]
 - !private ["Ps9AnyObject", "width"]
-- !private ["Sa", "Element"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "SubSequence"]
-- !private ["Sa", "deinit"]
 - !private ["Sa", "subscript"]
-- !private ["Ps23ArrayLiteralConvertible", "Element"]
 - !private ["Ps23ArrayLiteralConvertible", "Index"]
 - !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
 - !private ["Ps23ArrayLiteralConvertible", "subscript"]
-- !private ["Ps23BidirectionalCollection", "Element"]
 - !private ["Ps23BidirectionalCollection", "Index"]
 - !private ["Ps23BidirectionalCollection", "IndexDistance"]
 - !private ["Ps23BidirectionalCollection", "Indices"]
@@ -114,7 +107,6 @@ depends-member:
 - !private ["Ps23BidirectionalCollection", "SubSequence"]
 - !private ["Ps23BidirectionalCollection", "_Element"]
 - !private ["Ps23BidirectionalCollection", "subscript"]
-- !private ["Ps22BidirectionalIndexable", "Element"]
 - !private ["Ps22BidirectionalIndexable", "Index"]
 - !private ["Ps22BidirectionalIndexable", "IndexDistance"]
 - !private ["Ps22BidirectionalIndexable", "Indices"]
@@ -145,7 +137,6 @@ depends-member:
 - !private ["VSC22CLLocationCoordinate2D", "longitude"]
 - !private ["VSC6CMTime", "deinit"]
 - !private ["VSC6CMTime", "value"]
-- !private ["Ps7CVarArg", "Element"]
 - !private ["Ps7CVarArg", "IntegerLiteralType"]
 - !private ["Ps7CVarArg", "Stride"]
 - !private ["Ps7CVarArg", "_DisabledRangeIndex"]
@@ -163,7 +154,6 @@ depends-member:
 - !private ["Ps7CVarArg", "size"]
 - !private ["Vs9Character", "deinit"]
 - !private ["V10Foundation12CharacterSet", "deinit"]
-- !private ["Ps10Collection", "Element"]
 - !private ["Ps10Collection", "Index"]
 - !private ["Ps10Collection", "IndexDistance"]
 - !private ["Ps10Collection", "Indices"]
@@ -177,7 +167,6 @@ depends-member:
 - !private ["Ps10Collection", "jsonEncodedString"]
 - !private ["Ps10Collection", "keys"]
 - !private ["Ps10Collection", "subscript"]
-- !private ["Ps10Comparable", "Element"]
 - !private ["Ps10Comparable", "IntegerLiteralType"]
 - !private ["Ps10Comparable", "Stride"]
 - !private ["Ps10Comparable", "_DisabledRangeIndex"]
@@ -187,7 +176,6 @@ depends-member:
 - !private ["Ps10Comparable", "value"]
 - !private ["Vs14CountableRange", "Iterator"]
 - !private ["Vs14CountableRange", "_Element"]
-- !private ["Ps28CustomDebugStringConvertible", "Element"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
 - !private ["Ps28CustomDebugStringConvertible", "Iterator"]
@@ -211,7 +199,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "size"]
 - ["Ps28CustomDebugStringConvertible", "some"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "Element"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "IntegerLiteralType"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "Stride"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_DisabledRangeIndex"]
@@ -219,7 +206,6 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "components"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "init"]
-- !private ["Ps17CustomReflectable", "Element"]
 - !private ["Ps17CustomReflectable", "Index"]
 - !private ["Ps17CustomReflectable", "IndexDistance"]
 - !private ["Ps17CustomReflectable", "IntegerLiteralType"]
@@ -238,7 +224,6 @@ depends-member:
 - !private ["Ps17CustomReflectable", "keys"]
 - ["Ps17CustomReflectable", "some"]
 - !private ["Ps17CustomReflectable", "subscript"]
-- !private ["Ps23CustomStringConvertible", "Element"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IndexDistance"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
@@ -297,7 +282,6 @@ depends-member:
 - !private ["Sd", "Stride"]
 - !private ["Sd", "deinit"]
 - !private ["Sd", "init"]
-- !private ["Ps9Equatable", "Element"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "Iterator"]
 - !private ["Ps9Equatable", "PNG"]
@@ -324,7 +308,6 @@ depends-member:
 - !private ["Ps13ErrorProtocol", "exportFailed"]
 - ["Ps13ErrorProtocol", "invalidKey"]
 - ["Ps13ErrorProtocol", "notConvertible"]
-- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "Element"]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "components"]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["CSo11FileManager", "createFile"]
@@ -344,7 +327,6 @@ depends-member:
 - !private ["P11PerfectHTTP11HTTPRequest", "urlVariables"]
 - !private ["P11PerfectHTTP12HTTPResponse", "appendBody"]
 - !private ["P11PerfectHTTP12HTTPResponse", "completed"]
-- !private ["Ps8Hashable", "Element"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "PNG"]
 - !private ["Ps8Hashable", "Stride"]
@@ -366,7 +348,6 @@ depends-member:
 - !private ["Ps8Hashable", "representation"]
 - !private ["Ps8Hashable", "size"]
 - !private ["V10Foundation9IndexPath", "deinit"]
-- !private ["Ps9Indexable", "Element"]
 - !private ["Ps9Indexable", "Index"]
 - !private ["Ps9Indexable", "IndexDistance"]
 - !private ["Ps9Indexable", "Indices"]
@@ -380,7 +361,6 @@ depends-member:
 - !private ["Ps9Indexable", "jsonEncodedString"]
 - !private ["Ps9Indexable", "keys"]
 - !private ["Ps9Indexable", "subscript"]
-- !private ["Ps13IndexableBase", "Element"]
 - !private ["Ps13IndexableBase", "Index"]
 - !private ["Ps13IndexableBase", "IndexDistance"]
 - !private ["Ps13IndexableBase", "Indices"]
@@ -426,7 +406,6 @@ depends-member:
 - !private ["Ps16IteratorProtocol", "numRows"]
 - ["O10PerfectLib19JSONConversionError", "invalidKey"]
 - ["O10PerfectLib19JSONConversionError", "notConvertible"]
-- !private ["P10PerfectLib15JSONConvertible", "Element"]
 - !private ["P10PerfectLib15JSONConvertible", "Index"]
 - !private ["P10PerfectLib15JSONConvertible", "IndexDistance"]
 - !private ["P10PerfectLib15JSONConvertible", "IntegerLiteralType"]
@@ -449,36 +428,30 @@ depends-member:
 - !private ["Vs17LazyMapCollection", "count"]
 - !private ["Ps20LazySequenceProtocol", "IndexDistance"]
 - !private ["Ps20LazySequenceProtocol", "count"]
-- !private ["Ps10MirrorPath", "Element"]
 - !private ["Ps10MirrorPath", "IntegerLiteralType"]
 - !private ["Ps10MirrorPath", "Stride"]
 - !private ["Ps10MirrorPath", "_DisabledRangeIndex"]
 - !private ["Ps10MirrorPath", "components"]
 - !private ["Ps10MirrorPath", "init"]
-- !private ["Ps17MutableCollection", "Element"]
 - !private ["Ps17MutableCollection", "Index"]
 - !private ["Ps17MutableCollection", "SubSequence"]
 - !private ["Ps17MutableCollection", "subscript"]
-- !private ["Ps16MutableIndexable", "Element"]
 - !private ["Ps16MutableIndexable", "Index"]
 - !private ["Ps16MutableIndexable", "SubSequence"]
 - !private ["Ps16MutableIndexable", "subscript"]
 - !private ["C5MySQL5MySQL", "close"]
 - !private ["C5MySQL5MySQL", "query"]
 - !private ["C5MySQL5MySQL", "storeResults"]
-- !private ["CSo7NSArray", "Element"]
 - !private ["OSC21NSBitmapImageFileType", "PNG"]
 - !private ["CSo16NSBitmapImageRep", "init"]
 - !private ["CSo16NSBitmapImageRep", "representation"]
 - !private ["CSo16NSBitmapImageRep", "size"]
-- !private ["PSo8NSCoding", "Element"]
 - !private ["PSo8NSCoding", "cgImage"]
 - !private ["PSo8NSCoding", "components"]
 - !private ["PSo8NSCoding", "coordinate"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "representation"]
 - !private ["PSo8NSCoding", "size"]
-- !private ["PSo9NSCopying", "Element"]
 - !private ["PSo9NSCopying", "cgImage"]
 - !private ["PSo9NSCopying", "components"]
 - !private ["PSo9NSCopying", "coordinate"]
@@ -486,17 +459,14 @@ depends-member:
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "representation"]
 - !private ["PSo9NSCopying", "size"]
-- !private ["PSo17NSFastEnumeration", "Element"]
 - !private ["CSo7NSImage", "cgImage"]
 - !private ["CSo7NSImage", "init"]
 - !private ["CSo7NSImage", "size"]
 - !private ["CSo10NSImageRep", "init"]
 - !private ["CSo10NSImageRep", "representation"]
 - !private ["CSo10NSImageRep", "size"]
-- !private ["PSo16NSMutableCopying", "Element"]
 - !private ["PSo16NSMutableCopying", "components"]
 - !private ["PSo16NSMutableCopying", "init"]
-- !private ["CSo8NSObject", "Element"]
 - !private ["CSo8NSObject", "cgImage"]
 - !private ["CSo8NSObject", "components"]
 - !private ["CSo8NSObject", "coordinate"]
@@ -508,7 +478,6 @@ depends-member:
 - !private ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "representation"]
 - !private ["CSo8NSObject", "size"]
-- !private ["PSo16NSObjectProtocol", "Element"]
 - !private ["PSo16NSObjectProtocol", "cgImage"]
 - !private ["PSo16NSObjectProtocol", "components"]
 - !private ["PSo16NSObjectProtocol", "coordinate"]
@@ -528,7 +497,6 @@ depends-member:
 - !private ["PSo19NSPasteboardWriting", "components"]
 - !private ["PSo19NSPasteboardWriting", "init"]
 - !private ["PSo19NSPasteboardWriting", "size"]
-- !private ["PSo14NSSecureCoding", "Element"]
 - !private ["PSo14NSSecureCoding", "cgImage"]
 - !private ["PSo14NSSecureCoding", "components"]
 - !private ["PSo14NSSecureCoding", "coordinate"]
@@ -541,10 +509,8 @@ depends-member:
 - ["Ps21NilLiteralConvertible", "some"]
 - !private ["Sq", "deinit"]
 - ["Sq", "some"]
-- !private ["Ps12OutputStream", "Element"]
 - !private ["Ps12OutputStream", "components"]
 - !private ["Ps12OutputStream", "init"]
-- !private ["Ps22RandomAccessCollection", "Element"]
 - !private ["Ps22RandomAccessCollection", "Index"]
 - !private ["Ps22RandomAccessCollection", "IndexDistance"]
 - !private ["Ps22RandomAccessCollection", "Indices"]
@@ -552,7 +518,6 @@ depends-member:
 - !private ["Ps22RandomAccessCollection", "SubSequence"]
 - !private ["Ps22RandomAccessCollection", "_Element"]
 - !private ["Ps22RandomAccessCollection", "subscript"]
-- !private ["Ps21RandomAccessIndexable", "Element"]
 - !private ["Ps21RandomAccessIndexable", "Index"]
 - !private ["Ps21RandomAccessIndexable", "IndexDistance"]
 - !private ["Ps21RandomAccessIndexable", "Indices"]
@@ -568,11 +533,9 @@ depends-member:
 - !private ["Vs17RandomAccessSlice", "_Element"]
 - !private ["Vs5Range", "Iterator"]
 - !private ["Vs5Range", "deinit"]
-- !private ["Ps26RangeReplaceableCollection", "Element"]
 - !private ["Ps26RangeReplaceableCollection", "Index"]
 - !private ["Ps26RangeReplaceableCollection", "SubSequence"]
 - !private ["Ps26RangeReplaceableCollection", "subscript"]
-- !private ["Ps25RangeReplaceableIndexable", "Element"]
 - !private ["Ps25RangeReplaceableIndexable", "Index"]
 - !private ["Ps25RangeReplaceableIndexable", "SubSequence"]
 - !private ["Ps25RangeReplaceableIndexable", "subscript"]
@@ -582,9 +545,10 @@ depends-member:
 - !private ["CC5MySQL5MySQL7Results", "forEachRow"]
 - !private ["CC5MySQL5MySQL7Results", "next"]
 - !private ["CC5MySQL5MySQL7Results", "numRows"]
-- !private ["V11PerfectHTTP8RouteMap", "description"]
-- !private ["V11PerfectHTTP8RouteMap", "subscript"]
-- !private ["V11PerfectHTTP7Routing", "Routes"]
+- !private ["P11PerfectHTTP14RouteNavigator", "description"]
+- !private ["V11PerfectHTTP6Routes", "add"]
+- !private ["V11PerfectHTTP6Routes", "init"]
+- !private ["V11PerfectHTTP6Routes", "navigator"]
 - !private ["Ps8Sequence", "Element"]
 - !private ["Ps8Sequence", "Index"]
 - !private ["Ps8Sequence", "IndexDistance"]
@@ -612,7 +576,6 @@ depends-member:
 - !private ["Vs5Slice", "_Element"]
 - !private ["V11PerfectHTTP17StaticFileHandler", "handleRequest"]
 - !private ["V11PerfectHTTP17StaticFileHandler", "init"]
-- !private ["Ps10Streamable", "Element"]
 - !private ["Ps10Streamable", "components"]
 - !private ["Ps10Streamable", "init"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
@@ -620,14 +583,11 @@ depends-member:
 - !private ["Ps10Strideable", "_DisabledRangeIndex"]
 - !private ["Ps10Strideable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps10Strideable", "init"]
-- !private ["SS", "Element"]
 - !private ["SS", "components"]
 - !private ["SS", "deinit"]
 - !private ["SS", "init"]
-- !private ["Ps30StringInterpolationConvertible", "Element"]
 - !private ["Ps30StringInterpolationConvertible", "components"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
-- !private ["Ps24StringLiteralConvertible", "Element"]
 - !private ["Ps24StringLiteralConvertible", "components"]
 - !private ["Ps24StringLiteralConvertible", "init"]
 - !private ["Su", "Stride"]
@@ -647,18 +607,15 @@ depends-member:
 - !private ["Vs5UInt8", "deinit"]
 - !private ["V10Foundation3URL", "init"]
 - !private ["Sc", "deinit"]
-- !private ["Ps31UnicodeScalarLiteralConvertible", "Element"]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "components"]
 - !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
 - !private ["Ps15UnsignedInteger", "Stride"]
 - !private ["Ps15UnsignedInteger", "_DisallowMixedSignArithmetic"]
-- !private ["Ps14_ArrayProtocol", "Element"]
 - !private ["Ps14_ArrayProtocol", "Index"]
 - !private ["Ps14_ArrayProtocol", "SubSequence"]
 - !private ["Ps14_ArrayProtocol", "subscript"]
 - !private ["P10Foundation15_BridgedNSError", "exportFailed"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "Element"]
 - !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "components"]
 - !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Ps31_BuiltinFloatLiteralConvertible", "Stride"]
@@ -668,13 +625,10 @@ depends-member:
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "_DisabledRangeIndex"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "_DisallowMixedSignArithmetic"]
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
-- !private ["Ps32_BuiltinStringLiteralConvertible", "Element"]
 - !private ["Ps32_BuiltinStringLiteralConvertible", "components"]
 - !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
-- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "Element"]
 - !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "components"]
 - !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
-- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "Element"]
 - !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "components"]
 - !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
 - !private ["Ps15_CVarArgAligned", "Stride"]
@@ -682,7 +636,6 @@ depends-member:
 - !private ["Ps15_CVarArgAligned", "init"]
 - !private ["Ps22_CVarArgPassedAsDouble", "Stride"]
 - !private ["Ps22_CVarArgPassedAsDouble", "init"]
-- !private ["Ps24_DestructorSafeContainer", "Element"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "SubSequence"]
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
@@ -704,7 +657,6 @@ depends-member:
 - !private ["Ps18_IntegerArithmetic", "Stride"]
 - !private ["Ps18_IntegerArithmetic", "_DisabledRangeIndex"]
 - !private ["Ps18_IntegerArithmetic", "_DisallowMixedSignArithmetic"]
-- !private ["Ps21_ObjectiveCBridgeable", "Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "IndexDistance"]
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
@@ -808,12 +760,10 @@ depends-nominal:
 - !private "Ps17MutableCollection"
 - !private "Ps16MutableIndexable"
 - !private "C5MySQL5MySQL"
-- !private "CSo7NSArray"
 - !private "OSC21NSBitmapImageFileType"
 - !private "CSo16NSBitmapImageRep"
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
-- !private "PSo17NSFastEnumeration"
 - !private "CSo7NSImage"
 - !private "CSo10NSImageRep"
 - !private "PSo16NSMutableCopying"
@@ -835,8 +785,8 @@ depends-nominal:
 - !private "Ps16RawRepresentable"
 - !private "P10Foundation20ReferenceConvertible"
 - !private "CC5MySQL5MySQL7Results"
-- !private "V11PerfectHTTP8RouteMap"
-- !private "V11PerfectHTTP7Routing"
+- !private "P11PerfectHTTP14RouteNavigator"
+- !private "V11PerfectHTTP6Routes"
 - !private "Ps8Sequence"
 - !private "Ps13SignedInteger"
 - !private "Ps12SignedNumber"
@@ -883,6 +833,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTP.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
@@ -950,7 +901,6 @@ depends-external:
 - "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_com.h"
 - "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_version.h"
 - "/usr/local/include/mysql/mysql.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"

@@ -7,20 +7,20 @@ provides-member:
 - ["C10PerfectLib5Bytes", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Int"
 - !private "&"
-- !private "-"
 - "Bytes"
-- "UInt64"
-- "UInt16"
-- !private "+"
-- "UInt8"
-- !private "+="
-- !private ">>"
 - !private "<"
-- "UInt32"
-- "ArraySlice"
 - !private "<<"
+- "UInt16"
+- "UInt64"
+- !private "+"
+- "ArraySlice"
+- "UInt8"
+- !private ">>"
+- !private "+="
+- !private "-"
+- "UInt32"
+- "Int"
 depends-member:
 - !private ["Ps9AnyObject", "UInt16"]
 - !private ["Ps9AnyObject", "UInt32"]
@@ -442,6 +442,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"

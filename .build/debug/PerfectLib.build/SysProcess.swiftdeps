@@ -7,42 +7,47 @@ provides-member:
 - ["C10PerfectLib10SysProcess", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "CChar"
-- !private "STDIN_FILENO"
-- !private "posix_spawn_file_actions_init"
-- !private "posix_spawn_file_actions_addclose"
-- "BooleanLiteralType"
-- !private "Darwin"
-- !private "|"
-- "String"
-- !private "strdup"
-- !private "SIGTERM"
-- !private "STDERR_FILENO"
-- "Int32"
-- "File"
-- !private "posix_spawn_file_actions_destroy"
-- !private "!="
-- !private "??"
-- !private "STDOUT_FILENO"
-- !private "UnsafeMutablePointer"
-- !private "waitpid"
-- !private "StringLiteralType"
 - !private "pipe"
-- !private "WUNTRACED"
 - !private "posix_spawnp"
 - !private "..<"
-- !private "+"
-- "Bool"
+- !private "WNOHANG"
+- !private "STDOUT_FILENO"
+- !private "STDIN_FILENO"
 - "SysProcess"
+- !private "??"
 - !private "UnicodeScalarType"
+- !private "strdup"
+- !private "STDERR_FILENO"
+- !private "posix_spawn_file_actions_adddup2"
+- !private "+"
+- !private "posix_spawn_file_actions_t"
+- !private "StringLiteralType"
+- !private "|"
 - "pid_t"
 - !private "free"
-- !private "posix_spawn_file_actions_adddup2"
-- !private "WNOHANG"
-- !private "posix_spawn_file_actions_t"
+- "String"
+- !private "waitpid"
+- "Int32"
+- !private "posix_spawn_file_actions_init"
+- !private "WUNTRACED"
+- !private "posix_spawn_file_actions_addclose"
+- !private "=="
+- !private "errno"
+- !private "&&"
+- !private "posix_spawn_file_actions_destroy"
+- !private "CChar"
+- "Bool"
+- "BooleanLiteralType"
+- "File"
+- !private "Darwin"
+- !private "SIGTERM"
+- !private "!="
+- !private "EINTR"
 - !private "ThrowSystemError"
+- !private "UnsafeMutablePointer"
 depends-member:
 - !private ["Ps9AnyObject", "Darwin"]
+- !private ["Ps9AnyObject", "EINTR"]
 - !private ["Ps9AnyObject", "File"]
 - !private ["Ps9AnyObject", "Int32"]
 - !private ["Ps9AnyObject", "SIGTERM"]
@@ -54,6 +59,7 @@ depends-member:
 - !private ["Ps9AnyObject", "WNOHANG"]
 - !private ["Ps9AnyObject", "WUNTRACED"]
 - !private ["Ps9AnyObject", "close"]
+- !private ["Ps9AnyObject", "errno"]
 - !private ["Ps9AnyObject", "free"]
 - !private ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "kill"]
@@ -330,6 +336,7 @@ depends-member:
 - ["C10PerfectLib10SysProcess", "Bool"]
 - !private ["C10PerfectLib10SysProcess", "CChar"]
 - !private ["C10PerfectLib10SysProcess", "Darwin"]
+- !private ["C10PerfectLib10SysProcess", "EINTR"]
 - ["C10PerfectLib10SysProcess", "File"]
 - ["C10PerfectLib10SysProcess", "Int32"]
 - !private ["C10PerfectLib10SysProcess", "SIGTERM"]
@@ -344,6 +351,7 @@ depends-member:
 - ["C10PerfectLib10SysProcess", "close"]
 - ["C10PerfectLib10SysProcess", "deinit"]
 - ["C10PerfectLib10SysProcess", "detach"]
+- !private ["C10PerfectLib10SysProcess", "errno"]
 - !private ["C10PerfectLib10SysProcess", "free"]
 - ["C10PerfectLib10SysProcess", "init"]
 - ["C10PerfectLib10SysProcess", "isOpen"]
@@ -488,6 +496,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"

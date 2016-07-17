@@ -9,12 +9,15 @@ provides-top-level:
 provides-nominal:
 - "C10PerfectLib4File"
 - "OC10PerfectLib4File8OpenMode"
+- "VC10PerfectLib4File14PermissionMode"
 - "C10PerfectLib13TemporaryFile"
 provides-member:
 - ["C10PerfectLib4File", ""]
 - ["OC10PerfectLib4File8OpenMode", ""]
+- ["VC10PerfectLib4File14PermissionMode", ""]
 - ["C10PerfectLib13TemporaryFile", ""]
 - ["C10PerfectLib4File", "OpenMode"]
+- ["C10PerfectLib4File", "PermissionMode"]
 - ["C10PerfectLib4File", "open"]
 - ["C10PerfectLib4File", "marker"]
 - ["C10PerfectLib4File", "delete"]
@@ -34,88 +37,95 @@ provides-member:
 - ["C10PerfectLib4File", "testLock"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "O_APPEND"
-- "Int"
-- !private "|"
-- "BooleanLiteralType"
-- !private "off_t"
-- !private "S_IRUSR"
-- !private "O_RDONLY"
-- !private "Array"
-- "TemporaryFile"
 - !private "lseek"
-- !private "F_LOCK"
-- !private "S_IRGRP"
-- !private "STDERR_FILENO"
-- !private "!"
-- !private "lockf"
-- !private "&&"
-- !private ">="
-- !private "readlink"
-- "=="
-- !private "SEEK_SET"
-- !private "STDIN_FILENO"
-- !private "read"
-- !private "wordexp"
-- !private "S_IWUSR"
-- !private "S_IFMT"
+- !private "EXDEV"
+- "fileStdin"
+- "S_IXGRP"
+- "Int32"
+- !private "access"
 - "File"
-- "StringLiteralType"
+- !private "-"
+- !private "off_t"
+- !private "F_OK"
+- "S_IXUSR"
+- !private "|"
+- "S_IWUSR"
+- !private "!="
+- !private "read"
+- !private "readlink"
+- !private "STDOUT_FILENO"
+- !private "!"
+- "S_IROTH"
+- !private "O_WRONLY"
+- !private "S_IFLNK"
+- "S_IWGRP"
+- "fileCopyBufferSize"
+- !private "wordexp"
+- !private "S_IFMT"
+- !private "mkstemp"
+- !private "&"
+- "=="
+- !private "UnicodeScalarType"
+- !private "unlink"
+- !private "PerfectError"
+- !private "O_TRUNC"
+- !private "rename"
+- !private "F_LOCK"
+- !private "STDIN_FILENO"
+- !private "wordexp_t"
+- !private "O_CREAT"
+- !private "EACCES"
+- "BooleanLiteralType"
+- !private "&&"
+- "S_IRUSR"
+- "TemporaryFile"
+- !private "min"
+- "S_IWOTH"
+- !private "F_TLOCK"
 - !private ">"
 - "fileStderr"
-- !private "wordexp_t"
-- !private "O_WRONLY"
-- !private "+"
-- !private "S_IWGRP"
-- !private "PerfectError"
-- "fileStdin"
-- !private "errno"
-- !private "ThrowFileError"
-- !private "UTF8Encoding"
-- !private "<"
-- !private "min"
-- "String"
-- !private "UnsafeMutablePointer"
-- !private "F_TLOCK"
 - !private "CInt"
-- !private "SEEK_CUR"
-- !private "UnicodeScalarType"
-- !private "Darwin"
-- !private "unlink"
-- !private "fstat"
-- !private "UnclosableFile"
-- !private "lstat"
-- !private "F_OK"
-- !private "S_IFDIR"
-- !private "^"
-- !private "STDOUT_FILENO"
-- !private "&"
-- !private "access"
-- !private "EACCES"
-- !private "S_IFLNK"
-- !private "!="
-- !private "-"
-- !private "EXDEV"
-- "fileCopyBufferSize"
-- "Bool"
-- !private "O_CREAT"
-- !private "..<"
-- !private "ExtendedGraphemeClusterType"
-- !private "F_ULOCK"
-- !private "rename"
-- !private "O_TRUNC"
-- !private "mode_t"
-- !private "Int8"
-- !private "stat"
-- !private "EAGAIN"
+- "S_IRGRP"
+- !private "errno"
 - !private "||"
 - "UInt8"
-- !private "S_IFREG"
-- !private "O_RDWR"
-- !private "mkstemp"
-- !private "F_TEST"
+- !private "ExtendedGraphemeClusterType"
 - "fileStdout"
-- "Int32"
+- !private "S_IFDIR"
+- !private "O_RDWR"
+- !private "EAGAIN"
+- !private "ThrowFileError"
+- !private "^"
+- "S_IXOTH"
+- !private "fstat"
+- !private "UnsafeMutablePointer"
+- "Int"
+- "StringLiteralType"
+- "Bool"
+- !private "UnclosableFile"
+- !private "Int8"
+- !private "STDERR_FILENO"
+- !private "lockf"
+- !private ">="
+- "String"
+- !private "..<"
+- "mode_t"
+- !private "F_ULOCK"
+- "OptionSet"
+- !private "<"
+- !private "UTF8Encoding"
+- !private "chmod"
+- "Array"
+- !private "SEEK_CUR"
+- !private "Darwin"
+- !private "O_RDONLY"
+- !private "lstat"
+- !private "SEEK_SET"
+- !private "+"
+- !private "O_APPEND"
+- !private "S_IFREG"
+- !private "F_TEST"
+- !private "stat"
 depends-member:
 - !private ["Ps9AnyObject", "Array"]
 - !private ["Ps9AnyObject", "CInt"]
@@ -139,22 +149,29 @@ depends-member:
 - !private ["Ps9AnyObject", "O_TRUNC"]
 - !private ["Ps9AnyObject", "O_WRONLY"]
 - !private ["Ps9AnyObject", "PerfectError"]
+- ["Ps9AnyObject", "PermissionMode"]
 - !private ["Ps9AnyObject", "SEEK_CUR"]
 - !private ["Ps9AnyObject", "SEEK_SET"]
 - !private ["Ps9AnyObject", "S_IFDIR"]
 - !private ["Ps9AnyObject", "S_IFLNK"]
 - !private ["Ps9AnyObject", "S_IFMT"]
 - !private ["Ps9AnyObject", "S_IFREG"]
-- !private ["Ps9AnyObject", "S_IRGRP"]
-- !private ["Ps9AnyObject", "S_IRUSR"]
-- !private ["Ps9AnyObject", "S_IWGRP"]
-- !private ["Ps9AnyObject", "S_IWUSR"]
+- ["Ps9AnyObject", "S_IRGRP"]
+- ["Ps9AnyObject", "S_IROTH"]
+- ["Ps9AnyObject", "S_IRUSR"]
+- ["Ps9AnyObject", "S_IWGRP"]
+- ["Ps9AnyObject", "S_IWOTH"]
+- ["Ps9AnyObject", "S_IWUSR"]
+- ["Ps9AnyObject", "S_IXGRP"]
+- ["Ps9AnyObject", "S_IXOTH"]
+- ["Ps9AnyObject", "S_IXUSR"]
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "ThrowFileError"]
 - !private ["Ps9AnyObject", "UInt8"]
 - !private ["Ps9AnyObject", "UTF8Encoding"]
 - !private ["Ps9AnyObject", "UnsafeMutablePointer"]
 - !private ["Ps9AnyObject", "access"]
+- !private ["Ps9AnyObject", "chmod"]
 - !private ["Ps9AnyObject", "close"]
 - !private ["Ps9AnyObject", "copyTo"]
 - !private ["Ps9AnyObject", "delete"]
@@ -201,13 +218,53 @@ depends-member:
 - !private ["Sa", "count"]
 - !private ["Sa", "init"]
 - !private ["Sa", "removeLast"]
+- ["Ps23ArrayLiteralConvertible", "Element"]
 - !private ["Ps23ArrayLiteralConvertible", "IndexDistance"]
 - !private ["Ps23ArrayLiteralConvertible", "Iterator"]
+- !private ["Ps23ArrayLiteralConvertible", "Mode"]
+- ["Ps23ArrayLiteralConvertible", "PermissionMode"]
+- ["Ps23ArrayLiteralConvertible", "RawValue"]
+- ["Ps23ArrayLiteralConvertible", "S_IRGRP"]
+- ["Ps23ArrayLiteralConvertible", "S_IROTH"]
+- ["Ps23ArrayLiteralConvertible", "S_IRUSR"]
+- ["Ps23ArrayLiteralConvertible", "S_IWGRP"]
+- ["Ps23ArrayLiteralConvertible", "S_IWOTH"]
+- ["Ps23ArrayLiteralConvertible", "S_IWUSR"]
+- ["Ps23ArrayLiteralConvertible", "S_IXGRP"]
+- ["Ps23ArrayLiteralConvertible", "S_IXOTH"]
+- ["Ps23ArrayLiteralConvertible", "S_IXUSR"]
 - !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
 - !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- ["Ps23ArrayLiteralConvertible", "contains"]
 - !private ["Ps23ArrayLiteralConvertible", "count"]
-- !private ["Ps23ArrayLiteralConvertible", "init"]
+- ["Ps23ArrayLiteralConvertible", "executeGroup"]
+- ["Ps23ArrayLiteralConvertible", "executeOther"]
+- ["Ps23ArrayLiteralConvertible", "executeUser"]
+- ["Ps23ArrayLiteralConvertible", "formIntersection"]
+- ["Ps23ArrayLiteralConvertible", "formSymmetricDifference"]
+- ["Ps23ArrayLiteralConvertible", "formUnion"]
+- ["Ps23ArrayLiteralConvertible", "init"]
+- ["Ps23ArrayLiteralConvertible", "insert"]
+- ["Ps23ArrayLiteralConvertible", "intersection"]
+- ["Ps23ArrayLiteralConvertible", "isDisjoint"]
+- ["Ps23ArrayLiteralConvertible", "isEmpty"]
+- ["Ps23ArrayLiteralConvertible", "isSubset"]
+- ["Ps23ArrayLiteralConvertible", "isSuperset"]
+- ["Ps23ArrayLiteralConvertible", "rawValue"]
+- ["Ps23ArrayLiteralConvertible", "readGroup"]
+- ["Ps23ArrayLiteralConvertible", "readOther"]
+- ["Ps23ArrayLiteralConvertible", "readUser"]
+- ["Ps23ArrayLiteralConvertible", "remove"]
 - !private ["Ps23ArrayLiteralConvertible", "removeLast"]
+- !private ["Ps23ArrayLiteralConvertible", "rwUserGroup"]
+- ["Ps23ArrayLiteralConvertible", "subtract"]
+- ["Ps23ArrayLiteralConvertible", "subtracting"]
+- ["Ps23ArrayLiteralConvertible", "symmetricDifference"]
+- ["Ps23ArrayLiteralConvertible", "union"]
+- ["Ps23ArrayLiteralConvertible", "update"]
+- ["Ps23ArrayLiteralConvertible", "writeGroup"]
+- ["Ps23ArrayLiteralConvertible", "writeUser"]
+- ["Ps23ArrayLiteralConvertible", ""]
 - !private ["Ps23BidirectionalCollection", "IndexDistance"]
 - !private ["Ps23BidirectionalCollection", "Iterator"]
 - !private ["Ps23BidirectionalCollection", "SubSequence"]
@@ -353,35 +410,73 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "stringByDeletingLastPathComponent"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - !private ["Ps23CustomStringConvertible", "utf8"]
+- ["Ps9Equatable", "Element"]
 - !private ["Ps9Equatable", "Int"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "Iterator"]
+- !private ["Ps9Equatable", "Mode"]
 - !private ["Ps9Equatable", "O_APPEND"]
 - !private ["Ps9Equatable", "O_CREAT"]
 - !private ["Ps9Equatable", "O_RDONLY"]
 - !private ["Ps9Equatable", "O_RDWR"]
 - !private ["Ps9Equatable", "O_TRUNC"]
 - !private ["Ps9Equatable", "O_WRONLY"]
+- ["Ps9Equatable", "PermissionMode"]
+- ["Ps9Equatable", "RawValue"]
+- ["Ps9Equatable", "S_IRGRP"]
+- ["Ps9Equatable", "S_IROTH"]
+- ["Ps9Equatable", "S_IRUSR"]
+- ["Ps9Equatable", "S_IWGRP"]
+- ["Ps9Equatable", "S_IWOTH"]
+- ["Ps9Equatable", "S_IWUSR"]
+- ["Ps9Equatable", "S_IXGRP"]
+- ["Ps9Equatable", "S_IXOTH"]
+- ["Ps9Equatable", "S_IXUSR"]
 - !private ["Ps9Equatable", "Stride"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
 - !private ["Ps9Equatable", "_Element"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "advanced"]
 - ["Ps9Equatable", "append"]
+- ["Ps9Equatable", "contains"]
 - !private ["Ps9Equatable", "deallocateCapacity"]
+- ["Ps9Equatable", "executeGroup"]
+- ["Ps9Equatable", "executeOther"]
+- ["Ps9Equatable", "executeUser"]
+- ["Ps9Equatable", "formIntersection"]
+- ["Ps9Equatable", "formSymmetricDifference"]
+- ["Ps9Equatable", "formUnion"]
 - ["Ps9Equatable", "hashValue"]
-- !private ["Ps9Equatable", "init"]
-- !private ["Ps9Equatable", "isEmpty"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "insert"]
+- ["Ps9Equatable", "intersection"]
+- ["Ps9Equatable", "isDisjoint"]
+- ["Ps9Equatable", "isEmpty"]
+- ["Ps9Equatable", "isSubset"]
+- ["Ps9Equatable", "isSuperset"]
 - !private ["Ps9Equatable", "max"]
+- ["Ps9Equatable", "rawValue"]
 - ["Ps9Equatable", "read"]
+- ["Ps9Equatable", "readGroup"]
+- ["Ps9Equatable", "readOther"]
+- ["Ps9Equatable", "readUser"]
 - ["Ps9Equatable", "readWrite"]
+- ["Ps9Equatable", "remove"]
+- !private ["Ps9Equatable", "rwUserGroup"]
 - !private ["Ps9Equatable", "startIndex"]
 - !private ["Ps9Equatable", "stringByDeletingLastPathComponent"]
 - !private ["Ps9Equatable", "subscript"]
+- ["Ps9Equatable", "subtract"]
+- ["Ps9Equatable", "subtracting"]
+- ["Ps9Equatable", "symmetricDifference"]
 - !private ["Ps9Equatable", "toMode"]
 - ["Ps9Equatable", "truncate"]
+- ["Ps9Equatable", "union"]
+- ["Ps9Equatable", "update"]
 - !private ["Ps9Equatable", "utf8"]
 - ["Ps9Equatable", "write"]
+- ["Ps9Equatable", "writeGroup"]
+- ["Ps9Equatable", "writeUser"]
 - ["Ps9Equatable", ""]
 - !private ["Ps13ErrorProtocol", "fileError"]
 - !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
@@ -413,17 +508,24 @@ depends-member:
 - !private ["C10PerfectLib4File", "O_TRUNC"]
 - !private ["C10PerfectLib4File", "O_WRONLY"]
 - ["C10PerfectLib4File", "OpenMode"]
+- ["C10PerfectLib4File", "OptionSet"]
 - !private ["C10PerfectLib4File", "PerfectError"]
+- ["C10PerfectLib4File", "PermissionMode"]
 - !private ["C10PerfectLib4File", "SEEK_CUR"]
 - !private ["C10PerfectLib4File", "SEEK_SET"]
 - !private ["C10PerfectLib4File", "S_IFDIR"]
 - !private ["C10PerfectLib4File", "S_IFLNK"]
 - !private ["C10PerfectLib4File", "S_IFMT"]
 - !private ["C10PerfectLib4File", "S_IFREG"]
-- !private ["C10PerfectLib4File", "S_IRGRP"]
-- !private ["C10PerfectLib4File", "S_IRUSR"]
-- !private ["C10PerfectLib4File", "S_IWGRP"]
-- !private ["C10PerfectLib4File", "S_IWUSR"]
+- ["C10PerfectLib4File", "S_IRGRP"]
+- ["C10PerfectLib4File", "S_IROTH"]
+- ["C10PerfectLib4File", "S_IRUSR"]
+- ["C10PerfectLib4File", "S_IWGRP"]
+- ["C10PerfectLib4File", "S_IWOTH"]
+- ["C10PerfectLib4File", "S_IWUSR"]
+- ["C10PerfectLib4File", "S_IXGRP"]
+- ["C10PerfectLib4File", "S_IXOTH"]
+- ["C10PerfectLib4File", "S_IXUSR"]
 - ["C10PerfectLib4File", "String"]
 - !private ["C10PerfectLib4File", "ThrowFileError"]
 - ["C10PerfectLib4File", "UInt8"]
@@ -431,6 +533,7 @@ depends-member:
 - !private ["C10PerfectLib4File", "UnsafeMutablePointer"]
 - ["C10PerfectLib4File", "abandon"]
 - !private ["C10PerfectLib4File", "access"]
+- !private ["C10PerfectLib4File", "chmod"]
 - ["C10PerfectLib4File", "close"]
 - ["C10PerfectLib4File", "copyTo"]
 - ["C10PerfectLib4File", "deinit"]
@@ -452,7 +555,7 @@ depends-member:
 - ["C10PerfectLib4File", "marker"]
 - !private ["C10PerfectLib4File", "min"]
 - !private ["C10PerfectLib4File", "mkstemp"]
-- !private ["C10PerfectLib4File", "mode_t"]
+- ["C10PerfectLib4File", "mode_t"]
 - ["C10PerfectLib4File", "modificationTime"]
 - ["C10PerfectLib4File", "moveTo"]
 - !private ["C10PerfectLib4File", "off_t"]
@@ -559,7 +662,7 @@ depends-member:
 - !private ["Ps25IntegerLiteralConvertible", "hashValue"]
 - !private ["Ps25IntegerLiteralConvertible", "init"]
 - !private ["Ps25IntegerLiteralConvertible", "max"]
-- !private ["Ps16IteratorProtocol", "Element"]
+- ["Ps16IteratorProtocol", "Element"]
 - !private ["P10PerfectLib15JSONConvertible", "IndexDistance"]
 - !private ["P10PerfectLib15JSONConvertible", "IntegerLiteralType"]
 - !private ["P10PerfectLib15JSONConvertible", "Iterator"]
@@ -657,6 +760,47 @@ depends-member:
 - ["OC10PerfectLib4File8OpenMode", "toMode"]
 - ["OC10PerfectLib4File8OpenMode", "truncate"]
 - ["OC10PerfectLib4File8OpenMode", "write"]
+- ["Ps9OptionSet", "Element"]
+- !private ["Ps9OptionSet", "Mode"]
+- ["Ps9OptionSet", "PermissionMode"]
+- ["Ps9OptionSet", "RawValue"]
+- ["Ps9OptionSet", "S_IRGRP"]
+- ["Ps9OptionSet", "S_IROTH"]
+- ["Ps9OptionSet", "S_IRUSR"]
+- ["Ps9OptionSet", "S_IWGRP"]
+- ["Ps9OptionSet", "S_IWOTH"]
+- ["Ps9OptionSet", "S_IWUSR"]
+- ["Ps9OptionSet", "S_IXGRP"]
+- ["Ps9OptionSet", "S_IXOTH"]
+- ["Ps9OptionSet", "S_IXUSR"]
+- ["Ps9OptionSet", "contains"]
+- ["Ps9OptionSet", "executeGroup"]
+- ["Ps9OptionSet", "executeOther"]
+- ["Ps9OptionSet", "executeUser"]
+- ["Ps9OptionSet", "formIntersection"]
+- ["Ps9OptionSet", "formSymmetricDifference"]
+- ["Ps9OptionSet", "formUnion"]
+- ["Ps9OptionSet", "init"]
+- ["Ps9OptionSet", "insert"]
+- ["Ps9OptionSet", "intersection"]
+- ["Ps9OptionSet", "isDisjoint"]
+- ["Ps9OptionSet", "isEmpty"]
+- ["Ps9OptionSet", "isSubset"]
+- ["Ps9OptionSet", "isSuperset"]
+- ["Ps9OptionSet", "rawValue"]
+- ["Ps9OptionSet", "readGroup"]
+- ["Ps9OptionSet", "readOther"]
+- ["Ps9OptionSet", "readUser"]
+- ["Ps9OptionSet", "remove"]
+- !private ["Ps9OptionSet", "rwUserGroup"]
+- ["Ps9OptionSet", "subtract"]
+- ["Ps9OptionSet", "subtracting"]
+- ["Ps9OptionSet", "symmetricDifference"]
+- ["Ps9OptionSet", "union"]
+- ["Ps9OptionSet", "update"]
+- ["Ps9OptionSet", "writeGroup"]
+- ["Ps9OptionSet", "writeUser"]
+- ["Ps9OptionSet", ""]
 - !private ["Sq", "advanced"]
 - !private ["Sq", "deinit"]
 - ["Sq", "some"]
@@ -668,6 +812,52 @@ depends-member:
 - !private ["Ps12OutputStream", "utf8"]
 - !private ["O10PerfectLib12PerfectError", "deinit"]
 - !private ["O10PerfectLib12PerfectError", "fileError"]
+- ["VC10PerfectLib4File14PermissionMode", "Element"]
+- ["VC10PerfectLib4File14PermissionMode", "Mode"]
+- ["VC10PerfectLib4File14PermissionMode", "PermissionMode"]
+- ["VC10PerfectLib4File14PermissionMode", "RawValue"]
+- ["VC10PerfectLib4File14PermissionMode", "S_IRGRP"]
+- ["VC10PerfectLib4File14PermissionMode", "S_IROTH"]
+- ["VC10PerfectLib4File14PermissionMode", "S_IRUSR"]
+- ["VC10PerfectLib4File14PermissionMode", "S_IWGRP"]
+- ["VC10PerfectLib4File14PermissionMode", "S_IWOTH"]
+- ["VC10PerfectLib4File14PermissionMode", "S_IWUSR"]
+- ["VC10PerfectLib4File14PermissionMode", "S_IXGRP"]
+- ["VC10PerfectLib4File14PermissionMode", "S_IXOTH"]
+- ["VC10PerfectLib4File14PermissionMode", "S_IXUSR"]
+- ["VC10PerfectLib4File14PermissionMode", "contains"]
+- ["VC10PerfectLib4File14PermissionMode", "deinit"]
+- ["VC10PerfectLib4File14PermissionMode", "executeGroup"]
+- ["VC10PerfectLib4File14PermissionMode", "executeOther"]
+- ["VC10PerfectLib4File14PermissionMode", "executeUser"]
+- ["VC10PerfectLib4File14PermissionMode", "formIntersection"]
+- ["VC10PerfectLib4File14PermissionMode", "formSymmetricDifference"]
+- ["VC10PerfectLib4File14PermissionMode", "formUnion"]
+- ["VC10PerfectLib4File14PermissionMode", "init"]
+- ["VC10PerfectLib4File14PermissionMode", "insert"]
+- ["VC10PerfectLib4File14PermissionMode", "intersection"]
+- ["VC10PerfectLib4File14PermissionMode", "isDisjoint"]
+- ["VC10PerfectLib4File14PermissionMode", "isEmpty"]
+- ["VC10PerfectLib4File14PermissionMode", "isSubset"]
+- ["VC10PerfectLib4File14PermissionMode", "isSuperset"]
+- ["VC10PerfectLib4File14PermissionMode", "mode_t"]
+- ["VC10PerfectLib4File14PermissionMode", "rawValue"]
+- ["VC10PerfectLib4File14PermissionMode", "readGroup"]
+- ["VC10PerfectLib4File14PermissionMode", "readOther"]
+- ["VC10PerfectLib4File14PermissionMode", "readUser"]
+- ["VC10PerfectLib4File14PermissionMode", "remove"]
+- ["VC10PerfectLib4File14PermissionMode", "rwUserGroup"]
+- ["VC10PerfectLib4File14PermissionMode", "rwxUser"]
+- ["VC10PerfectLib4File14PermissionMode", "rxGroup"]
+- ["VC10PerfectLib4File14PermissionMode", "rxOther"]
+- ["VC10PerfectLib4File14PermissionMode", "subtract"]
+- ["VC10PerfectLib4File14PermissionMode", "subtracting"]
+- ["VC10PerfectLib4File14PermissionMode", "symmetricDifference"]
+- ["VC10PerfectLib4File14PermissionMode", "union"]
+- ["VC10PerfectLib4File14PermissionMode", "update"]
+- ["VC10PerfectLib4File14PermissionMode", "writeGroup"]
+- ["VC10PerfectLib4File14PermissionMode", "writeOther"]
+- ["VC10PerfectLib4File14PermissionMode", "writeUser"]
 - !private ["Ps22RandomAccessCollection", "IndexDistance"]
 - !private ["Ps22RandomAccessCollection", "Iterator"]
 - !private ["Ps22RandomAccessCollection", "SubSequence"]
@@ -697,10 +887,51 @@ depends-member:
 - !private ["Ps25RangeReplaceableIndexable", "count"]
 - !private ["Ps25RangeReplaceableIndexable", "init"]
 - !private ["Ps25RangeReplaceableIndexable", "removeLast"]
+- ["Ps16RawRepresentable", "Element"]
+- !private ["Ps16RawRepresentable", "Mode"]
+- ["Ps16RawRepresentable", "PermissionMode"]
+- ["Ps16RawRepresentable", "RawValue"]
+- ["Ps16RawRepresentable", "S_IRGRP"]
+- ["Ps16RawRepresentable", "S_IROTH"]
+- ["Ps16RawRepresentable", "S_IRUSR"]
+- ["Ps16RawRepresentable", "S_IWGRP"]
+- ["Ps16RawRepresentable", "S_IWOTH"]
+- ["Ps16RawRepresentable", "S_IWUSR"]
+- ["Ps16RawRepresentable", "S_IXGRP"]
+- ["Ps16RawRepresentable", "S_IXOTH"]
+- ["Ps16RawRepresentable", "S_IXUSR"]
+- ["Ps16RawRepresentable", "contains"]
+- ["Ps16RawRepresentable", "executeGroup"]
+- ["Ps16RawRepresentable", "executeOther"]
+- ["Ps16RawRepresentable", "executeUser"]
+- ["Ps16RawRepresentable", "formIntersection"]
+- ["Ps16RawRepresentable", "formSymmetricDifference"]
+- ["Ps16RawRepresentable", "formUnion"]
+- ["Ps16RawRepresentable", "init"]
+- ["Ps16RawRepresentable", "insert"]
+- ["Ps16RawRepresentable", "intersection"]
+- ["Ps16RawRepresentable", "isDisjoint"]
+- ["Ps16RawRepresentable", "isEmpty"]
+- ["Ps16RawRepresentable", "isSubset"]
+- ["Ps16RawRepresentable", "isSuperset"]
+- ["Ps16RawRepresentable", "rawValue"]
+- ["Ps16RawRepresentable", "readGroup"]
+- ["Ps16RawRepresentable", "readOther"]
+- ["Ps16RawRepresentable", "readUser"]
+- ["Ps16RawRepresentable", "remove"]
+- !private ["Ps16RawRepresentable", "rwUserGroup"]
+- ["Ps16RawRepresentable", "subtract"]
+- ["Ps16RawRepresentable", "subtracting"]
+- ["Ps16RawRepresentable", "symmetricDifference"]
+- ["Ps16RawRepresentable", "union"]
+- ["Ps16RawRepresentable", "update"]
+- ["Ps16RawRepresentable", "writeGroup"]
+- ["Ps16RawRepresentable", "writeUser"]
+- ["Ps16RawRepresentable", ""]
 - !private ["Ps8Sequence", "Element"]
 - !private ["Ps8Sequence", "Index"]
 - !private ["Ps8Sequence", "IndexDistance"]
-- !private ["Ps8Sequence", "Iterator"]
+- ["Ps8Sequence", "Iterator"]
 - !private ["Ps8Sequence", "SubSequence"]
 - !private ["Ps8Sequence", "_Element"]
 - !private ["Ps8Sequence", "count"]
@@ -709,6 +940,47 @@ depends-member:
 - !private ["Ps8Sequence", "removeLast"]
 - !private ["Ps8Sequence", "startIndex"]
 - !private ["Ps8Sequence", "subscript"]
+- ["Ps10SetAlgebra", "Element"]
+- !private ["Ps10SetAlgebra", "Mode"]
+- ["Ps10SetAlgebra", "PermissionMode"]
+- ["Ps10SetAlgebra", "RawValue"]
+- ["Ps10SetAlgebra", "S_IRGRP"]
+- ["Ps10SetAlgebra", "S_IROTH"]
+- ["Ps10SetAlgebra", "S_IRUSR"]
+- ["Ps10SetAlgebra", "S_IWGRP"]
+- ["Ps10SetAlgebra", "S_IWOTH"]
+- ["Ps10SetAlgebra", "S_IWUSR"]
+- ["Ps10SetAlgebra", "S_IXGRP"]
+- ["Ps10SetAlgebra", "S_IXOTH"]
+- ["Ps10SetAlgebra", "S_IXUSR"]
+- ["Ps10SetAlgebra", "contains"]
+- ["Ps10SetAlgebra", "executeGroup"]
+- ["Ps10SetAlgebra", "executeOther"]
+- ["Ps10SetAlgebra", "executeUser"]
+- ["Ps10SetAlgebra", "formIntersection"]
+- ["Ps10SetAlgebra", "formSymmetricDifference"]
+- ["Ps10SetAlgebra", "formUnion"]
+- ["Ps10SetAlgebra", "init"]
+- ["Ps10SetAlgebra", "insert"]
+- ["Ps10SetAlgebra", "intersection"]
+- ["Ps10SetAlgebra", "isDisjoint"]
+- ["Ps10SetAlgebra", "isEmpty"]
+- ["Ps10SetAlgebra", "isSubset"]
+- ["Ps10SetAlgebra", "isSuperset"]
+- ["Ps10SetAlgebra", "rawValue"]
+- ["Ps10SetAlgebra", "readGroup"]
+- ["Ps10SetAlgebra", "readOther"]
+- ["Ps10SetAlgebra", "readUser"]
+- ["Ps10SetAlgebra", "remove"]
+- !private ["Ps10SetAlgebra", "rwUserGroup"]
+- ["Ps10SetAlgebra", "subtract"]
+- ["Ps10SetAlgebra", "subtracting"]
+- ["Ps10SetAlgebra", "symmetricDifference"]
+- ["Ps10SetAlgebra", "union"]
+- ["Ps10SetAlgebra", "update"]
+- ["Ps10SetAlgebra", "writeGroup"]
+- ["Ps10SetAlgebra", "writeUser"]
+- ["Ps10SetAlgebra", ""]
 - !private ["Ps13SignedInteger", "IntegerLiteralType"]
 - !private ["Ps13SignedInteger", "Stride"]
 - !private ["Ps13SignedInteger", "_DisabledRangeIndex"]
@@ -905,7 +1177,7 @@ depends-member:
 depends-nominal:
 - "Ps9AnyObject"
 - !private "Sa"
-- !private "Ps23ArrayLiteralConvertible"
+- "Ps23ArrayLiteralConvertible"
 - !private "Ps23BidirectionalCollection"
 - !private "Ps22BidirectionalIndexable"
 - !private "Ps17BitwiseOperations"
@@ -938,7 +1210,7 @@ depends-nominal:
 - !private "Ps7Integer"
 - !private "Ps17IntegerArithmetic"
 - !private "Ps25IntegerLiteralConvertible"
-- !private "Ps16IteratorProtocol"
+- "Ps16IteratorProtocol"
 - "P10PerfectLib15JSONConvertible"
 - !private "Ps10MirrorPath"
 - !private "Ps17MutableCollection"
@@ -952,15 +1224,19 @@ depends-nominal:
 - !private "CSo8NSString"
 - "Ps21NilLiteralConvertible"
 - "OC10PerfectLib4File8OpenMode"
+- "Ps9OptionSet"
 - "Sq"
 - !private "Ps12OutputStream"
 - !private "O10PerfectLib12PerfectError"
+- "VC10PerfectLib4File14PermissionMode"
 - !private "Ps22RandomAccessCollection"
 - !private "Ps21RandomAccessIndexable"
 - !private "Vs5Range"
 - !private "Ps26RangeReplaceableCollection"
 - !private "Ps25RangeReplaceableIndexable"
-- !private "Ps8Sequence"
+- "Ps16RawRepresentable"
+- "Ps8Sequence"
+- "Ps10SetAlgebra"
 - !private "Ps13SignedInteger"
 - !private "Ps12SignedNumber"
 - !private "Vs5Slice"
@@ -1005,6 +1281,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
@@ -1055,4 +1332,4 @@ depends-external:
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/comp.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl.h"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
-interface-hash: "552fc4d33a8fbfb8f6b7bf67ed81421f"
+interface-hash: "25c07aa3cb487ac990447500b2042a3d"

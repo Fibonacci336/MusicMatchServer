@@ -10,19 +10,19 @@ provides-member:
 - ["O10PerfectLib12PerfectError", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "+"
-- !private "errno"
-- !private "UnicodeScalarType"
-- "Int"
-- "StringLiteralType"
-- "ThrowNetworkError"
-- "PerfectError"
-- !private "strerror"
-- "String"
 - "ErrorProtocol"
 - "Int32"
-- "ThrowSystemError"
 - "ThrowFileError"
+- "ThrowSystemError"
+- !private "strerror"
+- !private "+"
+- !private "UnicodeScalarType"
+- "ThrowNetworkError"
+- "String"
+- "PerfectError"
+- "Int"
+- "StringLiteralType"
+- !private "errno"
 depends-member:
 - !private ["Ps9AnyObject", "init"]
 - !private ["Sb", "deinit"]
@@ -135,6 +135,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"

@@ -38,6 +38,15 @@ do {
     
     // Launch the HTTP server on port 8181
     let server = HTTPServer()
+    var routes = Routes()
+    routes.add(method: .post, uri: "/distcheck/{command}", handler: distanceCheck)
+    routes.add(method: .post, uri: "/request/{command}", handler: restJSONHandler)
+    routes.add(method: .get, uri: "/avthumb/{videoname}", handler: thumbHandler)
+    routes.add(method: .get, uri: "/", handler: indexHandler)
+    routes.add(method: .get, uri: "*", handler: StaticFileHandler().handleRequest)
+    
+    print(routes.navigator.description)
+    server.addRoutes(routes)
     configureServer(server)
     PerfectServerModuleInit()
     if(production){

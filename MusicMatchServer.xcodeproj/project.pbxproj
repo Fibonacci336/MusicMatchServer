@@ -237,71 +237,71 @@
         _______Group_PerfectLib = {
             isa = PBXGroup;
             name = PerfectLib;
-            path = 'Packages/PerfectLib-0.50.0/Sources/PerfectLib';
+            path = 'Packages/PerfectLib-0.55.0/Sources/PerfectLib';
             sourceTree = '<group>';
-            children = ('__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Bytes.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Dir.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/DynamicLoader.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/File.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/JSONConvertible.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Log.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectError.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectServer.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SwiftCompatibility.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SysProcess.swift', '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Utilities.swift', __PBXFileRef_PerfectLib_Info.plist);
+            children = ('__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Bytes.swift', '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Dir.swift', '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/DynamicLoader.swift', '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/File.swift', '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/JSONConvertible.swift', '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Log.swift', '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/PerfectError.swift', '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/PerfectServer.swift', '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/SwiftCompatibility.swift', '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/SysProcess.swift', '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Utilities.swift', __PBXFileRef_PerfectLib_Info.plist);
         };
-        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Bytes.swift' = {
+        '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Bytes.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'Bytes.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Dir.swift' = {
+        '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Dir.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'Dir.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/DynamicLoader.swift' = {
+        '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/DynamicLoader.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'DynamicLoader.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/File.swift' = {
+        '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/File.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'File.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/JSONConvertible.swift' = {
+        '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/JSONConvertible.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'JSONConvertible.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Log.swift' = {
+        '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Log.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'Log.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectError.swift' = {
+        '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/PerfectError.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'PerfectError.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectServer.swift' = {
+        '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/PerfectServer.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'PerfectServer.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SwiftCompatibility.swift' = {
+        '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/SwiftCompatibility.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'SwiftCompatibility.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SysProcess.swift' = {
+        '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/SysProcess.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'SysProcess.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Utilities.swift' = {
+        '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Utilities.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'Utilities.swift';
@@ -326,52 +326,52 @@
         };
         CompilePhase_PerfectLib = {
             isa = PBXSourcesBuildPhase;
-            files = ('__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Bytes.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Dir.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/DynamicLoader.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/File.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/JSONConvertible.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Log.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectError.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectServer.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SwiftCompatibility.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SysProcess.swift', '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Utilities.swift');
+            files = ('__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Bytes.swift', '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Dir.swift', '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/DynamicLoader.swift', '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/File.swift', '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/JSONConvertible.swift', '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Log.swift', '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/PerfectError.swift', '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/PerfectServer.swift', '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/SwiftCompatibility.swift', '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/SysProcess.swift', '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Utilities.swift');
             runOnlyForDeploymentPostprocessing = 0;
         };
-        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Bytes.swift' = {
+        '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Bytes.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Bytes.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Bytes.swift';
         };
-        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Dir.swift' = {
+        '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Dir.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Dir.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Dir.swift';
         };
-        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/DynamicLoader.swift' = {
+        '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/DynamicLoader.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/DynamicLoader.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/DynamicLoader.swift';
         };
-        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/File.swift' = {
+        '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/File.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/File.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/File.swift';
         };
-        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/JSONConvertible.swift' = {
+        '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/JSONConvertible.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/JSONConvertible.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/JSONConvertible.swift';
         };
-        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Log.swift' = {
+        '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Log.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Log.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Log.swift';
         };
-        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectError.swift' = {
+        '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/PerfectError.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectError.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/PerfectError.swift';
         };
-        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectServer.swift' = {
+        '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/PerfectServer.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/PerfectServer.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/PerfectServer.swift';
         };
-        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SwiftCompatibility.swift' = {
+        '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/SwiftCompatibility.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SwiftCompatibility.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/SwiftCompatibility.swift';
         };
-        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SysProcess.swift' = {
+        '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/SysProcess.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/SysProcess.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/SysProcess.swift';
         };
-        '__src_cc_ref_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Utilities.swift' = {
+        '__src_cc_ref_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Utilities.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectLib-0.50.0/Sources/PerfectLib/Utilities.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectLib-0.55.0/Sources/PerfectLib/Utilities.swift';
         };
         ___LinkPhase_PerfectLib = {
             isa = PBXFrameworksBuildPhase;
@@ -416,59 +416,59 @@
         _______Group_PerfectHTTP = {
             isa = PBXGroup;
             name = PerfectHTTP;
-            path = 'Packages/PerfectHTTP-0.8.0/Sources';
+            path = 'Packages/PerfectHTTP-0.12.0/Sources';
             sourceTree = '<group>';
-            children = ('__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPFilter.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPHeaders.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPMethod.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPRequest.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPResponse.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/MimeReader.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/MimeType.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/Routing.swift', '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/StaticFileHandler.swift', __PBXFileRef_PerfectHTTP_Info.plist);
+            children = ('__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPFilter.swift', '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPHeaders.swift', '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPMethod.swift', '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPRequest.swift', '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPResponse.swift', '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/MimeReader.swift', '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/MimeType.swift', '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/Routing.swift', '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/StaticFileHandler.swift', __PBXFileRef_PerfectHTTP_Info.plist);
         };
-        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPFilter.swift' = {
+        '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPFilter.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'HTTPFilter.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPHeaders.swift' = {
+        '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPHeaders.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'HTTPHeaders.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPMethod.swift' = {
+        '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPMethod.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'HTTPMethod.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPRequest.swift' = {
+        '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPRequest.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'HTTPRequest.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPResponse.swift' = {
+        '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPResponse.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'HTTPResponse.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/MimeReader.swift' = {
+        '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/MimeReader.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'MimeReader.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/MimeType.swift' = {
+        '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/MimeType.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'MimeType.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/Routing.swift' = {
+        '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/Routing.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'Routing.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/StaticFileHandler.swift' = {
+        '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/StaticFileHandler.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'StaticFileHandler.swift';
@@ -493,44 +493,44 @@
         };
         CompilePhase_PerfectHTTP = {
             isa = PBXSourcesBuildPhase;
-            files = ('__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPFilter.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPHeaders.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPMethod.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPRequest.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPResponse.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/MimeReader.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/MimeType.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/Routing.swift', '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/StaticFileHandler.swift');
+            files = ('__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/HTTPFilter.swift', '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/HTTPHeaders.swift', '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/HTTPMethod.swift', '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/HTTPRequest.swift', '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/HTTPResponse.swift', '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/MimeReader.swift', '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/MimeType.swift', '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/Routing.swift', '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/StaticFileHandler.swift');
             runOnlyForDeploymentPostprocessing = 0;
         };
-        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPFilter.swift' = {
+        '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/HTTPFilter.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPFilter.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPFilter.swift';
         };
-        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPHeaders.swift' = {
+        '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/HTTPHeaders.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPHeaders.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPHeaders.swift';
         };
-        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPMethod.swift' = {
+        '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/HTTPMethod.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPMethod.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPMethod.swift';
         };
-        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPRequest.swift' = {
+        '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/HTTPRequest.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPRequest.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPRequest.swift';
         };
-        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/HTTPResponse.swift' = {
+        '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/HTTPResponse.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/HTTPResponse.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/HTTPResponse.swift';
         };
-        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/MimeReader.swift' = {
+        '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/MimeReader.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/MimeReader.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/MimeReader.swift';
         };
-        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/MimeType.swift' = {
+        '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/MimeType.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/MimeType.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/MimeType.swift';
         };
-        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/Routing.swift' = {
+        '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/Routing.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/Routing.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/Routing.swift';
         };
-        '__src_cc_ref_Packages/PerfectHTTP-0.8.0/Sources/StaticFileHandler.swift' = {
+        '__src_cc_ref_Packages/PerfectHTTP-0.12.0/Sources/StaticFileHandler.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.8.0/Sources/StaticFileHandler.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectHTTP-0.12.0/Sources/StaticFileHandler.swift';
         };
         ___LinkPhase_PerfectHTTP = {
             isa = PBXFrameworksBuildPhase;
@@ -579,35 +579,35 @@
         _______Group_PerfectHTTPServer = {
             isa = PBXGroup;
             name = PerfectHTTPServer;
-            path = 'Packages/PerfectHTTPServer-0.4.0/Sources';
+            path = 'Packages/PerfectHTTPServer-0.5.0/Sources';
             sourceTree = '<group>';
-            children = ('__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HPACK.swift', '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Request.swift', '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Response.swift', '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP2.swift', '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTPServer.swift', __PBXFileRef_PerfectHTTPServer_Info.plist);
+            children = ('__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HPACK.swift', '__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP11Request.swift', '__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP11Response.swift', '__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP2.swift', '__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HTTPServer.swift', __PBXFileRef_PerfectHTTPServer_Info.plist);
         };
-        '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HPACK.swift' = {
+        '__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HPACK.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'HPACK.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Request.swift' = {
+        '__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP11Request.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'HTTP11Request.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Response.swift' = {
+        '__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP11Response.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'HTTP11Response.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP2.swift' = {
+        '__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP2.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'HTTP2.swift';
             sourceTree = '<group>';
         };
-        '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTPServer.swift' = {
+        '__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HTTPServer.swift' = {
             isa = PBXFileReference;
             lastKnownFileType = sourcecode.swift;
             name = 'HTTPServer.swift';
@@ -632,28 +632,28 @@
         };
         CompilePhase_PerfectHTTPServer = {
             isa = PBXSourcesBuildPhase;
-            files = ('__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HPACK.swift', '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Request.swift', '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Response.swift', '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP2.swift', '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTPServer.swift');
+            files = ('__src_cc_ref_Packages/PerfectHTTPServer-0.5.0/Sources/HPACK.swift', '__src_cc_ref_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP11Request.swift', '__src_cc_ref_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP11Response.swift', '__src_cc_ref_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP2.swift', '__src_cc_ref_Packages/PerfectHTTPServer-0.5.0/Sources/HTTPServer.swift');
             runOnlyForDeploymentPostprocessing = 0;
         };
-        '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HPACK.swift' = {
+        '__src_cc_ref_Packages/PerfectHTTPServer-0.5.0/Sources/HPACK.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HPACK.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HPACK.swift';
         };
-        '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Request.swift' = {
+        '__src_cc_ref_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP11Request.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Request.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP11Request.swift';
         };
-        '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Response.swift' = {
+        '__src_cc_ref_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP11Response.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP11Response.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP11Response.swift';
         };
-        '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP2.swift' = {
+        '__src_cc_ref_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP2.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTP2.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HTTP2.swift';
         };
-        '__src_cc_ref_Packages/PerfectHTTPServer-0.4.0/Sources/HTTPServer.swift' = {
+        '__src_cc_ref_Packages/PerfectHTTPServer-0.5.0/Sources/HTTPServer.swift' = {
             isa = PBXBuildFile;
-            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.4.0/Sources/HTTPServer.swift';
+            fileRef = '__PBXFileRef_Packages/PerfectHTTPServer-0.5.0/Sources/HTTPServer.swift';
         };
         ___LinkPhase_PerfectHTTPServer = {
             isa = PBXFrameworksBuildPhase;
