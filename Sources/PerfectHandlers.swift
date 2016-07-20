@@ -34,14 +34,7 @@ let SCHEMA = "MusicMatch"
 var currentURL = "http://0.0.0.0:8181/"
 //public method that is being called by the server framework to initialise your module.
 public func PerfectServerModuleInit() {
-    
-    // Install the built-in routing handler.
-    // Using this system is optional and you could install your own system if desired.
-    //Routing.Handler.registerGlobally()
-    
-    // Create Routes
-    
-    
+
     initializeUserData()
     initializeMessagesData()
     initializeUserLogInData()
@@ -84,7 +77,7 @@ func distanceCheck(_ request: HTTPRequest, response: HTTPResponse) {
         
         for var i in 0..<userArray.keys.count{
             let UUID = userArray[i]
-            let statement = "SELECT UserType,UserName,BirthDate,MusicType,BandPosition,VideoName,Available,UUID FROM users where UUID=\"" + UUID! + "\";"
+            let statement = "SELECT UserType,UserName,BirthDate,MusicType,BandPosition,VideoName,Available,UUID, CurrentLat, CurrentLong FROM users where UUID=\"" + UUID! + "\";"
             let query = mysql.query(statement: statement)
             
             if(query){

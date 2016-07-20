@@ -6,13 +6,13 @@ provides-member:
 - ["SS", "range"]
 provides-dynamic-lookup:
 depends-top-level:
-- "Bool"
-- "String"
-- !private "..<"
-- !private "!="
 - !private "=="
-- !private "&&"
+- "String"
 - "BooleanLiteralType"
+- !private "&&"
+- !private "!="
+- !private "..<"
+- "Bool"
 - "Range"
 depends-member:
 - !private ["Ps9AnyObject", "endIndex"]
@@ -281,16 +281,16 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/bio.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/opensslconf.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/e_os2.h"
@@ -331,5 +331,5 @@ depends-external:
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/crypto.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/comp.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
 interface-hash: "a184c06af1a4a65e3c8ef4f8b20b4e0c"

@@ -1,11 +1,11 @@
 {
   "": {
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MySQL.build/master.swiftdeps"
+    "swift-dependencies": "/Users/Fibonacci/Documents/Old Documents - Ben’s MacBook Pro/MusicMatchServer/.build/debug/MySQL.build/master.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/MySQL-0.5.0/Sources/MySQL/MySQL.swift": {
-    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MySQL.build/MySQL.d",
-    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MySQL.build/MySQL.swift.o",
-    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MySQL.build/MySQL~partial.swiftmodule",
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MySQL.build/MySQL.swiftdeps"
+  "/Users/Fibonacci/Documents/Old Documents - Ben’s MacBook Pro/MusicMatchServer/Packages/MySQL-0.5.0/Sources/MySQL/MySQL.swift": {
+    "dependencies": "/Users/Fibonacci/Documents/Old Documents - Ben’s MacBook Pro/MusicMatchServer/.build/debug/MySQL.build/MySQL.d",
+    "object": "/Users/Fibonacci/Documents/Old Documents - Ben’s MacBook Pro/MusicMatchServer/.build/debug/MySQL.build/MySQL.swift.o",
+    "swiftmodule": "/Users/Fibonacci/Documents/Old Documents - Ben’s MacBook Pro/MusicMatchServer/.build/debug/MySQL.build/MySQL~partial.swiftmodule",
+    "swift-dependencies": "/Users/Fibonacci/Documents/Old Documents - Ben’s MacBook Pro/MusicMatchServer/.build/debug/MySQL.build/MySQL.swiftdeps"
   }
 }

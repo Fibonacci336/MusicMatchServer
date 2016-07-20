@@ -1,15 +1,15 @@
-version: "Apple Swift version 3.0 (swiftlang-800.0.33.1 clang-800.0.31)"
-options: "cc04023a11f2c0d973b253b71ee3d43e"
-build_time: [522032816, 966475000]
+version: "Apple Swift version 3.0 (swiftlang-800.0.34.6 clang-800.0.33)"
+options: "fb995d5f41f6a2d5a551967c6cff2842"
+build_time: [522290419, 56231000]
 inputs:
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectLib-0.55.0/Sources/PerfectLib/Bytes.swift": [522032787, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectLib-0.55.0/Sources/PerfectLib/Dir.swift": [522032787, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectLib-0.55.0/Sources/PerfectLib/DynamicLoader.swift": [522032787, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectLib-0.55.0/Sources/PerfectLib/File.swift": [522032787, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectLib-0.55.0/Sources/PerfectLib/JSONConvertible.swift": [522032787, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectLib-0.55.0/Sources/PerfectLib/Log.swift": [522032787, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectLib-0.55.0/Sources/PerfectLib/PerfectError.swift": [522032787, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectLib-0.55.0/Sources/PerfectLib/PerfectServer.swift": [522032787, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectLib-0.55.0/Sources/PerfectLib/SwiftCompatibility.swift": [522032787, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectLib-0.55.0/Sources/PerfectLib/SysProcess.swift": [522032787, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectLib-0.55.0/Sources/PerfectLib/Utilities.swift": [522032787, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectLib-0.56.0/Sources/PerfectLib/Bytes.swift": [522290356, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectLib-0.56.0/Sources/PerfectLib/Dir.swift": [522290356, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectLib-0.56.0/Sources/PerfectLib/DynamicLoader.swift": [522290356, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectLib-0.56.0/Sources/PerfectLib/File.swift": [522290356, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectLib-0.56.0/Sources/PerfectLib/JSONConvertible.swift": [522290356, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectLib-0.56.0/Sources/PerfectLib/Log.swift": [522290356, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectLib-0.56.0/Sources/PerfectLib/PerfectError.swift": [522290356, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectLib-0.56.0/Sources/PerfectLib/PerfectServer.swift": [522290356, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectLib-0.56.0/Sources/PerfectLib/SwiftCompatibility.swift": [522290356, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectLib-0.56.0/Sources/PerfectLib/SysProcess.swift": [522290356, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectLib-0.56.0/Sources/PerfectLib/Utilities.swift": [522290356, 0]

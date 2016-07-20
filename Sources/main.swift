@@ -41,7 +41,7 @@ do {
     var routes = Routes()
     routes.add(method: .post, uri: "/distcheck/{command}", handler: distanceCheck)
     routes.add(method: .post, uri: "/request/{command}", handler: restJSONHandler)
-    routes.add(method: .get, uri: "/avthumb/{videoname}", handler: thumbHandler)
+    routes.add(method: .post, uri: "/avthumb/{videoname}", handler: thumbHandler)
     routes.add(method: .get, uri: "/", handler: indexHandler)
     routes.add(method: .get, uri: "*", handler: StaticFileHandler().handleRequest)
     

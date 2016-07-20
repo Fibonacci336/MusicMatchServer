@@ -40,38 +40,38 @@ provides-member:
 - ["SS", "routePathComponents"]
 provides-dynamic-lookup:
 depends-top-level:
-- "String"
-- !private "ExtendedGraphemeClusterType"
-- "HTTPRequest"
-- !private "=="
-- "IndexingIterator"
-- !private "..<"
-- "RouteNavigator"
-- "RouteNode"
-- !private "??"
-- "CustomStringConvertible"
-- "RouteTrailingWildCard"
-- !private "UnicodeScalarType"
-- "HTTPMethod"
-- "compatRoutes"
-- "Routing"
-- "Int"
-- !private ">="
-- !private "&&"
-- "RequestHandler"
-- "RouteMap"
-- "Route"
-- !private "!="
-- !private "ErrorProtocol"
 - !private "!"
-- !private "Log"
-- !private "StringLiteralType"
-- "RoutePath"
-- "RouteWildCard"
-- !private "+"
-- "HTTPResponse"
-- !private "RouteException"
 - "RouteVariable"
+- "Int"
+- "CustomStringConvertible"
+- !private "+"
+- "compatRoutes"
+- !private "&&"
+- "RouteNavigator"
+- !private "StringLiteralType"
+- !private "Log"
+- "HTTPResponse"
+- "HTTPRequest"
+- "RouteMap"
+- !private "..<"
+- "Routing"
+- "RequestHandler"
+- "IndexingIterator"
+- !private "=="
+- "HTTPMethod"
+- !private "ExtendedGraphemeClusterType"
+- "RouteTrailingWildCard"
+- !private "RouteException"
+- !private "!="
+- !private "UnicodeScalarType"
+- "String"
+- "Route"
+- "RoutePath"
+- !private "ErrorProtocol"
+- !private "??"
+- !private ">="
+- "RouteWildCard"
+- "RouteNode"
 - "Routes"
 depends-member:
 - !private ["Vs11AnyIterator", "Element"]
@@ -313,6 +313,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "map"]
 - ["Ps23CustomStringConvertible", "name"]
 - !private ["Ps23CustomStringConvertible", "nodeForComponent"]
+- !private ["Ps23CustomStringConvertible", "post"]
 - !private ["Ps23CustomStringConvertible", "putTabs"]
 - !private ["Ps23CustomStringConvertible", "routePathComponents"]
 - !private ["Ps23CustomStringConvertible", "startIndex"]
@@ -355,6 +356,7 @@ depends-member:
 - !private ["Ps9Equatable", "invalidRoute"]
 - !private ["Ps9Equatable", "isEmpty"]
 - !private ["Ps9Equatable", "lowercased"]
+- !private ["Ps9Equatable", "post"]
 - !private ["Ps9Equatable", "routePathComponents"]
 - !private ["Ps9Equatable", "startIndex"]
 - !private ["Ps9Equatable", "stringByDecodingURL"]
@@ -380,6 +382,7 @@ depends-member:
 - !private ["Sf", "deinit"]
 - ["O11PerfectHTTP10HTTPMethod", "deinit"]
 - !private ["O11PerfectHTTP10HTTPMethod", "get"]
+- !private ["O11PerfectHTTP10HTTPMethod", "post"]
 - !private ["P11PerfectHTTP11HTTPRequest", "method"]
 - !private ["P11PerfectHTTP11HTTPRequest", "urlVariables"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
@@ -399,6 +402,7 @@ depends-member:
 - !private ["Ps8Hashable", "invalidRoute"]
 - !private ["Ps8Hashable", "isEmpty"]
 - !private ["Ps8Hashable", "lowercased"]
+- !private ["Ps8Hashable", "post"]
 - !private ["Ps8Hashable", "routePathComponents"]
 - !private ["Ps8Hashable", "startIndex"]
 - !private ["Ps8Hashable", "stringByDecodingURL"]
@@ -1096,9 +1100,9 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/bio.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/opensslconf.h"
@@ -1140,12 +1144,12 @@ depends-external:
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/crypto.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/comp.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-interface-hash: "757bc04f5d18d60654fd1b2e0e06987e"
+interface-hash: "844909c92c07779e54b11664db8a9bf9"

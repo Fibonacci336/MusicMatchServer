@@ -56,6 +56,8 @@ func initializeUserLogInData(){
             print(mysql.errorMessage())
             return
         }
+        
+        print("Initialized \"UserLogInData\" Table")
     }catch{
         print("Could not initialize database connection")
     }
@@ -75,6 +77,8 @@ func initializeMessagesData(){
             print(mysql.errorMessage())
             return
         }
+        
+        print("Initialized \"Messages\" Table")
     }catch{
         print("Could not initialize database connection")
     }
@@ -87,12 +91,14 @@ func initializeUserData(){
             mysql.close()
         }
         //FIX
-        let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS Users (UserType TEXT, UserName TEXT, UUID TEXT, BirthDate DATE, MusicType TEXT, BandPosition TEXT, VideoName TEXT, CurrentLat DOUBLE, CurrentLong DOUBLE, Available INT, Bio TEXT, LookingFor TEXT);")
+        let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS Users (UserType TEXT, UserName TEXT, UUID TEXT, BirthDate DATE, MusicType TEXT, BandPosition TEXT, VideoName TEXT, CurrentLat DOUBLE, CurrentLong DOUBLE, Available INT, Bio TEXT, LookingFor TEXT, DistanceUnit TEXT);")
         
         guard tableSuccess else {
             print(mysql.errorMessage())
             return
         }
+        
+        print("Initialized \"Users\" Table")
     }catch{
         print("Could not initialize database connection")
     }

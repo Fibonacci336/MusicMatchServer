@@ -16,16 +16,16 @@ provides-member:
 - ["OO11PerfectHTTP18HTTPResponseHeader4Name", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "HTTPResponseHeader"
 - "String"
-- "HTTPRequestHeader"
-- "Bool"
-- "StringLiteralType"
-- "Int"
-- "=="
-- !private "~="
 - "Dictionary"
+- "StringLiteralType"
+- "Bool"
+- "HTTPRequestHeader"
+- !private "~="
+- "=="
+- "HTTPResponseHeader"
 - "Hashable"
+- "Int"
 depends-member:
 - !private ["Ps9AnyObject", "hashValue"]
 - !private ["Ps9AnyObject", "lowercased"]
@@ -128,6 +128,7 @@ depends-member:
 - ["Ps9Equatable", "via"]
 - ["Ps9Equatable", "warning"]
 - ["Ps9Equatable", "xATTDeviceId"]
+- ["Ps9Equatable", "xAuthorization"]
 - ["Ps9Equatable", "xCsrfToken"]
 - ["Ps9Equatable", "xForwardedFor"]
 - ["Ps9Equatable", "xForwardedHost"]
@@ -192,6 +193,7 @@ depends-member:
 - ["Ps8Hashable", "via"]
 - ["Ps8Hashable", "warning"]
 - ["Ps8Hashable", "xATTDeviceId"]
+- ["Ps8Hashable", "xAuthorization"]
 - ["Ps8Hashable", "xCsrfToken"]
 - ["Ps8Hashable", "xForwardedFor"]
 - ["Ps8Hashable", "xForwardedHost"]
@@ -288,6 +290,7 @@ depends-member:
 - ["OO11PerfectHTTP17HTTPRequestHeader4Name", "via"]
 - ["OO11PerfectHTTP17HTTPRequestHeader4Name", "warning"]
 - ["OO11PerfectHTTP17HTTPRequestHeader4Name", "xATTDeviceId"]
+- ["OO11PerfectHTTP17HTTPRequestHeader4Name", "xAuthorization"]
 - ["OO11PerfectHTTP17HTTPRequestHeader4Name", "xCsrfToken"]
 - ["OO11PerfectHTTP17HTTPRequestHeader4Name", "xForwardedFor"]
 - ["OO11PerfectHTTP17HTTPRequestHeader4Name", "xForwardedHost"]
@@ -459,9 +462,9 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/bio.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/opensslconf.h"
@@ -503,12 +506,12 @@ depends-external:
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/crypto.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/comp.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-interface-hash: "7a150651e6a2e135ce437b947ec9dca6"
+interface-hash: "a9d05874a809c914e764b9bcc742b24f"

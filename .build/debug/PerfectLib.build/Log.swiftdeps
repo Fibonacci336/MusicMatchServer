@@ -16,25 +16,25 @@ provides-member:
 - ["V10PerfectLib3Log", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "ConsoleLogger"
-- !private "fatalError"
-- "SysLogger"
-- !private "LOG_INFO"
-- !private "LOG_WARNING"
 - !private "StringLiteralType"
-- !private "LOG_DEBUG"
-- "Log"
-- !private "LOG_EMERG"
-- !private "+"
-- "CVarArg"
-- !private "withVaList"
-- !private "print"
-- "Int32"
-- !private "LOG_ERR"
-- "String"
 - !private "vsyslog"
-- !private "LOG_CRIT"
+- "Log"
+- "ConsoleLogger"
 - "Logger"
+- !private "print"
+- "SysLogger"
+- "String"
+- !private "LOG_INFO"
+- "Int32"
+- !private "+"
+- !private "LOG_DEBUG"
+- !private "LOG_ERR"
+- !private "fatalError"
+- !private "withVaList"
+- !private "LOG_WARNING"
+- "CVarArg"
+- !private "LOG_EMERG"
+- !private "LOG_CRIT"
 depends-member:
 - !private ["Ps9AnyObject", "withCString"]
 - !private ["Ps7CVarArg", "withCString"]
@@ -103,7 +103,6 @@ depends-member:
 - !private ["Ps12OutputStream", "withCString"]
 - !private ["Vs12StaticString", "deinit"]
 - !private ["Ps10Streamable", "withCString"]
-- !private ["SS", "deinit"]
 - !private ["SS", "withCString"]
 - !private ["Ps30StringInterpolationConvertible", "withCString"]
 - !private ["Ps24StringLiteralConvertible", "withCString"]
@@ -177,16 +176,16 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/bio.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/opensslconf.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/e_os2.h"
@@ -227,5 +226,5 @@ depends-external:
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/crypto.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/comp.h"
 - "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
 interface-hash: "1475d98beb69fff9614041f0f9729ead"
