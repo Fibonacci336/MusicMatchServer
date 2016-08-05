@@ -35,16 +35,17 @@ try Dir(webRoot).create()
 
 
 do {
-    
+
     // Launch the HTTP server on port 8181
     let server = HTTPServer()
     var routes = Routes()
     routes.add(method: .post, uri: "/distcheck/{command}", handler: distanceCheck)
     routes.add(method: .post, uri: "/request/{command}", handler: restJSONHandler)
     routes.add(method: .post, uri: "/avthumb/{videoname}", handler: thumbHandler)
+    routes.add(method: .post, uri: "/upload/{fileType}", handler: fileUpload)
     routes.add(method: .get, uri: "/", handler: indexHandler)
-    routes.add(method: .get, uri: "*", handler: StaticFileHandler().handleRequest)
-    
+    routes.add(method: .get, uri: "*", handler: StaticFileHandler(documentRoot: webRoot).handleRequest)
+
     print(routes.navigator.description)
     server.addRoutes(routes)
     configureServer(server)
@@ -56,7 +57,7 @@ do {
         server.serverPort = 8181
     }
     try server.start()
-    
+
 } catch PerfectError.networkError(let err, let msg) {
     print("Network error thrown: \(err) \(msg)")
 }

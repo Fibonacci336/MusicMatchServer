@@ -6,6 +6,7 @@ provides-top-level:
 - "SCHEMA"
 - "currentURL"
 - "PerfectServerModuleInit"
+- "fileUpload"
 - "distanceCheck"
 - "restJSONHandler"
 - "indexHandler"
@@ -18,61 +19,65 @@ provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
-- !private "FileManager"
-- "PASSWORD"
-- "NSImage"
-- "indexHandler"
-- "currentURL"
-- "USER"
-- "getVideoThumbnail"
-- !private "production"
-- "HTTPResponse"
-- !private "webRoot"
-- !private "AVError"
-- "HTTPRequest"
-- !private "print"
-- "HOST"
-- "distanceCheck"
-- "SCHEMA"
-- "restJSONHandler"
-- !private "AVAssetImageGenerator"
-- !private "initializeMessagesData"
-- "CLLocation"
-- !private "initializeUserData"
-- !private "initializeUserLogInData"
-- !private "UnicodeScalarType"
-- "StringLiteralType"
-- "NSString"
-- !private "+="
-- !private "URL"
+- "saveImage"
 - !private "NSSize"
-- !private "/="
-- !private "..<"
-- !private "Dictionary"
-- "Int"
+- !private "URL"
+- !private "webRoot"
+- "PerfectServerModuleInit"
 - !private "AVAsset"
 - "getDocumentsDirectory"
-- "thumbHandler"
-- "String"
-- "PerfectServerModuleInit"
-- "saveImage"
-- "getUsersInArea"
-- !private "NSBitmapImageFileType"
-- "Double"
-- !private "JSONConversionError"
-- !private "initializeDatabaseConnection"
 - !private "+"
+- !private "FloatLiteralType"
+- "String"
+- !private "NSBitmapImageFileType"
+- !private "initializeMessagesData"
+- !private "initializeDatabaseConnection"
+- "Double"
+- !private "AVAssetImageGenerator"
+- "SCHEMA"
+- !private "Dictionary"
+- "getUsersInArea"
+- !private "FileManager"
+- "CLLocation"
+- !private "production"
+- !private "initializeUserData"
+- !private "IntegerLiteralType"
+- "thumbHandler"
+- "StringLiteralType"
+- !private "JSONConversionError"
+- "fileUpload"
+- "HTTPRequest"
+- !private "initializeUserLogInData"
+- !private "File"
+- "HTTPResponse"
+- !private "..<"
+- "currentURL"
+- !private "UnicodeScalarType"
+- "NSString"
+- "HOST"
+- "getVideoThumbnail"
+- "indexHandler"
+- "Int"
+- !private "FileError"
+- !private "print"
+- !private "/="
+- "PASSWORD"
 - !private "NSBitmapImageRep"
+- "restJSONHandler"
+- "USER"
+- "distanceCheck"
+- !private "+="
+- "NSImage"
 depends-member:
+- ["CSo7AVAsset", "deinit"]
 - !private ["CSo7AVAsset", "duration"]
 - !private ["CSo7AVAsset", "init"]
 - !private ["CSo21AVAssetImageGenerator", "copyCGImage"]
+- ["CSo21AVAssetImageGenerator", "deinit"]
 - !private ["CSo21AVAssetImageGenerator", "init"]
 - !private ["PSo29AVAsynchronousKeyValueLoading", "duration"]
 - !private ["PSo29AVAsynchronousKeyValueLoading", "init"]
-- !private ["OSC7AVError", "exportFailed"]
 - !private ["Ps16AbsoluteValuable", "Stride"]
-- !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "cgImage"]
 - !private ["Ps9AnyObject", "close"]
 - !private ["Ps9AnyObject", "components"]
@@ -82,22 +87,25 @@ depends-member:
 - !private ["Ps9AnyObject", "currentDirectoryPath"]
 - !private ["Ps9AnyObject", "default"]
 - !private ["Ps9AnyObject", "duration"]
+- !private ["Ps9AnyObject", "fileName"]
 - !private ["Ps9AnyObject", "forEachRow"]
 - !private ["Ps9AnyObject", "height"]
 - !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "moveTo"]
 - !private ["Ps9AnyObject", "next"]
 - !private ["Ps9AnyObject", "numRows"]
 - !private ["Ps9AnyObject", "query"]
 - !private ["Ps9AnyObject", "representation"]
 - !private ["Ps9AnyObject", "size"]
 - !private ["Ps9AnyObject", "storeResults"]
+- !private ["Ps9AnyObject", "tmpFileName"]
 - !private ["Ps9AnyObject", "width"]
+- !private ["Ps10Arithmetic", "Stride"]
+- !private ["Ps10Arithmetic", "init"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "SubSequence"]
+- ["Sa", "deinit"]
 - !private ["Sa", "subscript"]
-- !private ["Ps23ArrayLiteralConvertible", "Index"]
-- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
-- !private ["Ps23ArrayLiteralConvertible", "subscript"]
 - !private ["Ps23BidirectionalCollection", "Index"]
 - !private ["Ps23BidirectionalCollection", "IndexDistance"]
 - !private ["Ps23BidirectionalCollection", "Indices"]
@@ -112,28 +120,39 @@ depends-member:
 - !private ["Ps22BidirectionalIndexable", "SubSequence"]
 - !private ["Ps22BidirectionalIndexable", "_Element"]
 - !private ["Ps22BidirectionalIndexable", "subscript"]
+- !private ["Vs18BidirectionalSlice", "Index"]
+- !private ["Vs18BidirectionalSlice", "IndexDistance"]
+- !private ["Vs18BidirectionalSlice", "Indices"]
+- !private ["Vs18BidirectionalSlice", "Iterator"]
+- !private ["Vs18BidirectionalSlice", "SubSequence"]
+- !private ["Vs18BidirectionalSlice", "_Element"]
 - !private ["Ps19BinaryFloatingPoint", "Stride"]
 - !private ["Ps19BinaryFloatingPoint", "init"]
 - !private ["Ps17BitwiseOperations", "IntegerLiteralType"]
 - !private ["Ps17BitwiseOperations", "Stride"]
 - !private ["Ps17BitwiseOperations", "_DisabledRangeIndex"]
 - !private ["Ps17BitwiseOperations", "_DisallowMixedSignArithmetic"]
+- ["CC11PerfectHTTP10MimeReader8BodySpec", "deinit"]
+- !private ["CC11PerfectHTTP10MimeReader8BodySpec", "fileName"]
+- !private ["CC11PerfectHTTP10MimeReader8BodySpec", "tmpFileName"]
 - !private ["Sb", "_getBuiltinLogicValue"]
-- !private ["Sb", "deinit"]
-- !private ["Ps7Boolean", "_getBuiltinLogicValue"]
-- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- ["Sb", "deinit"]
 - !private ["P10PerfectNet28BytesSwappingUnsignedInteger", "Stride"]
 - !private ["P10PerfectNet28BytesSwappingUnsignedInteger", "_DisallowMixedSignArithmetic"]
 - !private ["V12CoreGraphics7CGFloat", "Stride"]
 - !private ["V12CoreGraphics7CGFloat", "deinit"]
+- ["CSo7CGImage", "deinit"]
 - !private ["CSo7CGImage", "height"]
 - !private ["CSo7CGImage", "width"]
+- ["VSC6CGSize", "deinit"]
 - !private ["VSC6CGSize", "init"]
 - !private ["CSo10CLLocation", "coordinate"]
+- ["CSo10CLLocation", "deinit"]
 - !private ["CSo10CLLocation", "init"]
+- ["VSC22CLLocationCoordinate2D", "deinit"]
 - !private ["VSC22CLLocationCoordinate2D", "latitude"]
 - !private ["VSC22CLLocationCoordinate2D", "longitude"]
-- !private ["VSC6CMTime", "deinit"]
+- ["VSC6CMTime", "deinit"]
 - !private ["VSC6CMTime", "value"]
 - !private ["Ps7CVarArg", "IntegerLiteralType"]
 - !private ["Ps7CVarArg", "Stride"]
@@ -161,6 +180,7 @@ depends-member:
 - !private ["Ps10Collection", "Value"]
 - !private ["Ps10Collection", "_Element"]
 - !private ["Ps10Collection", "count"]
+- !private ["Ps10Collection", "first"]
 - !private ["Ps10Collection", "init"]
 - !private ["Ps10Collection", "jsonEncodedString"]
 - !private ["Ps10Collection", "keys"]
@@ -174,6 +194,7 @@ depends-member:
 - !private ["Ps10Comparable", "value"]
 - !private ["Vs14CountableRange", "Iterator"]
 - !private ["Vs14CountableRange", "_Element"]
+- ["Vs14CountableRange", "deinit"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
 - !private ["Ps28CustomDebugStringConvertible", "Iterator"]
@@ -190,6 +211,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "currentDirectoryPath"]
 - !private ["Ps28CustomDebugStringConvertible", "default"]
 - !private ["Ps28CustomDebugStringConvertible", "duration"]
+- !private ["Ps28CustomDebugStringConvertible", "first"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "jsonEncodedString"]
 - !private ["Ps28CustomDebugStringConvertible", "keys"]
@@ -204,6 +226,7 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "components"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "Element"]
 - !private ["Ps17CustomReflectable", "Index"]
 - !private ["Ps17CustomReflectable", "IndexDistance"]
 - !private ["Ps17CustomReflectable", "IntegerLiteralType"]
@@ -217,6 +240,7 @@ depends-member:
 - !private ["Ps17CustomReflectable", "_Element"]
 - !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "components"]
+- !private ["Ps17CustomReflectable", "first"]
 - !private ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "jsonEncodedString"]
 - !private ["Ps17CustomReflectable", "keys"]
@@ -242,6 +266,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "currentDirectoryPath"]
 - !private ["Ps23CustomStringConvertible", "default"]
 - !private ["Ps23CustomStringConvertible", "duration"]
+- !private ["Ps23CustomStringConvertible", "first"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "jsonEncodedString"]
 - !private ["Ps23CustomStringConvertible", "keys"]
@@ -251,6 +276,10 @@ depends-member:
 - !private ["V10Foundation4Date", "deinit"]
 - !private ["VSC7Decimal", "Stride"]
 - !private ["VSC7Decimal", "deinit"]
+- !private ["Vs27DefaultBidirectionalIndices", "Index"]
+- !private ["Vs27DefaultBidirectionalIndices", "Iterator"]
+- !private ["Vs27DefaultBidirectionalIndices", "SubSequence"]
+- !private ["Vs27DefaultBidirectionalIndices", "_Element"]
 - !private ["Vs26DefaultRandomAccessIndices", "Index"]
 - !private ["Vs26DefaultRandomAccessIndices", "IndexDistance"]
 - !private ["Vs26DefaultRandomAccessIndices", "Indices"]
@@ -258,24 +287,21 @@ depends-member:
 - !private ["Vs26DefaultRandomAccessIndices", "SubSequence"]
 - !private ["Vs26DefaultRandomAccessIndices", "_Element"]
 - !private ["Vs10Dictionary", "IndexDistance"]
+- !private ["Vs10Dictionary", "Iterator"]
 - !private ["Vs10Dictionary", "Key"]
 - !private ["Vs10Dictionary", "Value"]
+- ["Vs10Dictionary", "deinit"]
+- !private ["Vs10Dictionary", "first"]
 - !private ["Vs10Dictionary", "init"]
 - !private ["Vs10Dictionary", "jsonEncodedString"]
 - !private ["Vs10Dictionary", "keys"]
 - !private ["Vs10Dictionary", "subscript"]
-- !private ["Ps28DictionaryLiteralConvertible", "IndexDistance"]
-- !private ["Ps28DictionaryLiteralConvertible", "Key"]
-- !private ["Ps28DictionaryLiteralConvertible", "Value"]
-- !private ["Ps28DictionaryLiteralConvertible", "init"]
-- !private ["Ps28DictionaryLiteralConvertible", "jsonEncodedString"]
-- !private ["Ps28DictionaryLiteralConvertible", "keys"]
-- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- !private ["Vs18DictionaryIterator", "Element"]
 - !private ["V8Dispatch12DispatchTime", "deinit"]
 - !private ["O8Dispatch20DispatchTimeInterval", "deinit"]
 - !private ["V8Dispatch16DispatchWallTime", "deinit"]
 - !private ["Sd", "Stride"]
-- !private ["Sd", "deinit"]
+- ["Sd", "deinit"]
 - !private ["Sd", "init"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - !private ["Ps9Equatable", "Iterator"]
@@ -298,26 +324,61 @@ depends-member:
 - !private ["Ps9Equatable", "representation"]
 - !private ["Ps9Equatable", "size"]
 - !private ["Ps9Equatable", "value"]
-- !private ["Ps13ErrorProtocol", "exportFailed"]
-- ["Ps13ErrorProtocol", "invalidKey"]
-- ["Ps13ErrorProtocol", "notConvertible"]
-- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "components"]
-- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- ["Ps5Error", "deinit"]
+- !private ["Ps5Error", "exportFailed"]
+- ["Ps5Error", "invalidKey"]
+- ["Ps5Error", "notConvertible"]
+- !private ["Ps25ExpressibleByArrayLiteral", "Index"]
+- !private ["Ps25ExpressibleByArrayLiteral", "SubSequence"]
+- !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "IndexDistance"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "Iterator"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "Key"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "Value"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "first"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "init"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "jsonEncodedString"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "keys"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "subscript"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "components"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps25ExpressibleByFloatLiteral", "Stride"]
+- !private ["Ps25ExpressibleByFloatLiteral", "init"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "IntegerLiteralType"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "_DisabledRangeIndex"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "_DisallowMixedSignArithmetic"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "init"]
+- ["Ps23ExpressibleByNilLiteral", "some"]
+- !private ["Ps32ExpressibleByStringInterpolation", "components"]
+- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "components"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "components"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["C10PerfectLib4File", "deinit"]
+- !private ["C10PerfectLib4File", "init"]
+- !private ["C10PerfectLib4File", "moveTo"]
+- ["O16MusicMatchServer9FileError", "deinit"]
+- !private ["O16MusicMatchServer9FileError", "exportFailed"]
 - !private ["CSo11FileManager", "createFile"]
 - !private ["CSo11FileManager", "currentDirectoryPath"]
 - !private ["CSo11FileManager", "default"]
+- ["CSo11FileManager", "deinit"]
 - !private ["Sf", "Stride"]
 - !private ["Sf", "deinit"]
 - !private ["Vs7Float80", "Stride"]
 - !private ["Vs7Float80", "deinit"]
-- !private ["Ps23FloatLiteralConvertible", "Stride"]
-- !private ["Ps23FloatLiteralConvertible", "init"]
 - !private ["Ps13FloatingPoint", "Stride"]
 - !private ["Ps13FloatingPoint", "init"]
+- ["P11PerfectHTTP11HTTPRequest", "deinit"]
 - !private ["P11PerfectHTTP11HTTPRequest", "postBodyString"]
+- !private ["P11PerfectHTTP11HTTPRequest", "postFileUploads"]
 - !private ["P11PerfectHTTP11HTTPRequest", "urlVariables"]
 - !private ["P11PerfectHTTP12HTTPResponse", "appendBody"]
 - !private ["P11PerfectHTTP12HTTPResponse", "completed"]
+- ["P11PerfectHTTP12HTTPResponse", "deinit"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - !private ["Ps8Hashable", "PNG"]
 - !private ["Ps8Hashable", "Stride"]
@@ -346,6 +407,7 @@ depends-member:
 - !private ["Ps9Indexable", "Value"]
 - !private ["Ps9Indexable", "_Element"]
 - !private ["Ps9Indexable", "count"]
+- !private ["Ps9Indexable", "first"]
 - !private ["Ps9Indexable", "init"]
 - !private ["Ps9Indexable", "jsonEncodedString"]
 - !private ["Ps9Indexable", "keys"]
@@ -359,6 +421,7 @@ depends-member:
 - !private ["Ps13IndexableBase", "Value"]
 - !private ["Ps13IndexableBase", "_Element"]
 - !private ["Ps13IndexableBase", "count"]
+- !private ["Ps13IndexableBase", "first"]
 - !private ["Ps13IndexableBase", "init"]
 - !private ["Ps13IndexableBase", "jsonEncodedString"]
 - !private ["Ps13IndexableBase", "keys"]
@@ -367,13 +430,13 @@ depends-member:
 - !private ["Si", "IntegerLiteralType"]
 - !private ["Si", "Stride"]
 - !private ["Si", "_DisabledRangeIndex"]
-- !private ["Si", "deinit"]
+- ["Si", "deinit"]
 - !private ["Vs5Int16", "Stride"]
 - !private ["Vs5Int16", "deinit"]
 - !private ["Vs5Int32", "Stride"]
 - !private ["Vs5Int32", "deinit"]
 - !private ["Vs5Int64", "Stride"]
-- !private ["Vs5Int64", "deinit"]
+- ["Vs5Int64", "deinit"]
 - !private ["Vs4Int8", "Stride"]
 - !private ["Vs4Int8", "deinit"]
 - !private ["Ps7Integer", "IntegerLiteralType"]
@@ -384,11 +447,6 @@ depends-member:
 - !private ["Ps17IntegerArithmetic", "Stride"]
 - !private ["Ps17IntegerArithmetic", "_DisabledRangeIndex"]
 - !private ["Ps17IntegerArithmetic", "_DisallowMixedSignArithmetic"]
-- !private ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
-- !private ["Ps25IntegerLiteralConvertible", "Stride"]
-- !private ["Ps25IntegerLiteralConvertible", "_DisabledRangeIndex"]
-- !private ["Ps25IntegerLiteralConvertible", "_DisallowMixedSignArithmetic"]
-- !private ["Ps25IntegerLiteralConvertible", "init"]
 - !private ["Ps16IteratorProtocol", "Element"]
 - !private ["Ps16IteratorProtocol", "forEachRow"]
 - !private ["Ps16IteratorProtocol", "next"]
@@ -398,6 +456,7 @@ depends-member:
 - !private ["P10PerfectLib15JSONConvertible", "Index"]
 - !private ["P10PerfectLib15JSONConvertible", "IndexDistance"]
 - !private ["P10PerfectLib15JSONConvertible", "IntegerLiteralType"]
+- !private ["P10PerfectLib15JSONConvertible", "Iterator"]
 - !private ["P10PerfectLib15JSONConvertible", "Key"]
 - !private ["P10PerfectLib15JSONConvertible", "Stride"]
 - !private ["P10PerfectLib15JSONConvertible", "SubSequence"]
@@ -406,6 +465,7 @@ depends-member:
 - !private ["P10PerfectLib15JSONConvertible", "_DisallowMixedSignArithmetic"]
 - !private ["P10PerfectLib15JSONConvertible", "_getBuiltinLogicValue"]
 - !private ["P10PerfectLib15JSONConvertible", "components"]
+- !private ["P10PerfectLib15JSONConvertible", "first"]
 - !private ["P10PerfectLib15JSONConvertible", "init"]
 - !private ["P10PerfectLib15JSONConvertible", "jsonEncodedString"]
 - !private ["P10PerfectLib15JSONConvertible", "keys"]
@@ -415,6 +475,7 @@ depends-member:
 - !private ["Ps22LazyCollectionProtocol", "count"]
 - !private ["Vs17LazyMapCollection", "IndexDistance"]
 - !private ["Vs17LazyMapCollection", "count"]
+- ["Vs17LazyMapCollection", "deinit"]
 - !private ["Ps20LazySequenceProtocol", "IndexDistance"]
 - !private ["Ps20LazySequenceProtocol", "count"]
 - !private ["Ps10MirrorPath", "IntegerLiteralType"]
@@ -429,9 +490,12 @@ depends-member:
 - !private ["Ps16MutableIndexable", "SubSequence"]
 - !private ["Ps16MutableIndexable", "subscript"]
 - !private ["C5MySQL5MySQL", "close"]
+- ["C5MySQL5MySQL", "deinit"]
 - !private ["C5MySQL5MySQL", "query"]
 - !private ["C5MySQL5MySQL", "storeResults"]
 - !private ["OSC21NSBitmapImageFileType", "PNG"]
+- ["OSC21NSBitmapImageFileType", "deinit"]
+- ["CSo16NSBitmapImageRep", "deinit"]
 - !private ["CSo16NSBitmapImageRep", "init"]
 - !private ["CSo16NSBitmapImageRep", "representation"]
 - !private ["CSo16NSBitmapImageRep", "size"]
@@ -449,6 +513,7 @@ depends-member:
 - !private ["PSo9NSCopying", "representation"]
 - !private ["PSo9NSCopying", "size"]
 - !private ["CSo7NSImage", "cgImage"]
+- ["CSo7NSImage", "deinit"]
 - !private ["CSo7NSImage", "init"]
 - !private ["CSo7NSImage", "size"]
 - !private ["CSo10NSImageRep", "init"]
@@ -494,11 +559,8 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "size"]
 - !private ["CSo8NSString", "components"]
 - !private ["CSo8NSString", "init"]
-- ["Ps21NilLiteralConvertible", "some"]
-- !private ["Sq", "deinit"]
+- ["Sq", "deinit"]
 - ["Sq", "some"]
-- !private ["Ps12OutputStream", "components"]
-- !private ["Ps12OutputStream", "init"]
 - !private ["Ps22RandomAccessCollection", "Index"]
 - !private ["Ps22RandomAccessCollection", "IndexDistance"]
 - !private ["Ps22RandomAccessCollection", "Indices"]
@@ -528,8 +590,8 @@ depends-member:
 - !private ["Ps25RangeReplaceableIndexable", "SubSequence"]
 - !private ["Ps25RangeReplaceableIndexable", "subscript"]
 - !private ["Ps16RawRepresentable", "PNG"]
-- !private ["Ps16RawRepresentable", "exportFailed"]
 - !private ["P10Foundation20ReferenceConvertible", "init"]
+- ["CC5MySQL5MySQL7Results", "deinit"]
 - !private ["CC5MySQL5MySQL7Results", "forEachRow"]
 - !private ["CC5MySQL5MySQL7Results", "next"]
 - !private ["CC5MySQL5MySQL7Results", "numRows"]
@@ -543,6 +605,7 @@ depends-member:
 - !private ["Ps8Sequence", "Value"]
 - !private ["Ps8Sequence", "_Element"]
 - !private ["Ps8Sequence", "count"]
+- !private ["Ps8Sequence", "first"]
 - !private ["Ps8Sequence", "init"]
 - !private ["Ps8Sequence", "jsonEncodedString"]
 - !private ["Ps8Sequence", "keys"]
@@ -566,12 +629,10 @@ depends-member:
 - !private ["Ps10Strideable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps10Strideable", "init"]
 - !private ["SS", "components"]
-- !private ["SS", "deinit"]
+- ["SS", "deinit"]
 - !private ["SS", "init"]
-- !private ["Ps30StringInterpolationConvertible", "components"]
-- !private ["Ps30StringInterpolationConvertible", "init"]
-- !private ["Ps24StringLiteralConvertible", "components"]
-- !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["Ps16TextOutputStream", "components"]
+- !private ["Ps16TextOutputStream", "init"]
 - !private ["Su", "Stride"]
 - !private ["Su", "_DisallowMixedSignArithmetic"]
 - !private ["Su", "deinit"]
@@ -587,32 +648,14 @@ depends-member:
 - !private ["Vs5UInt8", "Stride"]
 - !private ["Vs5UInt8", "_DisallowMixedSignArithmetic"]
 - !private ["Vs5UInt8", "deinit"]
+- ["V10Foundation3URL", "deinit"]
 - !private ["V10Foundation3URL", "init"]
 - !private ["Sc", "deinit"]
-- !private ["Ps31UnicodeScalarLiteralConvertible", "components"]
-- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
 - !private ["Ps15UnsignedInteger", "Stride"]
 - !private ["Ps15UnsignedInteger", "_DisallowMixedSignArithmetic"]
 - !private ["Ps14_ArrayProtocol", "Index"]
 - !private ["Ps14_ArrayProtocol", "SubSequence"]
 - !private ["Ps14_ArrayProtocol", "subscript"]
-- !private ["P10Foundation15_BridgedNSError", "exportFailed"]
-- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "components"]
-- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
-- !private ["Ps31_BuiltinFloatLiteralConvertible", "Stride"]
-- !private ["Ps31_BuiltinFloatLiteralConvertible", "init"]
-- !private ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
-- !private ["Ps33_BuiltinIntegerLiteralConvertible", "Stride"]
-- !private ["Ps33_BuiltinIntegerLiteralConvertible", "_DisabledRangeIndex"]
-- !private ["Ps33_BuiltinIntegerLiteralConvertible", "_DisallowMixedSignArithmetic"]
-- !private ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
-- !private ["Ps32_BuiltinStringLiteralConvertible", "components"]
-- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
-- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "components"]
-- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
-- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "components"]
-- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
 - !private ["Ps15_CVarArgAligned", "Stride"]
 - !private ["Ps15_CVarArgAligned", "_DisallowMixedSignArithmetic"]
 - !private ["Ps15_CVarArgAligned", "init"]
@@ -623,10 +666,26 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps28_DisallowMixedSignArithmetic", "Stride"]
 - !private ["Ps28_DisallowMixedSignArithmetic", "_DisallowMixedSignArithmetic"]
-- !private ["Ps32_FileReferenceLiteralConvertible", "init"]
-- !private ["Ps24_ImageLiteralConvertible", "cgImage"]
-- !private ["Ps24_ImageLiteralConvertible", "init"]
-- !private ["Ps24_ImageLiteralConvertible", "size"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "components"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "Stride"]
+- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "init"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "IntegerLiteralType"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "Stride"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "_DisabledRangeIndex"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "_DisallowMixedSignArithmetic"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "components"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "components"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "components"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps34_ExpressibleByFileReferenceLiteral", "init"]
+- !private ["Ps26_ExpressibleByImageLiteral", "cgImage"]
+- !private ["Ps26_ExpressibleByImageLiteral", "init"]
+- !private ["Ps26_ExpressibleByImageLiteral", "size"]
 - !private ["Ps14_Incrementable", "IntegerLiteralType"]
 - !private ["Ps14_Incrementable", "Stride"]
 - !private ["Ps14_Incrementable", "_DisabledRangeIndex"]
@@ -642,6 +701,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "IndexDistance"]
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "Iterator"]
 - !private ["Ps21_ObjectiveCBridgeable", "Key"]
 - !private ["Ps21_ObjectiveCBridgeable", "Stride"]
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
@@ -650,11 +710,11 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "components"]
+- !private ["Ps21_ObjectiveCBridgeable", "first"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "jsonEncodedString"]
 - !private ["Ps21_ObjectiveCBridgeable", "keys"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
-- !private ["P10Foundation34_ObjectiveCBridgeableErrorProtocol", "exportFailed"]
 - !private ["Ps14_SignedInteger", "IntegerLiteralType"]
 - !private ["Ps14_SignedInteger", "Stride"]
 - !private ["Ps14_SignedInteger", "_DisabledRangeIndex"]
@@ -665,87 +725,95 @@ depends-member:
 - !private ["Ps11_Strideable", "init"]
 - !private ["Ps14_StringElement", "Stride"]
 - !private ["Ps14_StringElement", "_DisallowMixedSignArithmetic"]
-- !private ["P10Foundation16__BridgedNSError", "exportFailed"]
 depends-nominal:
-- !private "CSo7AVAsset"
-- !private "CSo21AVAssetImageGenerator"
+- "CSo7AVAsset"
+- "CSo21AVAssetImageGenerator"
 - !private "PSo29AVAsynchronousKeyValueLoading"
-- !private "OSC7AVError"
 - !private "Ps16AbsoluteValuable"
 - !private "Ps9AnyObject"
-- !private "Sa"
-- !private "Ps23ArrayLiteralConvertible"
+- !private "Ps10Arithmetic"
+- "Sa"
 - !private "Ps23BidirectionalCollection"
 - !private "Ps22BidirectionalIndexable"
+- !private "Vs18BidirectionalSlice"
 - !private "Ps19BinaryFloatingPoint"
 - !private "Ps17BitwiseOperations"
-- !private "Sb"
-- !private "Ps7Boolean"
-- !private "Ps25BooleanLiteralConvertible"
+- "CC11PerfectHTTP10MimeReader8BodySpec"
+- "Sb"
 - !private "P10PerfectNet28BytesSwappingUnsignedInteger"
 - !private "V12CoreGraphics7CGFloat"
-- !private "CSo7CGImage"
-- !private "VSC6CGSize"
-- !private "CSo10CLLocation"
-- !private "VSC22CLLocationCoordinate2D"
-- !private "VSC6CMTime"
+- "CSo7CGImage"
+- "VSC6CGSize"
+- "CSo10CLLocation"
+- "VSC22CLLocationCoordinate2D"
+- "VSC6CMTime"
 - !private "Ps7CVarArg"
 - !private "Vs9Character"
 - !private "V10Foundation12CharacterSet"
 - !private "Ps10Collection"
 - !private "Ps10Comparable"
-- !private "Vs14CountableRange"
+- "Vs14CountableRange"
 - "Ps28CustomDebugStringConvertible"
 - !private "Ps29CustomPlaygroundQuickLookable"
 - "Ps17CustomReflectable"
 - !private "Ps23CustomStringConvertible"
 - !private "V10Foundation4Date"
 - !private "VSC7Decimal"
+- !private "Vs27DefaultBidirectionalIndices"
 - !private "Vs26DefaultRandomAccessIndices"
-- !private "Vs10Dictionary"
-- !private "Ps28DictionaryLiteralConvertible"
+- "Vs10Dictionary"
+- !private "Vs18DictionaryIterator"
 - !private "V8Dispatch12DispatchTime"
 - !private "O8Dispatch20DispatchTimeInterval"
 - !private "V8Dispatch16DispatchWallTime"
-- !private "Sd"
+- "Sd"
 - !private "Ps9Equatable"
-- "Ps13ErrorProtocol"
-- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
-- !private "CSo11FileManager"
+- "Ps5Error"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps30ExpressibleByDictionaryLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps25ExpressibleByFloatLiteral"
+- !private "Ps27ExpressibleByIntegerLiteral"
+- "Ps23ExpressibleByNilLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "C10PerfectLib4File"
+- "O16MusicMatchServer9FileError"
+- "CSo11FileManager"
 - !private "Sf"
 - !private "Vs7Float80"
-- !private "Ps23FloatLiteralConvertible"
 - !private "Ps13FloatingPoint"
-- !private "P11PerfectHTTP11HTTPRequest"
-- !private "P11PerfectHTTP12HTTPResponse"
+- "P11PerfectHTTP11HTTPRequest"
+- "P11PerfectHTTP12HTTPResponse"
 - !private "Ps8Hashable"
 - !private "V10Foundation9IndexPath"
 - !private "Ps9Indexable"
 - !private "Ps13IndexableBase"
 - !private "Vs16IndexingIterator"
-- !private "Si"
+- "Si"
 - !private "Vs5Int16"
 - !private "Vs5Int32"
-- !private "Vs5Int64"
+- "Vs5Int64"
 - !private "Vs4Int8"
 - !private "Ps7Integer"
 - !private "Ps17IntegerArithmetic"
-- !private "Ps25IntegerLiteralConvertible"
 - !private "Ps16IteratorProtocol"
 - "O10PerfectLib19JSONConversionError"
 - "P10PerfectLib15JSONConvertible"
 - !private "Ps22LazyCollectionProtocol"
-- !private "Vs17LazyMapCollection"
+- "Vs17LazyMapCollection"
 - !private "Ps20LazySequenceProtocol"
 - !private "Ps10MirrorPath"
 - !private "Ps17MutableCollection"
 - !private "Ps16MutableIndexable"
-- !private "C5MySQL5MySQL"
-- !private "OSC21NSBitmapImageFileType"
-- !private "CSo16NSBitmapImageRep"
+- "C5MySQL5MySQL"
+- "OSC21NSBitmapImageFileType"
+- "CSo16NSBitmapImageRep"
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
-- !private "CSo7NSImage"
+- "CSo7NSImage"
 - !private "CSo10NSImageRep"
 - !private "PSo16NSMutableCopying"
 - !private "CSo8NSObject"
@@ -754,9 +822,7 @@ depends-nominal:
 - !private "PSo19NSPasteboardWriting"
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
-- "Ps21NilLiteralConvertible"
 - "Sq"
-- !private "Ps12OutputStream"
 - !private "Ps22RandomAccessCollection"
 - !private "Ps21RandomAccessIndexable"
 - !private "Vs17RandomAccessSlice"
@@ -765,126 +831,135 @@ depends-nominal:
 - !private "Ps25RangeReplaceableIndexable"
 - !private "Ps16RawRepresentable"
 - !private "P10Foundation20ReferenceConvertible"
-- !private "CC5MySQL5MySQL7Results"
+- "CC5MySQL5MySQL7Results"
 - !private "Ps8Sequence"
 - !private "Ps13SignedInteger"
 - !private "Ps12SignedNumber"
 - !private "Vs5Slice"
 - !private "Ps10Streamable"
 - !private "Ps10Strideable"
-- !private "SS"
-- !private "Ps30StringInterpolationConvertible"
-- !private "Ps24StringLiteralConvertible"
+- "SS"
+- !private "Ps16TextOutputStream"
 - !private "Su"
 - !private "Vs6UInt16"
 - !private "Vs6UInt32"
 - !private "Vs6UInt64"
 - !private "Vs5UInt8"
-- !private "V10Foundation3URL"
+- "V10Foundation3URL"
 - !private "Sc"
-- !private "Ps31UnicodeScalarLiteralConvertible"
 - !private "Ps15UnsignedInteger"
 - !private "Ps14_ArrayProtocol"
-- !private "P10Foundation15_BridgedNSError"
-- !private "Ps33_BuiltinBooleanLiteralConvertible"
-- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
-- !private "Ps31_BuiltinFloatLiteralConvertible"
-- !private "Ps33_BuiltinIntegerLiteralConvertible"
-- !private "Ps32_BuiltinStringLiteralConvertible"
-- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
-- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
 - !private "Ps15_CVarArgAligned"
 - !private "Ps22_CVarArgPassedAsDouble"
 - !private "Ps24_DestructorSafeContainer"
 - !private "Ps28_DisallowMixedSignArithmetic"
-- !private "Ps32_FileReferenceLiteralConvertible"
-- !private "Ps24_ImageLiteralConvertible"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps33_ExpressibleByBuiltinFloatLiteral"
+- !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps34_ExpressibleByFileReferenceLiteral"
+- !private "Ps26_ExpressibleByImageLiteral"
 - !private "Ps14_Incrementable"
 - !private "Ps8_Integer"
 - !private "Ps18_IntegerArithmetic"
 - !private "Ps21_ObjectiveCBridgeable"
-- !private "P10Foundation34_ObjectiveCBridgeableErrorProtocol"
 - !private "Ps14_SignedInteger"
 - !private "Ps11_Strideable"
 - !private "Ps14_StringElement"
-- !private "P10Foundation16__BridgedNSError"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/Visibility.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/LibcShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RefCount.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/HeapObject.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/DispatchShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/module.modulemap"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectHTTP.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/bio.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/opensslconf.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/e_os2.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/bio.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/opensslconf.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/e_os2.h"
 - "/usr/local/include/openssl/err.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/srtp.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl23.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/pqueue.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/dtls1.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/tls1.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl3.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl2.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/kssl.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/hmac.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/pem2.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/x509.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/pem.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/pkcs7.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/lhash.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/x509_vfy.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/sha.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/dh.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/dsa.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/rsa.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ecdh.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ecdsa.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ec.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/bn.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/asn1.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/obj_mac.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/objects.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/evp.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/buffer.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/symhacks.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ossl_typ.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/opensslv.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/safestack.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/stack.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/crypto.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/comp.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/srtp.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ssl23.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/pqueue.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/dtls1.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/tls1.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ssl3.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ssl2.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/kssl.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/hmac.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/pem2.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/x509.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/pem.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/pkcs7.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/lhash.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/x509_vfy.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/sha.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/dh.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/dsa.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/rsa.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ecdh.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ecdsa.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ec.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/bn.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/asn1.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/obj_mac.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/objects.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/evp.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/buffer.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/symhacks.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ossl_typ.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/opensslv.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/safestack.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/stack.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/crypto.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/comp.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ssl.h"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectHTTPServer.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/MySQL.swiftmodule"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/psi/psi_base.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/psi/psi_memory.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_alloc.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/typelib.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/plugin_auth_common.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql/client_plugin.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_list.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_time.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/my_command.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/binary_log_types.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_com.h"
-- "/usr/local/Cellar/mysql/5.7.10/include/mysql/mysql_version.h"
+- "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql/psi/psi_base.h"
+- "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql/psi/psi_memory.h"
+- "/usr/local/Cellar/mysql/5.7.13/include/mysql/my_alloc.h"
+- "/usr/local/Cellar/mysql/5.7.13/include/mysql/typelib.h"
+- "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql/plugin_auth_common.h"
+- "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql/client_plugin.h"
+- "/usr/local/Cellar/mysql/5.7.13/include/mysql/my_list.h"
+- "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql_time.h"
+- "/usr/local/Cellar/mysql/5.7.13/include/mysql/my_command.h"
+- "/usr/local/Cellar/mysql/5.7.13/include/mysql/binary_log_types.h"
+- "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql_com.h"
+- "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql_version.h"
 - "/usr/local/include/mysql/mysql.h"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AVFoundation.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreMedia.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreAudio.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreLocation.swiftmodule"
-interface-hash: "d22f6a8a59a4e260ba740a92d089e049"
+- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/AVFoundation.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreMedia.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreAudio.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreLocation.swiftmodule"
+interface-hash: "ed112e03236a031d881444457b8e92eb"

@@ -1,9 +1,9 @@
-version: "Apple Swift version 3.0 (swiftlang-800.0.34.6 clang-800.0.33)"
-options: "65449c4971d46428866887c40a2e9378"
-build_time: [522290434, 125285000]
+version: "Apple Swift version 3.0-dev (LLVM 440a472499, Clang e10506ae1c, Swift 395e967875)"
+options: "732ecc63556fea20d3b9533f10892220"
+build_time: [523747581, 670796000]
 inputs:
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTPServer-0.5.0/Sources/HPACK.swift": [522290351, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTPServer-0.5.0/Sources/HTTP11Request.swift": [522290351, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTPServer-0.5.0/Sources/HTTP11Response.swift": [522290351, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTPServer-0.5.0/Sources/HTTP2.swift": [522290351, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTPServer-0.5.0/Sources/HTTPServer.swift": [522290351, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTPServer-0.8.0/Sources/HPACK.swift": [523604190, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTPServer-0.8.0/Sources/HTTP11Request.swift": [523604190, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTPServer-0.8.0/Sources/HTTP11Response.swift": [523604190, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTPServer-0.8.0/Sources/HTTP2.swift": [523604190, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTPServer-0.8.0/Sources/HTTPServer.swift": [523604190, 0]

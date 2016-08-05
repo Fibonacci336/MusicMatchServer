@@ -16,22 +16,21 @@ provides-member:
 - ["OO11PerfectHTTP18HTTPResponseHeader4Name", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "String"
-- "Dictionary"
-- "StringLiteralType"
-- "Bool"
-- "HTTPRequestHeader"
 - !private "~="
-- "=="
-- "HTTPResponseHeader"
-- "Hashable"
 - "Int"
+- "Hashable"
+- "HTTPRequestHeader"
+- "=="
+- "String"
+- "Bool"
+- "Dictionary"
+- "HTTPResponseHeader"
+- "StringLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "hashValue"]
 - !private ["Ps9AnyObject", "lowercased"]
 - !private ["Sb", "_getBuiltinLogicValue"]
-- !private ["Ps7Boolean", "_getBuiltinLogicValue"]
-- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- ["Sb", "deinit"]
 - !private ["Ps7CVarArg", "hashValue"]
 - !private ["Ps7CVarArg", "lowercased"]
 - !private ["Vs11ClosedRange", "deinit"]
@@ -78,12 +77,8 @@ depends-member:
 - ["Vs10Dictionary", "Key"]
 - !private ["Vs10Dictionary", "SubSequence"]
 - ["Vs10Dictionary", "Value"]
+- ["Vs10Dictionary", "deinit"]
 - !private ["Vs10Dictionary", "subscript"]
-- !private ["Ps28DictionaryLiteralConvertible", "Index"]
-- ["Ps28DictionaryLiteralConvertible", "Key"]
-- !private ["Ps28DictionaryLiteralConvertible", "SubSequence"]
-- ["Ps28DictionaryLiteralConvertible", "Value"]
-- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
 - !private ["Ps9Equatable", "HTTPRequestHeader"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "accept"]
@@ -138,8 +133,21 @@ depends-member:
 - ["Ps9Equatable", "xUIDH"]
 - ["Ps9Equatable", "xWapProfile"]
 - ["Ps9Equatable", ""]
-- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "hashValue"]
-- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "lowercased"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "Index"]
+- ["Ps30ExpressibleByDictionaryLiteral", "Key"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "SubSequence"]
+- ["Ps30ExpressibleByDictionaryLiteral", "Value"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "subscript"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "hashValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "lowercased"]
+- ["Ps23ExpressibleByNilLiteral", "some"]
+- !private ["Ps32ExpressibleByStringInterpolation", "hashValue"]
+- !private ["Ps32ExpressibleByStringInterpolation", "lowercased"]
+- !private ["Ps26ExpressibleByStringLiteral", "hashValue"]
+- !private ["Ps26ExpressibleByStringLiteral", "lowercased"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "hashValue"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "lowercased"]
 - ["O11PerfectHTTP17HTTPRequestHeader", "HTTPRequestHeader"]
 - ["O11PerfectHTTP17HTTPRequestHeader", "Hashable"]
 - ["O11PerfectHTTP17HTTPRequestHeader", "Int"]
@@ -218,6 +226,7 @@ depends-member:
 - !private ["Ps13IndexableBase", "_Element"]
 - !private ["Ps13IndexableBase", "subscript"]
 - !private ["Vs16IndexingIterator", "Element"]
+- ["Si", "deinit"]
 - !private ["Ps16IteratorProtocol", "Element"]
 - !private ["P10PerfectLib15JSONConvertible", "Index"]
 - ["P10PerfectLib15JSONConvertible", "Key"]
@@ -321,6 +330,7 @@ depends-member:
 - ["OO11PerfectHTTP18HTTPResponseHeader4Name", "contentType"]
 - ["OO11PerfectHTTP18HTTPResponseHeader4Name", "custom"]
 - ["OO11PerfectHTTP18HTTPResponseHeader4Name", "date"]
+- ["OO11PerfectHTTP18HTTPResponseHeader4Name", "deinit"]
 - ["OO11PerfectHTTP18HTTPResponseHeader4Name", "eTag"]
 - ["OO11PerfectHTTP18HTTPResponseHeader4Name", "expires"]
 - ["OO11PerfectHTTP18HTTPResponseHeader4Name", "fromStandard"]
@@ -358,10 +368,8 @@ depends-member:
 - ["OO11PerfectHTTP18HTTPResponseHeader4Name", "xUACompatible"]
 - ["OO11PerfectHTTP18HTTPResponseHeader4Name", "xWebKitCSP"]
 - ["OO11PerfectHTTP18HTTPResponseHeader4Name", "xxsSProtection"]
-- ["Ps21NilLiteralConvertible", "some"]
+- ["Sq", "deinit"]
 - ["Sq", "some"]
-- !private ["Ps12OutputStream", "hashValue"]
-- !private ["Ps12OutputStream", "lowercased"]
 - !private ["Vs5Range", "deinit"]
 - !private ["Ps8Sequence", "Element"]
 - !private ["Ps8Sequence", "Index"]
@@ -377,24 +385,20 @@ depends-member:
 - !private ["Vs5Slice", "_Element"]
 - !private ["Ps10Streamable", "hashValue"]
 - !private ["Ps10Streamable", "lowercased"]
-- !private ["SS", "deinit"]
+- ["SS", "deinit"]
 - !private ["SS", "hashValue"]
 - !private ["SS", "lowercased"]
-- !private ["Ps30StringInterpolationConvertible", "hashValue"]
-- !private ["Ps30StringInterpolationConvertible", "lowercased"]
-- !private ["Ps24StringLiteralConvertible", "hashValue"]
-- !private ["Ps24StringLiteralConvertible", "lowercased"]
-- !private ["Ps31UnicodeScalarLiteralConvertible", "hashValue"]
-- !private ["Ps31UnicodeScalarLiteralConvertible", "lowercased"]
-- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "hashValue"]
-- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "lowercased"]
-- !private ["Ps32_BuiltinStringLiteralConvertible", "hashValue"]
-- !private ["Ps32_BuiltinStringLiteralConvertible", "lowercased"]
-- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "hashValue"]
-- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "lowercased"]
-- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "hashValue"]
-- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "lowercased"]
+- !private ["Ps16TextOutputStream", "hashValue"]
+- !private ["Ps16TextOutputStream", "lowercased"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "hashValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "lowercased"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "hashValue"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "lowercased"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "hashValue"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "lowercased"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "hashValue"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "lowercased"]
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - ["Ps21_ObjectiveCBridgeable", "Key"]
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
@@ -406,9 +410,7 @@ depends-member:
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
 depends-nominal:
 - !private "Ps9AnyObject"
-- !private "Sb"
-- !private "Ps7Boolean"
-- !private "Ps25BooleanLiteralConvertible"
+- "Sb"
 - !private "Ps7CVarArg"
 - !private "Vs11ClosedRange"
 - "Ps10Collection"
@@ -420,15 +422,21 @@ depends-nominal:
 - "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
 - "Vs10Dictionary"
-- "Ps28DictionaryLiteralConvertible"
 - "Ps9Equatable"
-- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- "Ps30ExpressibleByDictionaryLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps23ExpressibleByNilLiteral"
+- !private "Ps32ExpressibleByStringInterpolation"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - "O11PerfectHTTP17HTTPRequestHeader"
 - "O11PerfectHTTP18HTTPResponseHeader"
 - "Ps8Hashable"
 - "Ps9Indexable"
 - "Ps13IndexableBase"
 - !private "Vs16IndexingIterator"
+- "Si"
 - !private "Ps16IteratorProtocol"
 - "P10PerfectLib15JSONConvertible"
 - !private "Ps10MirrorPath"
@@ -441,77 +449,86 @@ depends-nominal:
 - !private "CSo8NSString"
 - "OO11PerfectHTTP17HTTPRequestHeader4Name"
 - "OO11PerfectHTTP18HTTPResponseHeader4Name"
-- "Ps21NilLiteralConvertible"
 - "Sq"
-- !private "Ps12OutputStream"
 - !private "Vs5Range"
 - "Ps8Sequence"
 - !private "Vs5Slice"
 - !private "Ps10Streamable"
-- !private "SS"
-- !private "Ps30StringInterpolationConvertible"
-- !private "Ps24StringLiteralConvertible"
-- !private "Ps31UnicodeScalarLiteralConvertible"
-- !private "Ps33_BuiltinBooleanLiteralConvertible"
-- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
-- !private "Ps32_BuiltinStringLiteralConvertible"
-- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
-- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
 - "Ps21_ObjectiveCBridgeable"
 - !private "Vs26_OptionalNilComparisonType"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/mysqlclient-0.3.0/module.modulemap"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/Visibility.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/LibcShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RefCount.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/HeapObject.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/DispatchShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/module.modulemap"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/bio.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/opensslconf.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/e_os2.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/bio.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/opensslconf.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/e_os2.h"
 - "/usr/local/include/openssl/err.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/srtp.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl23.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/pqueue.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/dtls1.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/tls1.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl3.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl2.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/kssl.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/hmac.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/pem2.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/x509.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/pem.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/pkcs7.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/lhash.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/x509_vfy.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/sha.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/dh.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/dsa.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/rsa.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ecdh.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ecdsa.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ec.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/bn.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/asn1.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/obj_mac.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/objects.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/evp.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/buffer.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/symhacks.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ossl_typ.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/opensslv.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/safestack.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/stack.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/crypto.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/comp.h"
-- "/usr/local/Cellar/openssl/1.0.2e/include/openssl/ssl.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/srtp.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ssl23.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/pqueue.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/dtls1.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/tls1.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ssl3.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ssl2.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/kssl.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/hmac.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/pem2.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/x509.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/pem.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/pkcs7.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/lhash.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/x509_vfy.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/sha.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/dh.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/dsa.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/rsa.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ecdh.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ecdsa.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ec.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/bn.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/asn1.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/obj_mac.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/objects.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/evp.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/buffer.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/symhacks.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ossl_typ.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/opensslv.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/safestack.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/stack.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/crypto.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/comp.h"
+- "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/ssl.h"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
 interface-hash: "a9d05874a809c914e764b9bcc742b24f"

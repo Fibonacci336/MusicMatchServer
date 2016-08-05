@@ -1,6 +1,6 @@
-version: "Apple Swift version 3.0 (swiftlang-800.0.34.6 clang-800.0.33)"
-options: "3ff092cc704ca526117a203ab6df6f8b"
-build_time: [522290413, 621983000]
+version: "Apple Swift version 3.0-dev (LLVM 440a472499, Clang e10506ae1c, Swift 395e967875)"
+options: "dd5d3cc1b8f8b7a008098d32809f9f44"
+build_time: [523747562, 177426000]
 inputs:
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectThread-0.10.0/Sources/Threading.swift": [522290396, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectThread-0.10.0/Sources/ThreadQueue.swift": [522290396, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectThread-0.11.0/Sources/Threading.swift": [523604206, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectThread-0.11.0/Sources/ThreadQueue.swift": [523604206, 0]

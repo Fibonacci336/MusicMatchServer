@@ -1,8 +1,8 @@
-version: "Apple Swift version 3.0 (swiftlang-800.0.34.6 clang-800.0.33)"
-options: "b6c00f96ce57e7f2877002f2f2ec7083"
-build_time: [522290437, 287993000]
+version: "Apple Swift version 3.0-dev (LLVM 440a472499, Clang e10506ae1c, Swift 395e967875)"
+options: "9c9848fce884d9664e7b8d02ddf7e0e6"
+build_time: [523747586, 436123000]
 inputs:
   "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Sources/arguments.swift": [521850997, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Sources/main.swift": [522280900, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Sources/MySQLFunctions.swift": [522287805, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Sources/PerfectHandlers.swift": [522287972, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Sources/main.swift": [523661944, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Sources/MySQLFunctions.swift": [522887576, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Sources/PerfectHandlers.swift": [523747512, 0]

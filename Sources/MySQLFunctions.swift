@@ -35,10 +35,14 @@ func initializeDatabaseConnection() throws -> MySQL{
     return mysql
 }
 
-enum DatabaseError : ErrorProtocol{
+enum DatabaseError : Error{
     
     case connectionError
     case schemaCreationError
+}
+
+enum FileError : Error{
+    case exportFailed
 }
 
 func deleteColumn(_ name : String, mysql : MySQL, table : String){

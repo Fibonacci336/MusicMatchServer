@@ -32,18 +32,35 @@ let PASSWORD = "123qweasdzxC"
 let SCHEMA = "MusicMatch"
 
 var currentURL = "http://0.0.0.0:8181/"
+
 //public method that is being called by the server framework to initialise your module.
 public func PerfectServerModuleInit() {
 
     initializeUserData()
     initializeMessagesData()
     initializeUserLogInData()
-    
+
     if(production){
         currentURL = "http://www.lassoconsultant.com:8183/"
         print("Production")
     }
 
+}
+
+func fileUpload(_ request : HTTPRequest, response : HTTPResponse){
+
+    print("Handling File Upload Request")
+
+    print(request.postFileUploads)
+
+    print("Media Type: " + request.urlVariables.first!.value)
+    let upload = request.postFileUploads![0]
+    let file = File(upload.tmpFileName)
+    do {
+        let _ = try file.moveTo(path: webRoot + "/" + upload.fileName, overWrite: true)
+    } catch {
+        print(error)
+    }
 }
 
 
@@ -60,9 +77,9 @@ func distanceCheck(_ request: HTTPRequest, response: HTTPResponse) {
             mysql.close()
         }
         let mysqlStatement = "SELECT CurrentLat,CurrentLong FROM Users WHERE UUID=" + currentUUID! + ";"
-        
+
         let query = mysql.query(statement: mysqlStatement)
-        
+
         if(query){
             if let queryResults = mysql.storeResults(){
                 let row = queryResults.next()!
@@ -72,28 +89,28 @@ func distanceCheck(_ request: HTTPRequest, response: HTTPResponse) {
             }
         }
         var userArray = getUsersInArea(currentLocation: currentLocation, range: userRange)!
-        
+
         var returnDict = [String : [String?]]()
-        
+
         for var i in 0..<userArray.keys.count{
             let UUID = userArray[i]
             let statement = "SELECT UserType,UserName,BirthDate,MusicType,BandPosition,VideoName,Available,UUID, CurrentLat, CurrentLong FROM users where UUID=\"" + UUID! + "\";"
             let query = mysql.query(statement: statement)
-            
+
             if(query){
                 if let queryResults = mysql.storeResults(){
                     let row = queryResults.next()!
                     returnDict[String(i)] = row
                 }
             }
-            
+
         }
         currentDict = returnDict
-        
+
     }catch{
         print("Could not initialize database connection")
     }
-    
+
     do{
         let jsonString = try currentDict.jsonEncodedString()
         response.appendBody(string: jsonString)
@@ -126,7 +143,7 @@ func restJSONHandler(_ request: HTTPRequest, response: HTTPResponse) {
                         dictionary[String(index)] = row
                         index+=1
                     }
-                
+
                     do{
                         let jsonString = try dictionary.jsonEncodedString()
                         response.appendBody(string: jsonString)
@@ -146,7 +163,7 @@ func restJSONHandler(_ request: HTTPRequest, response: HTTPResponse) {
 
 
 //Create a handler for index Route
-    
+
 func indexHandler(_ request: HTTPRequest, response: HTTPResponse) {
     response.appendBody(string: "Hello")
     response.completed()
@@ -160,7 +177,7 @@ func thumbHandler(_ request: HTTPRequest, response: HTTPResponse) {
         saveImage(thumbnail, locationPath: documentsDir + imagePath)
         response.appendBody(string: ((request.urlVariables["videoname"]!) + ".png"))
     }
-    
+
     response.completed()
     }
 func getDocumentsDirectory() -> NSString {
@@ -170,20 +187,20 @@ func getDocumentsDirectory() -> NSString {
 }
 
 func getVideoThumbnail(videoURL : String) throws -> NSImage{
-    
+
     let asset = AVAsset(url: URL(string: videoURL)!)
     let imageGenerator = AVAssetImageGenerator(asset: asset)
     var time = asset.duration
     time.value /= 2
-    
+
     if let cgImage = try? imageGenerator.copyCGImage(at: time, actualTime: nil){
         let image = NSImage(cgImage: cgImage, size: NSSize(width: cgImage.width, height: cgImage.height))
         return image
     }else{
         print("Returning Nil Thumbnail for Video " + videoURL)
-        throw AVError.exportFailed
+        throw FileError.exportFailed
     }
-    
+
 }
 
 func saveImage(_ image : NSImage, locationPath : String){
@@ -202,7 +219,7 @@ func saveImage(_ image : NSImage, locationPath : String){
 }
 
 func getUsersInArea(currentLocation : CLLocation, range : Double) -> [Int : String]?{
-    
+
     do{
         let mysql = try initializeDatabaseConnection()
         defer {
@@ -223,25 +240,12 @@ func getUsersInArea(currentLocation : CLLocation, range : Double) -> [Int : Stri
             uuidArray[index] = row[0]
             index+=1
         }
-        
+
         return uuidArray
-        
-        
+
+
     }catch{
         print("Could not initialize database connection")
         return nil
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
