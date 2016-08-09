@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "196"
             endingLineNumber = "196"
-            landmarkName = "getVideoThumbnail(videoURL:)"
+            landmarkName = "distanceCheck(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "182"
             endingLineNumber = "182"
-            landmarkName = "thumbHandler(_:response:)"
+            landmarkName = "distanceCheck(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -47,14 +47,14 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "181"
             endingLineNumber = "181"
-            landmarkName = "thumbHandler(_:response:)"
+            landmarkName = "distanceCheck(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "Sources/main.swift"
@@ -85,7 +85,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "207"
             endingLineNumber = "207"
-            landmarkName = "saveImage(_:locationPath:)"
+            landmarkName = "distanceCheck(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -101,7 +101,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "182"
             endingLineNumber = "182"
-            landmarkName = "thumbHandler(_:response:)"
+            landmarkName = "distanceCheck(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -117,7 +117,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "207"
             endingLineNumber = "207"
-            landmarkName = "saveImage(_:locationPath:)"
+            landmarkName = "distanceCheck(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -132,7 +132,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "163"
-            endingLineNumber = "163">
+            endingLineNumber = "163"
+            landmarkName = "distanceCheck(_:response:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -147,7 +149,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "202"
             endingLineNumber = "202"
-            landmarkName = "getVideoThumbnail(videoURL:)"
+            landmarkName = "distanceCheck(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -163,7 +165,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "179"
             endingLineNumber = "179"
-            landmarkName = "thumbHandler(_:response:)"
+            landmarkName = "distanceCheck(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -179,7 +181,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
             endingLineNumber = "72"
-            landmarkName = "distanceCheck(_:response:)"
+            landmarkName = "messageHandler(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -195,7 +197,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
             endingLineNumber = "70"
-            landmarkName = "distanceCheck(_:response:)"
+            landmarkName = "messageHandler(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -211,7 +213,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
             endingLineNumber = "107"
-            landmarkName = "distanceCheck(_:response:)"
+            landmarkName = "getDataFromDatabase(with:)"
             landmarkType = "9">
             <Locations>
                <Location
@@ -274,7 +276,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
             endingLineNumber = "103"
-            landmarkName = "distanceCheck(_:response:)"
+            landmarkName = "getDataFromDatabase(with:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -290,23 +292,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "123"
             endingLineNumber = "123"
-            landmarkName = "distanceCheck(_:response:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "3"
-            continueAfterRunningActions = "No"
-            filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "490411391.131524"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "distanceCheck(_:response:)"
+            landmarkName = "sendMessageNotification(message:recipientUUID:senderUUID:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -322,7 +308,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
             endingLineNumber = "92"
-            landmarkName = "distanceCheck(_:response:)"
+            landmarkName = "getDataFromDatabase(with:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -338,7 +324,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "106"
             endingLineNumber = "106"
-            landmarkName = "distanceCheck(_:response:)"
+            landmarkName = "getDataFromDatabase(with:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -354,7 +340,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
             endingLineNumber = "110"
-            landmarkName = "distanceCheck(_:response:)"
+            landmarkName = "getDataFromDatabase(with:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -370,7 +356,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "108"
             endingLineNumber = "108"
-            landmarkName = "distanceCheck(_:response:)"
+            landmarkName = "getDataFromDatabase(with:)"
             landmarkType = "9">
             <Locations>
                <Location
@@ -418,14 +404,14 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "112"
             endingLineNumber = "112"
-            landmarkName = "distanceCheck(_:response:)"
+            landmarkName = "getDataFromDatabase(with:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
@@ -434,14 +420,14 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
             endingLineNumber = "109"
-            landmarkName = "distanceCheck(_:response:)"
+            landmarkName = "getDataFromDatabase(with:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
@@ -450,14 +436,14 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
             endingLineNumber = "111"
-            landmarkName = "distanceCheck(_:response:)"
+            landmarkName = "getDataFromDatabase(with:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
@@ -466,7 +452,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
             endingLineNumber = "113"
-            landmarkName = "distanceCheck(_:response:)"
+            landmarkName = "getDataFromDatabase(with:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -546,7 +532,23 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
             endingLineNumber = "56"
-            landmarkName = "fileUpload(_:response:)"
+            landmarkName = "messageHandler(_:response:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/PerfectHandlers.swift"
+            timestampString = "492399057.320569"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "messageHandler(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

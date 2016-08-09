@@ -1,13 +1,13 @@
-version: "Apple Swift version 3.0-dev (LLVM 440a472499, Clang e10506ae1c, Swift 395e967875)"
-options: "f79d025f2ec34dfb7f613939559530bc"
-build_time: [523747576, 239001000]
+version: "Apple Swift version 3.0-dev (LLVM 3a878c6fdb, Clang 4ca9e01a7c, Swift 2ef0a8fdcb)"
+options: "ca8f217a0852da0b593f8f08f0d817bf"
+build_time: [524024937, 280854000]
 inputs:
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.18.0/Sources/HTTPFilter.swift": [523604192, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.18.0/Sources/HTTPHeaders.swift": [523604192, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.18.0/Sources/HTTPMethod.swift": [523604192, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.18.0/Sources/HTTPRequest.swift": [523604192, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.18.0/Sources/HTTPResponse.swift": [523604192, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.18.0/Sources/MimeReader.swift": [523604192, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.18.0/Sources/MimeType.swift": [523604192, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.18.0/Sources/Routing.swift": [523604192, 0]
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.18.0/Sources/StaticFileHandler.swift": [523604192, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.20.0/Sources/HTTPFilter.swift": [524014966, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.20.0/Sources/HTTPHeaders.swift": [524014966, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.20.0/Sources/HTTPMethod.swift": [524014966, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.20.0/Sources/HTTPRequest.swift": [524014966, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.20.0/Sources/HTTPResponse.swift": [524014966, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.20.0/Sources/MimeReader.swift": [524014966, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.20.0/Sources/MimeType.swift": [524014966, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.20.0/Sources/Routing.swift": [524014966, 0]
+  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/PerfectHTTP-0.20.0/Sources/StaticFileHandler.swift": [524014966, 0]

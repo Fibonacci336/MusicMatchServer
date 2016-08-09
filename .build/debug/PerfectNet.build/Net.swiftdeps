@@ -26,46 +26,47 @@ provides-member:
 - ["P10PerfectNet28BytesSwappingUnsignedInteger", "netToHost"]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "setsockopt"
+- !private "strerror"
+- !private "errno"
 - "BytesSwappingUnsignedInteger"
+- "StringLiteralType"
+- !private "SOL_SOCKET"
 - "UInt16"
 - "Error"
-- !private "SOL_SOCKET"
-- !private "+"
-- "invalidSocket"
-- !private "F_SETFL"
+- !private ">="
 - !private "SO_REUSEADDR"
-- "StringLiteralType"
-- !private "!="
-- !private "|"
-- "UInt32"
-- !private "strerror"
-- !private "F_GETFL"
-- !private "socklen_t"
-- "String"
-- !private "SO_NOSIGPIPE"
-- !private "O_NONBLOCK"
-- !private "sizeof"
+- "Int"
 - !private "AF_UNSPEC"
+- !private "&"
+- !private "+"
+- !private "~"
+- "invalidSocket"
+- "PerfectNetError"
+- !private "|"
+- "ThrowNetworkError"
+- "TernaryPrecedence"
+- !private "fcntl"
+- "Never"
+- "IntegerLiteralType"
+- "UnsignedInteger"
+- "Int32"
+- "SocketType"
+- "UInt64"
+- !private "F_SETFL"
+- "FloatLiteralType"
+- "String"
+- "SocketFileDescriptor"
 - !private "UnicodeScalarType"
 - "Bool"
-- "Never"
-- "UInt64"
-- "IntegerLiteralType"
+- "UInt32"
+- !private "!="
+- "AssignmentPrecedence"
+- !private "F_GETFL"
+- !private "MemoryLayout"
+- !private "O_NONBLOCK"
 - !private "=="
-- "UnsignedInteger"
-- !private "errno"
-- "ThrowNetworkError"
-- !private ">="
-- "FloatLiteralType"
-- "SocketFileDescriptor"
-- !private "&"
-- !private "~"
-- !private "fcntl"
-- "Int32"
-- "PerfectNetError"
-- "Int"
-- "SocketType"
-- !private "setsockopt"
+- !private "SO_NOSIGPIPE"
 depends-member:
 - ["Ps17BitwiseOperations", "Bool"]
 - ["Ps17BitwiseOperations", "Self"]
@@ -122,6 +123,7 @@ depends-member:
 - ["Ps9Equatable", ""]
 - ["Ps5Error", "_code"]
 - ["Ps5Error", "_domain"]
+- ["Ps5Error", "_getEmbeddedNSError"]
 - ["Ps5Error", "_userInfo"]
 - !private ["Ps5Error", "networkError"]
 - ["Ps5Error", ""]
@@ -167,12 +169,16 @@ depends-member:
 - ["Ps17IntegerArithmetic", "init"]
 - !private ["Ps17IntegerArithmetic", "littleEndian"]
 - ["Ps17IntegerArithmetic", ""]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Os12MemoryLayout", "size"]
 - !private ["Ps10MirrorPath", "init"]
 - !private ["Ps10MirrorPath", "littleEndian"]
 - ["O10PerfectNet15PerfectNetError", "Int32"]
 - ["O10PerfectNet15PerfectNetError", "String"]
 - ["O10PerfectNet15PerfectNetError", "_code"]
 - ["O10PerfectNet15PerfectNetError", "_domain"]
+- ["O10PerfectNet15PerfectNetError", "_getEmbeddedNSError"]
 - ["O10PerfectNet15PerfectNetError", "_userInfo"]
 - ["O10PerfectNet15PerfectNetError", "deinit"]
 - ["O10PerfectNet15PerfectNetError", "networkError"]
@@ -185,6 +191,7 @@ depends-member:
 - !private ["V10PerfectNet20SocketFileDescriptor", "F_GETFL"]
 - !private ["V10PerfectNet20SocketFileDescriptor", "F_SETFL"]
 - ["V10PerfectNet20SocketFileDescriptor", "Int32"]
+- !private ["V10PerfectNet20SocketFileDescriptor", "MemoryLayout"]
 - !private ["V10PerfectNet20SocketFileDescriptor", "O_NONBLOCK"]
 - !private ["V10PerfectNet20SocketFileDescriptor", "SOL_SOCKET"]
 - !private ["V10PerfectNet20SocketFileDescriptor", "SO_NOSIGPIPE"]
@@ -198,8 +205,6 @@ depends-member:
 - !private ["V10PerfectNet20SocketFileDescriptor", "invalidSocket"]
 - ["V10PerfectNet20SocketFileDescriptor", "isValid"]
 - !private ["V10PerfectNet20SocketFileDescriptor", "setsockopt"]
-- !private ["V10PerfectNet20SocketFileDescriptor", "sizeof"]
-- !private ["V10PerfectNet20SocketFileDescriptor", "socklen_t"]
 - ["V10PerfectNet20SocketFileDescriptor", "switchToBlocking"]
 - ["V10PerfectNet20SocketFileDescriptor", "switchToNonBlocking"]
 - !private ["Ps10Streamable", "init"]
@@ -222,7 +227,7 @@ depends-member:
 - ["Vs6UInt64", "deinit"]
 - !private ["Vs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
-- !private ["Sp", "deinit"]
+- !private ["Sv", "deinit"]
 - ["Ps15UnsignedInteger", "Bool"]
 - ["Ps15UnsignedInteger", "Self"]
 - ["Ps15UnsignedInteger", "byteSwapped"]
@@ -248,6 +253,14 @@ depends-member:
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- ["Ps9_Hashable", "Bool"]
+- ["Ps9_Hashable", "Self"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- ["Ps9_Hashable", "byteSwapped"]
+- !private ["Ps9_Hashable", "hostIsLittleEndian"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "littleEndian"]
+- ["Ps9_Hashable", ""]
 - ["Ps14_Incrementable", "Bool"]
 - ["Ps14_Incrementable", "Self"]
 - ["Ps14_Incrementable", "byteSwapped"]
@@ -308,6 +321,8 @@ depends-nominal:
 - !private "Vs4Int8"
 - "Ps7Integer"
 - "Ps17IntegerArithmetic"
+- !private "Ps25LosslessStringConvertible"
+- !private "Os12MemoryLayout"
 - !private "Ps10MirrorPath"
 - "O10PerfectNet15PerfectNetError"
 - "Ps13SignedInteger"
@@ -323,7 +338,7 @@ depends-nominal:
 - "Vs6UInt64"
 - !private "Vs5UInt8"
 - !private "Sc"
-- !private "Sp"
+- !private "Sv"
 - "Ps15UnsignedInteger"
 - "Ps15_CVarArgAligned"
 - "Ps28_DisallowMixedSignArithmetic"
@@ -333,6 +348,7 @@ depends-nominal:
 - !private "Ps34_ExpressibleByBuiltinStringLiteral"
 - !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
 - !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps9_Hashable"
 - "Ps14_Incrementable"
 - "Ps8_Integer"
 - "Ps18_IntegerArithmetic"
@@ -341,23 +357,23 @@ depends-nominal:
 - "Ps14_StringElement"
 depends-dynamic-lookup:
 depends-external:
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/Visibility.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/LibcShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RefCount.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/HeapObject.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/DispatchShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/module.modulemap"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/Visibility.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/LibcShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/RefCount.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/HeapObject.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/DispatchShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/module.modulemap"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
 - "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/bio.h"
 - "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/opensslconf.h"

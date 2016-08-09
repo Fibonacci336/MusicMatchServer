@@ -98,6 +98,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "______Target_PerfectNotifications"
+               BuildableName = "PerfectNotifications.framework"
+               BlueprintName = "PerfectNotifications"
+               ReferencedContainer = "container:MusicMatchServer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "______Target_MusicMatchServer"
                BuildableName = "MusicMatchServer"
                BlueprintName = "MusicMatchServer"

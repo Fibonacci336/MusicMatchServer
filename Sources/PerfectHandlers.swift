@@ -21,6 +21,8 @@ import MySQL
 import CoreLocation
 import PerfectHTTP
 import PerfectHTTPServer
+import PerfectNotifications
+
 
 // host where mysql server is
 let HOST = "127.0.0.1"
@@ -35,16 +37,111 @@ var currentURL = "http://0.0.0.0:8181/"
 
 //public method that is being called by the server framework to initialise your module.
 public func PerfectServerModuleInit() {
-
+    do{
+        let mysql = try initializeDatabaseConnection()
+    }catch{
+        print("Could not initialize database connection or created database")
+    }
     initializeUserData()
     initializeMessagesData()
     initializeUserLogInData()
-
+    initializeNotificationSystem()
     if(production){
         currentURL = "http://www.lassoconsultant.com:8183/"
         print("Production")
     }
+    
 
+}
+
+func messageHandler(_ request : HTTPRequest, response : HTTPResponse){
+    print("Handling Message Request")
+    
+    if let dict = try? request.postBodyString!.jsonDecode() as! [String : String]{
+        print(dict)
+        let messageUUID = dict["messageUUID"]
+        let senderUUID = dict["sender"]
+        let recipientUUID = dict["recipient"]
+        let messageBody = dict["body"]
+        let date = dict["date"]
+        let status = dict["status"]
+        let messageType = dict["mediatype"]
+        
+
+
+        let messageDataRequest = "INSERT INTO Messages (MessageUUID, Sender, Recipient, MessageContent, SendDate, Status, MessageType) VALUES (\"\(messageUUID!)\", \"\(senderUUID!)\", \"\(recipientUUID!)\", \"\(messageBody!)\", \"\(date!)\", \"\(status!)\", \"\(messageType!)\");"
+        let data = try? getDataFromDatabase(with: messageDataRequest)
+        
+        sendMessageNotification(message: messageBody!, recipientUUID: recipientUUID!, senderUUID: senderUUID!)
+        
+    }else{
+        print("Could not convert body string to dictionary")
+    }
+    
+}
+
+func getDataFromDatabase(with request : String) throws -> [Int : [String?]]{
+    
+    guard request != "" else{
+        print("Empty Request")
+        throw DatabaseError.emptyRequestError
+    }
+    let mysql = try initializeDatabaseConnection()
+    defer {
+        mysql.close()
+    }
+    
+    let query = mysql.query(statement: request)
+    if(query){
+        var dictionary = [Int : [String?]]()
+        if let queryResults = mysql.storeResults(){
+            var index = 0
+            queryResults.forEachRow{ row in
+                print(row)
+                dictionary[index] = row
+                index+=1
+            }
+            
+            return dictionary
+        }else{
+            return dictionary
+        }
+    }else{
+        print("Request Failed")
+        throw DatabaseError.failedRequestError
+    }
+
+    
+}
+
+
+
+func sendMessageNotification(message : String, recipientUUID : String, senderUUID : String){
+    let senderDataRequest = "SELECT UserName,DeviceToken FROM Users WHERE UUID=\"\(senderUUID)\" OR UUID=\"\(recipientUUID)\";"
+    if let data = try? getDataFromDatabase(with: senderDataRequest){
+        
+        guard !data.isEmpty else{
+            print("Empty Dictionary")
+            return
+        }
+        
+        let senderUser = data[0]
+        let recipientuser = data[1]
+        let userName = recipientuser![0]
+        let deviceToken = recipientuser![1]
+        //Send Notification
+        let notificationArray = [IOSNotificationItem.alertBody(message), IOSNotificationItem.sound("default"), IOSNotificationItem.alertTitle(userName!)]
+        let pusher = NotificationPusher()
+
+        pusher.apnsTopic = "com.fibonacci.MusicMatch"
+        let configurationName = "MusicMatch Configuration"
+        pusher.pushIOS(configurationName: configurationName, deviceToken: deviceToken!, expiration: 0, priority: 10,notificationItems: notificationArray, callback:{
+            (response : NotificationResponse) -> Void in
+            print(response.status)
+        })
+    
+    }
+    
 }
 
 func fileUpload(_ request : HTTPRequest, response : HTTPResponse){
@@ -180,7 +277,7 @@ func thumbHandler(_ request: HTTPRequest, response: HTTPResponse) {
 
     response.completed()
     }
-func getDocumentsDirectory() -> NSString {
+func getDocumentsDirectory() -> String {
     let fileManager = FileManager.default
     let documentsDirectory = fileManager.currentDirectoryPath
     return documentsDirectory

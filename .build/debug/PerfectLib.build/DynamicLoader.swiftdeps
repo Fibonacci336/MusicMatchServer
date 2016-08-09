@@ -7,30 +7,30 @@ provides-member:
 - ["V10PerfectLib13DynamicLoader", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "RTLD_NOW"
-- !private "File"
-- !private "RTLD_LOCAL"
-- !private "|"
-- !private "BooleanLiteralType"
-- !private "+"
-- "String"
-- !private "dlopen"
-- !private "dlclose"
-- !private "unsafeBitCast"
-- !private "dlsym"
 - "DynamicLoader"
 - !private "dlerror"
+- "String"
+- !private "UnicodeScalarType"
+- !private "BooleanLiteralType"
+- "StringLiteralType"
+- !private "RTLD_NOW"
+- !private "dlclose"
+- !private "dlopen"
+- !private "unsafeBitCast"
+- !private "|"
+- !private "RTLD_LOCAL"
 - "Bool"
 - !private "Log"
-- !private "UnicodeScalarType"
-- "StringLiteralType"
+- !private "File"
+- !private "+"
 - !private "!="
+- !private "dlsym"
 depends-member:
 - !private ["Ps9AnyObject", "begins"]
 - !private ["Ps9AnyObject", "characters"]
 - !private ["Ps9AnyObject", "deletingPathExtension"]
 - !private ["Ps9AnyObject", "exists"]
-- !private ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "lastPathComponent"]
 - !private ["Ps9AnyObject", "realPath"]
 - !private ["Ps9AnyObject", "resolvingSymlinksInPath"]
@@ -45,7 +45,7 @@ depends-member:
 - !private ["Ps7CVarArg", "begins"]
 - !private ["Ps7CVarArg", "characters"]
 - !private ["Ps7CVarArg", "deletingPathExtension"]
-- !private ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "lastPathComponent"]
 - !private ["Ps7CVarArg", "resolvingSymlinksInPath"]
 - !private ["Ps7CVarArg", "stringByReplacing"]
@@ -60,7 +60,7 @@ depends-member:
 - !private ["Ps10Comparable", "begins"]
 - !private ["Ps10Comparable", "characters"]
 - !private ["Ps10Comparable", "deletingPathExtension"]
-- !private ["Ps10Comparable", "init"]
+- ["Ps10Comparable", "init"]
 - !private ["Ps10Comparable", "lastPathComponent"]
 - !private ["Ps10Comparable", "resolvingSymlinksInPath"]
 - !private ["Ps10Comparable", "stringByReplacing"]
@@ -70,7 +70,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "characters"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - !private ["Ps28CustomDebugStringConvertible", "deletingPathExtension"]
-- !private ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "lastPathComponent"]
 - !private ["Ps28CustomDebugStringConvertible", "resolvingSymlinksInPath"]
 - !private ["Ps28CustomDebugStringConvertible", "some"]
@@ -82,7 +82,7 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "characters"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "count"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "deletingPathExtension"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "lastPathComponent"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "resolvingSymlinksInPath"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "stringByReplacing"]
@@ -93,7 +93,7 @@ depends-member:
 - !private ["Ps17CustomReflectable", "characters"]
 - !private ["Ps17CustomReflectable", "count"]
 - !private ["Ps17CustomReflectable", "deletingPathExtension"]
-- !private ["Ps17CustomReflectable", "init"]
+- ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "lastPathComponent"]
 - !private ["Ps17CustomReflectable", "resolvingSymlinksInPath"]
 - !private ["Ps17CustomReflectable", "some"]
@@ -105,7 +105,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "characters"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - !private ["Ps23CustomStringConvertible", "deletingPathExtension"]
-- !private ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "lastPathComponent"]
 - !private ["Ps23CustomStringConvertible", "resolvingSymlinksInPath"]
 - !private ["Ps23CustomStringConvertible", "stringByReplacing"]
@@ -133,7 +133,7 @@ depends-member:
 - !private ["Ps9Equatable", "begins"]
 - !private ["Ps9Equatable", "characters"]
 - !private ["Ps9Equatable", "deletingPathExtension"]
-- !private ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "lastPathComponent"]
 - !private ["Ps9Equatable", "resolvingSymlinksInPath"]
 - !private ["Ps9Equatable", "stringByReplacing"]
@@ -142,7 +142,7 @@ depends-member:
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "begins"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "characters"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "deletingPathExtension"]
-- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "lastPathComponent"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "resolvingSymlinksInPath"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "stringByReplacing"]
@@ -151,7 +151,7 @@ depends-member:
 - !private ["Ps32ExpressibleByStringInterpolation", "begins"]
 - !private ["Ps32ExpressibleByStringInterpolation", "characters"]
 - !private ["Ps32ExpressibleByStringInterpolation", "deletingPathExtension"]
-- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- ["Ps32ExpressibleByStringInterpolation", "init"]
 - !private ["Ps32ExpressibleByStringInterpolation", "lastPathComponent"]
 - !private ["Ps32ExpressibleByStringInterpolation", "resolvingSymlinksInPath"]
 - !private ["Ps32ExpressibleByStringInterpolation", "stringByReplacing"]
@@ -159,7 +159,7 @@ depends-member:
 - !private ["Ps26ExpressibleByStringLiteral", "begins"]
 - !private ["Ps26ExpressibleByStringLiteral", "characters"]
 - !private ["Ps26ExpressibleByStringLiteral", "deletingPathExtension"]
-- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps26ExpressibleByStringLiteral", "lastPathComponent"]
 - !private ["Ps26ExpressibleByStringLiteral", "resolvingSymlinksInPath"]
 - !private ["Ps26ExpressibleByStringLiteral", "stringByReplacing"]
@@ -167,7 +167,7 @@ depends-member:
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "begins"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "characters"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "deletingPathExtension"]
-- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "lastPathComponent"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "resolvingSymlinksInPath"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "stringByReplacing"]
@@ -181,7 +181,7 @@ depends-member:
 - !private ["Ps8Hashable", "begins"]
 - !private ["Ps8Hashable", "characters"]
 - !private ["Ps8Hashable", "deletingPathExtension"]
-- !private ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "lastPathComponent"]
 - !private ["Ps8Hashable", "resolvingSymlinksInPath"]
 - !private ["Ps8Hashable", "stringByReplacing"]
@@ -204,17 +204,26 @@ depends-member:
 - !private ["P10PerfectLib15JSONConvertible", "begins"]
 - !private ["P10PerfectLib15JSONConvertible", "characters"]
 - !private ["P10PerfectLib15JSONConvertible", "deletingPathExtension"]
-- !private ["P10PerfectLib15JSONConvertible", "init"]
+- ["P10PerfectLib15JSONConvertible", "init"]
 - !private ["P10PerfectLib15JSONConvertible", "lastPathComponent"]
 - !private ["P10PerfectLib15JSONConvertible", "resolvingSymlinksInPath"]
 - !private ["P10PerfectLib15JSONConvertible", "some"]
 - !private ["P10PerfectLib15JSONConvertible", "stringByReplacing"]
 - !private ["P10PerfectLib15JSONConvertible", "utf8"]
 - !private ["V10PerfectLib3Log", "warning"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "begins"]
+- !private ["Ps25LosslessStringConvertible", "characters"]
+- !private ["Ps25LosslessStringConvertible", "deletingPathExtension"]
+- ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps25LosslessStringConvertible", "lastPathComponent"]
+- !private ["Ps25LosslessStringConvertible", "resolvingSymlinksInPath"]
+- !private ["Ps25LosslessStringConvertible", "stringByReplacing"]
+- !private ["Ps25LosslessStringConvertible", "utf8"]
 - !private ["Ps10MirrorPath", "begins"]
 - !private ["Ps10MirrorPath", "characters"]
 - !private ["Ps10MirrorPath", "deletingPathExtension"]
-- !private ["Ps10MirrorPath", "init"]
+- ["Ps10MirrorPath", "init"]
 - !private ["Ps10MirrorPath", "lastPathComponent"]
 - !private ["Ps10MirrorPath", "resolvingSymlinksInPath"]
 - !private ["Ps10MirrorPath", "stringByReplacing"]
@@ -222,7 +231,7 @@ depends-member:
 - !private ["PSo8NSCoding", "begins"]
 - !private ["PSo8NSCoding", "characters"]
 - !private ["PSo8NSCoding", "deletingPathExtension"]
-- !private ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "lastPathComponent"]
 - !private ["PSo8NSCoding", "resolvingSymlinksInPath"]
 - !private ["PSo8NSCoding", "stringByReplacing"]
@@ -230,7 +239,7 @@ depends-member:
 - !private ["PSo9NSCopying", "begins"]
 - !private ["PSo9NSCopying", "characters"]
 - !private ["PSo9NSCopying", "deletingPathExtension"]
-- !private ["PSo9NSCopying", "init"]
+- ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "lastPathComponent"]
 - !private ["PSo9NSCopying", "resolvingSymlinksInPath"]
 - !private ["PSo9NSCopying", "stringByReplacing"]
@@ -238,7 +247,7 @@ depends-member:
 - !private ["PSo16NSMutableCopying", "begins"]
 - !private ["PSo16NSMutableCopying", "characters"]
 - !private ["PSo16NSMutableCopying", "deletingPathExtension"]
-- !private ["PSo16NSMutableCopying", "init"]
+- ["PSo16NSMutableCopying", "init"]
 - !private ["PSo16NSMutableCopying", "lastPathComponent"]
 - !private ["PSo16NSMutableCopying", "resolvingSymlinksInPath"]
 - !private ["PSo16NSMutableCopying", "stringByReplacing"]
@@ -246,7 +255,7 @@ depends-member:
 - !private ["CSo8NSObject", "begins"]
 - !private ["CSo8NSObject", "characters"]
 - !private ["CSo8NSObject", "deletingPathExtension"]
-- !private ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "lastPathComponent"]
 - !private ["CSo8NSObject", "resolvingSymlinksInPath"]
 - !private ["CSo8NSObject", "stringByReplacing"]
@@ -254,7 +263,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "begins"]
 - !private ["PSo16NSObjectProtocol", "characters"]
 - !private ["PSo16NSObjectProtocol", "deletingPathExtension"]
-- !private ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "lastPathComponent"]
 - !private ["PSo16NSObjectProtocol", "resolvingSymlinksInPath"]
 - !private ["PSo16NSObjectProtocol", "stringByReplacing"]
@@ -262,7 +271,7 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "begins"]
 - !private ["PSo14NSSecureCoding", "characters"]
 - !private ["PSo14NSSecureCoding", "deletingPathExtension"]
-- !private ["PSo14NSSecureCoding", "init"]
+- ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "lastPathComponent"]
 - !private ["PSo14NSSecureCoding", "resolvingSymlinksInPath"]
 - !private ["PSo14NSSecureCoding", "stringByReplacing"]
@@ -270,7 +279,7 @@ depends-member:
 - !private ["CSo8NSString", "begins"]
 - !private ["CSo8NSString", "characters"]
 - !private ["CSo8NSString", "deletingPathExtension"]
-- !private ["CSo8NSString", "init"]
+- ["CSo8NSString", "init"]
 - !private ["CSo8NSString", "lastPathComponent"]
 - !private ["CSo8NSString", "resolvingSymlinksInPath"]
 - !private ["CSo8NSString", "stringByReplacing"]
@@ -288,7 +297,7 @@ depends-member:
 - !private ["Ps10Streamable", "begins"]
 - !private ["Ps10Streamable", "characters"]
 - !private ["Ps10Streamable", "deletingPathExtension"]
-- !private ["Ps10Streamable", "init"]
+- ["Ps10Streamable", "init"]
 - !private ["Ps10Streamable", "lastPathComponent"]
 - !private ["Ps10Streamable", "resolvingSymlinksInPath"]
 - !private ["Ps10Streamable", "stringByReplacing"]
@@ -297,7 +306,7 @@ depends-member:
 - !private ["SS", "characters"]
 - ["SS", "deinit"]
 - !private ["SS", "deletingPathExtension"]
-- !private ["SS", "init"]
+- ["SS", "init"]
 - !private ["SS", "lastPathComponent"]
 - !private ["SS", "resolvingSymlinksInPath"]
 - !private ["SS", "stringByReplacing"]
@@ -305,7 +314,7 @@ depends-member:
 - !private ["Ps16TextOutputStream", "begins"]
 - !private ["Ps16TextOutputStream", "characters"]
 - !private ["Ps16TextOutputStream", "deletingPathExtension"]
-- !private ["Ps16TextOutputStream", "init"]
+- ["Ps16TextOutputStream", "init"]
 - !private ["Ps16TextOutputStream", "lastPathComponent"]
 - !private ["Ps16TextOutputStream", "resolvingSymlinksInPath"]
 - !private ["Ps16TextOutputStream", "stringByReplacing"]
@@ -319,12 +328,12 @@ depends-member:
 - !private ["VSS8UTF8View", "count"]
 - !private ["VSS8UTF8View", "deinit"]
 - !private ["Sc", "deinit"]
-- !private ["Sp", "deinit"]
+- !private ["Sv", "deinit"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "begins"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "characters"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "deletingPathExtension"]
-- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "lastPathComponent"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "resolvingSymlinksInPath"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "stringByReplacing"]
@@ -332,7 +341,7 @@ depends-member:
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "begins"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "characters"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "deletingPathExtension"]
-- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "lastPathComponent"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "resolvingSymlinksInPath"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "stringByReplacing"]
@@ -340,7 +349,7 @@ depends-member:
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "begins"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "characters"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "deletingPathExtension"]
-- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "lastPathComponent"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "resolvingSymlinksInPath"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "stringByReplacing"]
@@ -348,47 +357,64 @@ depends-member:
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "begins"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "characters"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "deletingPathExtension"]
-- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "lastPathComponent"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "resolvingSymlinksInPath"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "stringByReplacing"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "utf8"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "begins"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "characters"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "deletingPathExtension"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "lastPathComponent"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "resolvingSymlinksInPath"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "stringByReplacing"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "utf8"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "begins"]
+- !private ["Ps9_Hashable", "characters"]
+- !private ["Ps9_Hashable", "deletingPathExtension"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "lastPathComponent"]
+- !private ["Ps9_Hashable", "resolvingSymlinksInPath"]
+- !private ["Ps9_Hashable", "stringByReplacing"]
+- !private ["Ps9_Hashable", "utf8"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "begins"]
 - !private ["Ps21_ObjectiveCBridgeable", "characters"]
 - !private ["Ps21_ObjectiveCBridgeable", "deletingPathExtension"]
-- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "lastPathComponent"]
 - !private ["Ps21_ObjectiveCBridgeable", "resolvingSymlinksInPath"]
 - !private ["Ps21_ObjectiveCBridgeable", "stringByReplacing"]
 - !private ["Ps21_ObjectiveCBridgeable", "utf8"]
 - !private ["Vs26_OptionalNilComparisonType", "deinit"]
 depends-nominal:
-- !private "Ps9AnyObject"
+- "Ps9AnyObject"
 - !private "Ps23BidirectionalCollection"
 - !private "Ps22BidirectionalIndexable"
 - "Sb"
-- !private "Ps7CVarArg"
+- "Ps7CVarArg"
 - !private "Vs9Character"
 - !private "VSS13CharacterView"
 - !private "Ps10Collection"
-- !private "Ps10Comparable"
-- !private "Ps28CustomDebugStringConvertible"
-- !private "Ps29CustomPlaygroundQuickLookable"
-- !private "Ps17CustomReflectable"
-- !private "Ps23CustomStringConvertible"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
 - !private "Sd"
 - "V10PerfectLib13DynamicLoader"
-- !private "Ps9Equatable"
+- "Ps9Equatable"
 - !private "Ps27ExpressibleByBooleanLiteral"
-- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
 - !private "Ps23ExpressibleByNilLiteral"
-- !private "Ps32ExpressibleByStringInterpolation"
-- !private "Ps26ExpressibleByStringLiteral"
-- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps32ExpressibleByStringInterpolation"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
 - "C10PerfectLib4File"
 - !private "Sf"
-- !private "Ps8Hashable"
+- "Ps8Hashable"
 - !private "SQ"
 - !private "Ps9Indexable"
 - !private "Ps13IndexableBase"
@@ -397,23 +423,24 @@ depends-nominal:
 - !private "Vs5Int32"
 - !private "Vs5Int64"
 - !private "Vs4Int8"
-- !private "P10PerfectLib15JSONConvertible"
+- "P10PerfectLib15JSONConvertible"
 - !private "V10PerfectLib3Log"
-- !private "Ps10MirrorPath"
-- !private "PSo8NSCoding"
-- !private "PSo9NSCopying"
-- !private "PSo16NSMutableCopying"
-- !private "CSo8NSObject"
-- !private "PSo16NSObjectProtocol"
-- !private "PSo14NSSecureCoding"
-- !private "CSo8NSString"
+- "Ps25LosslessStringConvertible"
+- "Ps10MirrorPath"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "CSo8NSString"
 - !private "Sq"
 - !private "Ps26RangeReplaceableCollection"
 - !private "Ps25RangeReplaceableIndexable"
 - !private "Ps8Sequence"
-- !private "Ps10Streamable"
+- "Ps10Streamable"
 - "SS"
-- !private "Ps16TextOutputStream"
+- "Ps16TextOutputStream"
 - !private "Su"
 - !private "Vs6UInt16"
 - !private "Vs6UInt32"
@@ -421,39 +448,41 @@ depends-nominal:
 - !private "Vs5UInt8"
 - !private "VSS8UTF8View"
 - !private "Sc"
-- !private "Sp"
+- !private "Sv"
 - !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
-- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
-- !private "Ps34_ExpressibleByBuiltinStringLiteral"
-- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
-- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
-- !private "Ps21_ObjectiveCBridgeable"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- "Ps21_ObjectiveCBridgeable"
 - !private "Vs26_OptionalNilComparisonType"
 depends-dynamic-lookup:
 depends-external:
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/Visibility.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/LibcShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RefCount.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/HeapObject.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/DispatchShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/module.modulemap"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/Visibility.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/LibcShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/RefCount.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/HeapObject.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/DispatchShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/module.modulemap"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
 - "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/bio.h"
 - "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/opensslconf.h"

@@ -47,6 +47,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>______Target_PerfectNotifications</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>______Target_PerfectThread</key>
 		<dict>
 			<key>primary</key>

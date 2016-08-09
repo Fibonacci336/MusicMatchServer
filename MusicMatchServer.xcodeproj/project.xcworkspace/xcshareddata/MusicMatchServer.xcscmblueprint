@@ -16,13 +16,13 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8EF9708F-C45D-4C6E-B827-430D909EBC98",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "6F1260245BD69EFA9A05D126763C86280510C6E1" : "MusicMatchServer\/Packages\/PerfectNet-0.18.0\/",
+    "6F1260245BD69EFA9A05D126763C86280510C6E1" : "MusicMatchServer\/Packages\/PerfectNet-0.20.0\/",
     "9197B75B1BC29921D6E3B1CCDC2B258350009F3A" : "PerfectTemplate-MusicMatch\/Packages\/PerfectHTTP-0.4.0\/",
     "B123C9ACF68A2BF01173B652DA8ABD73F990D1DE" : "MusicMatchServer\/Packages\/MySQL-0.7.0\/",
-    "E2306DAE0C98D148736A05084B6FAB44F03B4909" : "MusicMatchServer\/Packages\/PerfectLib-0.50.0\/",
+    "E2306DAE0C98D148736A05084B6FAB44F03B4909" : "MusicMatchServer\/Packages\/PerfectLib-0.60.0\/",
     "0C1CB42F5BEA792669039C5D54B7C06E07C4B516" : "MusicMatchServer\/Packages\/mysqlclient-0.3.0\/",
     "C4127C9B9C8FDF608B532AD72407863CE2797629" : "MusicMatchServer\/Packages\/PerfectHTTPServer-0.8.0\/",
-    "615FD99B652E80AC2E813EEEE7964BA10A9886D5" : "PerfectTemplate\/Packages\/PerfectThread-0.10.0\/",
+    "615FD99B652E80AC2E813EEEE7964BA10A9886D5" : "MusicMatchServer\/Packages\/PerfectThread-0.12.0\/",
     "0B9B07A57A7603A158703662ACDD6F3ABAA339F4" : "PerfectTemplate\/",
     "B5FE85F6C5ED6BD4652F7DA5C117FE25153DA58D" : "MusicMatchServer\/"
   },

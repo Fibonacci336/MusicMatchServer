@@ -38,6 +38,8 @@ func initializeDatabaseConnection() throws -> MySQL{
 enum DatabaseError : Error{
     
     case connectionError
+    case failedRequestError
+    case emptyRequestError
     case schemaCreationError
 }
 
@@ -95,7 +97,7 @@ func initializeUserData(){
             mysql.close()
         }
         //FIX
-        let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS Users (UserType TEXT, UserName TEXT, UUID TEXT, BirthDate DATE, MusicType TEXT, BandPosition TEXT, VideoName TEXT, CurrentLat DOUBLE, CurrentLong DOUBLE, Available INT, Bio TEXT, LookingFor TEXT, DistanceUnit TEXT);")
+        let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS Users (UserType TEXT, UserName TEXT, UUID TEXT, BirthDate DATE, MusicType TEXT, BandPosition TEXT, VideoName TEXT, CurrentLat DOUBLE, CurrentLong DOUBLE, Available INT, Bio TEXT, LookingFor TEXT, DistanceUnit TEXT, DeviceToken TEXT);")
         
         guard tableSuccess else {
             print(mysql.errorMessage())

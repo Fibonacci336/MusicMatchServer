@@ -40,78 +40,79 @@ provides-member:
 - ["OC17PerfectHTTPServer11HTTP2Client11StreamState", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "SETTINGS_ENABLE_PUSH"
-- !private "HTTPResponseHeader"
-- "HTTP2_PING_ACK"
-- "HTTP2_CONTINUATION"
-- !private "&&"
-- !private "!="
-- "NetTCPSSL"
-- "HTTP2_RST_STREAM"
-- "UInt32"
-- "HTTPRequest"
-- !private "print"
-- !private ">>"
-- "Int"
-- !private "<<"
-- "HTTP2_SETTINGS"
-- "HTTP2Client"
-- !private "~"
-- "SETTINGS_HEADER_TABLE_SIZE"
-- "Threading"
-- !private "??"
-- !private "..<"
-- !private "+="
-- !private "-"
-- !private "&"
-- "HTTP2_PRIORITY"
-- "HTTP2Response"
-- "HTTP2_SETTINGS_ACK"
-- "Double"
-- !private ">"
-- !private "HPACKDecoder"
-- "Bytes"
-- "HTTP2_FLAG_PRIORITY"
-- !private "UTF8Encoding"
-- "HPACKEncoder"
-- "HTTP2_WINDOW_UPDATE"
-- "HeaderListener"
-- !private "|"
+- !private "<<="
+- !private "CastingPrecedence"
+- "=="
+- "AssignmentPrecedence"
+- !private "UnicodeScalarType"
 - "HTTP2_PADDED"
-- "SETTINGS_MAX_FRAME_SIZE"
-- "HTTP2_PING"
 - "UInt16"
+- "SETTINGS_MAX_CONCURRENT_STREAMS"
+- "HTTP2_DATA"
+- "HeaderListener"
+- !private "~="
+- !private "~"
+- "Int"
+- "HTTP2_HEADERS"
+- !private "..<"
+- "UInt32"
+- "HTTP2_PING"
+- "TernaryPrecedence"
+- "Double"
+- "Bytes"
+- !private "&"
+- !private ">"
+- !private "+"
+- "HTTP2_PRIORITY"
+- !private ">>"
+- "HTTP2_WINDOW_UPDATE"
+- !private "-"
+- "BooleanLiteralType"
 - "HTTP2_GOAWAY"
 - "SETTINGS_INITIAL_WINDOW_SIZE"
-- "String"
-- !private "!"
-- !private "<<="
-- "SETTINGS_MAX_HEADER_LIST_SIZE"
-- "Bool"
-- "HTTP2Request"
+- "HTTPRequest"
 - "StringLiteralType"
-- "HTTP2_HEADERS"
-- !private "&="
-- "HTTPResponse"
-- !private ">="
-- "IntegerLiteralType"
-- "=="
-- !private "+"
-- !private "~="
-- "HTTP2_END_HEADERS"
-- "SETTINGS_MAX_CONCURRENT_STREAMS"
-- !private "||"
-- !private "UnicodeScalarType"
-- "HTTP2Frame"
-- "UInt8"
-- "HTTP2_END_STREAM"
-- "HTTP2_DATA"
-- "HTTP11Response"
-- "BooleanLiteralType"
-- "HTTP11Request"
-- "HTTP2_PUSH_PROMISE"
-- "FloatLiteralType"
 - !private "HTTPResponseStatus"
+- "HTTP2_FLAG_PRIORITY"
+- "Threading"
+- !private "||"
+- "SETTINGS_MAX_HEADER_LIST_SIZE"
+- "HTTP11Response"
+- !private "??"
+- "HTTP2_PING_ACK"
+- !private "&="
+- "HTTP2Request"
+- !private "&&"
+- "HTTP2_RST_STREAM"
+- "String"
+- "HTTP11Request"
+- "HTTP2Response"
+- "HPACKEncoder"
+- "HTTP2_SETTINGS"
+- "Bool"
+- "HTTPResponse"
+- "HTTP2_SETTINGS_ACK"
+- !private "!="
+- !private "UTF8Encoding"
+- "SETTINGS_MAX_FRAME_SIZE"
+- !private "|"
+- "HTTP2_CONTINUATION"
+- !private ">="
+- !private "HPACKDecoder"
+- !private "<<"
+- "HTTP2Frame"
+- "SETTINGS_ENABLE_PUSH"
+- !private "!"
+- !private "+="
+- "HTTP2_END_HEADERS"
+- "SETTINGS_HEADER_TABLE_SIZE"
+- "HTTP2Client"
+- "HTTP2_END_STREAM"
+- !private "HTTPResponseHeader"
+- "UInt8"
+- "NetTCPSSL"
+- "HTTP2_PUSH_PROMISE"
+- !private "print"
 depends-member:
 - !private ["Vs11AnyIterator", "Element"]
 - !private ["Vs11AnyIterator", "Iterator"]
@@ -385,6 +386,7 @@ depends-member:
 - !private ["Ps9Equatable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps9Equatable", "_Element"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "_toAnyHashable"]
 - !private ["Ps9Equatable", "append"]
 - !private ["Ps9Equatable", "description"]
 - ["Ps9Equatable", "hashValue"]
@@ -417,7 +419,7 @@ depends-member:
 - ["Ps30ExpressibleByDictionaryLiteral", "init"]
 - !private ["Ps30ExpressibleByDictionaryLiteral", "subscript"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "append"]
-- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "IntegerLiteralType"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "_DisabledRangeIndex"]
@@ -430,11 +432,11 @@ depends-member:
 - !private ["Ps23ExpressibleByNilLiteral", "open"]
 - ["Ps23ExpressibleByNilLiteral", "some"]
 - !private ["Ps32ExpressibleByStringInterpolation", "append"]
-- !private ["Ps32ExpressibleByStringInterpolation", "init"]
+- ["Ps32ExpressibleByStringInterpolation", "init"]
 - !private ["Ps26ExpressibleByStringLiteral", "append"]
-- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "append"]
-- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Sf", "deinit"]
 - !private ["C17PerfectHTTPServer12HPACKDecoder", "decode"]
 - ["C17PerfectHTTPServer12HPACKDecoder", "deinit"]
@@ -591,6 +593,7 @@ depends-member:
 - !private ["Ps8Hashable", "_DisabledRangeIndex"]
 - !private ["Ps8Hashable", "_DisallowMixedSignArithmetic"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "_toAnyHashable"]
 - !private ["Ps8Hashable", "append"]
 - !private ["Ps8Hashable", "description"]
 - ["Ps8Hashable", "hashValue"]
@@ -683,8 +686,10 @@ depends-member:
 - !private ["P10PerfectLib15JSONConvertible", "append"]
 - !private ["P10PerfectLib15JSONConvertible", "count"]
 - !private ["P10PerfectLib15JSONConvertible", "hashValue"]
+- !private ["P10PerfectLib15JSONConvertible", "hostToNet"]
 - !private ["P10PerfectLib15JSONConvertible", "idle"]
 - ["P10PerfectLib15JSONConvertible", "init"]
+- !private ["P10PerfectLib15JSONConvertible", "netToHost"]
 - !private ["P10PerfectLib15JSONConvertible", "open"]
 - !private ["P10PerfectLib15JSONConvertible", "remove"]
 - !private ["P10PerfectLib15JSONConvertible", "removeFirst"]
@@ -695,12 +700,15 @@ depends-member:
 - !private ["CV13PerfectThread9Threading4Lock", "doWithLock"]
 - ["CV13PerfectThread9Threading4Lock", "init"]
 - !private ["CV13PerfectThread9Threading4Lock", "wait"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "append"]
+- ["Ps25LosslessStringConvertible", "init"]
 - !private ["Ps10MirrorPath", "IntegerLiteralType"]
 - !private ["Ps10MirrorPath", "Stride"]
 - !private ["Ps10MirrorPath", "_DisabledRangeIndex"]
 - !private ["Ps10MirrorPath", "append"]
 - !private ["Ps10MirrorPath", "hashValue"]
-- !private ["Ps10MirrorPath", "init"]
+- ["Ps10MirrorPath", "init"]
 - !private ["Ps17MutableCollection", "Index"]
 - !private ["Ps17MutableCollection", "IndexDistance"]
 - !private ["Ps17MutableCollection", "Iterator"]
@@ -724,19 +732,19 @@ depends-member:
 - !private ["Ps16MutableIndexable", "removeFirst"]
 - !private ["Ps16MutableIndexable", "subscript"]
 - !private ["PSo8NSCoding", "append"]
-- !private ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "init"]
 - !private ["PSo9NSCopying", "append"]
-- !private ["PSo9NSCopying", "init"]
+- ["PSo9NSCopying", "init"]
 - !private ["PSo16NSMutableCopying", "append"]
-- !private ["PSo16NSMutableCopying", "init"]
+- ["PSo16NSMutableCopying", "init"]
 - !private ["CSo8NSObject", "append"]
-- !private ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "init"]
 - !private ["PSo16NSObjectProtocol", "append"]
-- !private ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo14NSSecureCoding", "append"]
-- !private ["PSo14NSSecureCoding", "init"]
+- ["PSo14NSSecureCoding", "init"]
 - !private ["CSo8NSString", "append"]
-- !private ["CSo8NSString", "init"]
+- ["CSo8NSString", "init"]
 - ["OO11PerfectHTTP17HTTPRequestHeader4Name", "deinit"]
 - !private ["OO11PerfectHTTP17HTTPRequestHeader4Name", "standardName"]
 - ["OO11PerfectHTTP18HTTPResponseHeader4Name", "deinit"]
@@ -845,6 +853,7 @@ depends-member:
 - !private ["Vs5Slice", "SubSequence"]
 - !private ["Vs5Slice", "_Element"]
 - ["OC17PerfectHTTPServer11HTTP2Client11StreamState", "=="]
+- ["OC17PerfectHTTPServer11HTTP2Client11StreamState", "_toAnyHashable"]
 - ["OC17PerfectHTTPServer11HTTP2Client11StreamState", "closed"]
 - ["OC17PerfectHTTPServer11HTTP2Client11StreamState", "deinit"]
 - ["OC17PerfectHTTPServer11HTTP2Client11StreamState", "halfClosedLocal"]
@@ -856,7 +865,7 @@ depends-member:
 - ["OC17PerfectHTTPServer11HTTP2Client11StreamState", "reservedLocal"]
 - ["OC17PerfectHTTPServer11HTTP2Client11StreamState", "reservedRemote"]
 - !private ["Ps10Streamable", "append"]
-- !private ["Ps10Streamable", "init"]
+- ["Ps10Streamable", "init"]
 - !private ["Ps10Strideable", "IntegerLiteralType"]
 - !private ["Ps10Strideable", "Stride"]
 - !private ["Ps10Strideable", "_DisabledRangeIndex"]
@@ -867,9 +876,9 @@ depends-member:
 - !private ["Ps10Strideable", "netToHost"]
 - !private ["SS", "append"]
 - ["SS", "deinit"]
-- !private ["SS", "init"]
+- ["SS", "init"]
 - !private ["Ps16TextOutputStream", "append"]
-- !private ["Ps16TextOutputStream", "init"]
+- ["Ps16TextOutputStream", "init"]
 - ["V13PerfectThread9Threading", "Event"]
 - ["V13PerfectThread9Threading", "Lock"]
 - !private ["V13PerfectThread9Threading", "dispatch"]
@@ -934,7 +943,7 @@ depends-member:
 - !private ["Ps28_DisallowMixedSignArithmetic", "netToHost"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "append"]
-- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "IntegerLiteralType"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "Stride"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "_DisabledRangeIndex"]
@@ -944,11 +953,30 @@ depends-member:
 - ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "netToHost"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "append"]
-- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "append"]
-- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "append"]
-- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "append"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "IntegerLiteralType"]
+- !private ["Ps9_Hashable", "Stride"]
+- !private ["Ps9_Hashable", "_DisabledRangeIndex"]
+- !private ["Ps9_Hashable", "_DisallowMixedSignArithmetic"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- ["Ps9_Hashable", "_toAnyHashable"]
+- !private ["Ps9_Hashable", "append"]
+- !private ["Ps9_Hashable", "description"]
+- ["Ps9_Hashable", "hashValue"]
+- !private ["Ps9_Hashable", "hostToNet"]
+- !private ["Ps9_Hashable", "idle"]
+- ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "netToHost"]
+- !private ["Ps9_Hashable", "none"]
+- !private ["Ps9_Hashable", "open"]
+- !private ["Ps9_Hashable", "standardName"]
+- ["Ps9_Hashable", ""]
 - !private ["Ps14_Incrementable", "IntegerLiteralType"]
 - !private ["Ps14_Incrementable", "Stride"]
 - !private ["Ps14_Incrementable", "_DisabledRangeIndex"]
@@ -1040,12 +1068,12 @@ depends-nominal:
 - "Ps25ExpressibleByArrayLiteral"
 - !private "Ps27ExpressibleByBooleanLiteral"
 - "Ps30ExpressibleByDictionaryLiteral"
-- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
 - "Ps27ExpressibleByIntegerLiteral"
 - "Ps23ExpressibleByNilLiteral"
-- !private "Ps32ExpressibleByStringInterpolation"
-- !private "Ps26ExpressibleByStringLiteral"
-- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps32ExpressibleByStringInterpolation"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
 - !private "Sf"
 - "C17PerfectHTTPServer12HPACKDecoder"
 - "C17PerfectHTTPServer12HPACKEncoder"
@@ -1075,16 +1103,17 @@ depends-nominal:
 - !private "Ps16IteratorProtocol"
 - "P10PerfectLib15JSONConvertible"
 - "CV13PerfectThread9Threading4Lock"
-- !private "Ps10MirrorPath"
+- "Ps25LosslessStringConvertible"
+- "Ps10MirrorPath"
 - "Ps17MutableCollection"
 - "Ps16MutableIndexable"
-- !private "PSo8NSCoding"
-- !private "PSo9NSCopying"
-- !private "PSo16NSMutableCopying"
-- !private "CSo8NSObject"
-- !private "PSo16NSObjectProtocol"
-- !private "PSo14NSSecureCoding"
-- !private "CSo8NSString"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "CSo8NSString"
 - "OO11PerfectHTTP17HTTPRequestHeader4Name"
 - "OO11PerfectHTTP18HTTPResponseHeader4Name"
 - "C10PerfectNet6NetTCP"
@@ -1101,10 +1130,10 @@ depends-nominal:
 - !private "Ps12SignedNumber"
 - !private "Vs5Slice"
 - "OC17PerfectHTTPServer11HTTP2Client11StreamState"
-- !private "Ps10Streamable"
+- "Ps10Streamable"
 - "Ps10Strideable"
 - "SS"
-- !private "Ps16TextOutputStream"
+- "Ps16TextOutputStream"
 - "V13PerfectThread9Threading"
 - !private "Su"
 - "Vs6UInt16"
@@ -1121,11 +1150,13 @@ depends-nominal:
 - "Ps24_DestructorSafeContainer"
 - "Ps28_DisallowMixedSignArithmetic"
 - !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
-- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
 - "Ps35_ExpressibleByBuiltinIntegerLiteral"
-- !private "Ps34_ExpressibleByBuiltinStringLiteral"
-- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
-- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
 - "Ps14_Incrementable"
 - "Ps8_Integer"
 - "Ps18_IntegerArithmetic"
@@ -1136,30 +1167,30 @@ depends-nominal:
 - !private "Ps14_StringElement"
 depends-dynamic-lookup:
 depends-external:
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/Visibility.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/LibcShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/RefCount.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/HeapObject.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/DispatchShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/shims/module.modulemap"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/Visibility.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/LibcShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/RefCount.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/HeapObject.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/DispatchShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/shims/module.modulemap"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/OpenSSL-0.3.0/module.modulemap"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-07-25-a.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-04-a.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
 - "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/bio.h"
 - "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/opensslconf.h"
 - "/usr/local/Cellar/openssl/1.0.2h_1/include/openssl/e_os2.h"
@@ -1203,4 +1234,4 @@ depends-external:
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
 - "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/.build/debug/PerfectHTTP.swiftmodule"
-interface-hash: "dff3727785bd9e7c47dc02362eb98edd"
+interface-hash: "f83034c1063e2f0db3622601183414be"

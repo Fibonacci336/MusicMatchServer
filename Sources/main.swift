@@ -18,9 +18,11 @@
 //
 
 import PerfectLib
-import PerfectHTTP
+import PerfectNet
+import PerfectThread
 import PerfectHTTPServer
-
+import PerfectHTTP
+import PerfectNotifications
 // Initialize base-level services
 PerfectServer.initializeServices()
 
@@ -43,6 +45,7 @@ do {
     routes.add(method: .post, uri: "/request/{command}", handler: restJSONHandler)
     routes.add(method: .post, uri: "/avthumb/{videoname}", handler: thumbHandler)
     routes.add(method: .post, uri: "/upload/{fileType}", handler: fileUpload)
+    routes.add(method: .post, uri: "/message/", handler: messageHandler)
     routes.add(method: .get, uri: "/", handler: indexHandler)
     routes.add(method: .get, uri: "*", handler: StaticFileHandler(documentRoot: webRoot).handleRequest)
 
@@ -57,7 +60,29 @@ do {
         server.serverPort = 8181
     }
     try server.start()
-
+    
 } catch PerfectError.networkError(let err, let msg) {
     print("Network error thrown: \(err) \(msg)")
+}
+
+public func initializeNotificationSystem(){
+    let configurationName = "MusicMatch Configuration"
+    
+    NotificationPusher.addConfigurationIOS(name: configurationName) {
+        (net : NetTCPSSL) in
+        
+        // This code will be called whenever a new connection to the APNS service is required.
+        // Configure the SSL related settings.
+        
+        net.keyFilePassword = "123qweasdzxC"
+        
+        guard net.useCertificateFile(cert: "./MusicMatchPush.pem") && net.usePrivateKeyFile(cert: "./MusicMatchPush.pem") && net.checkPrivateKey() else {
+                
+                let code = Int32(net.errorCode())
+                print("Error validating private key file: \(net.errorStr(forCode: code))")
+                return
+        }
+    }
+    
+    NotificationPusher.development = true
 }
