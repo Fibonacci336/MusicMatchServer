@@ -17,12 +17,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>______Target_COpenSSL</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>______Target_MusicMatchServer</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>______Target_MySQL</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>______Target_OpenSSL</key>
 		<dict>
 			<key>primary</key>
 			<true/>

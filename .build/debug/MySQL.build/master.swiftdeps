@@ -1,5 +1,5 @@
-version: "Apple Swift version 3.0-dev (LLVM 3a878c6fdb, Clang 4ca9e01a7c, Swift 2ef0a8fdcb)"
-options: "fac548b13e162e640ffd0294c63fee22"
-build_time: [524024922, 514095000]
+version: "Apple Swift version 3.0-dev (LLVM 17c4c6cf7a, Clang 4ca9e01a7c, Swift d2d66f7921)"
+options: "e9dcdc117122a559e6cbea78677bba69"
+build_time: [525569203, 299848000]
 inputs:
-  "/Users/Fibonacci/Documents/Old Documents - Ben\u2019s MacBook Pro/MusicMatchServer/Packages/MySQL-0.8.0/Sources/MySQL/MySQL.swift": [524015031, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/MySQL-0.8.0/Sources/MySQL/MySQL.swift": [525235998, 0]

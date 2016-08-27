@@ -47,7 +47,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/Fibonacci/Documents/Old Documents - Ben&#x2019;s MacBook Pro/MusicMatchServer"
+      customWorkingDirectory = "/Users/Fibonacci/Documents/MusicMatchServer"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"

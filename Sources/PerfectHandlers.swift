@@ -125,7 +125,6 @@ func sendMessageNotification(message : String, recipientUUID : String, senderUUI
             return
         }
         
-        let senderUser = data[0]
         let recipientuser = data[1]
         let userName = recipientuser![0]
         let deviceToken = recipientuser![1]
@@ -158,6 +157,7 @@ func fileUpload(_ request : HTTPRequest, response : HTTPResponse){
     } catch {
         print(error)
     }
+    response.completed()
 }
 
 
@@ -267,16 +267,25 @@ func indexHandler(_ request: HTTPRequest, response: HTTPResponse) {
 }
 
 func thumbHandler(_ request: HTTPRequest, response: HTTPResponse) {
-    let videoPath = (request.urlVariables["videoname"]!) + ".mp4"
+    
+    print("Handling Thumbnail Request")
+    
+    let extensions = [".mov", ".MOV", ".mp4"]
+    
     let imagePath = (request.urlVariables["videoname"]!) + ".png"
     let documentsDir = webRoot + "/"
-    if let thumbnail = try? getVideoThumbnail(videoURL: currentURL + videoPath){
-        saveImage(thumbnail, locationPath: documentsDir + imagePath)
-        response.appendBody(string: ((request.urlVariables["videoname"]!) + ".png"))
+    for string in extensions{
+        let videoPath = (request.urlVariables["videoname"]!) + string
+        if let thumbnail = try? getVideoThumbnail(videoURL: currentURL + videoPath){
+            saveImage(thumbnail, locationPath: documentsDir + imagePath)
+            response.appendBody(string: imagePath)
+            break
+        }
     }
 
     response.completed()
-    }
+}
+
 func getDocumentsDirectory() -> String {
     let fileManager = FileManager.default
     let documentsDirectory = fileManager.currentDirectoryPath
@@ -346,3 +355,4 @@ func getUsersInArea(currentLocation : CLLocation, range : Double) -> [Int : Stri
         return nil
     }
 }
+
