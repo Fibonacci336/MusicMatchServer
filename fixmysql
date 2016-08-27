@@ -1,0 +1,2 @@
+rm -rf /usr/local/mysql/var/Bens-MacBook-Pro.local.pid
+mysql.server restart

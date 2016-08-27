@@ -52,77 +52,77 @@ provides-member:
 - ["SS", "resolvingSymlinksInFilePath"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "isalnum"
-- !private "??"
-- !private "&&"
-- "getNow"
-- "Int"
-- "icuDateToSeconds"
-- !private "ThrowSystemError"
-- !private "tm"
-- !private "-="
-- !private "!"
-- !private ">>"
-- "Bool"
-- "UnsafeMutablePointer"
-- !private "File"
-- "UInt8"
-- !private "+="
-- !private "BooleanLiteralType"
-- !private "*="
-- !private "timeval"
-- !private "isspace"
-- !private "&"
-- !private "StringLiteralType"
-- !private "*"
-- !private ">="
-- "UTF8"
-- !private "MemoryLayout"
-- !private "Int8"
-- "formatDate"
-- !private "time_t"
-- !private "gettimeofday"
-- !private "~="
-- "Double"
-- "random_uuid"
-- !private "memcpy"
-- !private "strftime"
-- !private "-"
-- !private "UInt32"
-- !private "||"
-- "AssignmentPrecedence"
-- "Encoding"
-- !private "=="
-- !private "uuid_generate_random"
-- "IteratorProtocol"
-- "IntegerLiteralType"
-- "GenerateFromPointer"
-- !private "<="
-- !private "gmtime_r"
-- "Sequence"
 - "FloatLiteralType"
-- !private "<"
-- "UnicodeScalar"
-- !private "UnicodeScalarType"
-- "UnicodeCodec"
-- "UUID"
-- !private "Character"
-- !private "uuid_parse"
-- !private "..<"
-- "Array"
-- "TernaryPrecedence"
-- !private "uuid_unparse_lower"
-- "UTF8Encoding"
-- !private "+"
+- !private "||"
 - !private "Int32"
-- "String"
-- !private ">"
-- "secondsToICUDate"
+- !private "<="
+- !private "*="
+- "IntegerLiteralType"
 - !private "ExtendedGraphemeClusterType"
-- !private "!="
-- !private "/"
-- !private "isdigit"
+- "Int"
+- !private "Character"
 - "uuid_t"
+- "TernaryPrecedence"
+- !private "gettimeofday"
+- !private "isdigit"
+- !private "gmtime_r"
+- !private "!"
+- "UUID"
+- !private "=="
+- "Bool"
+- "AssignmentPrecedence"
+- !private "+="
+- !private "&&"
+- !private "uuid_parse"
+- !private "~="
+- "Encoding"
+- !private ">>"
+- !private "timeval"
+- "icuDateToSeconds"
+- !private "StringLiteralType"
+- !private "uuid_generate_random"
+- !private "strftime"
+- "secondsToICUDate"
+- !private "??"
+- !private ">="
+- "UInt8"
+- "Sequence"
+- !private "Int8"
+- "UnicodeCodec"
+- !private "&"
+- "IteratorProtocol"
+- !private "File"
+- "getNow"
+- !private "BooleanLiteralType"
+- !private "UInt32"
+- !private "-="
+- !private "-"
+- !private "ThrowSystemError"
+- !private "/"
+- "UTF8Encoding"
+- !private "tm"
+- !private "MemoryLayout"
+- "UnsafeMutablePointer"
+- "UTF8"
+- "UnicodeScalar"
+- !private "<"
+- !private "..<"
+- !private "uuid_unparse_lower"
+- "Double"
+- !private "isspace"
+- !private "+"
+- "GenerateFromPointer"
+- !private "time_t"
+- !private "*"
+- "String"
+- "Array"
+- "formatDate"
+- !private "UnicodeScalarType"
+- !private ">"
+- !private "!="
+- !private "memcpy"
+- "random_uuid"
+- !private "isalnum"
 depends-member:
 - !private ["Vs11AnyIterator", "Element"]
 - !private ["Ps9AnyObject", "append"]
@@ -149,6 +149,7 @@ depends-member:
 - !private ["Ps9AnyObject", "utf8"]
 - !private ["Vs11AnySequence", "Iterator"]
 - !private ["Vs11AnySequence", "deinit"]
+- !private ["Ps10Arithmetic", "Stride"]
 - !private ["Ps10Arithmetic", "init"]
 - !private ["Sa", "Element"]
 - !private ["Sa", "IndexDistance"]
@@ -213,6 +214,7 @@ depends-member:
 - !private ["Vs18BidirectionalSlice", "Iterator"]
 - !private ["Vs18BidirectionalSlice", "SubSequence"]
 - !private ["Vs18BidirectionalSlice", "_Element"]
+- !private ["Ps19BinaryFloatingPoint", "Stride"]
 - !private ["Ps19BinaryFloatingPoint", "init"]
 - !private ["Ps17BitwiseOperations", "Character"]
 - !private ["Ps17BitwiseOperations", "Stride"]
@@ -360,6 +362,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
 - !private ["Ps28CustomDebugStringConvertible", "Int32"]
 - !private ["Ps28CustomDebugStringConvertible", "Iterator"]
+- !private ["Ps28CustomDebugStringConvertible", "Stride"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "UInt32"]
@@ -564,7 +567,7 @@ depends-member:
 - ["Vs10Dictionary", "deinit"]
 - !private ["Vs10Dictionary", "init"]
 - !private ["Vs10Dictionary", "subscript"]
-- !private ["O8Dispatch20DispatchTimeInterval", "deinit"]
+- !private ["Sd", "Stride"]
 - ["Sd", "deinit"]
 - !private ["Sd", "init"]
 - !private ["V10PerfectLib8Encoding", "Bool"]
@@ -665,6 +668,7 @@ depends-member:
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "subscript"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "unicodeScalars"]
 - !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "utf8"]
+- !private ["Ps25ExpressibleByFloatLiteral", "Stride"]
 - !private ["Ps25ExpressibleByFloatLiteral", "init"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "Character"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
@@ -774,6 +778,7 @@ depends-member:
 - !private ["C10PerfectLib4File", "init"]
 - !private ["C10PerfectLib4File", "realPath"]
 - !private ["Sf", "deinit"]
+- !private ["Ps13FloatingPoint", "Stride"]
 - !private ["Ps13FloatingPoint", "init"]
 - ["V10PerfectLib19GenerateFromPointer", "Element"]
 - ["V10PerfectLib19GenerateFromPointer", "Int"]
@@ -830,7 +835,6 @@ depends-member:
 - !private ["Ps8Hashable", "value"]
 - ["SQ", "deinit"]
 - ["VVSS13CharacterView5Index", "deinit"]
-- !private ["V10Foundation9IndexPath", "deinit"]
 - !private ["Ps9Indexable", "Element"]
 - !private ["Ps9Indexable", "Index"]
 - !private ["Ps9Indexable", "IndexDistance"]
@@ -885,7 +889,6 @@ depends-member:
 - ["Vs5Int32", "deinit"]
 - !private ["Vs5Int32", "init"]
 - !private ["Vs5Int64", "deinit"]
-- !private ["Vs4Int8", "Stride"]
 - !private ["Vs4Int8", "deinit"]
 - !private ["Ps7Integer", "Character"]
 - !private ["Ps7Integer", "Stride"]
@@ -957,6 +960,7 @@ depends-member:
 - !private ["Ps25LosslessStringConvertible", "CharacterView"]
 - !private ["Ps25LosslessStringConvertible", "File"]
 - !private ["Ps25LosslessStringConvertible", "Int32"]
+- !private ["Ps25LosslessStringConvertible", "Stride"]
 - !private ["Ps25LosslessStringConvertible", "String"]
 - !private ["Ps25LosslessStringConvertible", "UInt32"]
 - !private ["Ps25LosslessStringConvertible", "UInt8"]
@@ -990,7 +994,6 @@ depends-member:
 - !private ["Ps25LosslessStringConvertible", "unicodeScalars"]
 - !private ["Ps25LosslessStringConvertible", "utf8"]
 - !private ["Ps25LosslessStringConvertible", "value"]
-- !private ["V10Foundation11Measurement", "deinit"]
 - !private ["Os12MemoryLayout", "size"]
 - !private ["Ps10MirrorPath", "Character"]
 - !private ["Ps10MirrorPath", "CharacterView"]
@@ -1496,7 +1499,6 @@ depends-member:
 - !private ["Sp", "deallocate"]
 - ["Sp", "deinit"]
 - !private ["Sp", "subscript"]
-- !private ["SP", "deinit"]
 - !private ["Ps15UnsignedInteger", "Character"]
 - !private ["Ps15UnsignedInteger", "Stride"]
 - !private ["Ps15UnsignedInteger", "String"]
@@ -1517,7 +1519,9 @@ depends-member:
 - !private ["Ps14_ArrayProtocol", "last"]
 - !private ["Ps14_ArrayProtocol", "map"]
 - !private ["Ps14_ArrayProtocol", "removeLast"]
+- !private ["Ps15_CVarArgAligned", "Stride"]
 - !private ["Ps15_CVarArgAligned", "init"]
+- !private ["Ps22_CVarArgPassedAsDouble", "Stride"]
 - !private ["Ps22_CVarArgPassedAsDouble", "init"]
 - !private ["Ps24_DestructorSafeContainer", "Element"]
 - !private ["Ps24_DestructorSafeContainer", "IndexDistance"]
@@ -1570,6 +1574,7 @@ depends-member:
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "subscript"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "unicodeScalars"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "utf8"]
+- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "Stride"]
 - !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "init"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "Character"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "Stride"]
@@ -1862,7 +1867,6 @@ depends-nominal:
 - !private "Ps23CustomStringConvertible"
 - !private "Vs27DefaultBidirectionalIndices"
 - "Vs10Dictionary"
-- !private "O8Dispatch20DispatchTimeInterval"
 - "Sd"
 - "V10PerfectLib8Encoding"
 - "Ps9Equatable"
@@ -1882,7 +1886,6 @@ depends-nominal:
 - !private "Ps8Hashable"
 - "SQ"
 - "VVSS13CharacterView5Index"
-- !private "V10Foundation9IndexPath"
 - !private "Ps9Indexable"
 - !private "Ps13IndexableBase"
 - "Vs16IndexingIterator"
@@ -1897,7 +1900,6 @@ depends-nominal:
 - "Ps16IteratorProtocol"
 - !private "P10PerfectLib15JSONConvertible"
 - !private "Ps25LosslessStringConvertible"
-- !private "V10Foundation11Measurement"
 - !private "Os12MemoryLayout"
 - !private "Ps10MirrorPath"
 - !private "Ps17MutableCollection"
@@ -1938,7 +1940,6 @@ depends-nominal:
 - "Sc"
 - "VSS17UnicodeScalarView"
 - "Sp"
-- !private "SP"
 - !private "Ps15UnsignedInteger"
 - !private "Ps14_ArrayProtocol"
 - !private "Ps15_CVarArgAligned"
@@ -1967,26 +1968,26 @@ depends-nominal:
 - "VSC2tm"
 depends-dynamic-lookup:
 depends-external:
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/shims/Visibility.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/shims/LibcShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/shims/RefCount.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/shims/HeapObject.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/shims/DispatchShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/shims/module.modulemap"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-24-a.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/Visibility.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/LibcShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/RefCount.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/HeapObject.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/DispatchShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/module.modulemap"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
 interface-hash: "bee2795c3b0f8f1a44a8bbd47efb383d"

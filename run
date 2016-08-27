@@ -1,0 +1,25 @@
+clear
+clean () {
+	swift build --clean
+	echo "Cleaning..."
+}
+
+buildFailed () {
+	echo "Build Failed"
+}
+
+buildSucessful () {
+	echo "Build Succeeded!"
+	./.build/debug/MusicMatchServer
+}
+
+if [[ $1 = -clean ]]
+then
+	clean
+fi
+if [[ $1 = -mysql ]]
+then
+	./fixmysql.sh
+fi
+
+swift build -Xswiftc -suppress-warnings && buildSucessful || buildFailed
