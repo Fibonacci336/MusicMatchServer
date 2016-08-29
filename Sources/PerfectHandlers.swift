@@ -191,7 +191,7 @@ func distanceCheck(_ request: HTTPRequest, response: HTTPResponse) {
 
         for var i in 0..<userArray.keys.count{
             let UUID = userArray[i]
-            let statement = "SELECT UserType,UserName,BirthDate,MusicType,BandPosition,VideoName,Available,UUID, CurrentLat, CurrentLong FROM users where UUID=\"" + UUID! + "\";"
+            let statement = "SELECT UserType,UserName,BirthDate,MusicType,BandPosition,VideoName,Available,UUID, CurrentLat, CurrentLong, DistanceUnit FROM Users where UUID=\"" + UUID! + "\";"
             let query = mysql.query(statement: statement)
 
             if(query){

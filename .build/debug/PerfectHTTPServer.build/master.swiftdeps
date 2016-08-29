@@ -1,9 +1,9 @@
-version: "Apple Swift version 3.0-dev (LLVM 17c4c6cf7a, Clang 4ca9e01a7c, Swift d2d66f7921)"
-options: "db4a563150a2188c96a3b89e5e5d698b"
-build_time: [525569207, 16713000]
+version: "Apple Swift version 3.0-dev (LLVM f54fa77021, Clang 76d1ba12e0, Swift 97ba30afc5)"
+options: "9bc8d83c8675a082151a5a3a3a9934fb"
+build_time: [525763660, 540860000]
 inputs:
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.10.0/Sources/HPACK.swift": [525235948, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.10.0/Sources/HTTP11Request.swift": [525235948, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.10.0/Sources/HTTP11Response.swift": [525235948, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.10.0/Sources/HTTP2.swift": [525235948, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.10.0/Sources/HTTPServer.swift": [525235948, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.11.0/Sources/HPACK.swift": [525578746, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.11.0/Sources/HTTP11Request.swift": [525578746, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.11.0/Sources/HTTP11Response.swift": [525578746, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.11.0/Sources/HTTP2.swift": [525578746, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-0.11.0/Sources/HTTPServer.swift": [525578746, 0]

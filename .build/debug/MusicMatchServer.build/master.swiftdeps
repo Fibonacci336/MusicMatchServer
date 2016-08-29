@@ -1,8 +1,8 @@
-version: "Apple Swift version 3.0-dev (LLVM 17c4c6cf7a, Clang 4ca9e01a7c, Swift d2d66f7921)"
-options: "50084df5cc4e1b5151eceb8be8b05fab"
-build_time: [525569207, 328186000]
+version: "Apple Swift version 3.0-dev (LLVM f54fa77021, Clang 76d1ba12e0, Swift 97ba30afc5)"
+options: "5ed487b96ecf72c6bbbb7eb3727197ec"
+build_time: [525763660, 838785000]
 inputs:
   "/Users/Fibonacci/Documents/MusicMatchServer/Sources/arguments.swift": [524013505, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/main.swift": [525483585, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/main.swift": [525578645, 0]
   "/Users/Fibonacci/Documents/MusicMatchServer/Sources/MySQLFunctions.swift": [524017930, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/PerfectHandlers.swift": [525483156, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/PerfectHandlers.swift": [525763574, 0]

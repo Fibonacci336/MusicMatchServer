@@ -7,12 +7,12 @@ provides-member:
 - ["V10PerfectLib13PerfectServer", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "String"
 - !private "StringLiteralType"
 - !private "getpwnam"
 - "PerfectServer"
-- !private "setgid"
 - !private "ThrowSystemError"
+- !private "setgid"
+- "String"
 - !private "setuid"
 - !private "=="
 depends-member:
