@@ -1,13 +1,13 @@
-version: "Apple Swift version 3.0-dev (LLVM f54fa77021, Clang 76d1ba12e0, Swift 97ba30afc5)"
-options: "6d3583a4fb1466ce454432bb1713059e"
-build_time: [525763660, 350066000]
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "d0dd12ee1dbe1a909273399c20ac5de8"
+build_time: [527286337, 5337000]
 inputs:
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-0.27.0/Sources/HTTPFilter.swift": [525578747, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-0.27.0/Sources/HTTPHeaders.swift": [525578747, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-0.27.0/Sources/HTTPMethod.swift": [525578747, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-0.27.0/Sources/HTTPRequest.swift": [525578747, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-0.27.0/Sources/HTTPResponse.swift": [525578747, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-0.27.0/Sources/MimeReader.swift": [525578747, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-0.27.0/Sources/MimeType.swift": [525578747, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-0.27.0/Sources/Routing.swift": [525578747, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-0.27.0/Sources/StaticFileHandler.swift": [525578747, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/HTTPFilter.swift": [527286057, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/HTTPHeaders.swift": [527286057, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/HTTPMethod.swift": [527286057, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/HTTPRequest.swift": [527286057, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/HTTPResponse.swift": [527286057, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/MimeReader.swift": [527286057, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/MimeType.swift": [527286057, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/Routing.swift": [527286057, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/StaticFileHandler.swift": [527286057, 0]

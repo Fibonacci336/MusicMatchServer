@@ -26,56 +26,56 @@ provides-member:
 - ["Si", "secondsToDate"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "time_t"
-- "CustomStringConvertible"
-- "AnyIterator"
-- "Int"
-- !private "StringLiteralType"
-- !private ">"
-- "Double"
-- !private "UnsafeMutablePointer"
-- !private "BooleanLiteralType"
-- !private "tm"
-- !private "Int8"
-- "HTTPResponseStatus"
-- !private "gmtime_r"
-- !private "+"
 - !private "gettimeofday"
-- "UInt8"
-- !private "timeval"
-- "HTTPResponse"
+- "HTTPResponseStatus"
+- !private "/"
 - "String"
-- "HTTPRequest"
-- !private "*"
+- "HTTPResponseHeader"
+- !private "timeval"
+- "UInt8"
 - "HTTPCookie"
+- !private "UnicodeScalarType"
+- !private "+"
+- !private "strftime"
 - !private "~="
+- !private "=="
+- "AssignmentPrecedence"
+- !private "time_t"
+- !private "tm"
+- "Int"
+- !private ">"
 - "Bool"
 - !private "??"
-- "AssignmentPrecedence"
-- !private "=="
-- !private "UnicodeScalarType"
-- !private "strftime"
-- "HTTPResponseHeader"
-- !private "/"
+- !private "StringLiteralType"
+- !private "Int8"
+- !private "BooleanLiteralType"
+- "CustomStringConvertible"
+- "Double"
+- "AnyIterator"
+- "HTTPRequest"
+- !private "*"
+- !private "gmtime_r"
+- !private "UnsafeMutablePointer"
+- "HTTPResponse"
 depends-member:
+- !private ["Ps16AbsoluteValuable", "Double"]
+- !private ["Ps16AbsoluteValuable", "Int"]
+- !private ["Ps16AbsoluteValuable", "Stride"]
+- !private ["Ps16AbsoluteValuable", "String"]
+- !private ["Ps16AbsoluteValuable", "UnsafeMutablePointer"]
+- !private ["Ps16AbsoluteValuable", "formatDate"]
+- !private ["Ps16AbsoluteValuable", "gettimeofday"]
+- !private ["Ps16AbsoluteValuable", "gmtime_r"]
+- !private ["Ps16AbsoluteValuable", "init"]
+- !private ["Ps16AbsoluteValuable", "now"]
+- !private ["Ps16AbsoluteValuable", "strftime"]
+- !private ["Ps16AbsoluteValuable", "time_t"]
+- !private ["Ps16AbsoluteValuable", "timeval"]
+- !private ["Ps16AbsoluteValuable", "tm"]
 - !private ["Ps9AnyObject", "append"]
 - !private ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "stringByEncodingURL"]
 - !private ["Ps9AnyObject", "utf8"]
-- !private ["Ps10Arithmetic", "Double"]
-- !private ["Ps10Arithmetic", "Int"]
-- !private ["Ps10Arithmetic", "Stride"]
-- !private ["Ps10Arithmetic", "String"]
-- !private ["Ps10Arithmetic", "UnsafeMutablePointer"]
-- !private ["Ps10Arithmetic", "formatDate"]
-- !private ["Ps10Arithmetic", "gettimeofday"]
-- !private ["Ps10Arithmetic", "gmtime_r"]
-- !private ["Ps10Arithmetic", "init"]
-- !private ["Ps10Arithmetic", "now"]
-- !private ["Ps10Arithmetic", "strftime"]
-- !private ["Ps10Arithmetic", "time_t"]
-- !private ["Ps10Arithmetic", "timeval"]
-- !private ["Ps10Arithmetic", "tm"]
 - !private ["Sa", "Iterator"]
 - !private ["Sa", "_Element"]
 - !private ["Sa", "append"]
@@ -183,6 +183,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "jsonEncodedString"]
 - !private ["Ps28CustomDebugStringConvertible", "now"]
 - !private ["Ps28CustomDebugStringConvertible", "removeAll"]
+- ["Ps28CustomDebugStringConvertible", "some"]
 - !private ["Ps28CustomDebugStringConvertible", "strftime"]
 - !private ["Ps28CustomDebugStringConvertible", "stringByEncodingURL"]
 - !private ["Ps28CustomDebugStringConvertible", "time_t"]
@@ -231,6 +232,7 @@ depends-member:
 - !private ["Ps17CustomReflectable", "now"]
 - !private ["Ps17CustomReflectable", "removeAll"]
 - !private ["Ps17CustomReflectable", "secondsToDate"]
+- ["Ps17CustomReflectable", "some"]
 - !private ["Ps17CustomReflectable", "strftime"]
 - !private ["Ps17CustomReflectable", "stringByEncodingURL"]
 - !private ["Ps17CustomReflectable", "time_t"]
@@ -389,6 +391,7 @@ depends-member:
 - !private ["Ps27ExpressibleByIntegerLiteral", "time_t"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "timeval"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "tm"]
+- ["Ps23ExpressibleByNilLiteral", "some"]
 - !private ["Ps32ExpressibleByStringInterpolation", "append"]
 - !private ["Ps32ExpressibleByStringInterpolation", "init"]
 - !private ["Ps32ExpressibleByStringInterpolation", "stringByEncodingURL"]
@@ -402,7 +405,6 @@ depends-member:
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "stringByEncodingURL"]
 - !private ["Ps33ExpressibleByUnicodeScalarLiteral", "utf8"]
 - !private ["Sf", "deinit"]
-- !private ["Vs7Float80", "deinit"]
 - !private ["Ps13FloatingPoint", "Double"]
 - !private ["Ps13FloatingPoint", "Int"]
 - !private ["Ps13FloatingPoint", "Stride"]
@@ -572,6 +574,7 @@ depends-member:
 - !private ["P10PerfectLib15JSONConvertible", "now"]
 - !private ["P10PerfectLib15JSONConvertible", "removeAll"]
 - !private ["P10PerfectLib15JSONConvertible", "secondsToDate"]
+- ["P10PerfectLib15JSONConvertible", "some"]
 - !private ["P10PerfectLib15JSONConvertible", "strftime"]
 - !private ["P10PerfectLib15JSONConvertible", "stringByEncodingURL"]
 - !private ["P10PerfectLib15JSONConvertible", "time_t"]
@@ -644,6 +647,7 @@ depends-member:
 - ["OO11PerfectHTTP18HTTPResponseHeader4Name", "deinit"]
 - !private ["OO11PerfectHTTP18HTTPResponseHeader4Name", "setCookie"]
 - ["Sq", "deinit"]
+- ["Sq", "some"]
 - !private ["Ps22RandomAccessCollection", "Iterator"]
 - !private ["Ps22RandomAccessCollection", "_Element"]
 - !private ["Ps22RandomAccessCollection", "append"]
@@ -908,8 +912,8 @@ depends-member:
 - ["VSC2tm", "deinit"]
 - !private ["VSC2tm", "init"]
 depends-nominal:
+- !private "Ps16AbsoluteValuable"
 - !private "Ps9AnyObject"
-- !private "Ps10Arithmetic"
 - "Sa"
 - !private "Ps23BidirectionalCollection"
 - !private "Ps22BidirectionalIndexable"
@@ -923,9 +927,9 @@ depends-nominal:
 - !private "Ps10Comparable"
 - !private "Vs20CountableClosedRange"
 - !private "Vs14CountableRange"
-- !private "Ps28CustomDebugStringConvertible"
+- "Ps28CustomDebugStringConvertible"
 - !private "Ps29CustomPlaygroundQuickLookable"
-- !private "Ps17CustomReflectable"
+- "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
 - "Vs10Dictionary"
 - "Sd"
@@ -937,11 +941,11 @@ depends-nominal:
 - !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
 - !private "Ps25ExpressibleByFloatLiteral"
 - !private "Ps27ExpressibleByIntegerLiteral"
+- "Ps23ExpressibleByNilLiteral"
 - !private "Ps32ExpressibleByStringInterpolation"
 - !private "Ps26ExpressibleByStringLiteral"
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - !private "Sf"
-- !private "Vs7Float80"
 - !private "Ps13FloatingPoint"
 - "V11PerfectHTTP10HTTPCookie"
 - "P11PerfectHTTP12HTTPResponse"
@@ -960,7 +964,7 @@ depends-nominal:
 - !private "Ps7Integer"
 - !private "Ps17IntegerArithmetic"
 - !private "Ps16IteratorProtocol"
-- !private "P10PerfectLib15JSONConvertible"
+- "P10PerfectLib15JSONConvertible"
 - !private "Ps25LosslessStringConvertible"
 - !private "Ps10MirrorPath"
 - !private "Ps17MutableCollection"
@@ -1019,71 +1023,58 @@ depends-nominal:
 - "VSC2tm"
 depends-dynamic-lookup:
 depends-external:
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/Visibility.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/LibcShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/RefCount.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/HeapObject.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/DispatchShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/module.modulemap"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../ssl.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../srtp.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../ssl23.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../pqueue.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../dtls1.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../tls1.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../ssl3.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../ssl2.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../opensslconf.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../kssl.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../hmac.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../pem2.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../e_os2.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../pem.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../pkcs7.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../x509_vfy.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../sha.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../dh.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../dsa.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../rsa.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../ecdh.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../ecdsa.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../ec.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../bn.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../asn1.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../obj_mac.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../objects.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../evp.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../buffer.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../x509.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../comp.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../lhash.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../err.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../symhacks.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../ossl_typ.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../opensslv.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../safestack.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../stack.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../crypto.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/../bio.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/openssl.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-0.7.0/COpenSSL/include/module.modulemap"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../srtp.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl23.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../pqueue.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../dtls1.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../tls1.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl3.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl2.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../opensslconf.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../kssl.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../hmac.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../pem2.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../e_os2.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../pem.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../pkcs7.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../x509_vfy.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../sha.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../dh.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../dsa.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../rsa.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ecdh.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ecdsa.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ec.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../bn.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../asn1.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../obj_mac.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../objects.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../evp.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../buffer.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../x509.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../comp.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../lhash.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../err.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../symhacks.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ossl_typ.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../opensslv.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../safestack.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../stack.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../crypto.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../bio.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/openssl.h"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/CHTTPParser.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
 interface-hash: "261ed8b6421b8d598a096df9694faa8d"

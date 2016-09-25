@@ -46,65 +46,68 @@ provides-member:
 - ["SS", "jsonDecode"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "highSurrogateLowerBound"
-- "Int32"
-- !private "jsonWhiteSpace"
-- "jsonEncodedStringWorkAround"
-- !private "surrogateBase"
-- !private "jsonTab"
-- !private "&&"
-- !private "jsonFormFeed"
-- !private "..."
-- "strtoul"
-- !private "||"
-- "JSONDecoding"
-- "Int"
-- "Optional"
-- "JSONConvertibleObject"
-- !private "!"
-- !private "lowSurrogateLowerBound"
-- "JSONConvertible"
-- !private "+"
 - "String"
-- !private "jsonOpenArray"
+- !private "&&"
+- !private "~="
+- "CastingPrecedence"
 - !private "=="
 - "AssignmentPrecedence"
-- "CastingPrecedence"
-- !private "UnicodeScalarType"
+- "JSONConvertibleNull"
+- !private "*"
+- !private "jsonColon"
 - "Double"
-- !private "JSONDecodeState"
-- !private "~="
-- !private "Character"
-- !private "jsonBackSlash"
-- !private "jsonLF"
-- !private "jsonQuoteDouble"
-- !private "jsonCloseObject"
-- !private "-"
-- !private "jsonComma"
-- "UnicodeScalar"
-- !private "surrogateStep"
+- !private "||"
+- "Int32"
+- !private "highSurrogateUpperBound"
+- "Int"
+- "Dictionary"
+- !private "BooleanLiteralType"
+- "Int64"
 - "UInt"
 - "JSONConversionError"
-- "Error"
-- !private "jsonCR"
-- "Bool"
-- !private "jsonCloseArray"
-- !private "lowSurrogateUpperBound"
-- "Dictionary"
-- !private "jsonColon"
-- !private "jsonBackSpace"
-- !private "jsonOpenObject"
-- !private "!="
-- "UInt32"
 - "UInt64"
-- "JSONConvertibleNull"
+- "Bool"
+- !private "!"
+- "JSONDecoding"
+- "JSONConvertible"
+- !private "lowSurrogateUpperBound"
+- "Error"
+- !private "jsonCloseObject"
+- !private "jsonQuoteDouble"
+- !private "jsonBackSlash"
+- !private "UnicodeScalarType"
+- "UInt32"
+- "strtoul"
+- !private "jsonLF"
 - "StringLiteralType"
-- !private "*"
-- "Int64"
+- "UnicodeScalar"
+- !private "..."
+- !private "surrogateBase"
+- "Optional"
+- !private "highSurrogateLowerBound"
+- !private "Character"
+- !private "jsonFormFeed"
+- !private "lowSurrogateLowerBound"
+- !private "jsonTab"
+- "JSONConvertibleObject"
+- !private "jsonOpenArray"
+- !private "jsonWhiteSpace"
+- !private "jsonBackSpace"
+- !private "jsonCR"
+- !private "jsonCloseArray"
+- !private "-"
+- !private "!="
+- !private "jsonOpenObject"
+- !private "surrogateStep"
+- !private "JSONDecodeState"
+- "jsonEncodedStringWorkAround"
+- !private "jsonComma"
+- !private "+"
 - "Array"
-- !private "BooleanLiteralType"
-- !private "highSurrogateUpperBound"
 depends-member:
+- !private ["Ps16AbsoluteValuable", "String"]
+- !private ["Ps16AbsoluteValuable", "init"]
+- ["Ps16AbsoluteValuable", "jsonEncodedString"]
 - !private ["Ps9AnyObject", "Character"]
 - !private ["Ps9AnyObject", "Double"]
 - !private ["Ps9AnyObject", "EOF"]
@@ -156,9 +159,6 @@ depends-member:
 - !private ["Ps9AnyObject", "surrogateStep"]
 - !private ["Ps9AnyObject", "unicodeScalars"]
 - ["Ps9AnyObject", ""]
-- !private ["Ps10Arithmetic", "String"]
-- !private ["Ps10Arithmetic", "init"]
-- ["Ps10Arithmetic", "jsonEncodedString"]
 - !private ["Sa", "Iterator"]
 - ["Sa", "String"]
 - !private ["Sa", "_Element"]
@@ -279,6 +279,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "jsonQuoteDouble"]
 - !private ["Ps28CustomDebugStringConvertible", "jsonTab"]
 - !private ["Ps28CustomDebugStringConvertible", "makeIterator"]
+- ["Ps28CustomDebugStringConvertible", "some"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - !private ["Ps28CustomDebugStringConvertible", "unicodeScalars"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "IntegerLiteralType"]
@@ -333,6 +334,7 @@ depends-member:
 - !private ["Ps17CustomReflectable", "jsonQuoteDouble"]
 - !private ["Ps17CustomReflectable", "jsonTab"]
 - !private ["Ps17CustomReflectable", "makeIterator"]
+- ["Ps17CustomReflectable", "some"]
 - !private ["Ps17CustomReflectable", "subscript"]
 - !private ["Ps17CustomReflectable", "unicodeScalars"]
 - !private ["Ps23CustomStringConvertible", "Index"]
@@ -455,6 +457,7 @@ depends-member:
 - ["Ps27ExpressibleByIntegerLiteral", "jsonEncodedString"]
 - !private ["Ps23ExpressibleByNilLiteral", "JSONConversionError"]
 - ["Ps23ExpressibleByNilLiteral", "jsonEncodedString"]
+- ["Ps23ExpressibleByNilLiteral", "some"]
 - !private ["Ps32ExpressibleByStringInterpolation", "JSONConversionError"]
 - !private ["Ps32ExpressibleByStringInterpolation", "JSONDecodeState"]
 - !private ["Ps32ExpressibleByStringInterpolation", "String"]
@@ -613,6 +616,7 @@ depends-member:
 - !private ["P10PerfectLib15JSONConvertible", "jsonQuoteDouble"]
 - !private ["P10PerfectLib15JSONConvertible", "jsonTab"]
 - !private ["P10PerfectLib15JSONConvertible", "setJSONValues"]
+- ["P10PerfectLib15JSONConvertible", "some"]
 - !private ["P10PerfectLib15JSONConvertible", "subscript"]
 - !private ["P10PerfectLib15JSONConvertible", "unicodeScalars"]
 - ["P10PerfectLib15JSONConvertible", ""]
@@ -719,6 +723,7 @@ depends-member:
 - ["Sq", "String"]
 - ["Sq", "deinit"]
 - ["Sq", "jsonEncodedString"]
+- ["Sq", "some"]
 - !private ["Ps22RandomAccessCollection", "Iterator"]
 - !private ["Ps22RandomAccessCollection", "_Element"]
 - !private ["Ps22RandomAccessCollection", "append"]
@@ -1029,8 +1034,8 @@ depends-member:
 - ["Ps11_Strideable", "init"]
 - ["Ps11_Strideable", "jsonEncodedString"]
 depends-nominal:
+- "Ps16AbsoluteValuable"
 - "Ps9AnyObject"
-- "Ps10Arithmetic"
 - "Sa"
 - "Ps23BidirectionalCollection"
 - "Ps22BidirectionalIndexable"
@@ -1138,26 +1143,13 @@ depends-nominal:
 - "Ps11_Strideable"
 depends-dynamic-lookup:
 depends-external:
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/Visibility.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/UnicodeShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/RuntimeStubs.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/SwiftStdint.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/SwiftStddef.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/RuntimeShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/LibcShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/RefCount.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/HeapObject.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/GlobalObjects.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/FoundationShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/DispatchShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/CoreFoundationShims.h"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/shims/module.modulemap"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
-- "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-08-26-a.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-interface-hash: "1ff12fdebc3b7f9d8f79c9194fcc5636"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/CHTTPParser.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+interface-hash: "32489caf543b9cd073a474a173130f02"

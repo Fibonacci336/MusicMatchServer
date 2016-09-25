@@ -1,9 +1,9 @@
-version: "Apple Swift version 3.0-dev (LLVM f54fa77021, Clang 76d1ba12e0, Swift 97ba30afc5)"
-options: "0590354c9bbcbd45b8221c3b6cf1162f"
-build_time: [525763660, 219467000]
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "9a6a2c519d1a1a846df4c2c4a9430abe"
+build_time: [527286164, 410609000]
 inputs:
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-0.26.0/Sources/Net.swift": [525578865, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-0.26.0/Sources/NetEvent.swift": [525578865, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-0.26.0/Sources/NetNamedPipe.swift": [525578865, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-0.26.0/Sources/NetTCP.swift": [525578865, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-0.26.0/Sources/NetTCPSSL.swift": [525578865, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-2.0.0/Sources/Net.swift": [527286108, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-2.0.0/Sources/NetEvent.swift": [527286108, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-2.0.0/Sources/NetNamedPipe.swift": [527286108, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-2.0.0/Sources/NetTCP.swift": [527286108, 0]
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-2.0.0/Sources/NetTCPSSL.swift": [527286108, 0]

@@ -2,13 +2,13 @@
   "": {
     "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/master.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectThread-0.14.0/Sources/Threading.swift": {
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectThread-2.0.0/Sources/Threading.swift": {
     "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/Threading.d",
     "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/Threading.swift.o",
     "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/Threading~partial.swiftmodule",
     "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/Threading.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectThread-0.14.0/Sources/ThreadQueue.swift": {
+  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectThread-2.0.0/Sources/ThreadQueue.swift": {
     "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/ThreadQueue.d",
     "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/ThreadQueue.swift.o",
     "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/ThreadQueue~partial.swiftmodule",
