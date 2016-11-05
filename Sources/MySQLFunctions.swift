@@ -9,11 +9,24 @@
 import Foundation
 import MySQL
 
+struct HelloWorld{
+    
+    
+    let host = HOST
+    
+    init(){
+        print(HOST)
+    }
+    
+    
+    
+}
+
 func initializeDatabaseConnection() throws -> MySQL{
     // open mysql connection
     let mysql = MySQL()
     
-    let connected = mysql.connect(host: HOST, user: USER, password: PASSWORD, port: 0, socket: nil, flag: 0)
+    let connected = mysql.connect(host: HOST, user: USER, password: PASSWORD, port: 3306, socket: nil, flag: 0)
     
     guard connected else {
         print(mysql.errorMessage())
@@ -97,7 +110,7 @@ func initializeUserData(){
             mysql.close()
         }
         //FIX
-        let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS Users (UserType TEXT, UserName TEXT, UUID TEXT, BirthDate DATE, MusicType TEXT, BandPosition TEXT, VideoName TEXT, CurrentLat DOUBLE, CurrentLong DOUBLE, Available INT, Bio TEXT, LookingFor TEXT, DistanceUnit TEXT, DeviceToken TEXT);")
+        let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS Users (UserType TEXT, UserName TEXT, UUID TEXT, BirthDate DATE, MusicType TEXT, BandPosition TEXT, VideoName TEXT, CurrentLat DOUBLE, CurrentLong DOUBLE, Available INT, Bio TEXT, LookingFor TEXT, DistanceUnit TEXT, DeviceToken TEXT, LastLogin DATETIME);")
         
         guard tableSuccess else {
             print(mysql.errorMessage())

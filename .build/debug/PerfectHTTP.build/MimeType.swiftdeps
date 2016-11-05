@@ -10,21 +10,21 @@ provides-member:
 - ["OV11PerfectHTTP8MimeType7TopType", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "??"
-- !private "ExtendedGraphemeClusterType"
-- !private ">"
-- "mimeMap"
-- "StringLiteralType"
-- "String"
-- "CustomStringConvertible"
-- !private "defaultTopType"
-- "Dictionary"
-- "AssignmentPrecedence"
-- "MimeType"
+- !private "defaultSubType"
 - "ExpressibleByStringLiteral"
+- "Dictionary"
+- "StringLiteralType"
+- !private "ExtendedGraphemeClusterType"
+- !private "??"
+- !private "defaultTopType"
+- "AssignmentPrecedence"
 - !private "UnicodeScalarType"
 - !private "~="
-- !private "defaultSubType"
+- "CustomStringConvertible"
+- !private ">"
+- "MimeType"
+- "mimeMap"
+- "String"
 depends-member:
 - !private ["Vs11AnyIterator", "Element"]
 - !private ["Ps9AnyObject", "characters"]
@@ -697,6 +697,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-2.0.0/module.modulemap"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl.h"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../srtp.h"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl23.h"

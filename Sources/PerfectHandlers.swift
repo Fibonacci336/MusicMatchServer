@@ -26,6 +26,7 @@ import PerfectNotifications
 
 // host where mysql server is
 let HOST = "127.0.0.1"
+
 // mysql username
 let USER = "root"
 // mysql root password
@@ -34,6 +35,7 @@ let PASSWORD = "123qweasdzxC"
 let SCHEMA = "MusicMatch"
 
 var currentURL = "http://0.0.0.0:8181/"
+
 
 //public method that is being called by the server framework to initialise your module.
 public func PerfectServerModuleInit() {
@@ -51,8 +53,14 @@ public func PerfectServerModuleInit() {
         print("Production")
     }
     
-
+    
 }
+
+//MOCKSTOCK HANDLERS
+func stockListHandler(_ request : HTTPRequest, response : HTTPResponse){
+    print("Handling Stock Request")
+}
+
 
 func messageHandler(_ request : HTTPRequest, response : HTTPResponse){
     print("Handling Message Request")
@@ -163,28 +171,23 @@ func fileUpload(_ request : HTTPRequest, response : HTTPResponse){
 
 func distanceCheck(_ request: HTTPRequest, response: HTTPResponse) {
     let requestArray = request.postBodyString?.components(separatedBy: ",")
-    var currentUUID = requestArray?[0]
-    currentUUID = "\"" + currentUUID! + "\""
-    var currentLocation = CLLocation()
+    var currentUUID = requestArray![0]
     let userRange : Double = Double((requestArray?[1])!)!
+    
+    let currentLat = Double(requestArray![2])!
+    let currentLong = Double(requestArray![3])!
+    
+    var currentLocation = CLLocation(latitude: currentLat, longitude: currentLong)
     var currentDict = [String : [String?]]()
     do{
         let mysql = try initializeDatabaseConnection()
         defer {
             mysql.close()
         }
-        let mysqlStatement = "SELECT CurrentLat,CurrentLong FROM Users WHERE UUID=" + currentUUID! + ";"
+        let mysqlStatement = "UPDATE Users SET CurrentLat=\(currentLat), CurrentLong=\(currentLong) WHERE UUID=\"\(currentUUID)\";"
 
-        let query = mysql.query(statement: mysqlStatement)
+        print(mysql.query(statement: mysqlStatement))
 
-        if(query){
-            if let queryResults = mysql.storeResults(){
-                let row = queryResults.next()!
-                let currentLat = Double((row[0])!)!
-                let currentLong = Double((row[1])!)!
-                currentLocation = CLLocation(latitude: currentLat, longitude: currentLong)
-            }
-        }
         var userArray = getUsersInArea(currentLocation: currentLocation, range: userRange)!
 
         var returnDict = [String : [String?]]()
@@ -355,4 +358,5 @@ func getUsersInArea(currentLocation : CLLocation, range : Double) -> [Int : Stri
         return nil
     }
 }
+
 

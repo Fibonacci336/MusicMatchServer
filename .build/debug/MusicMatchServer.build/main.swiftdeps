@@ -2,38 +2,45 @@
 provides-top-level:
 - "webRoot"
 - "production"
+- "stockRefreshTimer"
+- "stockArray"
 - "initializeNotificationSystem"
 provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
-- "distanceCheck"
-- "PerfectError"
-- "StringLiteralType"
-- "restJSONHandler"
-- !private "Int32"
-- "messageHandler"
-- !private "&&"
-- "production"
-- "StaticFileHandler"
-- "print"
-- "BooleanLiteralType"
-- "Dir"
-- !private "NetTCPSSL"
-- "PerfectServerModuleInit"
-- "FloatLiteralType"
-- "webRoot"
-- "UnicodeScalarType"
 - "thumbHandler"
-- "IntegerLiteralType"
-- "indexHandler"
-- "fileUpload"
-- "AssignmentPrecedence"
-- "initializeNotificationSystem"
+- "BooleanLiteralType"
+- "stockArray"
+- "restJSONHandler"
 - "HTTPServer"
+- "StringLiteralType"
 - "configureServer"
+- "Dir"
 - "Routes"
 - !private "NotificationPusher"
+- "fileUpload"
+- "PerfectError"
+- !private "NetTCPSSL"
+- "initializeNotificationSystem"
+- "messageHandler"
+- "UnicodeScalarType"
+- "AssignmentPrecedence"
+- "PerfectServerModuleInit"
+- "stockRefreshTimer"
+- "distanceCheck"
+- !private "Int32"
+- "stockListHandler"
+- "webRoot"
+- "FloatLiteralType"
+- "StockRefreshTimer"
+- "indexHandler"
+- "Stock"
+- "StaticFileHandler"
+- "IntegerLiteralType"
+- "production"
+- !private "&&"
+- "print"
 depends-member:
 - !private ["Ps9AnyObject", "addConfigurationIOS"]
 - ["Ps9AnyObject", "addRoutes"]
@@ -48,11 +55,16 @@ depends-member:
 - ["Ps9AnyObject", "start"]
 - !private ["Ps9AnyObject", "useCertificateFile"]
 - !private ["Ps9AnyObject", "usePrivateKeyFile"]
+- ["Sa", "deinit"]
+- ["Sa", "init"]
+- ["Ps23BidirectionalCollection", "init"]
+- ["Ps22BidirectionalIndexable", "init"]
 - !private ["Ps17BitwiseOperations", "init"]
 - ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
 - ["Ps7CVarArg", "init"]
 - ["Vs9Character", "deinit"]
+- ["Ps10Collection", "init"]
 - ["Ps10Comparable", "init"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
@@ -73,6 +85,7 @@ depends-member:
 - ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "post"]
 - ["Ps5Error", "networkError"]
+- ["Ps25ExpressibleByArrayLiteral", "init"]
 - ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps27ExpressibleByIntegerLiteral", "init"]
@@ -93,6 +106,8 @@ depends-member:
 - ["Ps8Hashable", "get"]
 - ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "post"]
+- ["Ps9Indexable", "init"]
+- ["Ps13IndexableBase", "init"]
 - ["Si", "deinit"]
 - ["Vs5Int16", "deinit"]
 - ["Vs5Int32", "deinit"]
@@ -106,6 +121,8 @@ depends-member:
 - ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps25LosslessStringConvertible", "init"]
 - ["Ps10MirrorPath", "init"]
+- ["Ps17MutableCollection", "init"]
+- ["Ps16MutableIndexable", "init"]
 - ["PSo8NSCoding", "init"]
 - ["PSo9NSCopying", "init"]
 - ["PSo16NSMutableCopying", "init"]
@@ -130,13 +147,19 @@ depends-member:
 - !private ["C10PerfectNet9NetTCPSSL", "usePrivateKeyFile"]
 - !private ["C20PerfectNotifications18NotificationPusher", "addConfigurationIOS"]
 - !private ["C20PerfectNotifications18NotificationPusher", "development"]
+- ["Sq", "deinit"]
 - ["O10PerfectLib12PerfectError", "networkError"]
+- ["Ps22RandomAccessCollection", "init"]
+- ["Ps21RandomAccessIndexable", "init"]
+- ["Ps26RangeReplaceableCollection", "init"]
+- ["Ps25RangeReplaceableIndexable", "init"]
 - ["P11PerfectHTTP14RouteNavigator", "deinit"]
 - ["P11PerfectHTTP14RouteNavigator", "description"]
 - ["V11PerfectHTTP6Routes", "add"]
 - ["V11PerfectHTTP6Routes", "deinit"]
 - ["V11PerfectHTTP6Routes", "init"]
 - ["V11PerfectHTTP6Routes", "navigator"]
+- ["Ps8Sequence", "init"]
 - !private ["Ps13SignedInteger", "init"]
 - !private ["Ps12SignedNumber", "init"]
 - ["V11PerfectHTTP17StaticFileHandler", "deinit"]
@@ -153,6 +176,8 @@ depends-member:
 - ["Vs6UInt64", "deinit"]
 - ["Vs5UInt8", "deinit"]
 - ["Sc", "deinit"]
+- ["Ps14_ArrayProtocol", "init"]
+- ["Ps24_DestructorSafeContainer", "init"]
 - ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
@@ -173,10 +198,14 @@ depends-member:
 - !private ["Ps11_Strideable", "init"]
 depends-nominal:
 - "Ps9AnyObject"
+- "Sa"
+- "Ps23BidirectionalCollection"
+- "Ps22BidirectionalIndexable"
 - !private "Ps17BitwiseOperations"
 - "Sb"
 - "Ps7CVarArg"
 - "Vs9Character"
+- "Ps10Collection"
 - "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps29CustomPlaygroundQuickLookable"
@@ -186,6 +215,7 @@ depends-nominal:
 - "Sd"
 - "Ps9Equatable"
 - "Ps5Error"
+- "Ps25ExpressibleByArrayLiteral"
 - "Ps27ExpressibleByBooleanLiteral"
 - "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
 - !private "Ps27ExpressibleByIntegerLiteral"
@@ -196,6 +226,8 @@ depends-nominal:
 - "O11PerfectHTTP10HTTPMethod"
 - "C17PerfectHTTPServer10HTTPServer"
 - "Ps8Hashable"
+- "Ps9Indexable"
+- "Ps13IndexableBase"
 - "Si"
 - "Vs5Int16"
 - "Vs5Int32"
@@ -206,6 +238,8 @@ depends-nominal:
 - "P10PerfectLib15JSONConvertible"
 - "Ps25LosslessStringConvertible"
 - "Ps10MirrorPath"
+- "Ps17MutableCollection"
+- "Ps16MutableIndexable"
 - "PSo8NSCoding"
 - "PSo9NSCopying"
 - "PSo16NSMutableCopying"
@@ -218,9 +252,15 @@ depends-nominal:
 - !private "C10PerfectNet6NetTCP"
 - !private "C10PerfectNet9NetTCPSSL"
 - !private "C20PerfectNotifications18NotificationPusher"
+- "Sq"
 - "O10PerfectLib12PerfectError"
+- "Ps22RandomAccessCollection"
+- "Ps21RandomAccessIndexable"
+- "Ps26RangeReplaceableCollection"
+- "Ps25RangeReplaceableIndexable"
 - "P11PerfectHTTP14RouteNavigator"
 - "V11PerfectHTTP6Routes"
+- "Ps8Sequence"
 - !private "Ps13SignedInteger"
 - !private "Ps12SignedNumber"
 - "V11PerfectHTTP17StaticFileHandler"
@@ -234,6 +274,8 @@ depends-nominal:
 - "Vs6UInt64"
 - "Vs5UInt8"
 - "Sc"
+- "Ps14_ArrayProtocol"
+- "Ps24_DestructorSafeContainer"
 - "Ps35_ExpressibleByBuiltinBooleanLiteral"
 - "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
 - !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
@@ -253,6 +295,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTP.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-2.0.0/module.modulemap"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl.h"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../srtp.h"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl23.h"
@@ -321,7 +364,6 @@ depends-external:
 - "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql_com.h"
 - "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql_version.h"
 - "/usr/local/include/mysql/mysql.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-2.0.0/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
@@ -331,4 +373,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreAudio.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreLocation.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNotifications.swiftmodule"
-interface-hash: "2046833703704b9b0ac75314a531993a"
+interface-hash: "a97f07c4fa9e82729212ce2ff9ec1e5d"

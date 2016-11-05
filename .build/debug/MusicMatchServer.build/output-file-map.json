@@ -25,5 +25,17 @@
     "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/PerfectHandlers.swift.o",
     "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/PerfectHandlers~partial.swiftmodule",
     "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/PerfectHandlers.swiftdeps"
+  },
+  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/ServerTimer.swift": {
+    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/ServerTimer.d",
+    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/ServerTimer.swift.o",
+    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/ServerTimer~partial.swiftmodule",
+    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/ServerTimer.swiftdeps"
+  },
+  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/Stock.swift": {
+    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/Stock.d",
+    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/Stock.swift.o",
+    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/Stock~partial.swiftmodule",
+    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/Stock.swiftdeps"
   }
 }

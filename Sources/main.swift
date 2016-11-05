@@ -23,11 +23,15 @@ import PerfectThread
 import PerfectHTTPServer
 import PerfectHTTP
 import PerfectNotifications
+import Foundation
 
 // Create our webroot
 // This will serve all static content by default
 let webRoot = "./webroot"
 var production = false
+var stockRefreshTimer : StockRefreshTimer? = nil
+var stockArray : [Stock] = [Stock]()
+
 try Dir(webRoot).create()
 
 // Add our routes and such
@@ -40,10 +44,14 @@ do {
     // Launch the HTTP server on port 8181
     let server = HTTPServer()
     var routes = Routes()
+    routes.add(method: .post, uri: "/mockstock/stocks/", handler: stockListHandler)
     routes.add(method: .post, uri: "/distcheck/{command}", handler: distanceCheck)
     routes.add(method: .post, uri: "/request/{command}", handler: restJSONHandler)
     routes.add(method: .get, uri: "/avthumb/{videoname}", handler: thumbHandler)
+    
     routes.add(method: .post, uri: "/upload/{fileType}", handler: fileUpload)
+    routes.add(method: .get, uri: "/upload/{fileType}", handler: fileUpload)
+    
     routes.add(method: .post, uri: "/message/", handler: messageHandler)
     routes.add(method: .get, uri: "/", handler: indexHandler)
     routes.add(method: .get, uri: "/*", handler: StaticFileHandler(documentRoot: webRoot).handleRequest)
@@ -59,11 +67,14 @@ do {
     }else{
         server.serverPort = 8181
     }
+    //stockRefreshTimer = StockRefreshTimer(timeInterval: 15, repeats: false)
     try server.start()
+    
     
 } catch PerfectError.networkError(let err, let msg) {
     print("Network error thrown: \(err) \(msg)")
 }
+
 
 public func initializeNotificationSystem(){
     let configurationName = "MusicMatch Configuration"

@@ -12,23 +12,23 @@ provides-member:
 - ["P11PerfectHTTP11HTTPRequest", "cookies"]
 provides-dynamic-lookup:
 depends-top-level:
+- "String"
 - "UInt8"
 - !private "+"
 - "UInt16"
 - !private "UnicodeScalarType"
-- "String"
+- !private "ExtendedGraphemeClusterType"
+- "HTTPRequest"
 - !private "??"
 - !private "StringLiteralType"
 - "NetTCP"
-- !private "!="
 - "AnyIterator"
+- !private "!="
 - "MimeReader"
-- !private "ExtendedGraphemeClusterType"
-- !private "=="
-- "Int"
-- "HTTPMethod"
-- "HTTPRequest"
 - "HTTPRequestHeader"
+- "Int"
+- !private "=="
+- "HTTPMethod"
 - !private "Character"
 depends-member:
 - ["Ps9AnyObject", "BodySpec"]
@@ -742,6 +742,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
+- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-2.0.0/module.modulemap"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl.h"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../srtp.h"
 - "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl23.h"
