@@ -123,6 +123,19 @@ func getDataFromDatabase(with request : String) throws -> [Int : [String?]]{
 }
 
 
+func sendSilentMessageNotification(recipientDeviceToken : String){
+    let notificationArray = [IOSNotificationItem.alertBody("message-refresh"), IOSNotificationItem.contentAvailable]
+    let pusher = NotificationPusher()
+    
+    pusher.apnsTopic = "com.fibonacci.MusicMatch"
+    let configurationName = "MusicMatch Configuration"
+    pusher.pushIOS(configurationName: configurationName, deviceToken: recipientDeviceToken, expiration: 0, priority: 10,notificationItems: notificationArray, callback:{
+        (response : NotificationResponse) -> Void in
+        print(response.status)
+    })
+}
+
+
 
 func sendMessageNotification(message : String, recipientUUID : String, senderUUID : String){
     let senderDataRequest = "SELECT UserName,DeviceToken FROM Users WHERE UUID=\"\(senderUUID)\" OR UUID=\"\(recipientUUID)\";"
@@ -142,6 +155,7 @@ func sendMessageNotification(message : String, recipientUUID : String, senderUUI
 
         pusher.apnsTopic = "com.fibonacci.MusicMatch"
         let configurationName = "MusicMatch Configuration"
+        sendSilentMessageNotification(recipientDeviceToken: deviceToken!)
         pusher.pushIOS(configurationName: configurationName, deviceToken: deviceToken!, expiration: 0, priority: 10,notificationItems: notificationArray, callback:{
             (response : NotificationResponse) -> Void in
             print(response.status)
