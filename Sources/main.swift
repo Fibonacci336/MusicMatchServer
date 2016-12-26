@@ -76,8 +76,7 @@ do {
 }
 
 
-public func initializeNotificationSystem(){
-    let configurationName = "MusicMatch Configuration"
+public func initializeNotificationSystem(configurationName : String){
     
     NotificationPusher.addConfigurationIOS(name: configurationName) {
         (net : NetTCPSSL) in

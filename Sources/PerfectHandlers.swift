@@ -47,7 +47,8 @@ public func PerfectServerModuleInit() {
     initializeUserData()
     initializeMessagesData()
     initializeUserLogInData()
-    initializeNotificationSystem()
+    initializeNotificationSystem(configurationName: "MusicMatch Configuration")
+    initializeNotificationSystem(configurationName: "MusicMatch Silent Configuration")
     if(production){
         currentURL = "http://www.lassoconsultant.com:8183/"
         print("Production")
@@ -124,11 +125,11 @@ func getDataFromDatabase(with request : String) throws -> [Int : [String?]]{
 
 
 func sendSilentMessageNotification(recipientDeviceToken : String){
-    let notificationArray = [IOSNotificationItem.alertBody("message-refresh"), IOSNotificationItem.contentAvailable]
+    let notificationArray = [IOSNotificationItem.contentAvailable]
     let pusher = NotificationPusher()
     
     pusher.apnsTopic = "com.fibonacci.MusicMatch"
-    let configurationName = "MusicMatch Configuration"
+    let configurationName = "MusicMatch Silent Configuration"
     pusher.pushIOS(configurationName: configurationName, deviceToken: recipientDeviceToken, expiration: 0, priority: 10,notificationItems: notificationArray, callback:{
         (response : NotificationResponse) -> Void in
         print(response.status)
@@ -146,11 +147,22 @@ func sendMessageNotification(message : String, recipientUUID : String, senderUUI
             return
         }
         
-        let recipientuser = data[1]
-        let userName = recipientuser![0]
-        let deviceToken = recipientuser![1]
+        let recipientUser = data[1]
+        let senderUser = data[0]
+        
+        guard recipientUser != nil else{
+            print("Nil Recipient User")
+            return
+        }
+        let deviceToken = recipientUser![1]
+        
+        
+        guard deviceToken != nil else{
+            print("Nil Device Token, Possibly a Simulator Account?")
+            return
+        }
         //Send Notification
-        let notificationArray = [IOSNotificationItem.alertBody(message), IOSNotificationItem.sound("default"), IOSNotificationItem.alertTitle(userName!)]
+        let notificationArray = [IOSNotificationItem.alertBody(message), IOSNotificationItem.sound("default"), IOSNotificationItem.alertTitle(senderUser![0]!)]
         let pusher = NotificationPusher()
 
         pusher.apnsTopic = "com.fibonacci.MusicMatch"
@@ -188,27 +200,41 @@ func distanceCheck(_ request: HTTPRequest, response: HTTPResponse) {
     var currentUUID = requestArray![0]
     let userRange : Double = Double((requestArray?[1])!)!
     
-    let currentLat = Double(requestArray![2])!
-    let currentLong = Double(requestArray![3])!
+    var currentLat = Double(requestArray![2])!
+    var currentLong = Double(requestArray![3])!
     
-    var currentLocation = CLLocation(latitude: currentLat, longitude: currentLong)
+    
     var currentDict = [String : [String?]]()
     do{
         let mysql = try initializeDatabaseConnection()
         defer {
             mysql.close()
         }
+        
+        if currentLat == 0 && currentLong == 0{
+            let mysqlStatement = "SELECT CurrentLat, CurrentLong FROM Users WHERE UUID=\"\(currentUUID)\";"
+            print(mysqlStatement)
+            let response = mysql.query(statement: mysqlStatement)
+            let results = mysql.storeResults()
+            
+            results?.forEachRow{ row in
+                
+                currentLat = Double(row[0]!)!
+                currentLong = Double(row[1]!)!
+            }
+        }
+        
         let mysqlStatement = "UPDATE Users SET CurrentLat=\(currentLat), CurrentLong=\(currentLong) WHERE UUID=\"\(currentUUID)\";"
 
         print(mysql.query(statement: mysqlStatement))
-
+        var currentLocation = CLLocation(latitude: currentLat, longitude: currentLong)
         var userArray = getUsersInArea(currentLocation: currentLocation, range: userRange)!
 
         var returnDict = [String : [String?]]()
 
         for var i in 0..<userArray.keys.count{
             let UUID = userArray[i]
-            let statement = "SELECT UserType,UserName,BirthDate,MusicType,BandPosition,VideoName,Available,UUID, CurrentLat, CurrentLong, DistanceUnit, LastLogin FROM Users where UUID=\"" + UUID! + "\";"
+            let statement = "SELECT UserType,UserName,BirthDate,MusicType,BandPosition,UserMedia,Available,UUID, CurrentLat, CurrentLong, DistanceUnit, LastLogin FROM Users where UUID=\"" + UUID! + "\";"
             let query = mysql.query(statement: statement)
 
             if(query){

@@ -110,7 +110,7 @@ func initializeUserData(){
             mysql.close()
         }
         //FIX
-        let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS Users (UserType TEXT, UserName TEXT, UUID TEXT, BirthDate DATE, MusicType TEXT, BandPosition TEXT, VideoName TEXT, CurrentLat DOUBLE, CurrentLong DOUBLE, Available INT, Bio TEXT, LookingFor TEXT, DistanceUnit TEXT, DeviceToken TEXT, LastLogin DATETIME);")
+        let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS Users (UserType TEXT, UserName TEXT, UUID TEXT, BirthDate DATE, MusicType TEXT, BandPosition TEXT, UserMedia TEXT, CurrentLat DOUBLE, CurrentLong DOUBLE, Available INT, Bio TEXT, LookingFor TEXT, DistanceUnit TEXT, DeviceToken TEXT, LastLogin DATETIME);")
         
         guard tableSuccess else {
             print(mysql.errorMessage())
