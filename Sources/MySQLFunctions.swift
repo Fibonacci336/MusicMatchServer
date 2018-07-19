@@ -7,7 +7,12 @@
 //
 
 import Foundation
+
+#if os(Linux)
+import PerfectMySQL
+#else
 import MySQL
+#endif
 
 struct HelloWorld{
     
@@ -58,6 +63,7 @@ enum DatabaseError : Error{
 
 enum FileError : Error{
     case exportFailed
+    case invalidPath
 }
 
 func deleteColumn(_ name : String, mysql : MySQL, table : String){

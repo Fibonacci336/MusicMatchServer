@@ -13,6 +13,8 @@ buildSucessful () {
 	./.build/debug/MusicMatchServer
 }
 
+./tryStartMySQL
+
 if [[ $1 = -clean ]]
 then
 	clean

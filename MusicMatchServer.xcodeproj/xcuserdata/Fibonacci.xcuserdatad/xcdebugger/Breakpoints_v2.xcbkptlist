@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.350162"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
-            landmarkName = "distanceCheck(_:response:)"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "fileUpload(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.350238"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
-            landmarkName = "distanceCheck(_:response:)"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "fileUpload(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,11 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "Sources/main.swift"
-            timestampString = "489637430.55677"
+            timestampString = "549847600.975502"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
-            endingLineNumber = "23">
+            endingLineNumber = "23"
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Actions>
                <BreakpointActionProxy
                   ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
@@ -64,12 +66,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.350342"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "243"
-            endingLineNumber = "243"
-            landmarkName = "distanceCheck(_:response:)"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
+            landmarkName = "recieveLocalUsers(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -80,43 +82,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.350402"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
-            landmarkName = "distanceCheck(_:response:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "243"
-            endingLineNumber = "243"
-            landmarkName = "distanceCheck(_:response:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "fileUpload(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
@@ -128,12 +98,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.3504601"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
-            landmarkName = "distanceCheck(_:response:)"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
+            landmarkName = "recieveLocalUsers(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -144,12 +114,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.350517"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
-            landmarkName = "distanceCheck(_:response:)"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "fileAccessed(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -160,13 +130,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.350572"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
+            landmarkName = "recieveLocalUsers(_:response:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/PerfectHandlers.swift"
+            timestampString = "553384714.350628"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "fileUpload(_:response:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/PerfectHandlers.swift"
+            timestampString = "553384714.350684"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
             endingLineNumber = "70"
-            landmarkName = "messageHandler(_:response:)"
-            landmarkType = "9">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -176,12 +178,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.35074"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
             endingLineNumber = "68"
-            landmarkName = "messageHandler(_:response:)"
+            landmarkName = "stockListHandler(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -192,7 +194,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.350796"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
@@ -255,7 +257,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.350852"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
@@ -271,7 +273,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.350908"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "121"
@@ -287,7 +289,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.350965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
@@ -303,7 +305,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.35102"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
@@ -319,23 +321,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "getDataFromDatabase(with:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.351076"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "106"
@@ -383,7 +369,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.351131"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
@@ -399,7 +385,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.3511879"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
@@ -415,7 +401,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.351245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
@@ -431,7 +417,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.351356"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
@@ -511,7 +497,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.351563"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -527,7 +513,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.35164"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
@@ -909,12 +895,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.351957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
-            landmarkName = "distanceCheck(_:response:)"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "fileUpload(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -937,16 +923,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.352064"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
-            landmarkName = "fileUpload(_:response:)"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "sendMessageNotification(message:recipientUUID:senderUUID:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -957,12 +943,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.3521399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "128"
             endingLineNumber = "128"
-            landmarkName = "sendSilentMessageNotification(recipientDeviceToken:)"
+            landmarkName = "getDataFromDatabase(with:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -973,11 +959,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.352205"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "sendMessageNotification(message:recipientUUID:senderUUID:)"
             landmarkType = "9">
          </BreakpointContent>
@@ -989,23 +975,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "sendMessageNotification(message:recipientUUID:senderUUID:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.352272"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "154"
@@ -1017,11 +987,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.352338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "135"
@@ -1037,11 +1007,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.352405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "sendMessageNotification(message:recipientUUID:senderUUID:)"
             landmarkType = "9">
          </BreakpointContent>
@@ -1165,12 +1135,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.352591"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
-            landmarkName = "distanceCheck(_:response:)"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "recieveLocalUsers(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1181,12 +1151,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/PerfectHandlers.swift"
-            timestampString = "501527103.069471"
+            timestampString = "553384714.352659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
-            landmarkName = "distanceCheck(_:response:)"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "recieveLocalUsers(_:response:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1300,38 +1270,6 @@
             endingLineNumber = "194"
             landmarkName = "dequeueFrame(timeoutSeconds:streamId:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PerfectHTTPServer.HTTP2Client.dequeueFrame (timeoutSeconds : Swift.Double, streamId : Swift.UInt32) -&gt; Swift.Optional&lt;PerfectHTTPServer.HTTP2Frame&gt;"
-                  moduleName = "PerfectHTTPServer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-2.0.0/Sources/PerfectHTTPServer/HTTP2.swift"
-                  timestampString = "501529642.728476"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "195"
-                  endingLineNumber = "195"
-                  offsetFromSymbolStart = "62">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PerfectHTTPServer.HTTP2Client.(dequeueFrame (timeoutSeconds : Swift.Double, streamId : Swift.UInt32) -&gt; Swift.Optional&lt;PerfectHTTPServer.HTTP2Frame&gt;).(closure #1)"
-                  moduleName = "PerfectHTTPServer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-2.0.0/Sources/PerfectHTTPServer/HTTP2.swift"
-                  timestampString = "501529642.730761"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "196"
-                  endingLineNumber = "196"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1636,6 +1574,118 @@
             endingLineNumber = "210"
             landmarkName = "dequeueFrame(timeoutSeconds:streamId:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/PerfectHandlers.swift"
+            timestampString = "553384714.353276"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/PerfectHandlers.swift"
+            timestampString = "553384714.3533469"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "fileUpload(_:response:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/PerfectHandlers.swift"
+            timestampString = "553384714.353412"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "sendSilentMessageNotification(recipientDeviceToken:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/PerfectHandlers.swift"
+            timestampString = "553384714.3534811"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "sendMessageNotification(message:recipientUUID:senderUUID:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/PerfectHandlers.swift"
+            timestampString = "553384714.353548"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/PerfectHandlers.swift"
+            timestampString = "553384714.353614"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "sendSilentMessageNotification(recipientDeviceToken:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/main.swift"
+            timestampString = "549847620.382176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "initializeNotificationSystem(configurationName:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

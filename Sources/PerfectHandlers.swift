@@ -14,11 +14,17 @@
 //  Copyright © 2016 Ben Carlson. All rights reserved.
 //
 
-import PerfectLib
+#if os(Linux)
+import PerfectMySQL
+import SwiftGlibc
+#else
+import MySQL
 import AVKit
 import AVFoundation
-import MySQL
-import CoreLocation
+import Darwin
+#endif
+
+import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
 import PerfectNotifications
@@ -39,6 +45,7 @@ var currentURL = "http://0.0.0.0:8181/"
 
 //public method that is being called by the server framework to initialise your module.
 public func PerfectServerModuleInit() {
+    
     do{
         let mysql = try initializeDatabaseConnection()
     }catch{
@@ -47,13 +54,12 @@ public func PerfectServerModuleInit() {
     initializeUserData()
     initializeMessagesData()
     initializeUserLogInData()
-    initializeNotificationSystem(configurationName: "MusicMatch Configuration")
-    initializeNotificationSystem(configurationName: "MusicMatch Silent Configuration")
+    initializeNotificationSystem(configurationName: "MusicMatch.Configuration")
+    initializeNotificationSystem(configurationName: "MusicMatch.Silent.Configuration")
     if(production){
         currentURL = "http://www.lassoconsultant.com:8183/"
         print("Production")
     }
-    
     
 }
 
@@ -106,7 +112,6 @@ func getDataFromDatabase(with request : String) throws -> [Int : [String?]]{
         if let queryResults = mysql.storeResults(){
             var index = 0
             queryResults.forEachRow{ row in
-                print(row)
                 dictionary[index] = row
                 index+=1
             }
@@ -125,11 +130,11 @@ func getDataFromDatabase(with request : String) throws -> [Int : [String?]]{
 
 
 func sendSilentMessageNotification(recipientDeviceToken : String){
-    let notificationArray = [IOSNotificationItem.contentAvailable]
+    let notificationArray = [APNSNotificationItem.contentAvailable]
     let pusher = NotificationPusher()
     
     pusher.apnsTopic = "com.fibonacci.MusicMatch"
-    let configurationName = "MusicMatch Silent Configuration"
+    let configurationName = "MusicMatch.Silent.Configuration"
     pusher.pushIOS(configurationName: configurationName, deviceToken: recipientDeviceToken, expiration: 0, priority: 10,notificationItems: notificationArray, callback:{
         (response : NotificationResponse) -> Void in
         print(response.status)
@@ -147,34 +152,39 @@ func sendMessageNotification(message : String, recipientUUID : String, senderUUI
             return
         }
         
-        let recipientUser = data[1]
+        
         let senderUser = data[0]
         
-        guard recipientUser != nil else{
+        guard let recipientUser = data[1] else{
             print("Nil Recipient User")
             return
         }
-        let deviceToken = recipientUser![1]
         
-        
-        guard deviceToken != nil else{
+        guard let deviceToken = recipientUser[1] else{
             print("Nil Device Token, Possibly a Simulator Account?")
             return
         }
         //Send Notification
-        let notificationArray = [IOSNotificationItem.alertBody(message), IOSNotificationItem.sound("default"), IOSNotificationItem.alertTitle(senderUser![0]!)]
+        let notificationArray = [APNSNotificationItem.alertBody(message), APNSNotificationItem.sound("default"), APNSNotificationItem.alertTitle(senderUser![0]!)]
         let pusher = NotificationPusher()
 
         pusher.apnsTopic = "com.fibonacci.MusicMatch"
-        let configurationName = "MusicMatch Configuration"
-        sendSilentMessageNotification(recipientDeviceToken: deviceToken!)
-        pusher.pushIOS(configurationName: configurationName, deviceToken: deviceToken!, expiration: 0, priority: 10,notificationItems: notificationArray, callback:{
+        let configurationName = "MusicMatch.Configuration"
+        sendSilentMessageNotification(recipientDeviceToken: deviceToken)
+        pusher.pushIOS(configurationName: configurationName, deviceToken: deviceToken, expiration: 0, priority: 10,notificationItems: notificationArray, callback:{
             (response : NotificationResponse) -> Void in
             print(response.status)
         })
     
     }
     
+}
+
+func fileAccessed(_ request : HTTPRequest, response : HTTPResponse){
+    
+    print("Accessing File: \(request.uri)")
+    
+    StaticFileHandler(documentRoot: webRoot).handleRequest(request: request, response: response)
 }
 
 func fileUpload(_ request : HTTPRequest, response : HTTPResponse){
@@ -185,6 +195,12 @@ func fileUpload(_ request : HTTPRequest, response : HTTPResponse){
 
     print("Media Type: " + request.urlVariables.first!.value)
     let upload = request.postFileUploads![0]
+    
+    guard upload.fileName != "" else{
+        print("Empty Upload File Name, Can Not Save File")
+        response.completed(status: .badRequest)
+        return
+    }
     let file = File(upload.tmpFileName)
     do {
         let _ = try file.moveTo(path: webRoot + "/" + upload.fileName, overWrite: true)
@@ -195,7 +211,7 @@ func fileUpload(_ request : HTTPRequest, response : HTTPResponse){
 }
 
 
-func distanceCheck(_ request: HTTPRequest, response: HTTPResponse) {
+func recieveLocalUsers(_ request: HTTPRequest, response: HTTPResponse) {
     let requestArray = request.postBodyString?.components(separatedBy: ",")
     var currentUUID = requestArray![0]
     let userRange : Double = Double((requestArray?[1])!)!
@@ -211,10 +227,10 @@ func distanceCheck(_ request: HTTPRequest, response: HTTPResponse) {
             mysql.close()
         }
         
+        //If uploaded coordinates are 0,0(invalid), check server for last updated coordinates
         if currentLat == 0 && currentLong == 0{
             let mysqlStatement = "SELECT CurrentLat, CurrentLong FROM Users WHERE UUID=\"\(currentUUID)\";"
-            print(mysqlStatement)
-            let response = mysql.query(statement: mysqlStatement)
+            _ = mysql.query(statement: mysqlStatement)
             let results = mysql.storeResults()
             
             results?.forEachRow{ row in
@@ -226,13 +242,14 @@ func distanceCheck(_ request: HTTPRequest, response: HTTPResponse) {
         
         let mysqlStatement = "UPDATE Users SET CurrentLat=\(currentLat), CurrentLong=\(currentLong) WHERE UUID=\"\(currentUUID)\";"
 
-        print(mysql.query(statement: mysqlStatement))
-        var currentLocation = CLLocation(latitude: currentLat, longitude: currentLong)
-        var userArray = getUsersInArea(currentLocation: currentLocation, range: userRange)!
+        
+        print("MySQL Query Did Succeed?: \(mysql.query(statement: mysqlStatement))")
+        
+        var userArray = getUsersInArea(currentLat: currentLat, currentLong: currentLong, range: userRange)!
 
         var returnDict = [String : [String?]]()
 
-        for var i in 0..<userArray.keys.count{
+        for i in 0..<userArray.keys.count{
             let UUID = userArray[i]
             let statement = "SELECT UserType,UserName,BirthDate,MusicType,BandPosition,UserMedia,Available,UUID, CurrentLat, CurrentLong, DistanceUnit, LastLogin FROM Users where UUID=\"" + UUID! + "\";"
             let query = mysql.query(statement: statement)
@@ -273,6 +290,13 @@ func restJSONHandler(_ request: HTTPRequest, response: HTTPResponse) {
             }
             print("Getting REST Query")
             let statement = request.postBodyString!
+            
+            if statement.contains(string: "SELECT"){
+                print("Returning Data From REST Query")
+            }else if statement.contains(string: "UPDATE"){
+                print("Updating Server Data")
+            }
+            
             let query = mysql.query(statement: statement)
             if(query){
                 var dictionary = [String : [String?]]()
@@ -335,7 +359,62 @@ func getDocumentsDirectory() -> String {
     return documentsDirectory
 }
 
+func fileExistsHandler(_ request: HTTPRequest, response: HTTPResponse) {
+    let name = request.urlVariables["fileName"]
+    let doesExist = fileExists(fileName: name!)
+    
+    response.appendBody(string: String(doesExist))
+    response.completed()
+}
+
+
+func fileExists(fileName : String) -> Bool{
+    
+    
+    let fileManager = FileManager.default
+    let filePath = webRoot + "/" + fileName
+    
+    return fileManager.fileExists(atPath: filePath)
+    
+}
+
 func getVideoThumbnail(videoURL : String) throws -> NSImage{
+    #if os(Linux)
+    return try getVideoThumbnailFromLinux(videoURL: videoURL)
+    #else
+    return try getVideoThumbnailFromOSX(videoURL: videoURL)
+    #endif
+    
+}
+
+func getVideoThumbnailFromLinux(videoURL : String) throws -> NSImage{
+    
+    let videoPath = webRoot + videoURL.lastFilePathComponent
+    let imagePath = webRoot + videoURL.lastFilePathComponent.deletingFileExtension + ".png"
+    
+    var duration : Double = 0
+    
+    if let durationString = try runTerminalCommand(cmd: "./getVideoDurationLinux", args: [videoPath], getResponse: true){
+        if let durationDouble = Double(durationString){
+            duration = durationDouble
+        }
+    }
+    
+    //Input Video, Output Image, Time for Thumbnail
+    let args = [videoPath, imagePath, String(duration/2)]
+    
+    let _ = try runTerminalCommand(cmd: "./createThumbnailLinux", args: args)
+    
+    let imageURL = URL(fileURLWithPath: imagePath)
+    
+    guard let thumbnail = NSImage(contentsOf: imageURL) else{
+        throw FileError.invalidPath
+    }
+    
+    return thumbnail
+}
+
+func getVideoThumbnailFromOSX(videoURL : String) throws -> NSImage{
 
     let asset = AVAsset(url: URL(string: videoURL)!)
     let imageGenerator = AVAssetImageGenerator(asset: asset)
@@ -367,15 +446,14 @@ func saveImage(_ image : NSImage, locationPath : String){
 
 }
 
-func getUsersInArea(currentLocation : CLLocation, range : Double) -> [Int : String]?{
+func getUsersInArea(currentLat : Double, currentLong : Double, range : Double) -> [Int : String]?{
 
     do{
         let mysql = try initializeDatabaseConnection()
         defer {
             mysql.close()
         }
-        let currentLat = currentLocation.coordinate.latitude
-        let currentLong = currentLocation.coordinate.longitude
+
         let formula = "111.045* DEGREES(ACOS(COS(RADIANS(\(currentLat))) * COS(RADIANS(CurrentLat)) * COS(RADIANS(\(currentLong)) - RADIANS(CurrentLong)) + SIN(RADIANS(\(currentLat))) * SIN(RADIANS(CurrentLat))))"
         let statement = "SELECT UUID,CurrentLat,CurrentLong, Available FROM Users WHERE " + formula
         let fullStatement = statement + " <= \(range) AND Available=1;"
@@ -397,6 +475,34 @@ func getUsersInArea(currentLocation : CLLocation, range : Double) -> [Int : Stri
         print("Could not initialize database connection")
         return nil
     }
+}
+
+func runTerminalCommand(cmd: String, args: [String], getResponse: Bool = false) throws -> String? {
+    let envs = [("PATH", "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin")]
+    let proc = try SysProcess(cmd, args: args, env: envs)
+    var ret: String?
+    if getResponse {
+        var ary = [UInt8]()
+        while true {
+            do {
+                guard let s = try proc.stdout?.readSomeBytes(count: 1024), s.count > 0 else {
+                    break
+                }
+                ary.append(contentsOf: s)
+            } catch PerfectLib.PerfectError.fileError(let code, _) {
+                if code != EINTR {
+                    break
+                }
+            }
+        }
+        ret = UTF8Encoding.encode(bytes: ary)
+    }
+    let res = try proc.wait(hang: true)
+    if res != 0 {
+        let s = try proc.stderr?.readString()
+        throw  PerfectError.systemError(Int32(res), s!)
+    }
+    return ret
 }
 
 

@@ -45,7 +45,8 @@ do {
     let server = HTTPServer()
     var routes = Routes()
     routes.add(method: .post, uri: "/mockstock/stocks/", handler: stockListHandler)
-    routes.add(method: .post, uri: "/distcheck/{command}", handler: distanceCheck)
+    routes.add(method: .post, uri: "/recieveLocalUsers/{command}", handler: recieveLocalUsers)
+    routes.add(method: .get, uri: "/fexists/{fileName}", handler: fileExistsHandler)
     routes.add(method: .post, uri: "/request/{command}", handler: restJSONHandler)
     routes.add(method: .get, uri: "/avthumb/{videoname}", handler: thumbHandler)
     
@@ -54,8 +55,7 @@ do {
     
     routes.add(method: .post, uri: "/message/", handler: messageHandler)
     routes.add(method: .get, uri: "/", handler: indexHandler)
-    routes.add(method: .get, uri: "/*", handler: StaticFileHandler(documentRoot: webRoot).handleRequest)
-    
+    routes.add(method: .get, uri: "/*", handler: fileAccessed)
     
     print(routes.navigator.description)
     server.addRoutes(routes)

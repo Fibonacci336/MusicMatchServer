@@ -1,0 +1,10 @@
+echo "Please enter MySQL Username"
+read username
+
+echo "Please enter MySQL password for $username"
+read password
+
+mysql -u${username} -p${password} -e "USE MUSICMATCH; DELETE FROM USERS;"
+mysql -u${username} -p${password} -e "USE MUSICMATCH; DELETE FROM USERLOGINDATA;"
+mysql -u${username} -p${password} -e "USE MUSICMATCH; DELETE FROM MESSAGES;"
+mysql -u${username} -p${password} -e "FLUSH PRIVILEGES;"
