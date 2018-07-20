@@ -533,6 +533,7 @@ func runTerminalCommand(cmd: String, args: [String], getResponse: Bool = false) 
     return ret
 }
 
+#if !os(Linux)
 extension CGImage{
     
     
@@ -555,5 +556,5 @@ extension CGImage{
     }
     
 }
-
+#endif
 
