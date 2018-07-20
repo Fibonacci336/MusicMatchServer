@@ -34,10 +34,15 @@ import Foundation
 
 
 // host where mysql server is
-let HOST = "127.0.0.1"
 
+#if os(Linux)
+let HOST = "fibonacciinstance.ceqqk1kcroae.us-west-2.rds.amazonaws.com"
+let USER = "fibonacci"
+#else
+let HOST = "127.0.0.1"
 // mysql username
 let USER = "root"
+#endif
 // mysql root password
 let PASSWORD = "123qweasdzxC"
 // database name
