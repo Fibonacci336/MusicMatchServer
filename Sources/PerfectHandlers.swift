@@ -405,13 +405,13 @@ func getVideoThumbnailFromLinux(videoURL : String) throws -> Image{
     let imagePath = webRoot + "/" + videoURL.lastFilePathComponent.deletingFileExtension + ".png"
     
     var duration : Double = 0
-    let durationString = runTerminalCommand(with: "./getVideoDurationLinux", videoPath).outputArray[0]
+    let durationString = runTerminalCommand(with: "./getVideoDurationLinux", args: videoPath).outputArray[0]
     if let durationDouble = Double(durationString){
         duration = durationDouble
     }
     
     //Input Video, Output Image, Time for Thumbnail
-    let exitCode = runTerminalCommand(with: "./createThumbnailLinux", videoPath, imagePath, String(duration/2))
+    let exitCode = runTerminalCommand(with: "./createThumbnailLinux", args: videoPath, imagePath, String(duration/2))
     print(exitCode)
     
     let imageURL = URL(fileURLWithPath: imagePath)
@@ -534,13 +534,16 @@ extension CGImage{
 #endif
 
 @discardableResult
-func runTerminalCommand(with args: String...) -> (statusCode: Int, outputArray : [String]){
+func runTerminalCommand(with command : String, args: String...) -> (statusCode: Int, outputArray : [String]){
     
     var output : [String] = []
     
+    var completeArgs = args
+    completeArgs.insert(command, at: 0)
+    
     let task = Process()
     task.launchPath = "/usr/bin/env"
-    task.arguments = args
+    task.arguments = completeArgs
     
     //Gets Output From Command
     let outpipe = Pipe()
