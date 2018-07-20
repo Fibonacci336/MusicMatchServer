@@ -405,10 +405,9 @@ func getVideoThumbnailFromLinux(videoURL : String) throws -> Image{
     let imagePath = webRoot + "/" + videoURL.lastFilePathComponent.deletingFileExtension + ".png"
     
     var duration : Double = 0
-    if let durationString = runTerminalCommand(with: "./getVideoDurationLinux", videoPath).outputArray[0]{
-        if let durationDouble = Double(durationString!){
-            duration = durationDouble
-        }
+    let durationString = runTerminalCommand(with: "./getVideoDurationLinux", videoPath).outputArray[0]
+    if let durationDouble = Double(durationString!){
+        duration = durationDouble
     }
     
     //Input Video, Output Image, Time for Thumbnail
