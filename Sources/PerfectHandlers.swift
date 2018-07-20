@@ -405,7 +405,7 @@ func getVideoThumbnailFromLinux(videoURL : String) throws -> Image{
     let imagePath = webRoot + "/" + videoURL.lastFilePathComponent.deletingFileExtension + ".png"
     
     var duration : Double = 0
-    if let durationString = try? runTerminalCommand(cmd: "./getVideoDurationLinux", args: [videoPath], getResponse: true){
+    if let durationString = runTerminalCommand(with: "./getVideoDurationLinux", videoPath).outputArray[0]{
         if let durationDouble = Double(durationString!){
             duration = durationDouble
         }
@@ -509,34 +509,6 @@ func getUsersInArea(currentLat : Double, currentLong : Double, range : Double) -
     }
 }
 
-func runTerminalCommand(cmd: String, args: [String], getResponse: Bool = false) throws -> String? {
-    let envs = [("PATH", "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin")]
-    let proc = try SysProcess(cmd, args: args, env: envs)
-    var ret: String?
-    if getResponse {
-        var ary = [UInt8]()
-        while true {
-            do {
-                guard let s = try proc.stdout?.readSomeBytes(count: 1024), s.count > 0 else {
-                    break
-                }
-                ary.append(contentsOf: s)
-            } catch PerfectLib.PerfectError.fileError(let code, _) {
-                if code != EINTR {
-                    break
-                }
-            }
-        }
-        ret = UTF8Encoding.encode(bytes: ary)
-    }
-    let res = try proc.wait(hang: true)
-    if res != 0 {
-        let s = try proc.stderr?.readString()
-        throw  PerfectError.systemError(Int32(res), s!)
-    }
-    return ret
-}
-
 #if !os(Linux)
 extension CGImage{
     
@@ -563,11 +535,25 @@ extension CGImage{
 #endif
 
 @discardableResult
-func runTerminalCommand(with args: String...) -> Int{
+func runTerminalCommand(with args: String...) -> (statusCode: Int, outputArray : [String]){
+    
+    var output : [String] = []
+    
     let task = Process()
     task.launchPath = "/usr/bin/env"
     task.arguments = args
+    
+    //Gets Output From Command
+    let outpipe = Pipe()
+    task.standardOutput = outpipe
+    
     task.launch()
+    
+    let outdata = outpipe.fileHandleForReading.readDataToEndOfFile()
+    if var string = String(data: outdata, encoding: .utf8) {
+        string = string.trimmingCharacters(in: .newlines)
+        output = string.components(separatedBy: "\n")
+    }
     task.waitUntilExit()
-    return Int(task.terminationStatus)
+    return (Int(task.terminationStatus), output)
 }
