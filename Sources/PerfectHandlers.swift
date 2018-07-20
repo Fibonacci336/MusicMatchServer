@@ -398,7 +398,7 @@ func getVideoThumbnail(videoURL : String) throws -> Image{
     #endif
     
 }
-
+#if os(Linux)
 func getVideoThumbnailFromLinux(videoURL : String) throws -> Image{
     
     let videoPath = webRoot + videoURL.lastFilePathComponent
@@ -425,6 +425,7 @@ func getVideoThumbnailFromLinux(videoURL : String) throws -> Image{
     
     return thumbnail
 }
+#endif
 
 #if !os(Linux)
 func getVideoThumbnailFromOSX(videoURL : String) throws -> Image{
@@ -629,7 +630,6 @@ func sleep(seconds: Double) {
     tv.tv_usec = Int((milliseconds%1000)*1000)
     select(0, nil, nil, nil, &tv)
 }
-#endif
 func runProc(_ cmd: String, args: [String], envs: [String:String] = [:], quoteArgs: Bool = true, stderr: Bool = false, cd: String? = nil, read: ((String) -> ())? = nil) throws {
     var ienvs = [("PATH", pathFromShell),
                  ("HOME", ProcessInfo.processInfo.environment["HOME"]!),
@@ -733,7 +733,7 @@ func runProc(_ cmd: String, args: [String], envs: [String:String], quoteArgs: Bo
                 readStderr(writeStr.replacingOccurrences(of: "sh: no job control in this shell\n", with: ""))
             }
             
-            sleep(seconds: 0.25)
+            self.sleep(seconds: 0.25)
         } catch PerfectLib.PerfectError.fileError(let code, _) {
             if code != EINTR {
                 break
@@ -743,4 +743,4 @@ func runProc(_ cmd: String, args: [String], envs: [String:String], quoteArgs: Bo
     
     return Int(res)
 }
-
+#endif
