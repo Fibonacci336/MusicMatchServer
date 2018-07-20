@@ -28,6 +28,7 @@ import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
 import PerfectNotifications
+import Foundation
 
 
 // host where mysql server is
@@ -353,11 +354,13 @@ func thumbHandler(_ request: HTTPRequest, response: HTTPResponse) {
     response.completed()
 }
 
+#if !os(Linux)
 func getDocumentsDirectory() -> String {
     let fileManager = FileManager.default
     let documentsDirectory = fileManager.currentDirectoryPath
     return documentsDirectory
 }
+#endif
 
 func fileExistsHandler(_ request: HTTPRequest, response: HTTPResponse) {
     let name = request.urlVariables["fileName"]
@@ -414,6 +417,7 @@ func getVideoThumbnailFromLinux(videoURL : String) throws -> NSImage{
     return thumbnail
 }
 
+#if !os(Linux)
 func getVideoThumbnailFromOSX(videoURL : String) throws -> NSImage{
 
     let asset = AVAsset(url: URL(string: videoURL)!)
@@ -445,6 +449,7 @@ func saveImage(_ image : NSImage, locationPath : String){
     print("Successfully wrote to PNG file")
 
 }
+#endif
 
 func getUsersInArea(currentLat : Double, currentLong : Double, range : Double) -> [Int : String]?{
 
