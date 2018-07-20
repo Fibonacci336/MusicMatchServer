@@ -409,7 +409,7 @@ func getVideoThumbnailFromLinux(videoURL : String) throws -> Image{
         if let durationDouble = Double(durationString!){
             duration = durationDouble
         }
-    }SO_NOSIGPIPE
+    }
     
     //Input Video, Output Image, Time for Thumbnail
     let args = [videoPath, imagePath, String(duration/2)]
@@ -618,6 +618,7 @@ private var pathFromShell: String {
     return "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local:/usr/local/Cellar:~/.swiftenv/"
 }
 
+#if os(Linux)
 func sleep(seconds: Double) {
     guard seconds >= 0.0 else {
         return
@@ -625,10 +626,10 @@ func sleep(seconds: Double) {
     let milliseconds = Int(seconds * 1000.0)
     var tv = timeval()
     tv.tv_sec = milliseconds/1000
-    tv.tv_usec = __darwin_suseconds_t(Int((milliseconds%1000)*1000))
+    tv.tv_usec = Int((milliseconds%1000)*1000)
     select(0, nil, nil, nil, &tv)
 }
-
+#endif
 func runProc(_ cmd: String, args: [String], envs: [String:String] = [:], quoteArgs: Bool = true, stderr: Bool = false, cd: String? = nil, read: ((String) -> ())? = nil) throws {
     var ienvs = [("PATH", pathFromShell),
                  ("HOME", ProcessInfo.processInfo.environment["HOME"]!),
