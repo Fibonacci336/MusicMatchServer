@@ -24,6 +24,8 @@ import AVFoundation
 import Darwin
 #endif
 
+import SwiftGD
+
 import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
@@ -345,7 +347,9 @@ func thumbHandler(_ request: HTTPRequest, response: HTTPResponse) {
     for string in extensions{
         let videoPath = (request.urlVariables["videoname"]!) + string
         if let thumbnail = try? getVideoThumbnail(videoURL: currentURL + videoPath){
+            #if !os(Linux)
             saveImage(thumbnail, locationPath: documentsDir + imagePath)
+            #endif
             response.appendBody(string: imagePath)
             break
         }
@@ -381,7 +385,7 @@ func fileExists(fileName : String) -> Bool{
     
 }
 
-func getVideoThumbnail(videoURL : String) throws -> NSImage{
+func getVideoThumbnail(videoURL : String) throws -> Image{
     #if os(Linux)
     return try getVideoThumbnailFromLinux(videoURL: videoURL)
     #else
@@ -390,7 +394,7 @@ func getVideoThumbnail(videoURL : String) throws -> NSImage{
     
 }
 
-func getVideoThumbnailFromLinux(videoURL : String) throws -> NSImage{
+func getVideoThumbnailFromLinux(videoURL : String) throws -> Image{
     
     let videoPath = webRoot + videoURL.lastFilePathComponent
     let imagePath = webRoot + videoURL.lastFilePathComponent.deletingFileExtension + ".png"
@@ -410,7 +414,8 @@ func getVideoThumbnailFromLinux(videoURL : String) throws -> NSImage{
     
     let imageURL = URL(fileURLWithPath: imagePath)
     
-    guard let thumbnail = NSImage(contentsOf: imageURL) else{
+    
+    guard let thumbnail = Image(url: imageURL) else{
         throw FileError.invalidPath
     }
     
@@ -418,7 +423,7 @@ func getVideoThumbnailFromLinux(videoURL : String) throws -> NSImage{
 }
 
 #if !os(Linux)
-func getVideoThumbnailFromOSX(videoURL : String) throws -> NSImage{
+func getVideoThumbnailFromOSX(videoURL : String) throws -> Image{
 
     let asset = AVAsset(url: URL(string: videoURL)!)
     let imageGenerator = AVAssetImageGenerator(asset: asset)
@@ -426,7 +431,12 @@ func getVideoThumbnailFromOSX(videoURL : String) throws -> NSImage{
     time.value /= 2
 
     if let cgImage = try? imageGenerator.copyCGImage(at: time, actualTime: nil){
-        let image = NSImage(cgImage: cgImage, size: NSSize(width: cgImage.width, height: cgImage.height))
+        
+        guard let cgImageData = cgImage.data else{
+            throw FileError.exportFailed
+        }
+
+        let image = try Image(data: cgImageData, as: .any)
         return image
     }else{
         print("Returning Nil Thumbnail for Video " + videoURL)
@@ -434,7 +444,7 @@ func getVideoThumbnailFromOSX(videoURL : String) throws -> NSImage{
     }
 
 }
-
+/*
 func saveImage(_ image : NSImage, locationPath : String){
     let cgRef = image.cgImage(forProposedRect: nil, context: nil, hints: nil)!
     let newRep: NSBitmapImageRep = NSBitmapImageRep(cgImage: cgRef)
@@ -448,6 +458,19 @@ func saveImage(_ image : NSImage, locationPath : String){
     }
     print("Successfully wrote to PNG file")
 
+}
+*/
+func saveImage(_ image : Image, locationPath : String){
+    
+    guard let imageURL = URL(string: locationPath) else{
+        return
+    }
+    
+    if image.write(to: imageURL){
+        print("Successfully wrote to PNG file")
+        return
+    }
+    print("Could not write to PNG file")
 }
 #endif
 
@@ -508,6 +531,29 @@ func runTerminalCommand(cmd: String, args: [String], getResponse: Bool = false) 
         throw  PerfectError.systemError(Int32(res), s!)
     }
     return ret
+}
+
+extension CGImage{
+    
+    
+    var data : Data?{
+        
+        guard let mutableData = CFDataCreateMutable(nil, 0) else{
+            return nil
+        }
+        guard let destination = CGImageDestinationCreateWithData(mutableData,  "public.png" as CFString, 1, nil) else{
+            return nil
+        }
+        
+        CGImageDestinationAddImage(destination, self, nil)
+        if CGImageDestinationFinalize(destination) {
+            return mutableData as Data
+        }
+        print("Error writing Image")
+        return nil
+        
+    }
+    
 }
 
 
