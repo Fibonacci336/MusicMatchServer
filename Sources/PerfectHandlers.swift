@@ -412,9 +412,8 @@ func getVideoThumbnailFromLinux(videoURL : String) throws -> Image{
     }
     
     //Input Video, Output Image, Time for Thumbnail
-    let args = [videoPath, imagePath, String(duration/2)]
-    
-    try? runProc("./createThumbnailLinux", args: args)
+    let exitCode = runTerminalCommand(with: "./createThumbnailLinux", videoPath, imagePath, String(duration/2))
+    print(exitCode)
     
     let imageURL = URL(fileURLWithPath: imagePath)
     
@@ -563,184 +562,12 @@ extension CGImage{
 }
 #endif
 
-extension File {
-    func switchToNonBlocking() {
-        guard self.isOpen else {
-            return
-        }
-        let fd = Int32(self.fd)
-        let flags = fcntl(fd, F_GETFL)
-        guard flags >= 0 else {
-            return
-        }
-        let _ = fcntl(fd, F_SETFL, flags | O_NONBLOCK)
-        var one = Int32(1)
-        setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &one, UInt32(MemoryLayout<Int32>.size))
-        //setsockopt(fd, SOL_SOCKET, SO_NOSIGPIPE, &one, UInt32(MemoryLayout<Int32>.size));
-    }
+@discardableResult
+func runTerminalCommand(with args: String...) -> Int{
+    let task = Process()
+    task.launchPath = "/usr/bin/env"
+    task.arguments = args
+    task.launch()
+    task.waitUntilExit()
+    return Int(task.terminationStatus)
 }
-
-private var pathFromShell: String {
-    do {
-        let shell = ProcessInfo.processInfo.environment["SHELL"] ?? "/bin/bash"
-        let env = [
-            ("HOME", ProcessInfo.processInfo.environment["HOME"]!),
-            ("LANG", "en_CA.UTF-8"),
-            ("DISABLE_AUTO_UPDATE", "true")]
-        let proc: SysProcess
-        switch shell.lastFilePathComponent {
-        case "zsh":
-            proc = try SysProcess(shell, args: ["-ci", "echo $PATH"], env: env)
-        default:
-            proc = try SysProcess(shell, args: ["-cl", "echo $PATH"], env: env)
-        }
-        var read = ""
-        while true {
-            do {
-                guard let s = try proc.stdout?.readSomeBytes(count: 4096) , s.count > 0 else {
-                    break
-                }
-                let str = UTF8Encoding.encode(bytes: s)
-                read += str
-            } catch PerfectLib.PerfectError.fileError(let code, _) {
-                if code != EINTR {
-                    break
-                }
-            }
-        }
-        let res = try proc.wait(hang: true)
-        if res == 0 && !read.isEmpty {
-            return read
-        }
-    } catch {
-        print("Error thrown while echoing $PATH: \(error)")
-    }
-    //    print("Returning fallback path")
-    return "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local:/usr/local/Cellar:~/.swiftenv/"
-}
-
-#if os(Linux)
-func sleep(seconds: Double) {
-    guard seconds >= 0.0 else {
-        return
-    }
-    let milliseconds = Int(seconds * 1000.0)
-    var tv = timeval()
-    tv.tv_sec = milliseconds/1000
-    tv.tv_usec = Int((milliseconds%1000)*1000)
-    select(0, nil, nil, nil, &tv)
-}
-func runProc(_ cmd: String, args: [String], envs: [String:String] = [:], quoteArgs: Bool = true, stderr: Bool = false, cd: String? = nil, read: ((String) -> ())? = nil) throws {
-    var ienvs = [("PATH", pathFromShell),
-                 ("HOME", ProcessInfo.processInfo.environment["HOME"]!),
-                 ("LANG", "en_CA.UTF-8"),
-                 ("DISABLE_AUTO_UPDATE", "true")]
-    for e in envs {
-        ienvs.append(e)
-    }
-    let cmdPath = File(cmd).path
-    var newCmd: String
-    if let cd = cd {
-        newCmd = "cd '\(cd)' && '\(cmdPath)\'"
-    } else {
-        newCmd = "'\(cmdPath)\'"
-    }
-    
-    for n in 1...args.count {
-        if quoteArgs {
-            newCmd.append(" \"${\(n)}\"")
-        } else {
-            newCmd.append(" ${\(n)}")
-        }
-    }
-    let shell = "/bin/sh"
-    let proc = try SysProcess(shell, args: ["--login", "-ci", newCmd, cmdPath] + args, env: ienvs)
-    let out: File? = stderr ? proc.stderr : proc.stdout
-    if let read = read {
-        while true {
-            do {
-                guard let s = try out?.readSomeBytes(count: 4096) , s.count > 0 else {
-                    break
-                }
-                let str = UTF8Encoding.encode(bytes: s)
-                read(str.replacingOccurrences(of: "sh: no job control in this shell\n", with: ""))
-            } catch PerfectLib.PerfectError.fileError(let code, _) {
-                if code != EINTR {
-                    break
-                }
-            }
-        }
-    }
-    let res = try proc.wait(hang: true)
-    if res != 0 {
-        let s = try proc.stderr?.readString()
-        throw PerfectError.systemError(Int32(res), s!.replacingOccurrences(of: "sh: no job control in this shell\n", with: ""))
-    }
-}
-
-func runProc(_ cmd: String, args: [String], envs: [String:String], quoteArgs: Bool, cd: String? = nil, readStdin: ((String) -> ()), readStderr: ((String) -> ())) throws -> Int {
-    var ienvs = [("PATH", pathFromShell),
-                 ("HOME", ProcessInfo.processInfo.environment["HOME"]!),
-                 ("LANG", "en_CA.UTF-8"),
-                 ("DISABLE_AUTO_UPDATE", "true")]
-    for e in envs {
-        ienvs.append(e)
-    }
-    let cmdPath = File(cmd).path
-    var newCmd: String
-    if let cd = cd {
-        newCmd = "cd '\(cd)' && '\(cmdPath)\'"
-    } else {
-        newCmd = "'\(cmdPath)\'"
-    }
-    for n in 1...args.count {
-        if quoteArgs {
-            newCmd.append(" \"${\(n)}\"")
-        } else {
-            newCmd.append(" ${\(n)}")
-        }
-    }
-    let shell = "/bin/sh"
-    let proc = try SysProcess(shell, args: ["--login", "-ci", newCmd, cmdPath] + args, env: ienvs)
-    
-    proc.stdout?.switchToNonBlocking()
-    proc.stderr?.switchToNonBlocking()
-    
-    var res = -1 as Int32
-    while proc.isOpen() {
-        do {
-            res = try proc.wait(hang: false)
-            
-            var writeStr = ""
-            do {
-                while let s = try proc.stdout?.readSomeBytes(count: 4096), s.count > 0 {
-                    let str = UTF8Encoding.encode(bytes: s)
-                    writeStr.append(str)
-                }
-            } catch PerfectLib.PerfectError.fileError(let code, _) where code == EAGAIN {}
-            if !writeStr.isEmpty {
-                readStdin(writeStr.replacingOccurrences(of: "sh: no job control in this shell\n", with: ""))
-            }
-            
-            writeStr = ""
-            do {
-                while let s = try proc.stderr?.readSomeBytes(count: 4096), s.count > 0 {
-                    let str = UTF8Encoding.encode(bytes: s)
-                    writeStr.append(str)
-                }
-            } catch PerfectLib.PerfectError.fileError(let code, _) where code == EAGAIN {}
-            if !writeStr.isEmpty {
-                readStderr(writeStr.replacingOccurrences(of: "sh: no job control in this shell\n", with: ""))
-            }
-            
-            self.sleep(seconds: 0.25)
-        } catch PerfectLib.PerfectError.fileError(let code, _) {
-            if code != EINTR {
-                break
-            }
-        }
-    }
-    
-    return Int(res)
-}
-#endif
