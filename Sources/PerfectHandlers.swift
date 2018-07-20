@@ -409,7 +409,7 @@ func getVideoThumbnailFromLinux(videoURL : String) throws -> Image{
         if let durationDouble = Double(durationString!){
             duration = durationDouble
         }
-    }
+    }SO_NOSIGPIPE
     
     //Input Video, Output Image, Time for Thumbnail
     let args = [videoPath, imagePath, String(duration/2)]
@@ -575,7 +575,7 @@ extension File {
         let _ = fcntl(fd, F_SETFL, flags | O_NONBLOCK)
         var one = Int32(1)
         setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &one, UInt32(MemoryLayout<Int32>.size))
-        setsockopt(fd, SOL_SOCKET, SO_NOSIGPIPE, &one, UInt32(MemoryLayout<Int32>.size));
+        //setsockopt(fd, SOL_SOCKET, SO_NOSIGPIPE, &one, UInt32(MemoryLayout<Int32>.size));
     }
 }
 
@@ -625,7 +625,7 @@ func sleep(seconds: Double) {
     let milliseconds = Int(seconds * 1000.0)
     var tv = timeval()
     tv.tv_sec = milliseconds/1000
-    tv.tv_usec = Int32((milliseconds%1000)*1000)
+    tv.tv_usec = __darwin_suseconds_t(Int((milliseconds%1000)*1000))
     select(0, nil, nil, nil, &tv)
 }
 
