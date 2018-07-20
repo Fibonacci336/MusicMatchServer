@@ -406,7 +406,7 @@ func getVideoThumbnailFromLinux(videoURL : String) throws -> Image{
     
     var duration : Double = 0
     let durationString = runTerminalCommand(with: "./getVideoDurationLinux", videoPath).outputArray[0]
-    if let durationDouble = Double(durationString!){
+    if let durationDouble = Double(durationString){
         duration = durationDouble
     }
     
