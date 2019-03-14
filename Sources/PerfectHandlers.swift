@@ -72,7 +72,7 @@ public func PerfectServerModuleInit() {
 }
 
 enum ServerError: Error {
-    case couldNotAccessImage
+    case generic(String)
 }
 
 //MOCKSTOCK HANDLERS
@@ -422,7 +422,7 @@ func getVideoThumbnailFromLinux(videoURL : String) throws -> Image{
     
     
     guard let thumbnail = Image(url: imageURL) else{
-        throw ServerError.couldNotAccessImage
+        throw ServerError.generic("Could not access image")
     }
     
     return thumbnail
