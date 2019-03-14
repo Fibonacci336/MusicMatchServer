@@ -18,6 +18,7 @@
 //
 
 import PerfectLib
+import MySQL
 import PerfectNet
 import PerfectThread
 import PerfectHTTPServer

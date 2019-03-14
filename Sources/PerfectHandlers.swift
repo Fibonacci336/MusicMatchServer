@@ -15,16 +15,16 @@
 //
 
 #if os(Linux)
-import PerfectMySQL
 import SwiftGlibc
 #else
-import MySQL
 import AVKit
 import AVFoundation
 import Darwin
 #endif
 
 import SwiftGD
+
+import MySQL
 
 import PerfectLib
 import PerfectHTTP
@@ -69,6 +69,10 @@ public func PerfectServerModuleInit() {
         print("Production")
     }
     
+}
+
+enum GenericError: Error {
+    case runtimeError(String)
 }
 
 //MOCKSTOCK HANDLERS
@@ -418,7 +422,7 @@ func getVideoThumbnailFromLinux(videoURL : String) throws -> Image{
     
     
     guard let thumbnail = Image(url: imageURL) else{
-        throw FileError.invalidPath
+        throw GenericError.runtimeError("Failed to read image at URL")
     }
     
     return thumbnail
