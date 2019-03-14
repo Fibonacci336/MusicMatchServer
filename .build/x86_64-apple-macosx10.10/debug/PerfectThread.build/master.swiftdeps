@@ -1,0 +1,7 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "91891c5c90f9ac8de7d3b0c054fe9c3d"
+build_time: [1552597265, 939268000]
+inputs:
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-Thread.git-2278121985292826643/Sources/Promise.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-Thread.git-2278121985292826643/Sources/ThreadQueue.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-Thread.git-2278121985292826643/Sources/Threading.swift": [1552597261, 0]

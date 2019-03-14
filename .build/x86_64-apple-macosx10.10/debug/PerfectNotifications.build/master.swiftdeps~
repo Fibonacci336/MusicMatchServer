@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "5767640e624dd1287ff83f9970c94a18"
+build_time: [1552597311, 458792000]
+inputs:
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-Notifications.git--2006360965403578752/Sources/JWTokenMaker.swift": [1552597260, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-Notifications.git--2006360965403578752/Sources/NotificationPusher.swift": [1552597260, 0]

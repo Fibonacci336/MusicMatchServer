@@ -1,0 +1,14 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "dd60a7aef25796526a18196c3194a490"
+build_time: [1552597266, 112494000]
+inputs:
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/PerfectLib.git--1114110043383308484/Sources/PerfectLib/Bytes.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/PerfectLib.git--1114110043383308484/Sources/PerfectLib/Dir.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/PerfectLib.git--1114110043383308484/Sources/PerfectLib/File.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/PerfectLib.git--1114110043383308484/Sources/PerfectLib/JSONConvertible.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/PerfectLib.git--1114110043383308484/Sources/PerfectLib/Log.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/PerfectLib.git--1114110043383308484/Sources/PerfectLib/PerfectError.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/PerfectLib.git--1114110043383308484/Sources/PerfectLib/PerfectServer.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/PerfectLib.git--1114110043383308484/Sources/PerfectLib/SwiftCompatibility.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/PerfectLib.git--1114110043383308484/Sources/PerfectLib/SysProcess.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/PerfectLib.git--1114110043383308484/Sources/PerfectLib/Utilities.swift": [1552597261, 0]

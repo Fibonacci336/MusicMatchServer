@@ -1,0 +1,11 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "6dbd42c2c4f077c03c93a8e6f0a91cf1"
+build_time: [1552597302, 258791000]
+inputs:
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-Crypto.git--6891176901105668230/Sources/Algorithms.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-Crypto.git--6891176901105668230/Sources/ByteIO.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-Crypto.git--6891176901105668230/Sources/Extensions.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-Crypto.git--6891176901105668230/Sources/JWT.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-Crypto.git--6891176901105668230/Sources/Keys.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-Crypto.git--6891176901105668230/Sources/OpenSSLInternal.swift": [1552597261, 0]
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-Crypto.git--6891176901105668230/Sources/PerfectCrypto.swift": [1552597261, 0]

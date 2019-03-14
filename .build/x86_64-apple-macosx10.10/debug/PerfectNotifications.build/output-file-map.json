@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/fibonacci/MusicMatchServer/.build/x86_64-apple-macosx10.10/debug/PerfectNotifications.build/master.swiftdeps"
+  },
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-Notifications.git--2006360965403578752/Sources/JWTokenMaker.swift": {
+    "dependencies": "/Users/fibonacci/MusicMatchServer/.build/x86_64-apple-macosx10.10/debug/PerfectNotifications.build/JWTokenMaker.d",
+    "object": "/Users/fibonacci/MusicMatchServer/.build/x86_64-apple-macosx10.10/debug/PerfectNotifications.build/JWTokenMaker.swift.o",
+    "swiftmodule": "/Users/fibonacci/MusicMatchServer/.build/x86_64-apple-macosx10.10/debug/PerfectNotifications.build/JWTokenMaker~partial.swiftmodule",
+    "swift-dependencies": "/Users/fibonacci/MusicMatchServer/.build/x86_64-apple-macosx10.10/debug/PerfectNotifications.build/JWTokenMaker.swiftdeps"
+  },
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-Notifications.git--2006360965403578752/Sources/NotificationPusher.swift": {
+    "dependencies": "/Users/fibonacci/MusicMatchServer/.build/x86_64-apple-macosx10.10/debug/PerfectNotifications.build/NotificationPusher.d",
+    "object": "/Users/fibonacci/MusicMatchServer/.build/x86_64-apple-macosx10.10/debug/PerfectNotifications.build/NotificationPusher.swift.o",
+    "swiftmodule": "/Users/fibonacci/MusicMatchServer/.build/x86_64-apple-macosx10.10/debug/PerfectNotifications.build/NotificationPusher~partial.swiftmodule",
+    "swift-dependencies": "/Users/fibonacci/MusicMatchServer/.build/x86_64-apple-macosx10.10/debug/PerfectNotifications.build/NotificationPusher.swiftdeps"
+  }
+}

@@ -1,0 +1,10 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "41e8153d9409b58da5fd27b7c3dbd7bd"
+build_time: [1552597312, 588553000]
+inputs:
+  "/Users/fibonacci/MusicMatchServer/Sources/MySQLFunctions.swift": !dirty [1552594424, 0]
+  "/Users/fibonacci/MusicMatchServer/Sources/PerfectHandlers.swift": !dirty [1552597178, 0]
+  "/Users/fibonacci/MusicMatchServer/Sources/ServerTimer.swift": !dirty [1552594424, 0]
+  "/Users/fibonacci/MusicMatchServer/Sources/Stock.swift": !dirty [1552594424, 0]
+  "/Users/fibonacci/MusicMatchServer/Sources/arguments.swift": !dirty [1552594424, 0]
+  "/Users/fibonacci/MusicMatchServer/Sources/main.swift": !dirty [1552594424, 0]

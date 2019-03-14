@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/fibonacci/MusicMatchServer/.build/x86_64-apple-macosx10.10/debug/MySQL.build/master.swiftdeps"
+  },
+  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-MySQL.git--6334400757854872161/Sources/MySQL/MySQL.swift": {
+    "dependencies": "/Users/fibonacci/MusicMatchServer/.build/x86_64-apple-macosx10.10/debug/MySQL.build/MySQL.d",
+    "object": "/Users/fibonacci/MusicMatchServer/.build/x86_64-apple-macosx10.10/debug/MySQL.build/MySQL.swift.o",
+    "swiftmodule": "/Users/fibonacci/MusicMatchServer/.build/x86_64-apple-macosx10.10/debug/MySQL.build/MySQL~partial.swiftmodule",
+    "swift-dependencies": "/Users/fibonacci/MusicMatchServer/.build/x86_64-apple-macosx10.10/debug/MySQL.build/MySQL.swiftdeps"
+  }
+}
