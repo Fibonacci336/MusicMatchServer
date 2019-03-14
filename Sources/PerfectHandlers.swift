@@ -447,7 +447,7 @@ func getVideoThumbnailFromOSX(videoURL : String) throws -> Image{
         return image
     }else{
         print("Returning Nil Thumbnail for Video " + videoURL)
-        throw FileError.exportFailed
+        throw ServerError.couldNotAccessImage
     }
     
 }
