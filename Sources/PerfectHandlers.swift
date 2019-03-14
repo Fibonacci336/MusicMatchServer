@@ -14,35 +14,21 @@
 //  Copyright © 2016 Ben Carlson. All rights reserved.
 //
 
-#if os(Linux)
-import PerfectMySQL
-import SwiftGlibc
-#else
-import MySQL
+import PerfectLib
 import AVKit
 import AVFoundation
-import Darwin
-#endif
-
-import SwiftGD
-
-import PerfectLib
+import MySQL
+import CoreLocation
 import PerfectHTTP
 import PerfectHTTPServer
 import PerfectNotifications
-import Foundation
 
 
 // host where mysql server is
+let HOST = "127.0.0.1"
 
-//#if os(Linux)
-let HOST = "fibonacciinstance.ceqqk1kcroae.us-west-2.rds.amazonaws.com"
-let USER = "fibonacci"
-//#else
-//let HOST = "127.0.0.1"
-//// mysql username
-//let USER = "root"
-//#endif
+// mysql username
+let USER = "root"
 // mysql root password
 let PASSWORD = "123qweasdzxC"
 // database name
@@ -53,7 +39,6 @@ var currentURL = "http://0.0.0.0:8181/"
 
 //public method that is being called by the server framework to initialise your module.
 public func PerfectServerModuleInit() {
-    
     do{
         let mysql = try initializeDatabaseConnection()
     }catch{
@@ -253,7 +238,8 @@ func recieveLocalUsers(_ request: HTTPRequest, response: HTTPResponse) {
         
         print("MySQL Query Did Succeed?: \(mysql.query(statement: mysqlStatement))")
         
-        var userArray = getUsersInArea(currentLat: currentLat, currentLong: currentLong, range: userRange)!
+        let currentLocation = CLLocation(latitude: currentLat, longitude: currentLong)
+        var userArray = getUsersInArea(currentLocation: currentLocation, range: userRange)!
 
         var returnDict = [String : [String?]]()
 
@@ -345,16 +331,14 @@ func thumbHandler(_ request: HTTPRequest, response: HTTPResponse) {
     
     print("Handling Thumbnail Request")
     
-    let extensions = [".MOV", ".mov", ".mp4"]
+    let extensions = [".mov", ".MOV", ".mp4"]
     
     let imagePath = (request.urlVariables["videoname"]!) + ".png"
     let documentsDir = webRoot + "/"
     for string in extensions{
         let videoPath = (request.urlVariables["videoname"]!) + string
         if let thumbnail = try? getVideoThumbnail(videoURL: currentURL + videoPath){
-            #if !os(Linux)
             saveImage(thumbnail, locationPath: documentsDir + imagePath)
-            #endif
             response.appendBody(string: imagePath)
             break
         }
@@ -363,13 +347,64 @@ func thumbHandler(_ request: HTTPRequest, response: HTTPResponse) {
     response.completed()
 }
 
-#if !os(Linux)
 func getDocumentsDirectory() -> String {
     let fileManager = FileManager.default
     let documentsDirectory = fileManager.currentDirectoryPath
     return documentsDirectory
 }
-#endif
+
+func deleteUser(_ request: HTTPRequest, response: HTTPResponse) {
+    
+    
+    guard let uuid = request.urlVariables["userUUID"] else{
+        print("No User to Delete!")
+        return
+    }
+    
+    guard let mysql = try? initializeDatabaseConnection() else{
+        print("Could not initalize MySQL connection")
+        
+        return
+    }
+    defer {
+        mysql.close()
+    }
+    
+    let request1 = "DELETE FROM Users WHERE UUID=\"\(uuid)\";"
+    let request2 = "DELETE FROM UserLogInData WHERE UUID=\"\(uuid)\";"
+    let request3 = "DELETE FROM Messages WHERE Sender=\"\(uuid)\";"
+    let request4 = "DELETE FROM Messages WHERE Recipient=\"\(uuid)\";"
+    
+    
+    let fullRequest = request1 + request2 + request3 + request4
+    
+    let didSucceed = mysql.query(statement: fullRequest)
+    if !didSucceed{
+        
+        let errorCode = mysql.errorCode()
+        let errorMessage = "Request failed: \(mysql.errorMessage())"
+        
+        displayErrorCode(errorCode: Int(errorCode), response: response, description: errorMessage)
+        response.completed()
+        
+        return
+    }
+    
+    response.appendBody(string: "Successfully Deleted User (\"\(uuid)\")")
+    
+    
+}
+
+func displayErrorCode(errorCode : Int, response : HTTPResponse, description: String = "", returnDictionary: [String : [String?]] = [String : [String?]]()){
+    var dictionary = returnDictionary
+    dictionary["error_message"] = [((description == "") ? "Request Failed with error code: \(errorCode)" : description)]
+	dictionary["error_code"] = ["\(errorCode)"]
+    
+    guard let jsonString = try? dictionary.jsonEncodedString() else{
+        return
+    }
+    response.appendBody(string: jsonString)
+    print("Successfully Converted Dictionary to String")
 
 func fileExistsHandler(_ request: HTTPRequest, response: HTTPResponse) {
     let name = request.urlVariables["fileName"]
@@ -390,43 +425,7 @@ func fileExists(fileName : String) -> Bool{
     
 }
 
-func getVideoThumbnail(videoURL : String) throws -> Image{
-    #if os(Linux)
-    return try getVideoThumbnailFromLinux(videoURL: videoURL)
-    #else
-    return try getVideoThumbnailFromOSX(videoURL: videoURL)
-    #endif
-    
-}
-#if os(Linux)
-func getVideoThumbnailFromLinux(videoURL : String) throws -> Image{
-    
-    let videoPath = webRoot + "/" + videoURL.lastFilePathComponent
-    let imagePath = webRoot + "/" + videoURL.lastFilePathComponent.deletingFileExtension + ".png"
-    
-    var duration : Double = 0
-    let durationString = runTerminalCommand(with: "./getVideoDurationLinux", args: videoPath).outputArray[0]
-    if let durationDouble = Double(durationString){
-        duration = durationDouble
-    }
-    
-    //Input Video, Output Image, Time for Thumbnail
-    let exitCode = runTerminalCommand(with: "./createThumbnailLinux", args: videoPath, imagePath, String(duration/2))
-    print(exitCode)
-    
-    let imageURL = URL(fileURLWithPath: imagePath)
-    
-    
-    guard let thumbnail = Image(url: imageURL) else{
-        throw FileError.invalidPath
-    }
-    
-    return thumbnail
-}
-#endif
-
-#if !os(Linux)
-func getVideoThumbnailFromOSX(videoURL : String) throws -> Image{
+func getVideoThumbnail(videoURL : String) throws -> NSImage{
 
     let asset = AVAsset(url: URL(string: videoURL)!)
     let imageGenerator = AVAssetImageGenerator(asset: asset)
@@ -434,12 +433,7 @@ func getVideoThumbnailFromOSX(videoURL : String) throws -> Image{
     time.value /= 2
 
     if let cgImage = try? imageGenerator.copyCGImage(at: time, actualTime: nil){
-        
-        guard let cgImageData = cgImage.data else{
-            throw FileError.exportFailed
-        }
-
-        let image = try Image(data: cgImageData, as: .any)
+        let image = NSImage(cgImage: cgImage, size: NSSize(width: cgImage.width, height: cgImage.height))
         return image
     }else{
         print("Returning Nil Thumbnail for Video " + videoURL)
@@ -447,7 +441,7 @@ func getVideoThumbnailFromOSX(videoURL : String) throws -> Image{
     }
 
 }
-/*
+
 func saveImage(_ image : NSImage, locationPath : String){
     let cgRef = image.cgImage(forProposedRect: nil, context: nil, hints: nil)!
     let newRep: NSBitmapImageRep = NSBitmapImageRep(cgImage: cgRef)
@@ -462,29 +456,16 @@ func saveImage(_ image : NSImage, locationPath : String){
     print("Successfully wrote to PNG file")
 
 }
-*/
-func saveImage(_ image : Image, locationPath : String){
-    
-    guard let imageURL = URL(string: locationPath) else{
-        return
-    }
-    
-    if image.write(to: imageURL){
-        print("Successfully wrote to PNG file")
-        return
-    }
-    print("Could not write to PNG file")
-}
-#endif
 
-func getUsersInArea(currentLat : Double, currentLong : Double, range : Double) -> [Int : String]?{
+func getUsersInArea(currentLocation : CLLocation, range : Double) -> [Int : String]?{
 
     do{
         let mysql = try initializeDatabaseConnection()
         defer {
             mysql.close()
         }
-
+        let currentLat = currentLocation.coordinate.latitude
+        let currentLong = currentLocation.coordinate.longitude
         let formula = "111.045* DEGREES(ACOS(COS(RADIANS(\(currentLat))) * COS(RADIANS(CurrentLat)) * COS(RADIANS(\(currentLong)) - RADIANS(CurrentLong)) + SIN(RADIANS(\(currentLat))) * SIN(RADIANS(CurrentLat))))"
         let statement = "SELECT UUID,CurrentLat,CurrentLong, Available FROM Users WHERE " + formula
         let fullStatement = statement + " <= \(range) AND Available=1;"
@@ -508,54 +489,4 @@ func getUsersInArea(currentLat : Double, currentLong : Double, range : Double) -
     }
 }
 
-#if !os(Linux)
-extension CGImage{
-    
-    
-    var data : Data?{
-        
-        guard let mutableData = CFDataCreateMutable(nil, 0) else{
-            return nil
-        }
-        guard let destination = CGImageDestinationCreateWithData(mutableData,  "public.png" as CFString, 1, nil) else{
-            return nil
-        }
-        
-        CGImageDestinationAddImage(destination, self, nil)
-        if CGImageDestinationFinalize(destination) {
-            return mutableData as Data
-        }
-        print("Error writing Image")
-        return nil
-        
-    }
-    
-}
-#endif
 
-@discardableResult
-func runTerminalCommand(with command : String, args: String...) -> (statusCode: Int, outputArray : [String]){
-    
-    var output : [String] = []
-    
-    var completeArgs = args
-    completeArgs.insert(command, at: 0)
-    
-    let task = Process()
-    task.launchPath = "/usr/bin/env"
-    task.arguments = completeArgs
-    
-    //Gets Output From Command
-    let outpipe = Pipe()
-    task.standardOutput = outpipe
-    
-    task.launch()
-    
-    let outdata = outpipe.fileHandleForReading.readDataToEndOfFile()
-    if var string = String(data: outdata, encoding: .utf8) {
-        string = string.trimmingCharacters(in: .newlines)
-        output = string.components(separatedBy: "\n")
-    }
-    task.waitUntilExit()
-    return (Int(task.terminationStatus), output)
-}

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "MusicMatchServer::MusicMatchServer"
+               BlueprintIdentifier = "______Target_MusicMatchServer"
                BuildableName = "MusicMatchServer"
                BlueprintName = "MusicMatchServer"
                ReferencedContainer = "container:MusicMatchServer.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "MusicMatchServer::MusicMatchServer"
+            BlueprintIdentifier = "______Target_MusicMatchServer"
             BuildableName = "MusicMatchServer"
             BlueprintName = "MusicMatchServer"
             ReferencedContainer = "container:MusicMatchServer.xcodeproj">
@@ -47,7 +47,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "$PROJECT_DIR/"
+      customWorkingDirectory = "/Users/Fibonacci/Documents/MusicMatchServer"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
@@ -56,7 +56,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "MusicMatchServer::MusicMatchServer"
+            BlueprintIdentifier = "______Target_MusicMatchServer"
             BuildableName = "MusicMatchServer"
             BlueprintName = "MusicMatchServer"
             ReferencedContainer = "container:MusicMatchServer.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "MusicMatchServer::MusicMatchServer"
+            BlueprintIdentifier = "______Target_MusicMatchServer"
             BuildableName = "MusicMatchServer"
             BlueprintName = "MusicMatchServer"
             ReferencedContainer = "container:MusicMatchServer.xcodeproj">

@@ -53,6 +53,8 @@ do {
     routes.add(method: .post, uri: "/upload/{fileType}", handler: fileUpload)
     routes.add(method: .get, uri: "/upload/{fileType}", handler: fileUpload)
     
+    routes.add(method: .get, uri: "/delete/{userUUID}", handler: deleteUser)
+    
     routes.add(method: .post, uri: "/message/", handler: messageHandler)
     routes.add(method: .get, uri: "/", handler: indexHandler)
     routes.add(method: .get, uri: "/*", handler: fileAccessed)

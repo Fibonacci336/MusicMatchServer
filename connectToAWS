@@ -1,0 +1,2 @@
+clear
+ssh -i "MusicMatchKeyPair.pem" ubuntu@ec2-35-160-238-51.us-west-2.compute.amazonaws.com
