@@ -71,8 +71,8 @@ public func PerfectServerModuleInit() {
     
 }
 
-enum GenericError: Error {
-    case runtimeError(String)
+enum ServerError: Error {
+    case couldNotAccessImage
 }
 
 //MOCKSTOCK HANDLERS
@@ -422,7 +422,7 @@ func getVideoThumbnailFromLinux(videoURL : String) throws -> Image{
     
     
     guard let thumbnail = Image(url: imageURL) else{
-        throw GenericError.runtimeError("Failed to read image at URL")
+        throw ServerError.couldNotAccessImage
     }
     
     return thumbnail
