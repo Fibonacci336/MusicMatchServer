@@ -586,9 +586,6 @@ func deleteUser(_ request: HTTPRequest, response: HTTPResponse) {
     let request3 = "DELETE FROM Messages WHERE Sender=\"\(uuid)\"; "
     let request4 = "DELETE FROM Messages WHERE Recipient=\"\(uuid)\"; "
     
-    
-    let fullRequest = request1 + request2 + request3 + request4
-    
     let succeeded = mysql.query(statement: "SELECT UserMedia FROM Users WHERE UUID=\"\(uuid)\";")
     mysql.storeResults()
     
@@ -598,7 +595,7 @@ func deleteUser(_ request: HTTPRequest, response: HTTPResponse) {
         }
     }
     
-    let didSucceed = mysql.query(statement: fullRequest)
+    let didSucceed = (mysql.query(statement: request1) && mysql.query(statement: request2) && mysql.query(statement: request3) && mysql.query(statement: request4))
     if !didSucceed{
         let errorCode = mysql.errorCode()
         let errorMessage = "Request failed: \(mysql.errorMessage())"
