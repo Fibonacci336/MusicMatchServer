@@ -589,11 +589,17 @@ func deleteUser(_ request: HTTPRequest, response: HTTPResponse) {
     
     let fullRequest = request1 + request2 + request3 + request4
     
-    let didSucceed1 = mysql.query(statement: request1)
-    let didSucceed2 = mysql.query(statement: request2)
-    let didSucceed3 = mysql.query(statement: request3)
-    let didSucceed4 = mysql.query(statement: request4)
-    if !(didSucceed1 && didSucceed2 && didSucceed3 && didSucceed4){        
+    let succeeded = mysql.query(statement: "SELECT UserMedia FROM Users WHERE UUID=\"\(uuid)\";")
+    mysql.storeResults()
+    
+    if let queryResults = mysql.storeResults(){
+        for result in queryResults{
+            print(result)
+        }
+    }
+    
+    let didSucceed = mysql.query(statement: fullRequest)
+    if !didSucceed{
         let errorCode = mysql.errorCode()
         let errorMessage = "Request failed: \(mysql.errorMessage())"
 	print(fullRequest)
@@ -603,14 +609,7 @@ func deleteUser(_ request: HTTPRequest, response: HTTPResponse) {
         
         return
     }
-    print(didSucceed1)
-    print(didSucceed2)
-    print(didSucceed3)
-    print(didSucceed4)
-    print(request1)
-    print(request2)
-    print(request3)
-    print(request4)
+
     print("Successfully Deleted User")
     response.appendBody(string: "Successfully Deleted User (\"\(uuid)\")")
     response.completed()    

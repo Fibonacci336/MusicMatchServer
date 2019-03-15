@@ -1,7 +1,0 @@
-version: "Swift version 4.2.2 (swift-4.2.2-RELEASE)"
-options: "8b01e80d14b600dae186baa5dbfc99ad"
-build_time: [1552605279, 143167471]
-inputs:
-  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Thread.git-4661715522360368018/Sources/PerfectThread/Promise.swift": [1552604973, 0]
-  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Thread.git-4661715522360368018/Sources/PerfectThread/ThreadQueue.swift": [1552604973, 0]
-  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Thread.git-4661715522360368018/Sources/PerfectThread/Threading.swift": [1552604973, 0]
