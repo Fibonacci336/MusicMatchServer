@@ -593,8 +593,8 @@ func deleteUser(_ request: HTTPRequest, response: HTTPResponse) {
     mysql.storeResults()
     
     if let queryResults = mysql.storeResults(){
-        for result in queryResults{
-            print(result)
+        queryResults.forEachRow{ row in
+            print(row)
         }
     }
     
