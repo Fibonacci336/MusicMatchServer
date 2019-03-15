@@ -71,7 +71,7 @@ public func PerfectServerModuleInit() {
     
 }
 
-enum ServerError: Swift.Error {
+public enum ServerError: Swift.Error {
     case generic(String)
 }
 
