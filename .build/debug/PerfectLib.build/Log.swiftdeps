@@ -5,238 +5,298 @@ provides-top-level:
 - "SysLogger"
 - "Log"
 provides-nominal:
-- "P10PerfectLib6Logger"
-- "V10PerfectLib13ConsoleLogger"
-- "V10PerfectLib9SysLogger"
-- "V10PerfectLib3Log"
+- "10PerfectLib6LoggerP"
+- "10PerfectLib13ConsoleLoggerV"
+- "10PerfectLib9SysLoggerV"
+- "10PerfectLib3LogV"
 provides-member:
-- ["P10PerfectLib6Logger", ""]
-- ["V10PerfectLib13ConsoleLogger", ""]
-- ["V10PerfectLib9SysLogger", ""]
-- ["V10PerfectLib3Log", ""]
-provides-dynamic-lookup:
+- ["10PerfectLib6LoggerP", ""]
+- ["10PerfectLib13ConsoleLoggerV", ""]
+- ["10PerfectLib9SysLoggerV", ""]
+- ["10PerfectLib3LogV", ""]
 depends-top-level:
-- !private "withVaList"
-- !private "print"
+- !private "+"
+- "Bool"
+- "BooleanLiteralType"
+- "CVarArg"
+- "ConsoleLogger"
+- !private "FloatLiteralType"
 - "Int32"
+- !private "IntegerLiteralType"
+- !private "LOG_CRIT"
+- !private "LOG_DEBUG"
+- !private "LOG_EMERG"
+- !private "LOG_ERR"
+- !private "LOG_INFO"
+- !private "LOG_WARNING"
 - "Log"
+- "Logger"
 - "Never"
 - "String"
 - !private "StringLiteralType"
 - "SysLogger"
-- !private "+"
-- !private "LOG_DEBUG"
-- !private "LOG_INFO"
-- !private "LOG_ERR"
-- "ConsoleLogger"
-- !private "LOG_WARNING"
-- "CVarArg"
-- !private "vsyslog"
-- !private "LOG_CRIT"
+- "TernaryPrecedence"
 - !private "fatalError"
-- !private "LOG_EMERG"
-- "Logger"
+- !private "print"
+- !private "vsyslog"
+- !private "withVaList"
 depends-member:
-- !private ["Ps9AnyObject", "init"]
-- !private ["Ps9AnyObject", "withCString"]
-- ["Sa", "deinit"]
-- !private ["Vs14CVaListPointer", "deinit"]
-- !private ["Ps7CVarArg", "init"]
-- !private ["Ps7CVarArg", "withCString"]
-- !private ["Ps10Comparable", "init"]
-- !private ["Ps10Comparable", "withCString"]
-- ["V10PerfectLib13ConsoleLogger", "String"]
-- ["V10PerfectLib13ConsoleLogger", "critical"]
-- ["V10PerfectLib13ConsoleLogger", "debug"]
-- ["V10PerfectLib13ConsoleLogger", "deinit"]
-- ["V10PerfectLib13ConsoleLogger", "error"]
-- ["V10PerfectLib13ConsoleLogger", "info"]
-- ["V10PerfectLib13ConsoleLogger", "init"]
-- !private ["V10PerfectLib13ConsoleLogger", "print"]
-- ["V10PerfectLib13ConsoleLogger", "terminal"]
-- ["V10PerfectLib13ConsoleLogger", "warning"]
-- !private ["Ps28CustomDebugStringConvertible", "init"]
-- !private ["Ps28CustomDebugStringConvertible", "withCString"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "withCString"]
-- !private ["Ps17CustomReflectable", "init"]
-- !private ["Ps17CustomReflectable", "withCString"]
-- !private ["Ps23CustomStringConvertible", "init"]
-- !private ["Ps23CustomStringConvertible", "withCString"]
-- !private ["Ps9Equatable", "init"]
-- !private ["Ps9Equatable", "withCString"]
-- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "withCString"]
-- !private ["Ps32ExpressibleByStringInterpolation", "init"]
-- !private ["Ps32ExpressibleByStringInterpolation", "withCString"]
-- !private ["Ps26ExpressibleByStringLiteral", "init"]
-- !private ["Ps26ExpressibleByStringLiteral", "withCString"]
-- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
-- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "withCString"]
-- !private ["Ps8Hashable", "init"]
-- !private ["Ps8Hashable", "withCString"]
-- !private ["SQ", "deinit"]
-- !private ["Vs5Int32", "deinit"]
-- !private ["P10PerfectLib15JSONConvertible", "init"]
-- !private ["P10PerfectLib15JSONConvertible", "withCString"]
-- ["V10PerfectLib3Log", "ConsoleLogger"]
-- !private ["V10PerfectLib3Log", "Log"]
-- ["V10PerfectLib3Log", "Logger"]
-- ["V10PerfectLib3Log", "Never"]
-- ["V10PerfectLib3Log", "String"]
-- ["V10PerfectLib3Log", "critical"]
-- ["V10PerfectLib3Log", "debug"]
-- ["V10PerfectLib3Log", "error"]
-- !private ["V10PerfectLib3Log", "fatalError"]
-- ["V10PerfectLib3Log", "info"]
-- ["V10PerfectLib3Log", "init"]
-- ["V10PerfectLib3Log", "logger"]
-- ["V10PerfectLib3Log", "terminal"]
-- ["V10PerfectLib3Log", "warning"]
-- ["P10PerfectLib6Logger", "ConsoleLogger"]
-- !private ["P10PerfectLib6Logger", "LOG_CRIT"]
-- !private ["P10PerfectLib6Logger", "LOG_DEBUG"]
-- !private ["P10PerfectLib6Logger", "LOG_EMERG"]
-- !private ["P10PerfectLib6Logger", "LOG_ERR"]
-- !private ["P10PerfectLib6Logger", "LOG_INFO"]
-- !private ["P10PerfectLib6Logger", "LOG_WARNING"]
-- ["P10PerfectLib6Logger", "String"]
-- !private ["P10PerfectLib6Logger", "consoleEcho"]
-- ["P10PerfectLib6Logger", "critical"]
-- ["P10PerfectLib6Logger", "debug"]
-- ["P10PerfectLib6Logger", "deinit"]
-- ["P10PerfectLib6Logger", "error"]
-- ["P10PerfectLib6Logger", "info"]
-- ["P10PerfectLib6Logger", "init"]
-- !private ["P10PerfectLib6Logger", "print"]
-- !private ["P10PerfectLib6Logger", "syslog"]
-- ["P10PerfectLib6Logger", "terminal"]
-- !private ["P10PerfectLib6Logger", "vsyslog"]
-- ["P10PerfectLib6Logger", "warning"]
-- !private ["P10PerfectLib6Logger", "withVaList"]
-- ["P10PerfectLib6Logger", ""]
-- !private ["Ps25LosslessStringConvertible", "init"]
-- !private ["Ps25LosslessStringConvertible", "withCString"]
-- !private ["Ps10MirrorPath", "init"]
-- !private ["Ps10MirrorPath", "withCString"]
-- !private ["PSo8NSCoding", "init"]
-- !private ["PSo8NSCoding", "withCString"]
-- !private ["PSo9NSCopying", "init"]
-- !private ["PSo9NSCopying", "withCString"]
-- !private ["PSo16NSMutableCopying", "init"]
-- !private ["PSo16NSMutableCopying", "withCString"]
-- !private ["CSo8NSObject", "init"]
-- !private ["CSo8NSObject", "withCString"]
-- !private ["PSo16NSObjectProtocol", "init"]
-- !private ["PSo16NSObjectProtocol", "withCString"]
-- !private ["PSo14NSSecureCoding", "init"]
-- !private ["PSo14NSSecureCoding", "withCString"]
-- !private ["CSo8NSString", "init"]
-- !private ["CSo8NSString", "withCString"]
-- ["Os5Never", "deinit"]
-- ["Vs12StaticString", "deinit"]
-- !private ["Vs12StaticString", "init"]
-- ["SS", "deinit"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "withCString"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "withCString"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "withCString"]
+- ["10PerfectLib13ConsoleLoggerV", "Bool"]
+- ["10PerfectLib13ConsoleLoggerV", "String"]
+- ["10PerfectLib13ConsoleLoggerV", "critical"]
+- ["10PerfectLib13ConsoleLoggerV", "debug"]
+- ["10PerfectLib13ConsoleLoggerV", "deinit"]
+- ["10PerfectLib13ConsoleLoggerV", "error"]
+- ["10PerfectLib13ConsoleLoggerV", "info"]
+- ["10PerfectLib13ConsoleLoggerV", "init"]
+- !private ["10PerfectLib13ConsoleLoggerV", "print"]
+- ["10PerfectLib13ConsoleLoggerV", "terminal"]
+- ["10PerfectLib13ConsoleLoggerV", "warning"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "withCString"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "withCString"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "withCString"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "withCString"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "withCString"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "withCString"]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "withCString"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "withCString"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "withCString"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "withCString"]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "withCString"]
+- !private ["10PerfectLib15JSONConvertibleP", "_getBuiltinLogicValue"]
+- !private ["10PerfectLib15JSONConvertibleP", "init"]
+- !private ["10PerfectLib15JSONConvertibleP", "init"]
+- !private ["10PerfectLib15JSONConvertibleP", "withCString"]
+- ["10PerfectLib3LogV", "Bool"]
+- ["10PerfectLib3LogV", "ConsoleLogger"]
+- !private ["10PerfectLib3LogV", "Log"]
+- ["10PerfectLib3LogV", "Logger"]
+- ["10PerfectLib3LogV", "Never"]
+- ["10PerfectLib3LogV", "String"]
+- ["10PerfectLib3LogV", "critical"]
+- ["10PerfectLib3LogV", "debug"]
+- ["10PerfectLib3LogV", "error"]
+- ["10PerfectLib3LogV", "even"]
+- !private ["10PerfectLib3LogV", "fatalError"]
+- ["10PerfectLib3LogV", "info"]
+- !private ["10PerfectLib3LogV", "init"]
+- ["10PerfectLib3LogV", "logger"]
+- ["10PerfectLib3LogV", "terminal"]
+- ["10PerfectLib3LogV", "warning"]
+- ["10PerfectLib6LoggerP", "Bool"]
+- ["10PerfectLib6LoggerP", "ConsoleLogger"]
+- !private ["10PerfectLib6LoggerP", "LOG_CRIT"]
+- !private ["10PerfectLib6LoggerP", "LOG_DEBUG"]
+- !private ["10PerfectLib6LoggerP", "LOG_EMERG"]
+- !private ["10PerfectLib6LoggerP", "LOG_ERR"]
+- !private ["10PerfectLib6LoggerP", "LOG_INFO"]
+- !private ["10PerfectLib6LoggerP", "LOG_WARNING"]
+- ["10PerfectLib6LoggerP", "String"]
+- ["10PerfectLib6LoggerP", ""]
+- !private ["10PerfectLib6LoggerP", "consoleEcho"]
+- ["10PerfectLib6LoggerP", "critical"]
+- ["10PerfectLib6LoggerP", "debug"]
+- ["10PerfectLib6LoggerP", "error"]
+- ["10PerfectLib6LoggerP", "info"]
+- ["10PerfectLib6LoggerP", "init"]
+- !private ["10PerfectLib6LoggerP", "print"]
+- !private ["10PerfectLib6LoggerP", "syslog"]
+- ["10PerfectLib6LoggerP", "terminal"]
+- !private ["10PerfectLib6LoggerP", "vsyslog"]
+- ["10PerfectLib6LoggerP", "warning"]
+- !private ["10PerfectLib6LoggerP", "withVaList"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "withCString"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "withCString"]
+- !private ["10Foundation8NSCodingP", "withCString"]
+- !private ["10Foundation9NSCopyingP", "withCString"]
+- !private ["10Foundation16NSMutableCopyingP", "withCString"]
+- !private ["10Foundation8NSObjectC", "withCString"]
+- !private ["10Foundation16NSObjectProtocolP", "withCString"]
+- !private ["10Foundation14NSSecureCodingP", "withCString"]
+- !private ["10Foundation8NSStringC", "withCString"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "withCString"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "withCString"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["SS", "init"]
 - !private ["SS", "init"]
 - !private ["SS", "withCString"]
-- ["V10PerfectLib9SysLogger", "CVarArg"]
-- ["V10PerfectLib9SysLogger", "ConsoleLogger"]
-- ["V10PerfectLib9SysLogger", "Int32"]
-- !private ["V10PerfectLib9SysLogger", "LOG_CRIT"]
-- !private ["V10PerfectLib9SysLogger", "LOG_DEBUG"]
-- !private ["V10PerfectLib9SysLogger", "LOG_EMERG"]
-- !private ["V10PerfectLib9SysLogger", "LOG_ERR"]
-- !private ["V10PerfectLib9SysLogger", "LOG_INFO"]
-- !private ["V10PerfectLib9SysLogger", "LOG_WARNING"]
-- ["V10PerfectLib9SysLogger", "String"]
-- ["V10PerfectLib9SysLogger", "consoleEcho"]
-- ["V10PerfectLib9SysLogger", "critical"]
-- ["V10PerfectLib9SysLogger", "debug"]
-- ["V10PerfectLib9SysLogger", "deinit"]
-- ["V10PerfectLib9SysLogger", "error"]
-- ["V10PerfectLib9SysLogger", "info"]
-- ["V10PerfectLib9SysLogger", "init"]
-- ["V10PerfectLib9SysLogger", "syslog"]
-- ["V10PerfectLib9SysLogger", "terminal"]
-- !private ["V10PerfectLib9SysLogger", "vsyslog"]
-- ["V10PerfectLib9SysLogger", "warning"]
-- !private ["V10PerfectLib9SysLogger", "withVaList"]
-- !private ["Ps16TextOutputStream", "init"]
-- !private ["Ps16TextOutputStream", "withCString"]
-- !private ["Ps20TextOutputStreamable", "init"]
-- !private ["Ps20TextOutputStreamable", "withCString"]
-- ["Su", "deinit"]
-- !private ["SP", "deinit"]
-- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "withCString"]
-- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
-- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "withCString"]
-- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
-- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "withCString"]
-- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
-- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "withCString"]
-- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
-- !private ["Ps35_HasCustomAnyHashableRepresentation", "withCString"]
-- !private ["Ps9_Hashable", "init"]
-- !private ["Ps9_Hashable", "withCString"]
-- !private ["Ps21_ObjectiveCBridgeable", "init"]
-- !private ["Ps21_ObjectiveCBridgeable", "withCString"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "withCString"]
+- ["10PerfectLib9SysLoggerV", "Bool"]
+- ["10PerfectLib9SysLoggerV", "CVarArg"]
+- ["10PerfectLib9SysLoggerV", "ConsoleLogger"]
+- ["10PerfectLib9SysLoggerV", "Int32"]
+- !private ["10PerfectLib9SysLoggerV", "LOG_CRIT"]
+- !private ["10PerfectLib9SysLoggerV", "LOG_DEBUG"]
+- !private ["10PerfectLib9SysLoggerV", "LOG_EMERG"]
+- !private ["10PerfectLib9SysLoggerV", "LOG_ERR"]
+- !private ["10PerfectLib9SysLoggerV", "LOG_INFO"]
+- !private ["10PerfectLib9SysLoggerV", "LOG_WARNING"]
+- ["10PerfectLib9SysLoggerV", "String"]
+- ["10PerfectLib9SysLoggerV", "consoleEcho"]
+- ["10PerfectLib9SysLoggerV", "critical"]
+- ["10PerfectLib9SysLoggerV", "debug"]
+- ["10PerfectLib9SysLoggerV", "deinit"]
+- ["10PerfectLib9SysLoggerV", "error"]
+- ["10PerfectLib9SysLoggerV", "info"]
+- ["10PerfectLib9SysLoggerV", "init"]
+- ["10PerfectLib9SysLoggerV", "syslog"]
+- ["10PerfectLib9SysLoggerV", "terminal"]
+- !private ["10PerfectLib9SysLoggerV", "vsyslog"]
+- ["10PerfectLib9SysLoggerV", "warning"]
+- !private ["10PerfectLib9SysLoggerV", "withVaList"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "withCString"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "withCString"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "withCString"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "withCString"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "withCString"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "withCString"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "withCString"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "withCString"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "withCString"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "withCString"]
+- !private ["10Foundation17_StructBridgeableP", "withCString"]
+- !private ["10Foundation21_StructTypeBridgeableP", "withCString"]
+- !private ["10Foundation16_SwiftBridgeableP", "withCString"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "withCString"]
 depends-nominal:
-- !private "Ps9AnyObject"
-- "Sa"
-- !private "Vs14CVaListPointer"
-- !private "Ps7CVarArg"
-- !private "Ps10Comparable"
-- "V10PerfectLib13ConsoleLogger"
-- !private "Ps28CustomDebugStringConvertible"
-- !private "Ps29CustomPlaygroundQuickLookable"
-- !private "Ps17CustomReflectable"
-- !private "Ps23CustomStringConvertible"
-- !private "Ps9Equatable"
-- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
-- !private "Ps32ExpressibleByStringInterpolation"
-- !private "Ps26ExpressibleByStringLiteral"
-- !private "Ps33ExpressibleByUnicodeScalarLiteral"
-- !private "Ps8Hashable"
+- !private "SK"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- "10PerfectLib13ConsoleLoggerV"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
 - !private "SQ"
-- !private "Vs5Int32"
-- !private "P10PerfectLib15JSONConvertible"
-- "V10PerfectLib3Log"
-- "P10PerfectLib6Logger"
-- !private "Ps25LosslessStringConvertible"
-- !private "Ps10MirrorPath"
-- !private "PSo8NSCoding"
-- !private "PSo9NSCopying"
-- !private "PSo16NSMutableCopying"
-- !private "CSo8NSObject"
-- !private "PSo16NSObjectProtocol"
-- !private "PSo14NSSecureCoding"
-- !private "CSo8NSString"
-- "Os5Never"
-- "Vs12StaticString"
-- "SS"
-- "V10PerfectLib9SysLogger"
-- !private "Ps16TextOutputStream"
-- !private "Ps20TextOutputStreamable"
-- "Su"
-- !private "SP"
-- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
-- !private "Ps34_ExpressibleByBuiltinStringLiteral"
-- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
-- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
-- !private "Ps35_HasCustomAnyHashableRepresentation"
-- !private "Ps9_Hashable"
-- !private "Ps21_ObjectiveCBridgeable"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SH"
+- !private "10PerfectLib15JSONConvertibleP"
+- "10PerfectLib3LogV"
+- "10PerfectLib6LoggerP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "10Foundation8NSCodingP"
+- !private "10Foundation9NSCopyingP"
+- !private "10Foundation16NSMutableCopyingP"
+- !private "10Foundation8NSObjectC"
+- !private "10Foundation16NSObjectProtocolP"
+- !private "10Foundation14NSSecureCodingP"
+- !private "10Foundation8NSStringC"
+- !private "Sm"
+- !private "ST"
+- !private "s12StaticStringV"
+- !private "SS"
+- !private "Sy"
+- "10PerfectLib9SysLoggerV"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "10Foundation13_CFBridgeableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "10Foundation13_NSBridgeableP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "10Foundation17_StructBridgeableP"
+- !private "10Foundation21_StructTypeBridgeableP"
+- !private "10Foundation16_SwiftBridgeableP"
+- !private "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-2.0.0/module.modulemap"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/CHTTPParser.build/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-interface-hash: "546cc8503edf3a5885088ff42aea9de1"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/Dispatch.swiftmodule"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/Foundation.swiftmodule"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/Swift.swiftmodule"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-LinuxBridge.git-4690752410048834749/Sources/LinuxBridge/include/LinuxBridge.h"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/glibc.modulemap"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Cgd.git-6783677904322374398/module.modulemap"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/LinuxBridge.build/module.modulemap"
+interface-hash: "944a8d83d462fae22a4f700b3091ec11"

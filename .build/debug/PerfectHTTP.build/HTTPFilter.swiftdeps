@@ -5,176 +5,88 @@ provides-top-level:
 - "HTTPResponseFilterResult"
 - "HTTPRequestFilter"
 - "HTTPResponseFilter"
-- "=="
-- "=="
 provides-nominal:
-- "O11PerfectHTTP18HTTPFilterPriority"
-- "O11PerfectHTTP23HTTPRequestFilterResult"
-- "O11PerfectHTTP24HTTPResponseFilterResult"
-- "P11PerfectHTTP17HTTPRequestFilter"
-- "P11PerfectHTTP18HTTPResponseFilter"
+- "11PerfectHTTP18HTTPFilterPriorityO"
+- "11PerfectHTTP23HTTPRequestFilterResultO"
+- "11PerfectHTTP24HTTPResponseFilterResultO"
+- "11PerfectHTTP17HTTPRequestFilterP"
+- "11PerfectHTTP18HTTPResponseFilterP"
 provides-member:
-- ["O11PerfectHTTP18HTTPFilterPriority", ""]
-- ["O11PerfectHTTP23HTTPRequestFilterResult", ""]
-- ["O11PerfectHTTP24HTTPResponseFilterResult", ""]
-- ["P11PerfectHTTP17HTTPRequestFilter", ""]
-- ["P11PerfectHTTP18HTTPResponseFilter", ""]
-provides-dynamic-lookup:
+- ["11PerfectHTTP18HTTPFilterPriorityO", ""]
+- ["11PerfectHTTP23HTTPRequestFilterResultO", ""]
+- ["11PerfectHTTP24HTTPResponseFilterResultO", ""]
+- ["11PerfectHTTP17HTTPRequestFilterP", ""]
+- ["11PerfectHTTP18HTTPResponseFilterP", ""]
 depends-top-level:
-- "HTTPResponse"
+- "=="
+- !private "FloatLiteralType"
+- "HTTPFilterPriority"
 - "HTTPRequest"
 - "HTTPRequestFilter"
-- "HTTPResponseFilterResult"
-- "HTTPResponseFilter"
-- "HTTPFilterPriority"
-- "=="
 - "HTTPRequestFilterResult"
+- "HTTPResponse"
+- "HTTPResponseFilter"
+- "HTTPResponseFilterResult"
+- !private "IntegerLiteralType"
 depends-member:
-- !private ["Ps17BitwiseOperations", "hashValue"]
-- !private ["Ps7CVarArg", "hashValue"]
-- !private ["Ps10Comparable", "hashValue"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "hashValue"]
-- !private ["Ps17CustomReflectable", "hashValue"]
-- !private ["Ps23CustomStringConvertible", "hashValue"]
-- ["Ps9Equatable", "_toAnyHashable"]
-- ["Ps9Equatable", "hashValue"]
-- ["Ps9Equatable", ""]
-- !private ["Ps27ExpressibleByIntegerLiteral", "hashValue"]
-- ["O11PerfectHTTP18HTTPFilterPriority", "=="]
-- ["O11PerfectHTTP18HTTPFilterPriority", "_toAnyHashable"]
-- ["O11PerfectHTTP18HTTPFilterPriority", "deinit"]
-- ["O11PerfectHTTP18HTTPFilterPriority", "hashValue"]
-- ["O11PerfectHTTP18HTTPFilterPriority", "high"]
-- ["O11PerfectHTTP18HTTPFilterPriority", "low"]
-- ["O11PerfectHTTP18HTTPFilterPriority", "medium"]
-- ["P11PerfectHTTP17HTTPRequestFilter", "HTTPRequest"]
-- ["P11PerfectHTTP17HTTPRequestFilter", "HTTPRequestFilterResult"]
-- ["P11PerfectHTTP17HTTPRequestFilter", "HTTPResponse"]
-- ["P11PerfectHTTP17HTTPRequestFilter", "filter"]
-- ["O11PerfectHTTP23HTTPRequestFilterResult", "HTTPRequest"]
-- ["O11PerfectHTTP23HTTPRequestFilterResult", "HTTPResponse"]
-- ["O11PerfectHTTP23HTTPRequestFilterResult", "continue"]
-- ["O11PerfectHTTP23HTTPRequestFilterResult", "execute"]
-- ["O11PerfectHTTP23HTTPRequestFilterResult", "halt"]
-- ["P11PerfectHTTP18HTTPResponseFilter", "HTTPResponse"]
-- ["P11PerfectHTTP18HTTPResponseFilter", "HTTPResponseFilterResult"]
-- ["P11PerfectHTTP18HTTPResponseFilter", "filterBody"]
-- ["P11PerfectHTTP18HTTPResponseFilter", "filterHeaders"]
-- ["O11PerfectHTTP24HTTPResponseFilterResult", "=="]
-- ["O11PerfectHTTP24HTTPResponseFilterResult", "_toAnyHashable"]
-- ["O11PerfectHTTP24HTTPResponseFilterResult", "continue"]
-- ["O11PerfectHTTP24HTTPResponseFilterResult", "deinit"]
-- ["O11PerfectHTTP24HTTPResponseFilterResult", "done"]
-- ["O11PerfectHTTP24HTTPResponseFilterResult", "halt"]
-- ["O11PerfectHTTP24HTTPResponseFilterResult", "hashValue"]
-- ["Ps8Hashable", "_toAnyHashable"]
-- ["Ps8Hashable", "hashValue"]
-- ["Ps8Hashable", ""]
-- ["Si", "deinit"]
-- !private ["Si", "hashValue"]
-- !private ["Ps7Integer", "hashValue"]
-- !private ["Ps17IntegerArithmetic", "hashValue"]
-- !private ["P10PerfectLib15JSONConvertible", "hashValue"]
-- !private ["Ps10MirrorPath", "hashValue"]
-- !private ["Ps13SignedInteger", "hashValue"]
-- !private ["Ps12SignedNumber", "hashValue"]
-- !private ["Ps10Strideable", "hashValue"]
-- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "hashValue"]
-- ["Ps9_Hashable", "_toAnyHashable"]
-- ["Ps9_Hashable", "hashValue"]
-- ["Ps9_Hashable", ""]
-- !private ["Ps14_Incrementable", "hashValue"]
-- !private ["Ps8_Integer", "hashValue"]
-- !private ["Ps18_IntegerArithmetic", "hashValue"]
-- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
-- !private ["Ps14_SignedInteger", "hashValue"]
-- !private ["Ps11_Strideable", "hashValue"]
+- ["SQ", ""]
+- ["SQ", "hash"]
+- ["SQ", "hashValue"]
+- ["11PerfectHTTP18HTTPFilterPriorityO", "__derived_enum_equals"]
+- ["11PerfectHTTP18HTTPFilterPriorityO", "deinit"]
+- ["11PerfectHTTP18HTTPFilterPriorityO", "hash"]
+- ["11PerfectHTTP18HTTPFilterPriorityO", "hashValue"]
+- ["11PerfectHTTP18HTTPFilterPriorityO", "high"]
+- ["11PerfectHTTP18HTTPFilterPriorityO", "low"]
+- ["11PerfectHTTP18HTTPFilterPriorityO", "medium"]
+- ["11PerfectHTTP17HTTPRequestFilterP", "HTTPRequest"]
+- ["11PerfectHTTP17HTTPRequestFilterP", "HTTPRequestFilterResult"]
+- ["11PerfectHTTP17HTTPRequestFilterP", "HTTPResponse"]
+- ["11PerfectHTTP17HTTPRequestFilterP", "filter"]
+- ["11PerfectHTTP23HTTPRequestFilterResultO", "HTTPRequest"]
+- ["11PerfectHTTP23HTTPRequestFilterResultO", "HTTPResponse"]
+- ["11PerfectHTTP23HTTPRequestFilterResultO", "continue"]
+- ["11PerfectHTTP23HTTPRequestFilterResultO", "execute"]
+- ["11PerfectHTTP23HTTPRequestFilterResultO", "halt"]
+- ["11PerfectHTTP18HTTPResponseFilterP", "HTTPResponse"]
+- ["11PerfectHTTP18HTTPResponseFilterP", "HTTPResponseFilterResult"]
+- ["11PerfectHTTP18HTTPResponseFilterP", "filterBody"]
+- ["11PerfectHTTP18HTTPResponseFilterP", "filterHeaders"]
+- ["11PerfectHTTP24HTTPResponseFilterResultO", "__derived_enum_equals"]
+- ["11PerfectHTTP24HTTPResponseFilterResultO", "continue"]
+- ["11PerfectHTTP24HTTPResponseFilterResultO", "deinit"]
+- ["11PerfectHTTP24HTTPResponseFilterResultO", "done"]
+- ["11PerfectHTTP24HTTPResponseFilterResultO", "halt"]
+- ["11PerfectHTTP24HTTPResponseFilterResultO", "hash"]
+- ["11PerfectHTTP24HTTPResponseFilterResultO", "hashValue"]
+- ["SH", ""]
+- ["SH", "hash"]
+- ["SH", "hashValue"]
+- !private ["s6HasherV", "combine"]
 depends-nominal:
-- !private "Ps17BitwiseOperations"
-- !private "Ps7CVarArg"
-- !private "Ps10Comparable"
-- !private "Ps29CustomPlaygroundQuickLookable"
-- !private "Ps17CustomReflectable"
-- !private "Ps23CustomStringConvertible"
-- "Ps9Equatable"
-- !private "Ps27ExpressibleByIntegerLiteral"
-- "O11PerfectHTTP18HTTPFilterPriority"
-- "P11PerfectHTTP17HTTPRequestFilter"
-- "O11PerfectHTTP23HTTPRequestFilterResult"
-- "P11PerfectHTTP18HTTPResponseFilter"
-- "O11PerfectHTTP24HTTPResponseFilterResult"
-- "Ps8Hashable"
-- "Si"
-- !private "Ps7Integer"
-- !private "Ps17IntegerArithmetic"
-- !private "P10PerfectLib15JSONConvertible"
-- !private "Ps10MirrorPath"
-- !private "Ps13SignedInteger"
-- !private "Ps12SignedNumber"
-- !private "Ps10Strideable"
-- !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
-- "Ps9_Hashable"
-- !private "Ps14_Incrementable"
-- !private "Ps8_Integer"
-- !private "Ps18_IntegerArithmetic"
-- !private "Ps21_ObjectiveCBridgeable"
-- !private "Ps14_SignedInteger"
-- !private "Ps11_Strideable"
+- "SQ"
+- "11PerfectHTTP18HTTPFilterPriorityO"
+- "11PerfectHTTP17HTTPRequestFilterP"
+- "11PerfectHTTP23HTTPRequestFilterResultO"
+- "11PerfectHTTP18HTTPResponseFilterP"
+- "11PerfectHTTP24HTTPResponseFilterResultO"
+- "SH"
+- !private "s6HasherV"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-2.0.0/module.modulemap"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../srtp.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl23.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../pqueue.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../dtls1.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../tls1.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl3.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl2.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../opensslconf.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../kssl.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../hmac.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../pem2.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../e_os2.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../pem.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../pkcs7.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../x509_vfy.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../sha.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../dh.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../dsa.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../rsa.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ecdh.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ecdsa.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ec.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../bn.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../asn1.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../obj_mac.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../objects.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../evp.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../buffer.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../x509.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../comp.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../lhash.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../err.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../symhacks.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ossl_typ.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../opensslv.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../safestack.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../stack.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../crypto.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../bio.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/openssl.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/CHTTPParser.build/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-interface-hash: "30fc30b89fcd1b87bb32093ac5746b2d"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectLib.swiftmodule"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.swiftmodule"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/Dispatch.swiftmodule"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/Foundation.swiftmodule"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectCrypto.swiftmodule"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectNet.swiftmodule"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/Swift.swiftmodule"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-LinuxBridge.git-4690752410048834749/Sources/LinuxBridge/include/LinuxBridge.h"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-COpenSSL-Linux.git-3557131771114177070/COpenSSL/include/openssl.h"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/glibc.modulemap"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Cgd.git-6783677904322374398/module.modulemap"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/LinuxBridge.build/module.modulemap"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-COpenSSL-Linux.git-3557131771114177070/COpenSSL/include/module.modulemap"
+interface-hash: "faca457f2bff93ae3262167e6e3274da"

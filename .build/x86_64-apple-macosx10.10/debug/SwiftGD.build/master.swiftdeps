@@ -1,9 +1,0 @@
-version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "aebaf2fa933470876449276a99a611d4"
-build_time: [1552597670, 459759000]
-inputs:
-  "/Users/fibonacci/MusicMatchServer/.build/checkouts/SwiftGD.git--89852505705829550/Sources/Color.swift": !dirty [1552597667, 0]
-  "/Users/fibonacci/MusicMatchServer/.build/checkouts/SwiftGD.git--89852505705829550/Sources/Error.swift": !dirty [1552597667, 0]
-  "/Users/fibonacci/MusicMatchServer/.build/checkouts/SwiftGD.git--89852505705829550/Sources/Format.swift": !dirty [1552597667, 0]
-  "/Users/fibonacci/MusicMatchServer/.build/checkouts/SwiftGD.git--89852505705829550/Sources/Geometry.swift": !dirty [1552597667, 0]
-  "/Users/fibonacci/MusicMatchServer/.build/checkouts/SwiftGD.git--89852505705829550/Sources/Image.swift": !dirty [1552597667, 0]

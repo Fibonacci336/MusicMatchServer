@@ -1,6 +1,7 @@
-version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
-options: "c0902876c669a4cac43254816630c779"
-build_time: [529997019, 541173000]
+version: "Swift version 4.2.2 (swift-4.2.2-RELEASE)"
+options: "8b01e80d14b600dae186baa5dbfc99ad"
+build_time: [1552605279, 143167471]
 inputs:
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectThread-2.0.0/Sources/Threading.swift": [527286126, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectThread-2.0.0/Sources/ThreadQueue.swift": [527286126, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Thread.git-4661715522360368018/Sources/PerfectThread/Promise.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Thread.git-4661715522360368018/Sources/PerfectThread/ThreadQueue.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Thread.git-4661715522360368018/Sources/PerfectThread/Threading.swift": [1552604973, 0]

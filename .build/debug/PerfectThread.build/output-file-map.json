@@ -1,17 +1,23 @@
 {
   "": {
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/master.swiftdeps"
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.build/master.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectThread-2.0.0/Sources/Threading.swift": {
-    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/Threading.d",
-    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/Threading.swift.o",
-    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/Threading~partial.swiftmodule",
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/Threading.swiftdeps"
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Thread.git-4661715522360368018/Sources/PerfectThread/Promise.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.build/Promise.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.build/Promise.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.build/Promise~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.build/Promise.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectThread-2.0.0/Sources/ThreadQueue.swift": {
-    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/ThreadQueue.d",
-    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/ThreadQueue.swift.o",
-    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/ThreadQueue~partial.swiftmodule",
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.build/ThreadQueue.swiftdeps"
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Thread.git-4661715522360368018/Sources/PerfectThread/ThreadQueue.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.build/ThreadQueue.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.build/ThreadQueue.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.build/ThreadQueue~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.build/ThreadQueue.swiftdeps"
+  },
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Thread.git-4661715522360368018/Sources/PerfectThread/Threading.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.build/Threading.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.build/Threading.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.build/Threading~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.build/Threading.swiftdeps"
   }
 }

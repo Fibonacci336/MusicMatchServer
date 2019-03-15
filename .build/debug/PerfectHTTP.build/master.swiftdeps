@@ -1,13 +1,14 @@
-version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
-options: "d0dd12ee1dbe1a909273399c20ac5de8"
-build_time: [530035919, 38972000]
+version: "Swift version 4.2.2 (swift-4.2.2-RELEASE)"
+options: "420e0ff915ebb4f1140966a1537aabea"
+build_time: [1552605288, 208311081]
 inputs:
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/HTTPFilter.swift": [527286057, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/HTTPHeaders.swift": [527286057, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/HTTPMethod.swift": [527286057, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/HTTPRequest.swift": [527286057, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/HTTPResponse.swift": [527286057, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/MimeReader.swift": [527286057, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/MimeType.swift": [527286057, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/Routing.swift": [527286057, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTP-2.0.1/Sources/StaticFileHandler.swift": [527286057, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTP.git-4329295206342323312/Sources/PerfectHTTP/HTTPFilter.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTP.git-4329295206342323312/Sources/PerfectHTTP/HTTPHeaders.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTP.git-4329295206342323312/Sources/PerfectHTTP/HTTPMethod.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTP.git-4329295206342323312/Sources/PerfectHTTP/HTTPRequest.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTP.git-4329295206342323312/Sources/PerfectHTTP/HTTPResponse.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTP.git-4329295206342323312/Sources/PerfectHTTP/MimeReader.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTP.git-4329295206342323312/Sources/PerfectHTTP/MimeType.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTP.git-4329295206342323312/Sources/PerfectHTTP/Routing.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTP.git-4329295206342323312/Sources/PerfectHTTP/StaticFileHandler.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTP.git-4329295206342323312/Sources/PerfectHTTP/TypedRoutes.swift": [1552604973, 0]

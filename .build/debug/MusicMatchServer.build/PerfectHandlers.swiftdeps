@@ -6,1121 +6,878 @@ provides-top-level:
 - "SCHEMA"
 - "currentURL"
 - "PerfectServerModuleInit"
+- "ServerError"
 - "stockListHandler"
 - "messageHandler"
 - "getDataFromDatabase"
+- "sendSilentMessageNotification"
 - "sendMessageNotification"
+- "fileAccessed"
 - "fileUpload"
-- "distanceCheck"
+- "recieveLocalUsers"
 - "restJSONHandler"
 - "indexHandler"
 - "thumbHandler"
-- "getDocumentsDirectory"
+- "fileExistsHandler"
+- "fileExists"
 - "getVideoThumbnail"
-- "saveImage"
+- "getVideoThumbnailFromLinux"
 - "getUsersInArea"
+- "runTerminalCommand"
+- "deleteUser"
+- "displayErrorCode"
 provides-nominal:
+- "16MusicMatchServer0C5ErrorO"
 provides-member:
-provides-dynamic-lookup:
+- ["16MusicMatchServer0C5ErrorO", ""]
 depends-top-level:
-- !private "initializeMessagesData"
 - !private "!"
-- !private "+"
-- "PASSWORD"
-- !private "File"
-- !private "webRoot"
-- "PerfectServerModuleInit"
-- "StringLiteralType"
-- "SCHEMA"
-- "CLLocation"
-- "HOST"
-- "USER"
-- !private "NotificationPusher"
-- "saveImage"
-- !private "FileManager"
-- "currentURL"
-- "stockListHandler"
-- "NSImage"
-- "Double"
-- !private "Void"
-- "HTTPRequest"
-- !private "/="
-- "HTTPResponse"
-- "indexHandler"
-- "restJSONHandler"
-- !private "NotificationResponse"
-- !private "print"
-- !private "NSBitmapImageFileType"
-- "getDocumentsDirectory"
-- "getVideoThumbnail"
-- "Int"
-- !private "AVAsset"
-- !private "URL"
-- !private "FileError"
-- "thumbHandler"
-- !private "NSBitmapImageRep"
-- !private "DatabaseError"
-- !private "..<"
-- "String"
-- !private "initializeDatabaseConnection"
-- "fileUpload"
-- !private "initializeUserLogInData"
-- !private "production"
-- "getUsersInArea"
-- "AssignmentPrecedence"
-- "CastingPrecedence"
-- "distanceCheck"
-- !private "initializeNotificationSystem"
-- !private "IOSNotificationItem"
-- !private "+="
-- "sendMessageNotification"
-- !private "Array"
-- !private "initializeUserData"
-- "messageHandler"
-- "getDataFromDatabase"
 - !private "!="
-- !private "AVAssetImageGenerator"
+- !private "&&"
+- !private "+"
+- !private "+="
+- !private "..<"
+- !private "/"
+- !private "=="
+- !private "APNSNotificationItem"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- "CastingPrecedence"
+- !private "DatabaseError"
+- "Double"
+- !private "File"
+- !private "FileManager"
+- !private "FloatLiteralType"
+- "HOST"
+- "HTTPRequest"
+- "HTTPResponse"
+- "Image"
+- "Int"
+- !private "IntegerLiteralType"
 - !private "JSONConversionError"
-- !private "Dictionary"
-- !private "NSSize"
+- !private "NotificationPusher"
+- !private "NotificationResponse"
+- "PASSWORD"
+- "PerfectServerModuleInit"
+- !private "Pipe"
+- !private "Process"
+- "SCHEMA"
+- "ServerError"
+- !private "StaticFileHandler"
+- "String"
+- "StringLiteralType"
+- "Swift"
+- "TernaryPrecedence"
+- !private "URL"
+- "USER"
 - !private "UnicodeScalarType"
+- !private "Void"
+- "currentURL"
+- "deleteUser"
+- "displayErrorCode"
+- "fileAccessed"
+- "fileExists"
+- "fileExistsHandler"
+- "fileUpload"
+- "getDataFromDatabase"
+- "getUsersInArea"
+- "getVideoThumbnail"
+- "getVideoThumbnailFromLinux"
+- "indexHandler"
+- !private "initializeDatabaseConnection"
+- !private "initializeMessagesData"
+- !private "initializeNotificationSystem"
+- !private "initializeUserData"
+- !private "initializeUserLogInData"
+- "messageHandler"
+- !private "print"
+- !private "production"
+- "recieveLocalUsers"
+- "restJSONHandler"
+- "runTerminalCommand"
+- "sendMessageNotification"
+- "sendSilentMessageNotification"
+- "stockListHandler"
+- "thumbHandler"
+- !private "webRoot"
 depends-member:
-- ["CSo7AVAsset", "deinit"]
-- !private ["CSo7AVAsset", "duration"]
-- !private ["CSo7AVAsset", "init"]
-- !private ["CSo21AVAssetImageGenerator", "copyCGImage"]
-- ["CSo21AVAssetImageGenerator", "deinit"]
-- !private ["CSo21AVAssetImageGenerator", "init"]
-- !private ["PSo29AVAsynchronousKeyValueLoading", "duration"]
-- !private ["PSo29AVAsynchronousKeyValueLoading", "init"]
-- !private ["Ps16AbsoluteValuable", "Stride"]
-- !private ["Ps16AbsoluteValuable", "init"]
-- !private ["Ps9AnyObject", "apnsTopic"]
-- !private ["Ps9AnyObject", "cgImage"]
-- !private ["Ps9AnyObject", "close"]
-- !private ["Ps9AnyObject", "components"]
-- !private ["Ps9AnyObject", "coordinate"]
-- !private ["Ps9AnyObject", "copyCGImage"]
-- !private ["Ps9AnyObject", "createFile"]
-- !private ["Ps9AnyObject", "currentDirectoryPath"]
-- !private ["Ps9AnyObject", "default"]
-- !private ["Ps9AnyObject", "duration"]
-- !private ["Ps9AnyObject", "fileName"]
-- !private ["Ps9AnyObject", "forEachRow"]
-- !private ["Ps9AnyObject", "height"]
-- ["Ps9AnyObject", "init"]
-- !private ["Ps9AnyObject", "jsonDecode"]
-- !private ["Ps9AnyObject", "moveTo"]
-- !private ["Ps9AnyObject", "next"]
-- !private ["Ps9AnyObject", "numRows"]
-- !private ["Ps9AnyObject", "pushIOS"]
-- !private ["Ps9AnyObject", "query"]
-- !private ["Ps9AnyObject", "representation"]
-- !private ["Ps9AnyObject", "size"]
-- !private ["Ps9AnyObject", "storeResults"]
-- !private ["Ps9AnyObject", "tmpFileName"]
-- !private ["Ps9AnyObject", "width"]
-- !private ["Sa", "Element"]
-- !private ["Sa", "Index"]
-- !private ["Sa", "Iterator"]
-- !private ["Sa", "SubSequence"]
-- !private ["Sa", "_Element"]
-- ["Sa", "deinit"]
+- !private ["20PerfectNotifications20APNSNotificationItemO", "alertBody"]
+- !private ["20PerfectNotifications20APNSNotificationItemO", "alertTitle"]
+- !private ["20PerfectNotifications20APNSNotificationItemO", "contentAvailable"]
+- !private ["20PerfectNotifications20APNSNotificationItemO", "sound"]
+- !private ["Sa", "insert"]
 - !private ["Sa", "subscript"]
-- !private ["Ps23BidirectionalCollection", "Element"]
-- !private ["Ps23BidirectionalCollection", "Index"]
-- !private ["Ps23BidirectionalCollection", "IndexDistance"]
-- !private ["Ps23BidirectionalCollection", "Indices"]
-- !private ["Ps23BidirectionalCollection", "Iterator"]
-- !private ["Ps23BidirectionalCollection", "SubSequence"]
-- !private ["Ps23BidirectionalCollection", "_Element"]
-- !private ["Ps23BidirectionalCollection", "subscript"]
-- !private ["Ps22BidirectionalIndexable", "Element"]
-- !private ["Ps22BidirectionalIndexable", "Index"]
-- !private ["Ps22BidirectionalIndexable", "IndexDistance"]
-- !private ["Ps22BidirectionalIndexable", "Indices"]
-- !private ["Ps22BidirectionalIndexable", "Iterator"]
-- !private ["Ps22BidirectionalIndexable", "SubSequence"]
-- !private ["Ps22BidirectionalIndexable", "_Element"]
-- !private ["Ps22BidirectionalIndexable", "subscript"]
-- !private ["Vs18BidirectionalSlice", "Index"]
-- !private ["Vs18BidirectionalSlice", "IndexDistance"]
-- !private ["Vs18BidirectionalSlice", "Indices"]
-- !private ["Vs18BidirectionalSlice", "Iterator"]
-- !private ["Vs18BidirectionalSlice", "SubSequence"]
-- !private ["Vs18BidirectionalSlice", "_Element"]
-- !private ["Ps19BinaryFloatingPoint", "Stride"]
-- !private ["Ps19BinaryFloatingPoint", "init"]
-- !private ["Ps17BitwiseOperations", "IntegerLiteralType"]
-- !private ["Ps17BitwiseOperations", "Stride"]
-- !private ["Ps17BitwiseOperations", "_DisabledRangeIndex"]
-- !private ["Ps17BitwiseOperations", "_DisallowMixedSignArithmetic"]
-- ["CC11PerfectHTTP10MimeReader8BodySpec", "deinit"]
-- !private ["CC11PerfectHTTP10MimeReader8BodySpec", "fileName"]
-- !private ["CC11PerfectHTTP10MimeReader8BodySpec", "tmpFileName"]
+- !private ["s13ArrayProtocolP", "insert"]
+- !private ["s13ArrayProtocolP", "subscript"]
+- !private ["SK", "components"]
+- !private ["SK", "contains"]
+- !private ["SK", "count"]
+- !private ["SK", "deletingFileExtension"]
+- ["SK", "init"]
+- ["SK", "init"]
+- !private ["SK", "insert"]
+- !private ["SK", "jsonDecode"]
+- !private ["SK", "lastFilePathComponent"]
+- !private ["SK", "subscript"]
+- !private ["SK", "trimmingCharacters"]
+- !private ["SB", "init"]
+- !private ["Sz", "init"]
+- !private ["11PerfectHTTP10MimeReaderC8BodySpecC", "fileName"]
+- !private ["11PerfectHTTP10MimeReaderC8BodySpecC", "tmpFileName"]
 - !private ["Sb", "_getBuiltinLogicValue"]
-- ["Sb", "deinit"]
-- !private ["P10PerfectNet28BytesSwappingUnsignedInteger", "Stride"]
-- !private ["P10PerfectNet28BytesSwappingUnsignedInteger", "_DisallowMixedSignArithmetic"]
-- !private ["V12CoreGraphics7CGFloat", "Stride"]
-- !private ["V12CoreGraphics7CGFloat", "deinit"]
-- ["CSo7CGImage", "deinit"]
-- !private ["CSo7CGImage", "height"]
-- !private ["CSo7CGImage", "width"]
-- ["VSC6CGSize", "deinit"]
-- !private ["VSC6CGSize", "init"]
-- !private ["CSo10CLLocation", "coordinate"]
-- ["CSo10CLLocation", "deinit"]
-- !private ["CSo10CLLocation", "init"]
-- ["VSC22CLLocationCoordinate2D", "deinit"]
-- !private ["VSC22CLLocationCoordinate2D", "latitude"]
-- !private ["VSC22CLLocationCoordinate2D", "longitude"]
-- ["VSC6CMTime", "deinit"]
-- !private ["VSC6CMTime", "value"]
-- !private ["Ps7CVarArg", "Element"]
-- !private ["Ps7CVarArg", "Index"]
-- !private ["Ps7CVarArg", "IndexDistance"]
-- !private ["Ps7CVarArg", "IntegerLiteralType"]
-- !private ["Ps7CVarArg", "Iterator"]
-- !private ["Ps7CVarArg", "Key"]
-- !private ["Ps7CVarArg", "Stride"]
-- !private ["Ps7CVarArg", "SubSequence"]
-- !private ["Ps7CVarArg", "Value"]
-- !private ["Ps7CVarArg", "_DisabledRangeIndex"]
-- !private ["Ps7CVarArg", "_DisallowMixedSignArithmetic"]
-- !private ["Ps7CVarArg", "_Element"]
-- !private ["Ps7CVarArg", "cgImage"]
-- !private ["Ps7CVarArg", "components"]
-- !private ["Ps7CVarArg", "coordinate"]
-- !private ["Ps7CVarArg", "copyCGImage"]
-- !private ["Ps7CVarArg", "createFile"]
-- !private ["Ps7CVarArg", "currentDirectoryPath"]
-- !private ["Ps7CVarArg", "default"]
-- !private ["Ps7CVarArg", "duration"]
-- !private ["Ps7CVarArg", "first"]
-- ["Ps7CVarArg", "init"]
-- !private ["Ps7CVarArg", "isEmpty"]
-- !private ["Ps7CVarArg", "jsonDecode"]
-- !private ["Ps7CVarArg", "jsonEncodedString"]
-- !private ["Ps7CVarArg", "keys"]
-- !private ["Ps7CVarArg", "representation"]
-- !private ["Ps7CVarArg", "size"]
-- !private ["Ps7CVarArg", "subscript"]
-- !private ["Vs9Character", "deinit"]
-- !private ["V10Foundation12CharacterSet", "deinit"]
-- !private ["Ps10Collection", "Element"]
-- !private ["Ps10Collection", "Index"]
-- !private ["Ps10Collection", "IndexDistance"]
-- !private ["Ps10Collection", "Indices"]
-- !private ["Ps10Collection", "Iterator"]
-- !private ["Ps10Collection", "Key"]
-- !private ["Ps10Collection", "SubSequence"]
-- !private ["Ps10Collection", "Value"]
-- !private ["Ps10Collection", "_Element"]
-- !private ["Ps10Collection", "count"]
-- !private ["Ps10Collection", "first"]
-- !private ["Ps10Collection", "init"]
-- !private ["Ps10Collection", "isEmpty"]
-- !private ["Ps10Collection", "jsonEncodedString"]
-- !private ["Ps10Collection", "keys"]
-- !private ["Ps10Collection", "subscript"]
-- !private ["Ps10Comparable", "IntegerLiteralType"]
-- !private ["Ps10Comparable", "Stride"]
-- !private ["Ps10Comparable", "_DisabledRangeIndex"]
-- !private ["Ps10Comparable", "_DisallowMixedSignArithmetic"]
-- !private ["Ps10Comparable", "components"]
-- ["Ps10Comparable", "init"]
-- !private ["Ps10Comparable", "jsonDecode"]
-- !private ["Ps10Comparable", "value"]
-- !private ["Vs14CountableRange", "Iterator"]
-- !private ["Vs14CountableRange", "_Element"]
-- ["Vs14CountableRange", "deinit"]
-- !private ["Ps28CustomDebugStringConvertible", "Element"]
-- !private ["Ps28CustomDebugStringConvertible", "Index"]
-- !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
-- !private ["Ps28CustomDebugStringConvertible", "Iterator"]
-- !private ["Ps28CustomDebugStringConvertible", "Key"]
-- !private ["Ps28CustomDebugStringConvertible", "Stride"]
-- !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
-- !private ["Ps28CustomDebugStringConvertible", "Value"]
-- !private ["Ps28CustomDebugStringConvertible", "_Element"]
-- !private ["Ps28CustomDebugStringConvertible", "cgImage"]
-- !private ["Ps28CustomDebugStringConvertible", "components"]
-- !private ["Ps28CustomDebugStringConvertible", "coordinate"]
-- !private ["Ps28CustomDebugStringConvertible", "copyCGImage"]
-- !private ["Ps28CustomDebugStringConvertible", "createFile"]
-- !private ["Ps28CustomDebugStringConvertible", "currentDirectoryPath"]
-- !private ["Ps28CustomDebugStringConvertible", "default"]
-- !private ["Ps28CustomDebugStringConvertible", "duration"]
-- !private ["Ps28CustomDebugStringConvertible", "first"]
-- ["Ps28CustomDebugStringConvertible", "init"]
-- !private ["Ps28CustomDebugStringConvertible", "isEmpty"]
-- !private ["Ps28CustomDebugStringConvertible", "jsonDecode"]
-- !private ["Ps28CustomDebugStringConvertible", "jsonEncodedString"]
-- !private ["Ps28CustomDebugStringConvertible", "keys"]
-- !private ["Ps28CustomDebugStringConvertible", "representation"]
-- !private ["Ps28CustomDebugStringConvertible", "size"]
-- ["Ps28CustomDebugStringConvertible", "some"]
-- !private ["Ps28CustomDebugStringConvertible", "subscript"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "IntegerLiteralType"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "Stride"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "_DisabledRangeIndex"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "_DisallowMixedSignArithmetic"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "components"]
-- ["Ps29CustomPlaygroundQuickLookable", "init"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "jsonDecode"]
-- !private ["Ps17CustomReflectable", "Element"]
-- !private ["Ps17CustomReflectable", "Index"]
-- !private ["Ps17CustomReflectable", "IndexDistance"]
-- !private ["Ps17CustomReflectable", "IntegerLiteralType"]
-- !private ["Ps17CustomReflectable", "Iterator"]
-- !private ["Ps17CustomReflectable", "Key"]
-- !private ["Ps17CustomReflectable", "Stride"]
-- !private ["Ps17CustomReflectable", "SubSequence"]
-- !private ["Ps17CustomReflectable", "Value"]
-- !private ["Ps17CustomReflectable", "_DisabledRangeIndex"]
-- !private ["Ps17CustomReflectable", "_DisallowMixedSignArithmetic"]
-- !private ["Ps17CustomReflectable", "_Element"]
-- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
-- !private ["Ps17CustomReflectable", "components"]
-- !private ["Ps17CustomReflectable", "first"]
-- ["Ps17CustomReflectable", "init"]
-- !private ["Ps17CustomReflectable", "isEmpty"]
-- !private ["Ps17CustomReflectable", "jsonDecode"]
-- !private ["Ps17CustomReflectable", "jsonEncodedString"]
-- !private ["Ps17CustomReflectable", "keys"]
-- ["Ps17CustomReflectable", "some"]
-- !private ["Ps17CustomReflectable", "subscript"]
-- !private ["Ps23CustomStringConvertible", "Element"]
-- !private ["Ps23CustomStringConvertible", "Index"]
-- !private ["Ps23CustomStringConvertible", "IndexDistance"]
-- !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
-- !private ["Ps23CustomStringConvertible", "Iterator"]
-- !private ["Ps23CustomStringConvertible", "Key"]
-- !private ["Ps23CustomStringConvertible", "Stride"]
-- !private ["Ps23CustomStringConvertible", "SubSequence"]
-- !private ["Ps23CustomStringConvertible", "Value"]
-- !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
-- !private ["Ps23CustomStringConvertible", "_DisallowMixedSignArithmetic"]
-- !private ["Ps23CustomStringConvertible", "_Element"]
-- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps23CustomStringConvertible", "cgImage"]
-- !private ["Ps23CustomStringConvertible", "components"]
-- !private ["Ps23CustomStringConvertible", "coordinate"]
-- !private ["Ps23CustomStringConvertible", "copyCGImage"]
-- !private ["Ps23CustomStringConvertible", "createFile"]
-- !private ["Ps23CustomStringConvertible", "currentDirectoryPath"]
-- !private ["Ps23CustomStringConvertible", "default"]
-- !private ["Ps23CustomStringConvertible", "duration"]
-- !private ["Ps23CustomStringConvertible", "first"]
-- ["Ps23CustomStringConvertible", "init"]
-- !private ["Ps23CustomStringConvertible", "isEmpty"]
-- !private ["Ps23CustomStringConvertible", "jsonDecode"]
-- !private ["Ps23CustomStringConvertible", "jsonEncodedString"]
-- !private ["Ps23CustomStringConvertible", "keys"]
-- !private ["Ps23CustomStringConvertible", "representation"]
-- !private ["Ps23CustomStringConvertible", "size"]
-- !private ["Ps23CustomStringConvertible", "subscript"]
-- ["O16MusicMatchServer13DatabaseError", "deinit"]
-- !private ["O16MusicMatchServer13DatabaseError", "emptyRequestError"]
-- !private ["O16MusicMatchServer13DatabaseError", "failedRequestError"]
-- !private ["V10Foundation4Date", "deinit"]
-- !private ["VSC7Decimal", "Stride"]
-- !private ["VSC7Decimal", "deinit"]
-- !private ["Vs27DefaultBidirectionalIndices", "Index"]
-- !private ["Vs27DefaultBidirectionalIndices", "Iterator"]
-- !private ["Vs27DefaultBidirectionalIndices", "SubSequence"]
-- !private ["Vs27DefaultBidirectionalIndices", "_Element"]
-- !private ["Vs26DefaultRandomAccessIndices", "Index"]
-- !private ["Vs26DefaultRandomAccessIndices", "IndexDistance"]
-- !private ["Vs26DefaultRandomAccessIndices", "Indices"]
-- !private ["Vs26DefaultRandomAccessIndices", "Iterator"]
-- !private ["Vs26DefaultRandomAccessIndices", "SubSequence"]
-- !private ["Vs26DefaultRandomAccessIndices", "_Element"]
-- !private ["Vs10Dictionary", "Index"]
-- !private ["Vs10Dictionary", "IndexDistance"]
-- !private ["Vs10Dictionary", "Iterator"]
-- !private ["Vs10Dictionary", "Key"]
-- !private ["Vs10Dictionary", "SubSequence"]
-- !private ["Vs10Dictionary", "Value"]
-- ["Vs10Dictionary", "deinit"]
-- !private ["Vs10Dictionary", "first"]
-- !private ["Vs10Dictionary", "init"]
-- !private ["Vs10Dictionary", "isEmpty"]
-- !private ["Vs10Dictionary", "jsonEncodedString"]
-- !private ["Vs10Dictionary", "keys"]
-- !private ["Vs10Dictionary", "subscript"]
-- !private ["Vs18DictionaryIterator", "Element"]
-- !private ["V8Dispatch12DispatchTime", "deinit"]
-- !private ["O8Dispatch20DispatchTimeInterval", "deinit"]
-- !private ["V8Dispatch16DispatchWallTime", "deinit"]
-- !private ["Sd", "Stride"]
-- ["Sd", "deinit"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "init"]
+- !private ["10Foundation12CharacterSetV", "newlines"]
+- !private ["Sl", "components"]
+- !private ["Sl", "contains"]
+- !private ["Sl", "count"]
+- !private ["Sl", "deletingFileExtension"]
+- !private ["Sl", "first"]
+- ["Sl", "init"]
+- ["Sl", "init"]
+- !private ["Sl", "insert"]
+- !private ["Sl", "isEmpty"]
+- !private ["Sl", "jsonDecode"]
+- !private ["Sl", "jsonEncodedString"]
+- !private ["Sl", "keys"]
+- !private ["Sl", "lastFilePathComponent"]
+- !private ["Sl", "subscript"]
+- !private ["Sl", "trimmingCharacters"]
+- !private ["SL", "components"]
+- !private ["SL", "contains"]
+- !private ["SL", "deletingFileExtension"]
+- ["SL", "init"]
+- ["SL", "init"]
+- !private ["SL", "jsonDecode"]
+- !private ["SL", "lastFilePathComponent"]
+- !private ["SL", "trimmingCharacters"]
+- !private ["s28CustomDebugStringConvertibleP", "arguments"]
+- !private ["s28CustomDebugStringConvertibleP", "components"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- !private ["s28CustomDebugStringConvertibleP", "deletingFileExtension"]
+- !private ["s28CustomDebugStringConvertibleP", "fileExists"]
+- !private ["s28CustomDebugStringConvertibleP", "fileHandleForReading"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "insert"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "jsonDecode"]
+- !private ["s28CustomDebugStringConvertibleP", "jsonEncodedString"]
+- !private ["s28CustomDebugStringConvertibleP", "keys"]
+- !private ["s28CustomDebugStringConvertibleP", "lastFilePathComponent"]
+- !private ["s28CustomDebugStringConvertibleP", "launch"]
+- !private ["s28CustomDebugStringConvertibleP", "launchPath"]
+- !private ["s28CustomDebugStringConvertibleP", "newlines"]
+- !private ["s28CustomDebugStringConvertibleP", "readDataToEndOfFile"]
+- !private ["s28CustomDebugStringConvertibleP", "standardOutput"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "terminationStatus"]
+- !private ["s28CustomDebugStringConvertibleP", "trimmingCharacters"]
+- !private ["s28CustomDebugStringConvertibleP", "waitUntilExit"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "components"]
+- !private ["s29CustomPlaygroundQuickLookableP", "contains"]
+- !private ["s29CustomPlaygroundQuickLookableP", "deletingFileExtension"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "jsonDecode"]
+- !private ["s29CustomPlaygroundQuickLookableP", "lastFilePathComponent"]
+- !private ["s29CustomPlaygroundQuickLookableP", "trimmingCharacters"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "components"]
+- !private ["s17CustomReflectableP", "contains"]
+- !private ["s17CustomReflectableP", "deletingFileExtension"]
+- !private ["s17CustomReflectableP", "first"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "insert"]
+- !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "jsonDecode"]
+- !private ["s17CustomReflectableP", "jsonEncodedString"]
+- !private ["s17CustomReflectableP", "keys"]
+- !private ["s17CustomReflectableP", "lastFilePathComponent"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "trimmingCharacters"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "arguments"]
+- !private ["s23CustomStringConvertibleP", "badRequest"]
+- !private ["s23CustomStringConvertibleP", "components"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "deletingFileExtension"]
+- !private ["s23CustomStringConvertibleP", "fileExists"]
+- !private ["s23CustomStringConvertibleP", "fileHandleForReading"]
+- !private ["s23CustomStringConvertibleP", "first"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "insert"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
+- !private ["s23CustomStringConvertibleP", "jsonDecode"]
+- !private ["s23CustomStringConvertibleP", "jsonEncodedString"]
+- !private ["s23CustomStringConvertibleP", "keys"]
+- !private ["s23CustomStringConvertibleP", "lastFilePathComponent"]
+- !private ["s23CustomStringConvertibleP", "launch"]
+- !private ["s23CustomStringConvertibleP", "launchPath"]
+- !private ["s23CustomStringConvertibleP", "newlines"]
+- !private ["s23CustomStringConvertibleP", "readDataToEndOfFile"]
+- !private ["s23CustomStringConvertibleP", "standardOutput"]
+- !private ["s23CustomStringConvertibleP", "status"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "terminationStatus"]
+- !private ["s23CustomStringConvertibleP", "trimmingCharacters"]
+- !private ["s23CustomStringConvertibleP", "utf8"]
+- !private ["s23CustomStringConvertibleP", "waitUntilExit"]
+- !private ["16MusicMatchServer13DatabaseErrorO", "deinit"]
+- !private ["16MusicMatchServer13DatabaseErrorO", "emptyRequestError"]
+- !private ["16MusicMatchServer13DatabaseErrorO", "failedRequestError"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "badRequest"]
+- !private ["Se", "components"]
+- !private ["Se", "contains"]
+- !private ["Se", "deletingFileExtension"]
+- !private ["Se", "first"]
+- ["Se", "init"]
+- ["Se", "init"]
+- !private ["Se", "insert"]
+- !private ["Se", "isEmpty"]
+- !private ["Se", "jsonDecode"]
+- !private ["Se", "jsonEncodedString"]
+- !private ["Se", "keys"]
+- !private ["Se", "lastFilePathComponent"]
+- !private ["Se", "newlines"]
+- !private ["Se", "subscript"]
+- !private ["Se", "trimmingCharacters"]
+- !private ["SD", "first"]
+- !private ["SD", "init"]
+- !private ["SD", "isEmpty"]
+- !private ["SD", "jsonEncodedString"]
+- !private ["SD", "keys"]
+- !private ["SD", "subscript"]
 - !private ["Sd", "init"]
-- !private ["Ps9Equatable", "IntegerLiteralType"]
-- !private ["Ps9Equatable", "Iterator"]
-- !private ["Ps9Equatable", "PNG"]
-- !private ["Ps9Equatable", "Stride"]
-- !private ["Ps9Equatable", "_DisabledRangeIndex"]
-- !private ["Ps9Equatable", "_DisallowMixedSignArithmetic"]
-- !private ["Ps9Equatable", "_Element"]
-- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
-- !private ["Ps9Equatable", "cgImage"]
-- !private ["Ps9Equatable", "components"]
-- !private ["Ps9Equatable", "coordinate"]
-- !private ["Ps9Equatable", "copyCGImage"]
-- !private ["Ps9Equatable", "createFile"]
-- !private ["Ps9Equatable", "currentDirectoryPath"]
-- !private ["Ps9Equatable", "default"]
-- !private ["Ps9Equatable", "duration"]
-- !private ["Ps9Equatable", "emptyRequestError"]
-- !private ["Ps9Equatable", "exportFailed"]
-- !private ["Ps9Equatable", "failedRequestError"]
-- ["Ps9Equatable", "init"]
-- !private ["Ps9Equatable", "jsonDecode"]
-- !private ["Ps9Equatable", "representation"]
-- !private ["Ps9Equatable", "size"]
-- !private ["Ps9Equatable", "value"]
-- ["Ps5Error", "deinit"]
-- !private ["Ps5Error", "emptyRequestError"]
-- !private ["Ps5Error", "exportFailed"]
-- !private ["Ps5Error", "failedRequestError"]
-- ["Ps5Error", "invalidKey"]
-- ["Ps5Error", "notConvertible"]
-- !private ["Ps25ExpressibleByArrayLiteral", "Element"]
-- !private ["Ps25ExpressibleByArrayLiteral", "Index"]
-- !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
-- !private ["Ps25ExpressibleByArrayLiteral", "SubSequence"]
-- !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
-- !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
-- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
-- !private ["Ps30ExpressibleByDictionaryLiteral", "Index"]
-- !private ["Ps30ExpressibleByDictionaryLiteral", "IndexDistance"]
-- !private ["Ps30ExpressibleByDictionaryLiteral", "Iterator"]
-- !private ["Ps30ExpressibleByDictionaryLiteral", "Key"]
-- !private ["Ps30ExpressibleByDictionaryLiteral", "SubSequence"]
-- !private ["Ps30ExpressibleByDictionaryLiteral", "Value"]
-- !private ["Ps30ExpressibleByDictionaryLiteral", "first"]
-- !private ["Ps30ExpressibleByDictionaryLiteral", "init"]
-- !private ["Ps30ExpressibleByDictionaryLiteral", "isEmpty"]
-- !private ["Ps30ExpressibleByDictionaryLiteral", "jsonEncodedString"]
-- !private ["Ps30ExpressibleByDictionaryLiteral", "keys"]
-- !private ["Ps30ExpressibleByDictionaryLiteral", "subscript"]
-- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "components"]
-- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "jsonDecode"]
-- !private ["Ps25ExpressibleByFloatLiteral", "Stride"]
-- !private ["Ps25ExpressibleByFloatLiteral", "init"]
-- !private ["Ps27ExpressibleByIntegerLiteral", "IntegerLiteralType"]
-- !private ["Ps27ExpressibleByIntegerLiteral", "Stride"]
-- !private ["Ps27ExpressibleByIntegerLiteral", "_DisabledRangeIndex"]
-- !private ["Ps27ExpressibleByIntegerLiteral", "_DisallowMixedSignArithmetic"]
-- !private ["Ps27ExpressibleByIntegerLiteral", "init"]
-- ["Ps23ExpressibleByNilLiteral", "some"]
-- !private ["Ps32ExpressibleByStringInterpolation", "components"]
-- ["Ps32ExpressibleByStringInterpolation", "init"]
-- !private ["Ps32ExpressibleByStringInterpolation", "jsonDecode"]
-- !private ["Ps26ExpressibleByStringLiteral", "components"]
-- ["Ps26ExpressibleByStringLiteral", "init"]
-- !private ["Ps26ExpressibleByStringLiteral", "jsonDecode"]
-- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "components"]
-- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
-- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "jsonDecode"]
-- ["C10PerfectLib4File", "deinit"]
-- !private ["C10PerfectLib4File", "init"]
-- !private ["C10PerfectLib4File", "moveTo"]
-- ["O16MusicMatchServer9FileError", "deinit"]
-- !private ["O16MusicMatchServer9FileError", "exportFailed"]
-- !private ["CSo11FileManager", "createFile"]
-- !private ["CSo11FileManager", "currentDirectoryPath"]
-- !private ["CSo11FileManager", "default"]
-- ["CSo11FileManager", "deinit"]
-- !private ["Sf", "Stride"]
-- !private ["Sf", "deinit"]
-- !private ["Vs7Float80", "Stride"]
-- !private ["Vs7Float80", "deinit"]
-- !private ["Ps13FloatingPoint", "Stride"]
-- !private ["Ps13FloatingPoint", "init"]
-- ["P11PerfectHTTP11HTTPRequest", "deinit"]
-- !private ["P11PerfectHTTP11HTTPRequest", "postBodyString"]
-- !private ["P11PerfectHTTP11HTTPRequest", "postFileUploads"]
-- !private ["P11PerfectHTTP11HTTPRequest", "urlVariables"]
-- !private ["P11PerfectHTTP12HTTPResponse", "appendBody"]
-- !private ["P11PerfectHTTP12HTTPResponse", "completed"]
-- ["P11PerfectHTTP12HTTPResponse", "deinit"]
-- !private ["O11PerfectHTTP18HTTPResponseStatus", "deinit"]
-- !private ["Ps8Hashable", "IntegerLiteralType"]
-- !private ["Ps8Hashable", "PNG"]
-- !private ["Ps8Hashable", "Stride"]
-- !private ["Ps8Hashable", "_DisabledRangeIndex"]
-- !private ["Ps8Hashable", "_DisallowMixedSignArithmetic"]
-- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
-- !private ["Ps8Hashable", "cgImage"]
-- !private ["Ps8Hashable", "components"]
-- !private ["Ps8Hashable", "coordinate"]
-- !private ["Ps8Hashable", "copyCGImage"]
-- !private ["Ps8Hashable", "createFile"]
-- !private ["Ps8Hashable", "currentDirectoryPath"]
-- !private ["Ps8Hashable", "default"]
-- !private ["Ps8Hashable", "duration"]
-- !private ["Ps8Hashable", "emptyRequestError"]
-- !private ["Ps8Hashable", "exportFailed"]
-- !private ["Ps8Hashable", "failedRequestError"]
-- ["Ps8Hashable", "init"]
-- !private ["Ps8Hashable", "jsonDecode"]
-- !private ["Ps8Hashable", "representation"]
-- !private ["Ps8Hashable", "size"]
-- !private ["O20PerfectNotifications19IOSNotificationItem", "alertBody"]
-- !private ["O20PerfectNotifications19IOSNotificationItem", "alertTitle"]
-- ["O20PerfectNotifications19IOSNotificationItem", "deinit"]
-- !private ["O20PerfectNotifications19IOSNotificationItem", "sound"]
-- !private ["V10Foundation9IndexPath", "deinit"]
-- !private ["Ps9Indexable", "Element"]
-- !private ["Ps9Indexable", "Index"]
-- !private ["Ps9Indexable", "IndexDistance"]
-- !private ["Ps9Indexable", "Indices"]
-- !private ["Ps9Indexable", "Iterator"]
-- !private ["Ps9Indexable", "Key"]
-- !private ["Ps9Indexable", "SubSequence"]
-- !private ["Ps9Indexable", "Value"]
-- !private ["Ps9Indexable", "_Element"]
-- !private ["Ps9Indexable", "count"]
-- !private ["Ps9Indexable", "first"]
-- !private ["Ps9Indexable", "init"]
-- !private ["Ps9Indexable", "isEmpty"]
-- !private ["Ps9Indexable", "jsonEncodedString"]
-- !private ["Ps9Indexable", "keys"]
-- !private ["Ps9Indexable", "subscript"]
-- !private ["Ps13IndexableBase", "Element"]
-- !private ["Ps13IndexableBase", "Index"]
-- !private ["Ps13IndexableBase", "IndexDistance"]
-- !private ["Ps13IndexableBase", "Indices"]
-- !private ["Ps13IndexableBase", "Iterator"]
-- !private ["Ps13IndexableBase", "Key"]
-- !private ["Ps13IndexableBase", "SubSequence"]
-- !private ["Ps13IndexableBase", "Value"]
-- !private ["Ps13IndexableBase", "_Element"]
-- !private ["Ps13IndexableBase", "count"]
-- !private ["Ps13IndexableBase", "first"]
-- !private ["Ps13IndexableBase", "init"]
-- !private ["Ps13IndexableBase", "isEmpty"]
-- !private ["Ps13IndexableBase", "jsonEncodedString"]
-- !private ["Ps13IndexableBase", "keys"]
-- !private ["Ps13IndexableBase", "subscript"]
-- !private ["Vs16IndexingIterator", "Element"]
-- !private ["Si", "IntegerLiteralType"]
-- !private ["Si", "Stride"]
-- !private ["Si", "_DisabledRangeIndex"]
-- ["Si", "deinit"]
-- !private ["Vs5Int16", "Stride"]
-- !private ["Vs5Int16", "deinit"]
-- !private ["Vs5Int32", "Stride"]
-- !private ["Vs5Int32", "deinit"]
-- !private ["Vs5Int64", "Stride"]
-- ["Vs5Int64", "deinit"]
-- !private ["Vs4Int8", "Stride"]
-- !private ["Vs4Int8", "deinit"]
-- !private ["Ps7Integer", "IntegerLiteralType"]
-- !private ["Ps7Integer", "Stride"]
-- !private ["Ps7Integer", "_DisabledRangeIndex"]
-- !private ["Ps7Integer", "_DisallowMixedSignArithmetic"]
-- !private ["Ps17IntegerArithmetic", "IntegerLiteralType"]
-- !private ["Ps17IntegerArithmetic", "Stride"]
-- !private ["Ps17IntegerArithmetic", "_DisabledRangeIndex"]
-- !private ["Ps17IntegerArithmetic", "_DisallowMixedSignArithmetic"]
-- !private ["Ps16IteratorProtocol", "Element"]
-- !private ["Ps16IteratorProtocol", "forEachRow"]
-- !private ["Ps16IteratorProtocol", "next"]
-- !private ["Ps16IteratorProtocol", "numRows"]
-- ["O10PerfectLib19JSONConversionError", "invalidKey"]
-- ["O10PerfectLib19JSONConversionError", "notConvertible"]
-- !private ["P10PerfectLib15JSONConvertible", "Element"]
-- !private ["P10PerfectLib15JSONConvertible", "Index"]
-- !private ["P10PerfectLib15JSONConvertible", "IndexDistance"]
-- !private ["P10PerfectLib15JSONConvertible", "IntegerLiteralType"]
-- !private ["P10PerfectLib15JSONConvertible", "Iterator"]
-- !private ["P10PerfectLib15JSONConvertible", "Key"]
-- !private ["P10PerfectLib15JSONConvertible", "Stride"]
-- !private ["P10PerfectLib15JSONConvertible", "SubSequence"]
-- !private ["P10PerfectLib15JSONConvertible", "Value"]
-- !private ["P10PerfectLib15JSONConvertible", "_DisabledRangeIndex"]
-- !private ["P10PerfectLib15JSONConvertible", "_DisallowMixedSignArithmetic"]
-- !private ["P10PerfectLib15JSONConvertible", "_Element"]
-- !private ["P10PerfectLib15JSONConvertible", "_getBuiltinLogicValue"]
-- !private ["P10PerfectLib15JSONConvertible", "components"]
-- ["P10PerfectLib15JSONConvertible", "deinit"]
-- !private ["P10PerfectLib15JSONConvertible", "first"]
-- ["P10PerfectLib15JSONConvertible", "init"]
-- !private ["P10PerfectLib15JSONConvertible", "isEmpty"]
-- !private ["P10PerfectLib15JSONConvertible", "jsonDecode"]
-- !private ["P10PerfectLib15JSONConvertible", "jsonEncodedString"]
-- !private ["P10PerfectLib15JSONConvertible", "keys"]
-- ["P10PerfectLib15JSONConvertible", "some"]
-- !private ["P10PerfectLib15JSONConvertible", "subscript"]
-- !private ["Ps22LazyCollectionProtocol", "IndexDistance"]
-- !private ["Ps22LazyCollectionProtocol", "count"]
-- !private ["Vs17LazyMapCollection", "IndexDistance"]
-- !private ["Vs17LazyMapCollection", "count"]
-- ["Vs17LazyMapCollection", "deinit"]
-- !private ["Ps20LazySequenceProtocol", "IndexDistance"]
-- !private ["Ps20LazySequenceProtocol", "count"]
-- !private ["Ps25LosslessStringConvertible", "Stride"]
-- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
-- !private ["Ps25LosslessStringConvertible", "components"]
-- ["Ps25LosslessStringConvertible", "init"]
-- !private ["Ps25LosslessStringConvertible", "jsonDecode"]
-- !private ["Ps10MirrorPath", "IntegerLiteralType"]
-- !private ["Ps10MirrorPath", "Stride"]
-- !private ["Ps10MirrorPath", "_DisabledRangeIndex"]
-- !private ["Ps10MirrorPath", "components"]
-- ["Ps10MirrorPath", "init"]
-- !private ["Ps10MirrorPath", "jsonDecode"]
-- !private ["Ps17MutableCollection", "Element"]
-- !private ["Ps17MutableCollection", "Index"]
-- !private ["Ps17MutableCollection", "Iterator"]
-- !private ["Ps17MutableCollection", "SubSequence"]
-- !private ["Ps17MutableCollection", "_Element"]
-- !private ["Ps17MutableCollection", "subscript"]
-- !private ["Ps16MutableIndexable", "Element"]
-- !private ["Ps16MutableIndexable", "Index"]
-- !private ["Ps16MutableIndexable", "Iterator"]
-- !private ["Ps16MutableIndexable", "SubSequence"]
-- !private ["Ps16MutableIndexable", "_Element"]
-- !private ["Ps16MutableIndexable", "subscript"]
-- !private ["C5MySQL5MySQL", "close"]
-- ["C5MySQL5MySQL", "deinit"]
-- !private ["C5MySQL5MySQL", "query"]
-- !private ["C5MySQL5MySQL", "storeResults"]
-- !private ["OSC21NSBitmapImageFileType", "PNG"]
-- ["OSC21NSBitmapImageFileType", "deinit"]
-- ["CSo16NSBitmapImageRep", "deinit"]
-- !private ["CSo16NSBitmapImageRep", "init"]
-- !private ["CSo16NSBitmapImageRep", "representation"]
-- !private ["CSo16NSBitmapImageRep", "size"]
-- !private ["PSo8NSCoding", "cgImage"]
-- !private ["PSo8NSCoding", "components"]
-- !private ["PSo8NSCoding", "coordinate"]
-- ["PSo8NSCoding", "init"]
-- !private ["PSo8NSCoding", "jsonDecode"]
-- !private ["PSo8NSCoding", "representation"]
-- !private ["PSo8NSCoding", "size"]
-- !private ["PSo9NSCopying", "cgImage"]
-- !private ["PSo9NSCopying", "components"]
-- !private ["PSo9NSCopying", "coordinate"]
-- !private ["PSo9NSCopying", "duration"]
-- ["PSo9NSCopying", "init"]
-- !private ["PSo9NSCopying", "jsonDecode"]
-- !private ["PSo9NSCopying", "representation"]
-- !private ["PSo9NSCopying", "size"]
-- !private ["CSo7NSImage", "cgImage"]
-- ["CSo7NSImage", "deinit"]
-- !private ["CSo7NSImage", "init"]
-- !private ["CSo7NSImage", "size"]
-- !private ["CSo10NSImageRep", "init"]
-- !private ["CSo10NSImageRep", "representation"]
-- !private ["CSo10NSImageRep", "size"]
-- !private ["PSo16NSMutableCopying", "components"]
-- ["PSo16NSMutableCopying", "init"]
-- !private ["PSo16NSMutableCopying", "jsonDecode"]
-- !private ["CSo8NSObject", "cgImage"]
-- !private ["CSo8NSObject", "components"]
-- !private ["CSo8NSObject", "coordinate"]
-- !private ["CSo8NSObject", "copyCGImage"]
-- !private ["CSo8NSObject", "createFile"]
-- !private ["CSo8NSObject", "currentDirectoryPath"]
-- !private ["CSo8NSObject", "default"]
-- !private ["CSo8NSObject", "duration"]
-- ["CSo8NSObject", "init"]
-- !private ["CSo8NSObject", "jsonDecode"]
-- !private ["CSo8NSObject", "representation"]
-- !private ["CSo8NSObject", "size"]
-- !private ["PSo16NSObjectProtocol", "cgImage"]
-- !private ["PSo16NSObjectProtocol", "components"]
-- !private ["PSo16NSObjectProtocol", "coordinate"]
-- !private ["PSo16NSObjectProtocol", "copyCGImage"]
-- !private ["PSo16NSObjectProtocol", "createFile"]
-- !private ["PSo16NSObjectProtocol", "currentDirectoryPath"]
-- !private ["PSo16NSObjectProtocol", "default"]
-- !private ["PSo16NSObjectProtocol", "duration"]
-- ["PSo16NSObjectProtocol", "init"]
-- !private ["PSo16NSObjectProtocol", "jsonDecode"]
-- !private ["PSo16NSObjectProtocol", "representation"]
-- !private ["PSo16NSObjectProtocol", "size"]
-- !private ["PSo19NSPasteboardReading", "cgImage"]
-- !private ["PSo19NSPasteboardReading", "components"]
-- ["PSo19NSPasteboardReading", "init"]
-- !private ["PSo19NSPasteboardReading", "jsonDecode"]
-- !private ["PSo19NSPasteboardReading", "size"]
-- !private ["PSo19NSPasteboardWriting", "cgImage"]
-- !private ["PSo19NSPasteboardWriting", "components"]
-- ["PSo19NSPasteboardWriting", "init"]
-- !private ["PSo19NSPasteboardWriting", "jsonDecode"]
-- !private ["PSo19NSPasteboardWriting", "size"]
-- !private ["PSo14NSSecureCoding", "cgImage"]
-- !private ["PSo14NSSecureCoding", "components"]
-- !private ["PSo14NSSecureCoding", "coordinate"]
-- ["PSo14NSSecureCoding", "init"]
-- !private ["PSo14NSSecureCoding", "jsonDecode"]
-- !private ["PSo14NSSecureCoding", "representation"]
-- !private ["PSo14NSSecureCoding", "size"]
-- !private ["CSo8NSString", "components"]
-- ["CSo8NSString", "init"]
-- !private ["CSo8NSString", "jsonDecode"]
-- !private ["C20PerfectNotifications18NotificationPusher", "apnsTopic"]
-- ["C20PerfectNotifications18NotificationPusher", "deinit"]
-- !private ["C20PerfectNotifications18NotificationPusher", "init"]
-- !private ["C20PerfectNotifications18NotificationPusher", "pushIOS"]
-- !private ["V20PerfectNotifications20NotificationResponse", "deinit"]
-- !private ["V20PerfectNotifications20NotificationResponse", "status"]
-- ["Sq", "deinit"]
-- ["Sq", "some"]
-- !private ["Ps22RandomAccessCollection", "Element"]
-- !private ["Ps22RandomAccessCollection", "Index"]
-- !private ["Ps22RandomAccessCollection", "IndexDistance"]
-- !private ["Ps22RandomAccessCollection", "Indices"]
-- !private ["Ps22RandomAccessCollection", "Iterator"]
-- !private ["Ps22RandomAccessCollection", "SubSequence"]
-- !private ["Ps22RandomAccessCollection", "_Element"]
-- !private ["Ps22RandomAccessCollection", "subscript"]
-- !private ["Ps21RandomAccessIndexable", "Element"]
-- !private ["Ps21RandomAccessIndexable", "Index"]
-- !private ["Ps21RandomAccessIndexable", "IndexDistance"]
-- !private ["Ps21RandomAccessIndexable", "Indices"]
-- !private ["Ps21RandomAccessIndexable", "Iterator"]
-- !private ["Ps21RandomAccessIndexable", "SubSequence"]
-- !private ["Ps21RandomAccessIndexable", "_Element"]
-- !private ["Ps21RandomAccessIndexable", "subscript"]
-- !private ["Vs17RandomAccessSlice", "Index"]
-- !private ["Vs17RandomAccessSlice", "IndexDistance"]
-- !private ["Vs17RandomAccessSlice", "Indices"]
-- !private ["Vs17RandomAccessSlice", "Iterator"]
-- !private ["Vs17RandomAccessSlice", "SubSequence"]
-- !private ["Vs17RandomAccessSlice", "_Element"]
-- !private ["Vs5Range", "Iterator"]
-- !private ["Vs5Range", "deinit"]
-- !private ["Ps26RangeReplaceableCollection", "Element"]
-- !private ["Ps26RangeReplaceableCollection", "Index"]
-- !private ["Ps26RangeReplaceableCollection", "Iterator"]
-- !private ["Ps26RangeReplaceableCollection", "SubSequence"]
-- !private ["Ps26RangeReplaceableCollection", "_Element"]
-- !private ["Ps26RangeReplaceableCollection", "subscript"]
-- !private ["Ps25RangeReplaceableIndexable", "Element"]
-- !private ["Ps25RangeReplaceableIndexable", "Index"]
-- !private ["Ps25RangeReplaceableIndexable", "Iterator"]
-- !private ["Ps25RangeReplaceableIndexable", "SubSequence"]
-- !private ["Ps25RangeReplaceableIndexable", "_Element"]
-- !private ["Ps25RangeReplaceableIndexable", "subscript"]
-- !private ["Ps16RawRepresentable", "PNG"]
-- !private ["P10Foundation20ReferenceConvertible", "init"]
-- ["CC5MySQL5MySQL7Results", "deinit"]
-- !private ["CC5MySQL5MySQL7Results", "forEachRow"]
-- !private ["CC5MySQL5MySQL7Results", "next"]
-- !private ["CC5MySQL5MySQL7Results", "numRows"]
-- !private ["Ps8Sequence", "Element"]
-- !private ["Ps8Sequence", "Index"]
-- !private ["Ps8Sequence", "IndexDistance"]
-- !private ["Ps8Sequence", "Indices"]
-- !private ["Ps8Sequence", "Iterator"]
-- !private ["Ps8Sequence", "Key"]
-- !private ["Ps8Sequence", "SubSequence"]
-- !private ["Ps8Sequence", "Value"]
-- !private ["Ps8Sequence", "_Element"]
-- !private ["Ps8Sequence", "count"]
-- !private ["Ps8Sequence", "first"]
-- !private ["Ps8Sequence", "init"]
-- !private ["Ps8Sequence", "isEmpty"]
-- !private ["Ps8Sequence", "jsonEncodedString"]
-- !private ["Ps8Sequence", "keys"]
-- !private ["Ps8Sequence", "subscript"]
-- !private ["Ps13SignedInteger", "IntegerLiteralType"]
-- !private ["Ps13SignedInteger", "Stride"]
-- !private ["Ps13SignedInteger", "_DisabledRangeIndex"]
-- !private ["Ps12SignedNumber", "IntegerLiteralType"]
-- !private ["Ps12SignedNumber", "Stride"]
-- !private ["Ps12SignedNumber", "_DisabledRangeIndex"]
-- !private ["Ps12SignedNumber", "init"]
-- !private ["Vs5Slice", "Index"]
-- !private ["Vs5Slice", "Iterator"]
-- !private ["Vs5Slice", "SubSequence"]
-- !private ["Vs5Slice", "_Element"]
-- !private ["Ps10Strideable", "IntegerLiteralType"]
-- !private ["Ps10Strideable", "Stride"]
-- !private ["Ps10Strideable", "_DisabledRangeIndex"]
-- !private ["Ps10Strideable", "_DisallowMixedSignArithmetic"]
-- !private ["Ps10Strideable", "init"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "badRequest"]
+- !private ["SE", "components"]
+- !private ["SE", "contains"]
+- !private ["SE", "deletingFileExtension"]
+- !private ["SE", "first"]
+- ["SE", "init"]
+- ["SE", "init"]
+- !private ["SE", "insert"]
+- !private ["SE", "isEmpty"]
+- !private ["SE", "jsonDecode"]
+- !private ["SE", "jsonEncodedString"]
+- !private ["SE", "keys"]
+- !private ["SE", "lastFilePathComponent"]
+- !private ["SE", "newlines"]
+- !private ["SE", "subscript"]
+- !private ["SE", "trimmingCharacters"]
+- !private ["SS10FoundationE8EncodingV", "utf8"]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "arguments"]
+- !private ["SQ", "components"]
+- !private ["SQ", "contains"]
+- !private ["SQ", "default"]
+- !private ["SQ", "deletingFileExtension"]
+- !private ["SQ", "emptyRequestError"]
+- !private ["SQ", "failedRequestError"]
+- !private ["SQ", "fileExists"]
+- !private ["SQ", "fileHandleForReading"]
+- !private ["SQ", "first"]
+- ["SQ", "init"]
+- ["SQ", "init"]
+- !private ["SQ", "insert"]
+- !private ["SQ", "isEmpty"]
+- !private ["SQ", "jsonDecode"]
+- !private ["SQ", "jsonEncodedString"]
+- !private ["SQ", "keys"]
+- !private ["SQ", "lastFilePathComponent"]
+- !private ["SQ", "launch"]
+- !private ["SQ", "launchPath"]
+- !private ["SQ", "newlines"]
+- !private ["SQ", "readDataToEndOfFile"]
+- !private ["SQ", "standardOutput"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "terminationStatus"]
+- !private ["SQ", "trimmingCharacters"]
+- !private ["SQ", "utf8"]
+- !private ["SQ", "waitUntilExit"]
+- ["s5ErrorP", ""]
+- ["s5ErrorP", "_code"]
+- ["s5ErrorP", "_domain"]
+- ["s5ErrorP", "_userInfo"]
+- !private ["s5ErrorP", "emptyRequestError"]
+- !private ["s5ErrorP", "failedRequestError"]
+- !private ["s5ErrorP", "generic"]
+- ["s5ErrorP", "invalidKey"]
+- ["s5ErrorP", "notConvertible"]
+- !private ["s25ExpressibleByArrayLiteralP", "insert"]
+- !private ["s25ExpressibleByArrayLiteralP", "newlines"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "first"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "isEmpty"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "jsonEncodedString"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "keys"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "components"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "contains"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "deletingFileExtension"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "jsonDecode"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "lastFilePathComponent"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "trimmingCharacters"]
+- !private ["s25ExpressibleByFloatLiteralP", "init"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "components"]
+- !private ["s26ExpressibleByStringLiteralP", "contains"]
+- !private ["s26ExpressibleByStringLiteralP", "deletingFileExtension"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "jsonDecode"]
+- !private ["s26ExpressibleByStringLiteralP", "lastFilePathComponent"]
+- !private ["s26ExpressibleByStringLiteralP", "trimmingCharacters"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "components"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "contains"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "deletingFileExtension"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "jsonDecode"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "lastFilePathComponent"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "trimmingCharacters"]
+- !private ["10PerfectLib4FileC", "init"]
+- !private ["10PerfectLib4FileC", "moveTo"]
+- !private ["10Foundation10FileHandleC", "readDataToEndOfFile"]
+- !private ["10Foundation11FileManagerC", "default"]
+- !private ["10Foundation11FileManagerC", "fileExists"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["SF", "init"]
+- !private ["11PerfectHTTP11HTTPRequestP", "postBodyString"]
+- !private ["11PerfectHTTP11HTTPRequestP", "postFileUploads"]
+- !private ["11PerfectHTTP11HTTPRequestP", "uri"]
+- !private ["11PerfectHTTP11HTTPRequestP", "urlVariables"]
+- !private ["11PerfectHTTP12HTTPResponseP", "appendBody"]
+- !private ["11PerfectHTTP12HTTPResponseP", "completed"]
+- !private ["11PerfectHTTP18HTTPResponseStatusO", "badRequest"]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "arguments"]
+- !private ["SH", "components"]
+- !private ["SH", "contains"]
+- !private ["SH", "default"]
+- !private ["SH", "deletingFileExtension"]
+- !private ["SH", "emptyRequestError"]
+- !private ["SH", "failedRequestError"]
+- !private ["SH", "fileExists"]
+- !private ["SH", "fileHandleForReading"]
+- !private ["SH", "first"]
+- ["SH", "init"]
+- ["SH", "init"]
+- !private ["SH", "insert"]
+- !private ["SH", "isEmpty"]
+- !private ["SH", "jsonDecode"]
+- !private ["SH", "jsonEncodedString"]
+- !private ["SH", "keys"]
+- !private ["SH", "lastFilePathComponent"]
+- !private ["SH", "launch"]
+- !private ["SH", "launchPath"]
+- !private ["SH", "newlines"]
+- !private ["SH", "readDataToEndOfFile"]
+- !private ["SH", "standardOutput"]
+- !private ["SH", "subscript"]
+- !private ["SH", "terminationStatus"]
+- !private ["SH", "trimmingCharacters"]
+- !private ["SH", "utf8"]
+- !private ["SH", "waitUntilExit"]
+- !private ["7SwiftGD5ImageC", "init"]
+- !private ["Si", "init"]
+- !private ["St", "forEachRow"]
+- !private ["St", "next"]
+- !private ["St", "numRows"]
+- ["10PerfectLib19JSONConversionErrorO", "invalidKey"]
+- ["10PerfectLib19JSONConversionErrorO", "notConvertible"]
+- !private ["10PerfectLib15JSONConvertibleP", "_getBuiltinLogicValue"]
+- !private ["10PerfectLib15JSONConvertibleP", "components"]
+- !private ["10PerfectLib15JSONConvertibleP", "contains"]
+- !private ["10PerfectLib15JSONConvertibleP", "deletingFileExtension"]
+- !private ["10PerfectLib15JSONConvertibleP", "first"]
+- ["10PerfectLib15JSONConvertibleP", "init"]
+- ["10PerfectLib15JSONConvertibleP", "init"]
+- !private ["10PerfectLib15JSONConvertibleP", "insert"]
+- !private ["10PerfectLib15JSONConvertibleP", "isEmpty"]
+- !private ["10PerfectLib15JSONConvertibleP", "jsonDecode"]
+- !private ["10PerfectLib15JSONConvertibleP", "jsonEncodedString"]
+- !private ["10PerfectLib15JSONConvertibleP", "keys"]
+- !private ["10PerfectLib15JSONConvertibleP", "lastFilePathComponent"]
+- !private ["10PerfectLib15JSONConvertibleP", "subscript"]
+- !private ["10PerfectLib15JSONConvertibleP", "trimmingCharacters"]
+- !private ["s22LazyCollectionProtocolP", "count"]
+- !private ["s17LazyMapCollectionV", "count"]
+- !private ["s20LazySequenceProtocolP", "count"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "components"]
+- !private ["s25LosslessStringConvertibleP", "contains"]
+- !private ["s25LosslessStringConvertibleP", "deletingFileExtension"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "jsonDecode"]
+- !private ["s25LosslessStringConvertibleP", "lastFilePathComponent"]
+- !private ["s25LosslessStringConvertibleP", "trimmingCharacters"]
+- !private ["s10MirrorPathP", "components"]
+- !private ["s10MirrorPathP", "contains"]
+- !private ["s10MirrorPathP", "deletingFileExtension"]
+- ["s10MirrorPathP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "jsonDecode"]
+- !private ["s10MirrorPathP", "lastFilePathComponent"]
+- !private ["s10MirrorPathP", "trimmingCharacters"]
+- !private ["SM", "insert"]
+- !private ["SM", "subscript"]
+- !private ["12PerfectMySQL0bC0C", "close"]
+- !private ["12PerfectMySQL0bC0C", "errorCode"]
+- !private ["12PerfectMySQL0bC0C", "errorMessage"]
+- !private ["12PerfectMySQL0bC0C", "query"]
+- !private ["12PerfectMySQL0bC0C", "storeResults"]
+- !private ["10Foundation8NSCodingP", "components"]
+- !private ["10Foundation8NSCodingP", "contains"]
+- !private ["10Foundation8NSCodingP", "deletingFileExtension"]
+- !private ["10Foundation8NSCodingP", "jsonDecode"]
+- !private ["10Foundation8NSCodingP", "lastFilePathComponent"]
+- !private ["10Foundation8NSCodingP", "readDataToEndOfFile"]
+- !private ["10Foundation8NSCodingP", "trimmingCharacters"]
+- !private ["10Foundation9NSCopyingP", "components"]
+- !private ["10Foundation9NSCopyingP", "contains"]
+- !private ["10Foundation9NSCopyingP", "deletingFileExtension"]
+- !private ["10Foundation9NSCopyingP", "jsonDecode"]
+- !private ["10Foundation9NSCopyingP", "lastFilePathComponent"]
+- !private ["10Foundation9NSCopyingP", "trimmingCharacters"]
+- !private ["10Foundation16NSMutableCopyingP", "components"]
+- !private ["10Foundation16NSMutableCopyingP", "contains"]
+- !private ["10Foundation16NSMutableCopyingP", "deletingFileExtension"]
+- !private ["10Foundation16NSMutableCopyingP", "jsonDecode"]
+- !private ["10Foundation16NSMutableCopyingP", "lastFilePathComponent"]
+- !private ["10Foundation16NSMutableCopyingP", "trimmingCharacters"]
+- !private ["10Foundation8NSObjectC", "arguments"]
+- !private ["10Foundation8NSObjectC", "components"]
+- !private ["10Foundation8NSObjectC", "contains"]
+- !private ["10Foundation8NSObjectC", "default"]
+- !private ["10Foundation8NSObjectC", "deletingFileExtension"]
+- !private ["10Foundation8NSObjectC", "fileExists"]
+- !private ["10Foundation8NSObjectC", "fileHandleForReading"]
+- !private ["10Foundation8NSObjectC", "init"]
+- !private ["10Foundation8NSObjectC", "jsonDecode"]
+- !private ["10Foundation8NSObjectC", "lastFilePathComponent"]
+- !private ["10Foundation8NSObjectC", "launch"]
+- !private ["10Foundation8NSObjectC", "launchPath"]
+- !private ["10Foundation8NSObjectC", "readDataToEndOfFile"]
+- !private ["10Foundation8NSObjectC", "standardOutput"]
+- !private ["10Foundation8NSObjectC", "terminationStatus"]
+- !private ["10Foundation8NSObjectC", "trimmingCharacters"]
+- !private ["10Foundation8NSObjectC", "waitUntilExit"]
+- !private ["10Foundation16NSObjectProtocolP", "arguments"]
+- !private ["10Foundation16NSObjectProtocolP", "components"]
+- !private ["10Foundation16NSObjectProtocolP", "contains"]
+- !private ["10Foundation16NSObjectProtocolP", "default"]
+- !private ["10Foundation16NSObjectProtocolP", "deletingFileExtension"]
+- !private ["10Foundation16NSObjectProtocolP", "fileExists"]
+- !private ["10Foundation16NSObjectProtocolP", "fileHandleForReading"]
+- !private ["10Foundation16NSObjectProtocolP", "init"]
+- !private ["10Foundation16NSObjectProtocolP", "jsonDecode"]
+- !private ["10Foundation16NSObjectProtocolP", "lastFilePathComponent"]
+- !private ["10Foundation16NSObjectProtocolP", "launch"]
+- !private ["10Foundation16NSObjectProtocolP", "launchPath"]
+- !private ["10Foundation16NSObjectProtocolP", "readDataToEndOfFile"]
+- !private ["10Foundation16NSObjectProtocolP", "standardOutput"]
+- !private ["10Foundation16NSObjectProtocolP", "terminationStatus"]
+- !private ["10Foundation16NSObjectProtocolP", "trimmingCharacters"]
+- !private ["10Foundation16NSObjectProtocolP", "waitUntilExit"]
+- !private ["10Foundation14NSSecureCodingP", "components"]
+- !private ["10Foundation14NSSecureCodingP", "contains"]
+- !private ["10Foundation14NSSecureCodingP", "deletingFileExtension"]
+- !private ["10Foundation14NSSecureCodingP", "jsonDecode"]
+- !private ["10Foundation14NSSecureCodingP", "lastFilePathComponent"]
+- !private ["10Foundation14NSSecureCodingP", "readDataToEndOfFile"]
+- !private ["10Foundation14NSSecureCodingP", "trimmingCharacters"]
+- !private ["10Foundation8NSStringC", "components"]
+- !private ["10Foundation8NSStringC", "contains"]
+- !private ["10Foundation8NSStringC", "deletingFileExtension"]
+- !private ["10Foundation8NSStringC", "jsonDecode"]
+- !private ["10Foundation8NSStringC", "lastFilePathComponent"]
+- !private ["10Foundation8NSStringC", "trimmingCharacters"]
+- !private ["20PerfectNotifications18NotificationPusherC", "apnsTopic"]
+- !private ["20PerfectNotifications18NotificationPusherC", "init"]
+- !private ["20PerfectNotifications18NotificationPusherC", "pushIOS"]
+- !private ["20PerfectNotifications20NotificationResponseV", "status"]
+- !private ["Sj", "init"]
+- !private ["10Foundation4PipeC", "fileHandleForReading"]
+- !private ["10Foundation4PipeC", "init"]
+- !private ["10Foundation7ProcessC", "arguments"]
+- !private ["10Foundation7ProcessC", "init"]
+- !private ["10Foundation7ProcessC", "launch"]
+- !private ["10Foundation7ProcessC", "launchPath"]
+- !private ["10Foundation7ProcessC", "standardOutput"]
+- !private ["10Foundation7ProcessC", "terminationStatus"]
+- !private ["10Foundation7ProcessC", "waitUntilExit"]
+- !private ["Sk", "count"]
+- !private ["Sk", "insert"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", "components"]
+- !private ["Sm", "contains"]
+- !private ["Sm", "deletingFileExtension"]
+- ["Sm", "init"]
+- ["Sm", "init"]
+- !private ["Sm", "insert"]
+- !private ["Sm", "jsonDecode"]
+- !private ["Sm", "lastFilePathComponent"]
+- !private ["Sm", "subscript"]
+- !private ["Sm", "trimmingCharacters"]
+- !private ["SY", "utf8"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "newlines"]
+- !private ["12PerfectMySQL0bC0C7ResultsC", "forEachRow"]
+- !private ["12PerfectMySQL0bC0C7ResultsC", "next"]
+- !private ["12PerfectMySQL0bC0C7ResultsC", "numRows"]
+- !private ["ST", "components"]
+- !private ["ST", "contains"]
+- !private ["ST", "count"]
+- !private ["ST", "deletingFileExtension"]
+- !private ["ST", "first"]
+- ["ST", "init"]
+- ["ST", "init"]
+- !private ["ST", "insert"]
+- !private ["ST", "isEmpty"]
+- !private ["ST", "jsonDecode"]
+- !private ["ST", "jsonEncodedString"]
+- !private ["ST", "keys"]
+- !private ["ST", "lastFilePathComponent"]
+- !private ["ST", "subscript"]
+- !private ["ST", "trimmingCharacters"]
+- ["16MusicMatchServer0C5ErrorO", "String"]
+- ["16MusicMatchServer0C5ErrorO", "_code"]
+- ["16MusicMatchServer0C5ErrorO", "_domain"]
+- ["16MusicMatchServer0C5ErrorO", "_userInfo"]
+- ["16MusicMatchServer0C5ErrorO", "deinit"]
+- ["16MusicMatchServer0C5ErrorO", "generic"]
+- !private ["s10SetAlgebraP", "newlines"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "init"]
+- !private ["11PerfectHTTP17StaticFileHandlerV", "handleRequest"]
+- !private ["11PerfectHTTP17StaticFileHandlerV", "init"]
+- !private ["Sx", "init"]
 - !private ["SS", "components"]
-- ["SS", "deinit"]
+- !private ["SS", "contains"]
+- !private ["SS", "deletingFileExtension"]
+- ["SS", "init"]
 - ["SS", "init"]
 - !private ["SS", "jsonDecode"]
-- !private ["Ps16TextOutputStream", "components"]
-- ["Ps16TextOutputStream", "init"]
-- !private ["Ps16TextOutputStream", "jsonDecode"]
-- !private ["Ps20TextOutputStreamable", "components"]
-- ["Ps20TextOutputStreamable", "init"]
-- !private ["Ps20TextOutputStreamable", "jsonDecode"]
-- !private ["Su", "Stride"]
-- !private ["Su", "_DisallowMixedSignArithmetic"]
-- !private ["Su", "deinit"]
-- !private ["Vs6UInt16", "Stride"]
-- !private ["Vs6UInt16", "_DisallowMixedSignArithmetic"]
-- !private ["Vs6UInt16", "deinit"]
-- !private ["Vs6UInt32", "Stride"]
-- !private ["Vs6UInt32", "_DisallowMixedSignArithmetic"]
-- ["Vs6UInt32", "deinit"]
-- !private ["Vs6UInt64", "Stride"]
-- !private ["Vs6UInt64", "_DisallowMixedSignArithmetic"]
-- !private ["Vs6UInt64", "deinit"]
-- !private ["Vs5UInt8", "Stride"]
-- !private ["Vs5UInt8", "_DisallowMixedSignArithmetic"]
-- ["Vs5UInt8", "deinit"]
-- ["V10Foundation3URL", "deinit"]
-- !private ["V10Foundation3URL", "init"]
-- !private ["Sc", "deinit"]
-- !private ["Ps15UnsignedInteger", "Stride"]
-- !private ["Ps15UnsignedInteger", "_DisallowMixedSignArithmetic"]
-- !private ["Ps14_ArrayProtocol", "Element"]
-- !private ["Ps14_ArrayProtocol", "Index"]
-- !private ["Ps14_ArrayProtocol", "Iterator"]
-- !private ["Ps14_ArrayProtocol", "SubSequence"]
-- !private ["Ps14_ArrayProtocol", "_Element"]
-- !private ["Ps14_ArrayProtocol", "subscript"]
-- !private ["Ps15_CVarArgAligned", "Stride"]
-- !private ["Ps15_CVarArgAligned", "_DisallowMixedSignArithmetic"]
-- !private ["Ps15_CVarArgAligned", "init"]
-- !private ["Ps22_CVarArgPassedAsDouble", "Stride"]
-- !private ["Ps22_CVarArgPassedAsDouble", "init"]
-- !private ["Ps24_DestructorSafeContainer", "Element"]
-- !private ["Ps24_DestructorSafeContainer", "Index"]
-- !private ["Ps24_DestructorSafeContainer", "Iterator"]
-- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
-- !private ["Ps24_DestructorSafeContainer", "_Element"]
-- !private ["Ps24_DestructorSafeContainer", "subscript"]
-- !private ["Ps28_DisallowMixedSignArithmetic", "Stride"]
-- !private ["Ps28_DisallowMixedSignArithmetic", "_DisallowMixedSignArithmetic"]
-- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
-- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "components"]
-- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
-- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "jsonDecode"]
-- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "Stride"]
-- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "init"]
-- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "IntegerLiteralType"]
-- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "Stride"]
-- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "_DisabledRangeIndex"]
-- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "_DisallowMixedSignArithmetic"]
-- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
-- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "components"]
-- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
-- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "jsonDecode"]
-- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "components"]
-- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
-- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "jsonDecode"]
-- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "components"]
-- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
-- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "jsonDecode"]
-- !private ["Ps34_ExpressibleByFileReferenceLiteral", "init"]
-- !private ["Ps26_ExpressibleByImageLiteral", "cgImage"]
-- !private ["Ps26_ExpressibleByImageLiteral", "init"]
-- !private ["Ps26_ExpressibleByImageLiteral", "size"]
-- !private ["Ps35_HasCustomAnyHashableRepresentation", "components"]
-- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
-- !private ["Ps35_HasCustomAnyHashableRepresentation", "jsonDecode"]
-- !private ["Ps9_Hashable", "IntegerLiteralType"]
-- !private ["Ps9_Hashable", "PNG"]
-- !private ["Ps9_Hashable", "Stride"]
-- !private ["Ps9_Hashable", "_DisabledRangeIndex"]
-- !private ["Ps9_Hashable", "_DisallowMixedSignArithmetic"]
-- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
-- !private ["Ps9_Hashable", "cgImage"]
-- !private ["Ps9_Hashable", "components"]
-- !private ["Ps9_Hashable", "coordinate"]
-- !private ["Ps9_Hashable", "copyCGImage"]
-- !private ["Ps9_Hashable", "createFile"]
-- !private ["Ps9_Hashable", "currentDirectoryPath"]
-- !private ["Ps9_Hashable", "default"]
-- !private ["Ps9_Hashable", "duration"]
-- !private ["Ps9_Hashable", "emptyRequestError"]
-- !private ["Ps9_Hashable", "exportFailed"]
-- !private ["Ps9_Hashable", "failedRequestError"]
-- ["Ps9_Hashable", "init"]
-- !private ["Ps9_Hashable", "jsonDecode"]
-- !private ["Ps9_Hashable", "representation"]
-- !private ["Ps9_Hashable", "size"]
-- !private ["Ps14_Incrementable", "IntegerLiteralType"]
-- !private ["Ps14_Incrementable", "Stride"]
-- !private ["Ps14_Incrementable", "_DisabledRangeIndex"]
-- !private ["Ps14_Incrementable", "_DisallowMixedSignArithmetic"]
-- !private ["Ps8_Integer", "IntegerLiteralType"]
-- !private ["Ps8_Integer", "Stride"]
-- !private ["Ps8_Integer", "_DisabledRangeIndex"]
-- !private ["Ps8_Integer", "_DisallowMixedSignArithmetic"]
-- !private ["Ps18_IntegerArithmetic", "IntegerLiteralType"]
-- !private ["Ps18_IntegerArithmetic", "Stride"]
-- !private ["Ps18_IntegerArithmetic", "_DisabledRangeIndex"]
-- !private ["Ps18_IntegerArithmetic", "_DisallowMixedSignArithmetic"]
-- !private ["Ps21_ObjectiveCBridgeable", "Element"]
-- !private ["Ps21_ObjectiveCBridgeable", "Index"]
-- !private ["Ps21_ObjectiveCBridgeable", "IndexDistance"]
-- !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
-- !private ["Ps21_ObjectiveCBridgeable", "Iterator"]
-- !private ["Ps21_ObjectiveCBridgeable", "Key"]
-- !private ["Ps21_ObjectiveCBridgeable", "Stride"]
-- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
-- !private ["Ps21_ObjectiveCBridgeable", "Value"]
-- !private ["Ps21_ObjectiveCBridgeable", "_DisabledRangeIndex"]
-- !private ["Ps21_ObjectiveCBridgeable", "_DisallowMixedSignArithmetic"]
-- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
-- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
-- !private ["Ps21_ObjectiveCBridgeable", "components"]
-- !private ["Ps21_ObjectiveCBridgeable", "first"]
-- ["Ps21_ObjectiveCBridgeable", "init"]
-- !private ["Ps21_ObjectiveCBridgeable", "isEmpty"]
-- !private ["Ps21_ObjectiveCBridgeable", "jsonDecode"]
-- !private ["Ps21_ObjectiveCBridgeable", "jsonEncodedString"]
-- !private ["Ps21_ObjectiveCBridgeable", "keys"]
-- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
-- !private ["Ps14_SignedInteger", "IntegerLiteralType"]
-- !private ["Ps14_SignedInteger", "Stride"]
-- !private ["Ps14_SignedInteger", "_DisabledRangeIndex"]
-- !private ["Ps11_Strideable", "IntegerLiteralType"]
-- !private ["Ps11_Strideable", "Stride"]
-- !private ["Ps11_Strideable", "_DisabledRangeIndex"]
-- !private ["Ps11_Strideable", "_DisallowMixedSignArithmetic"]
-- !private ["Ps11_Strideable", "init"]
-- !private ["Ps14_StringElement", "Stride"]
-- !private ["Ps14_StringElement", "_DisallowMixedSignArithmetic"]
+- !private ["SS", "lastFilePathComponent"]
+- !private ["SS", "trimmingCharacters"]
+- !private ["Sy", "components"]
+- !private ["Sy", "contains"]
+- !private ["Sy", "deletingFileExtension"]
+- ["Sy", "init"]
+- ["Sy", "init"]
+- !private ["Sy", "jsonDecode"]
+- !private ["Sy", "lastFilePathComponent"]
+- !private ["Sy", "trimmingCharacters"]
+- !private ["s16TextOutputStreamP", "components"]
+- !private ["s16TextOutputStreamP", "contains"]
+- !private ["s16TextOutputStreamP", "deletingFileExtension"]
+- ["s16TextOutputStreamP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "jsonDecode"]
+- !private ["s16TextOutputStreamP", "lastFilePathComponent"]
+- !private ["s16TextOutputStreamP", "trimmingCharacters"]
+- !private ["s20TextOutputStreamableP", "components"]
+- !private ["s20TextOutputStreamableP", "contains"]
+- !private ["s20TextOutputStreamableP", "deletingFileExtension"]
+- ["s20TextOutputStreamableP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "jsonDecode"]
+- !private ["s20TextOutputStreamableP", "lastFilePathComponent"]
+- !private ["s20TextOutputStreamableP", "trimmingCharacters"]
+- !private ["10Foundation3URLV", "init"]
+- !private ["s18_BitwiseOperationsP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "_getBuiltinLogicValue"]
+- !private ["10Foundation13_CFBridgeableP", "components"]
+- !private ["10Foundation13_CFBridgeableP", "contains"]
+- !private ["10Foundation13_CFBridgeableP", "deletingFileExtension"]
+- !private ["10Foundation13_CFBridgeableP", "first"]
+- ["10Foundation13_CFBridgeableP", "init"]
+- ["10Foundation13_CFBridgeableP", "init"]
+- !private ["10Foundation13_CFBridgeableP", "insert"]
+- !private ["10Foundation13_CFBridgeableP", "isEmpty"]
+- !private ["10Foundation13_CFBridgeableP", "jsonDecode"]
+- !private ["10Foundation13_CFBridgeableP", "jsonEncodedString"]
+- !private ["10Foundation13_CFBridgeableP", "keys"]
+- !private ["10Foundation13_CFBridgeableP", "lastFilePathComponent"]
+- !private ["10Foundation13_CFBridgeableP", "newlines"]
+- !private ["10Foundation13_CFBridgeableP", "subscript"]
+- !private ["10Foundation13_CFBridgeableP", "trimmingCharacters"]
+- !private ["s15_CVarArgAlignedP", "init"]
+- !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s24_DestructorSafeContainerP", "insert"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "components"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "contains"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "deletingFileExtension"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "jsonDecode"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "lastFilePathComponent"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "trimmingCharacters"]
+- !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "components"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "contains"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "deletingFileExtension"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "jsonDecode"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "lastFilePathComponent"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "trimmingCharacters"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "components"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "contains"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "deletingFileExtension"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "jsonDecode"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "lastFilePathComponent"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "trimmingCharacters"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "components"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "contains"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "deletingFileExtension"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "jsonDecode"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "lastFilePathComponent"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "trimmingCharacters"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "components"]
+- !private ["s33_ExpressibleByStringInterpolationP", "contains"]
+- !private ["s33_ExpressibleByStringInterpolationP", "deletingFileExtension"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "jsonDecode"]
+- !private ["s33_ExpressibleByStringInterpolationP", "lastFilePathComponent"]
+- !private ["s33_ExpressibleByStringInterpolationP", "trimmingCharacters"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "insert"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "jsonEncodedString"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "keys"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation18_MutablePairBoxingP", "newlines"]
+- !private ["10Foundation13_NSBridgeableP", "components"]
+- !private ["10Foundation13_NSBridgeableP", "contains"]
+- !private ["10Foundation13_NSBridgeableP", "deletingFileExtension"]
+- !private ["10Foundation13_NSBridgeableP", "first"]
+- ["10Foundation13_NSBridgeableP", "init"]
+- ["10Foundation13_NSBridgeableP", "init"]
+- !private ["10Foundation13_NSBridgeableP", "insert"]
+- !private ["10Foundation13_NSBridgeableP", "isEmpty"]
+- !private ["10Foundation13_NSBridgeableP", "jsonDecode"]
+- !private ["10Foundation13_NSBridgeableP", "jsonEncodedString"]
+- !private ["10Foundation13_NSBridgeableP", "keys"]
+- !private ["10Foundation13_NSBridgeableP", "lastFilePathComponent"]
+- !private ["10Foundation13_NSBridgeableP", "newlines"]
+- !private ["10Foundation13_NSBridgeableP", "subscript"]
+- !private ["10Foundation13_NSBridgeableP", "trimmingCharacters"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "components"]
+- !private ["s21_ObjectiveCBridgeableP", "contains"]
+- !private ["s21_ObjectiveCBridgeableP", "deletingFileExtension"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "insert"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "jsonDecode"]
+- !private ["s21_ObjectiveCBridgeableP", "jsonEncodedString"]
+- !private ["s21_ObjectiveCBridgeableP", "keys"]
+- !private ["s21_ObjectiveCBridgeableP", "lastFilePathComponent"]
+- !private ["s21_ObjectiveCBridgeableP", "newlines"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "trimmingCharacters"]
+- !private ["10Foundation17_StructBridgeableP", "components"]
+- !private ["10Foundation17_StructBridgeableP", "contains"]
+- !private ["10Foundation17_StructBridgeableP", "deletingFileExtension"]
+- !private ["10Foundation17_StructBridgeableP", "jsonDecode"]
+- !private ["10Foundation17_StructBridgeableP", "lastFilePathComponent"]
+- !private ["10Foundation17_StructBridgeableP", "trimmingCharacters"]
+- !private ["10Foundation21_StructTypeBridgeableP", "components"]
+- !private ["10Foundation21_StructTypeBridgeableP", "contains"]
+- !private ["10Foundation21_StructTypeBridgeableP", "deletingFileExtension"]
+- !private ["10Foundation21_StructTypeBridgeableP", "jsonDecode"]
+- !private ["10Foundation21_StructTypeBridgeableP", "lastFilePathComponent"]
+- !private ["10Foundation21_StructTypeBridgeableP", "trimmingCharacters"]
+- !private ["10Foundation16_SwiftBridgeableP", "components"]
+- !private ["10Foundation16_SwiftBridgeableP", "contains"]
+- !private ["10Foundation16_SwiftBridgeableP", "deletingFileExtension"]
+- !private ["10Foundation16_SwiftBridgeableP", "jsonDecode"]
+- !private ["10Foundation16_SwiftBridgeableP", "lastFilePathComponent"]
+- !private ["10Foundation16_SwiftBridgeableP", "trimmingCharacters"]
+- !private ["s16_SwiftStringViewP", "components"]
+- !private ["s16_SwiftStringViewP", "contains"]
+- !private ["s16_SwiftStringViewP", "deletingFileExtension"]
+- ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "jsonDecode"]
+- !private ["s16_SwiftStringViewP", "lastFilePathComponent"]
+- !private ["s16_SwiftStringViewP", "trimmingCharacters"]
 depends-nominal:
-- "CSo7AVAsset"
-- "CSo21AVAssetImageGenerator"
-- !private "PSo29AVAsynchronousKeyValueLoading"
-- !private "Ps16AbsoluteValuable"
-- "Ps9AnyObject"
-- "Sa"
-- !private "Ps23BidirectionalCollection"
-- !private "Ps22BidirectionalIndexable"
-- !private "Vs18BidirectionalSlice"
-- !private "Ps19BinaryFloatingPoint"
-- !private "Ps17BitwiseOperations"
-- "CC11PerfectHTTP10MimeReader8BodySpec"
-- "Sb"
-- !private "P10PerfectNet28BytesSwappingUnsignedInteger"
-- !private "V12CoreGraphics7CGFloat"
-- "CSo7CGImage"
-- "VSC6CGSize"
-- "CSo10CLLocation"
-- "VSC22CLLocationCoordinate2D"
-- "VSC6CMTime"
-- "Ps7CVarArg"
-- !private "Vs9Character"
-- !private "V10Foundation12CharacterSet"
-- !private "Ps10Collection"
-- "Ps10Comparable"
-- "Vs14CountableRange"
-- "Ps28CustomDebugStringConvertible"
-- "Ps29CustomPlaygroundQuickLookable"
-- "Ps17CustomReflectable"
-- "Ps23CustomStringConvertible"
-- "O16MusicMatchServer13DatabaseError"
-- !private "V10Foundation4Date"
-- !private "VSC7Decimal"
-- !private "Vs27DefaultBidirectionalIndices"
-- !private "Vs26DefaultRandomAccessIndices"
-- "Vs10Dictionary"
-- !private "Vs18DictionaryIterator"
-- !private "V8Dispatch12DispatchTime"
-- !private "O8Dispatch20DispatchTimeInterval"
-- !private "V8Dispatch16DispatchWallTime"
-- "Sd"
-- "Ps9Equatable"
-- "Ps5Error"
-- !private "Ps25ExpressibleByArrayLiteral"
-- !private "Ps27ExpressibleByBooleanLiteral"
-- !private "Ps30ExpressibleByDictionaryLiteral"
-- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
-- !private "Ps25ExpressibleByFloatLiteral"
-- !private "Ps27ExpressibleByIntegerLiteral"
-- "Ps23ExpressibleByNilLiteral"
-- "Ps32ExpressibleByStringInterpolation"
-- "Ps26ExpressibleByStringLiteral"
-- "Ps33ExpressibleByUnicodeScalarLiteral"
-- "C10PerfectLib4File"
-- "O16MusicMatchServer9FileError"
-- "CSo11FileManager"
-- !private "Sf"
-- !private "Vs7Float80"
-- !private "Ps13FloatingPoint"
-- "P11PerfectHTTP11HTTPRequest"
-- "P11PerfectHTTP12HTTPResponse"
-- !private "O11PerfectHTTP18HTTPResponseStatus"
-- "Ps8Hashable"
-- "O20PerfectNotifications19IOSNotificationItem"
-- !private "V10Foundation9IndexPath"
-- !private "Ps9Indexable"
-- !private "Ps13IndexableBase"
-- !private "Vs16IndexingIterator"
-- "Si"
-- !private "Vs5Int16"
-- !private "Vs5Int32"
-- "Vs5Int64"
-- !private "Vs4Int8"
-- !private "Ps7Integer"
-- !private "Ps17IntegerArithmetic"
-- !private "Ps16IteratorProtocol"
-- "O10PerfectLib19JSONConversionError"
-- "P10PerfectLib15JSONConvertible"
-- !private "Ps22LazyCollectionProtocol"
-- "Vs17LazyMapCollection"
-- !private "Ps20LazySequenceProtocol"
-- "Ps25LosslessStringConvertible"
-- "Ps10MirrorPath"
-- !private "Ps17MutableCollection"
-- !private "Ps16MutableIndexable"
-- "C5MySQL5MySQL"
-- "OSC21NSBitmapImageFileType"
-- "CSo16NSBitmapImageRep"
-- "PSo8NSCoding"
-- "PSo9NSCopying"
-- "CSo7NSImage"
-- !private "CSo10NSImageRep"
-- "PSo16NSMutableCopying"
-- "CSo8NSObject"
-- "PSo16NSObjectProtocol"
-- "PSo19NSPasteboardReading"
-- "PSo19NSPasteboardWriting"
-- "PSo14NSSecureCoding"
-- "CSo8NSString"
-- "C20PerfectNotifications18NotificationPusher"
-- !private "V20PerfectNotifications20NotificationResponse"
-- "Sq"
-- !private "Ps22RandomAccessCollection"
-- !private "Ps21RandomAccessIndexable"
-- !private "Vs17RandomAccessSlice"
-- !private "Vs5Range"
-- !private "Ps26RangeReplaceableCollection"
-- !private "Ps25RangeReplaceableIndexable"
-- !private "Ps16RawRepresentable"
-- !private "P10Foundation20ReferenceConvertible"
-- "CC5MySQL5MySQL7Results"
-- !private "Ps8Sequence"
-- !private "Ps13SignedInteger"
-- !private "Ps12SignedNumber"
-- !private "Vs5Slice"
-- !private "Ps10Strideable"
+- !private "20PerfectNotifications20APNSNotificationItemO"
+- !private "Sa"
+- !private "s13ArrayProtocolP"
+- "SK"
+- !private "SB"
+- !private "Sz"
+- !private "11PerfectHTTP10MimeReaderC8BodySpecC"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "10Foundation12CharacterSetV"
+- "Sl"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "16MusicMatchServer13DatabaseErrorO"
+- "Se"
+- !private "SD"
+- !private "Sd"
+- "SE"
+- !private "SS10FoundationE8EncodingV"
+- "SQ"
+- "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s25ExpressibleByFloatLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "10PerfectLib4FileC"
+- !private "10Foundation10FileHandleC"
+- !private "10Foundation11FileManagerC"
+- !private "s17FixedWidthIntegerP"
+- !private "SF"
+- !private "11PerfectHTTP11HTTPRequestP"
+- !private "11PerfectHTTP12HTTPResponseP"
+- !private "11PerfectHTTP18HTTPResponseStatusO"
+- "SH"
+- !private "7SwiftGD5ImageC"
+- !private "Si"
+- !private "St"
+- "10PerfectLib19JSONConversionErrorO"
+- "10PerfectLib15JSONConvertibleP"
+- !private "s22LazyCollectionProtocolP"
+- !private "s17LazyMapCollectionV"
+- !private "s20LazySequenceProtocolP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- !private "SM"
+- !private "12PerfectMySQL0bC0C"
+- !private "10Foundation8NSCodingP"
+- !private "10Foundation9NSCopyingP"
+- !private "10Foundation16NSMutableCopyingP"
+- !private "10Foundation8NSObjectC"
+- !private "10Foundation16NSObjectProtocolP"
+- !private "10Foundation14NSSecureCodingP"
+- !private "10Foundation8NSStringC"
+- !private "20PerfectNotifications18NotificationPusherC"
+- !private "20PerfectNotifications20NotificationResponseV"
+- !private "Sj"
+- !private "10Foundation4PipeC"
+- !private "10Foundation7ProcessC"
+- !private "Sk"
+- "Sm"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "12PerfectMySQL0bC0C7ResultsC"
+- "ST"
+- "16MusicMatchServer0C5ErrorO"
+- !private "s10SetAlgebraP"
+- !private "SZ"
+- !private "s13SignedNumericP"
+- !private "11PerfectHTTP17StaticFileHandlerV"
+- !private "Sx"
 - "SS"
-- "Ps16TextOutputStream"
-- "Ps20TextOutputStreamable"
-- !private "Su"
-- !private "Vs6UInt16"
-- "Vs6UInt32"
-- !private "Vs6UInt64"
-- "Vs5UInt8"
-- "V10Foundation3URL"
-- !private "Sc"
-- !private "Ps15UnsignedInteger"
-- !private "Ps14_ArrayProtocol"
-- !private "Ps15_CVarArgAligned"
-- !private "Ps22_CVarArgPassedAsDouble"
-- !private "Ps24_DestructorSafeContainer"
-- !private "Ps28_DisallowMixedSignArithmetic"
-- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
-- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
-- !private "Ps33_ExpressibleByBuiltinFloatLiteral"
-- !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
-- "Ps34_ExpressibleByBuiltinStringLiteral"
-- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
-- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
-- !private "Ps34_ExpressibleByFileReferenceLiteral"
-- !private "Ps26_ExpressibleByImageLiteral"
-- "Ps35_HasCustomAnyHashableRepresentation"
-- "Ps9_Hashable"
-- !private "Ps14_Incrementable"
-- !private "Ps8_Integer"
-- !private "Ps18_IntegerArithmetic"
-- "Ps21_ObjectiveCBridgeable"
-- !private "Ps14_SignedInteger"
-- !private "Ps11_Strideable"
-- !private "Ps14_StringElement"
+- "Sy"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "10Foundation3URLV"
+- !private "s18_BitwiseOperationsP"
+- "10Foundation13_CFBridgeableP"
+- !private "s15_CVarArgAlignedP"
+- !private "s22_CVarArgPassedAsDoubleP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s33_ExpressibleByBuiltinFloatLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation18_MutablePairBoxingP"
+- "10Foundation13_NSBridgeableP"
+- "s21_ObjectiveCBridgeableP"
+- !private "10Foundation17_StructBridgeableP"
+- !private "10Foundation21_StructTypeBridgeableP"
+- !private "10Foundation16_SwiftBridgeableP"
+- "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTP.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/mysqlclient-2.0.0/module.modulemap"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../srtp.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl23.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../pqueue.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../dtls1.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../tls1.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl3.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ssl2.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../opensslconf.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../kssl.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../hmac.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../pem2.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../e_os2.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../pem.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../pkcs7.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../x509_vfy.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../sha.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../dh.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../dsa.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../rsa.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ecdh.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ecdsa.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ec.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../bn.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../asn1.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../obj_mac.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../objects.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../evp.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../buffer.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../x509.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../comp.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../lhash.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../err.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../symhacks.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../ossl_typ.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../opensslv.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../safestack.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../stack.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../crypto.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/../bio.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/openssl.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/COpenSSL-2.0.1/COpenSSL/include/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/CHTTPParser.build/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectLib.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNet.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectThread.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-2.0.0/Sources/CHTTPParser/include/http_parser.h"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MySQL.swiftmodule"
-- "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql/psi/psi_base.h"
-- "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql/psi/psi_memory.h"
-- "/usr/local/Cellar/mysql/5.7.13/include/mysql/my_alloc.h"
-- "/usr/local/Cellar/mysql/5.7.13/include/mysql/typelib.h"
-- "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql/plugin_auth_common.h"
-- "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql/client_plugin.h"
-- "/usr/local/Cellar/mysql/5.7.13/include/mysql/my_list.h"
-- "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql_time.h"
-- "/usr/local/Cellar/mysql/5.7.13/include/mysql/my_command.h"
-- "/usr/local/Cellar/mysql/5.7.13/include/mysql/binary_log_types.h"
-- "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql_com.h"
-- "/usr/local/Cellar/mysql/5.7.13/include/mysql/mysql_version.h"
-- "/usr/local/include/mysql/mysql.h"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AVFoundation.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreMedia.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreAudio.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreLocation.swiftmodule"
-- "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectNotifications.swiftmodule"
-interface-hash: "f687d62162b0a0fc19686de02215ca06"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/SwiftGD.swiftmodule"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectCRUD.swiftmodule"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectMySQL.swiftmodule"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTP.swiftmodule"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectLib.swiftmodule"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectThread.swiftmodule"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/Dispatch.swiftmodule"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/Foundation.swiftmodule"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectCrypto.swiftmodule"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.swiftmodule"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectNotifications.swiftmodule"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectNet.swiftmodule"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/Swift.swiftmodule"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/usr/include/mysql/typelib.h"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-CZlib-src.git--4817414574506890708/PerfectCZlib/include/../zlib.h"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-CZlib-src.git--4817414574506890708/PerfectCZlib/include/czlib.h"
+- "/usr/include/mysql/my_alloc.h"
+- "/usr/include/mysql/my_command.h"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-LinuxBridge.git-4690752410048834749/Sources/LinuxBridge/include/LinuxBridge.h"
+- "/usr/include/mysql/mysql_time.h"
+- "/usr/include/mysql/mysql/psi/psi_base.h"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-CZlib-src.git--4817414574506890708/PerfectCZlib/include/../zconf.h"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-CZlib-src.git--4817414574506890708/PerfectCZlib/include/../zutil.h"
+- "/usr/include/mysql/mysql.h"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-COpenSSL-Linux.git-3557131771114177070/COpenSSL/include/openssl.h"
+- "/usr/include/mysql/mysql_com.h"
+- "/usr/include/mysql/mysql/client_plugin.h"
+- "/usr/include/mysql/mysql_version.h"
+- "/usr/include/mysql/mysql/plugin_auth_common.h"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectCHTTPParser/include/http_parser.h"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-CZlib-src.git--4817414574506890708/PerfectCZlib/include/../inftrees.h"
+- "/usr/include/mysql/binary_log_types.h"
+- "/usr/include/mysql/my_list.h"
+- "/usr/include/mysql/mysql/psi/psi_memory.h"
+- "/home/ubuntu/swift/swift-4.2.2-RELEASE-ubuntu18.04/usr/lib/swift/linux/x86_64/glibc.modulemap"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-mysqlclient-Linux.git-1120755827560657871/module.modulemap"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Cgd.git-6783677904322374398/module.modulemap"
+- "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/LinuxBridge.build/module.modulemap"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-COpenSSL-Linux.git-3557131771114177070/COpenSSL/include/module.modulemap"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-CZlib-src.git--4817414574506890708/PerfectCZlib/include/module.modulemap"
+- "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectCHTTPParser/include/module.modulemap"
+interface-hash: "ee57831bbab79b92bd99be16ec765890"

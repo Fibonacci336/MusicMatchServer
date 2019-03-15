@@ -1,9 +1,11 @@
-version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
-options: "9a6a2c519d1a1a846df4c2c4a9430abe"
-build_time: [529997021, 194379000]
+version: "Swift version 4.2.2 (swift-4.2.2-RELEASE)"
+options: "b52b00bd8cb93a8cf7d19137f4f29c83"
+build_time: [1552605285, 222159382]
 inputs:
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-2.0.0/Sources/Net.swift": [527286108, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-2.0.0/Sources/NetEvent.swift": [527286108, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-2.0.0/Sources/NetNamedPipe.swift": [527286108, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-2.0.0/Sources/NetTCP.swift": [527286108, 0]
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectNet-2.0.0/Sources/NetTCPSSL.swift": [527286108, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Net.git-4671132050361332659/Sources/PerfectNet/Net.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Net.git-4671132050361332659/Sources/PerfectNet/NetAddress.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Net.git-4671132050361332659/Sources/PerfectNet/NetEvent.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Net.git-4671132050361332659/Sources/PerfectNet/NetNamedPipe.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Net.git-4671132050361332659/Sources/PerfectNet/NetTCP.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Net.git-4671132050361332659/Sources/PerfectNet/NetTCPSSL.swift": [1552604973, 0]
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-Net.git-4671132050361332659/Sources/PerfectNet/NetUDP.swift": [1552604973, 0]
