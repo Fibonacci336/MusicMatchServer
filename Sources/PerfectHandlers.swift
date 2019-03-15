@@ -587,7 +587,6 @@ func deleteUser(_ request: HTTPRequest, response: HTTPResponse) {
     let request4 = "DELETE FROM Messages WHERE Recipient=\"\(uuid)\"; "
     
     let succeeded = mysql.query(statement: "SELECT UserMedia FROM Users WHERE UUID=\"\(uuid)\";")
-    mysql.storeResults()
     
     if let queryResults = mysql.storeResults(){
         queryResults.forEachRow{ row in
