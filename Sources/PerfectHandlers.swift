@@ -594,7 +594,7 @@ func deleteUser(_ request: HTTPRequest, response: HTTPResponse) {
             if let rowValue = row[0]{
                 if let dict = try? row[0]?.jsonDecode() as! [String : String]{
                     for (fileName, fileType) in dict{
-                        let file = File(fileName)
+                        let file = File("webroot/" + fileName)
                         file.delete()
                     }
                 }
