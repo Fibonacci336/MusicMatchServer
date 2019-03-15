@@ -590,12 +590,17 @@ func deleteUser(_ request: HTTPRequest, response: HTTPResponse) {
     
     if let queryResults = mysql.storeResults(){
         queryResults.forEachRow{ row in
-            if let dict = try? row[0].jsonDecode() as! [String : String]{
-                for (fileName, fileType) in dict{
-                    let file = File(fileName)
-                    file.delete()
+            
+            if let rowValue = row[0]{
+                if let dict = try? row[0]?.jsonDecode() as! [String : String]{
+                    for (fileName, fileType) in dict{
+                        let file = File(fileName)
+                        file.delete()
+                    }
                 }
             }
+            
+            
         }
     }
     
