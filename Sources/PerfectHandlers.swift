@@ -599,8 +599,7 @@ func deleteUser(_ request: HTTPRequest, response: HTTPResponse) {
     if !didSucceed{
         let errorCode = mysql.errorCode()
         let errorMessage = "Request failed: \(mysql.errorMessage())"
-	print(fullRequest)
-	print(errorMessage)        
+		print(errorMessage)
         displayErrorCode(errorCode: Int(errorCode), response: response, description: errorMessage)
         response.completed()
         
