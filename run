@@ -1,6 +1,6 @@
 clear
 clean () {
-	swift build --clean
+	swift package clean
 	echo "Cleaning..."
 }
 

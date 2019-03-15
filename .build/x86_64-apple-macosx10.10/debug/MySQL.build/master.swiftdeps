@@ -1,5 +1,0 @@
-version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
-options: "1e522e6a96d083fe1968d2871ac5581c"
-build_time: [1552597266, 297805000]
-inputs:
-  "/Users/fibonacci/MusicMatchServer/.build/checkouts/Perfect-MySQL.git--6334400757854872161/Sources/MySQL/MySQL.swift": [1552597261, 0]

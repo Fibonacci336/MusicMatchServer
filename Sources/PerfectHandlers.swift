@@ -24,7 +24,7 @@ import Darwin
 
 import SwiftGD
 
-import MySQL
+import PerfectMySQL
 
 import PerfectLib
 import PerfectHTTP
@@ -565,7 +565,7 @@ func runTerminalCommand(with command : String, args: String...) -> (statusCode: 
 }
 
 func deleteUser(_ request: HTTPRequest, response: HTTPResponse) {
-    
+    print("Recieved Delete User Request")    
     
     guard let uuid = request.urlVariables["userUUID"] else{
         print("No User to Delete!")
@@ -581,28 +581,39 @@ func deleteUser(_ request: HTTPRequest, response: HTTPResponse) {
         mysql.close()
     }
     
-    let request1 = "DELETE FROM Users WHERE UUID=\"\(uuid)\";"
-    let request2 = "DELETE FROM UserLogInData WHERE UUID=\"\(uuid)\";"
-    let request3 = "DELETE FROM Messages WHERE Sender=\"\(uuid)\";"
-    let request4 = "DELETE FROM Messages WHERE Recipient=\"\(uuid)\";"
+    let request1 = "DELETE FROM Users WHERE UUID=\"\(uuid)\"; "
+    let request2 = "DELETE FROM UserLogInData WHERE UUID=\"\(uuid)\"; "
+    let request3 = "DELETE FROM Messages WHERE Sender=\"\(uuid)\"; "
+    let request4 = "DELETE FROM Messages WHERE Recipient=\"\(uuid)\"; "
     
     
     let fullRequest = request1 + request2 + request3 + request4
     
-    let didSucceed = mysql.query(statement: fullRequest)
-    if !didSucceed{
-        
+    let didSucceed1 = mysql.query(statement: request1)
+    let didSucceed2 = mysql.query(statement: request2)
+    let didSucceed3 = mysql.query(statement: request3)
+    let didSucceed4 = mysql.query(statement: request4)
+    if !(didSucceed1 && didSucceed2 && didSucceed3 && didSucceed4){        
         let errorCode = mysql.errorCode()
         let errorMessage = "Request failed: \(mysql.errorMessage())"
-        
+	print(fullRequest)
+	print(errorMessage)        
         displayErrorCode(errorCode: Int(errorCode), response: response, description: errorMessage)
         response.completed()
         
         return
     }
-    
+    print(didSucceed1)
+    print(didSucceed2)
+    print(didSucceed3)
+    print(didSucceed4)
+    print(request1)
+    print(request2)
+    print(request3)
+    print(request4)
+    print("Successfully Deleted User")
     response.appendBody(string: "Successfully Deleted User (\"\(uuid)\")")
-    
+    response.completed()    
     
 }
 

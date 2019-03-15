@@ -18,7 +18,7 @@
 //
 
 import PerfectLib
-import MySQL
+import PerfectMySQL
 import PerfectNet
 import PerfectThread
 import PerfectHTTPServer

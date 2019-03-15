@@ -1,35 +1,113 @@
 {
   "": {
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/master.swiftdeps"
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/master.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-2.0.0/Sources/PerfectHTTPServer/HPACK.swift": {
-    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HPACK.d",
-    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HPACK.swift.o",
-    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HPACK~partial.swiftmodule",
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HPACK.swiftdeps"
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTP11/HTTP11Request.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP11Request.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP11/HTTP11Request.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP11Request~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP11Request.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-2.0.0/Sources/PerfectHTTPServer/HTTP11Request.swift": {
-    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Request.d",
-    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Request.swift.o",
-    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Request~partial.swiftmodule",
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Request.swiftdeps"
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTP11/HTTP11Response.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP11Response.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP11/HTTP11Response.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP11Response~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP11Response.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-2.0.0/Sources/PerfectHTTPServer/HTTP11Response.swift": {
-    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Response.d",
-    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Response.swift.o",
-    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Response~partial.swiftmodule",
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP11Response.swiftdeps"
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTP2/HPACK.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HPACK.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2/HPACK.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HPACK~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HPACK.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-2.0.0/Sources/PerfectHTTPServer/HTTP2.swift": {
-    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP2.d",
-    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP2.swift.o",
-    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP2~partial.swiftmodule",
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTP2.swiftdeps"
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTP2/HTTP2.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2/HTTP2.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Packages/PerfectHTTPServer-2.0.0/Sources/PerfectHTTPServer/HTTPServer.swift": {
-    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTPServer.d",
-    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTPServer.swift.o",
-    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTPServer~partial.swiftmodule",
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/PerfectHTTPServer.build/HTTPServer.swiftdeps"
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTP2/HTTP2Client.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Client.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2/HTTP2Client.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Client~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Client.swiftdeps"
+  },
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTP2/HTTP2Frame.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Frame.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2/HTTP2Frame.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Frame~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Frame.swiftdeps"
+  },
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTP2/HTTP2FrameReader.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2FrameReader.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2/HTTP2FrameReader.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2FrameReader~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2FrameReader.swiftdeps"
+  },
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTP2/HTTP2FrameWriter.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2FrameWriter.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2/HTTP2FrameWriter.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2FrameWriter~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2FrameWriter.swiftdeps"
+  },
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTP2/HTTP2PrefaceValidator.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2PrefaceValidator.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2/HTTP2PrefaceValidator.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2PrefaceValidator~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2PrefaceValidator.swiftdeps"
+  },
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTP2/HTTP2Request.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Request.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2/HTTP2Request.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Request~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Request.swiftdeps"
+  },
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTP2/HTTP2Response.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Response.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2/HTTP2Response.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Response~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Response.swiftdeps"
+  },
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTP2/HTTP2Session.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Session.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2/HTTP2Session.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Session~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2Session.swiftdeps"
+  },
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTP2/HTTP2SessionSettings.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2SessionSettings.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2/HTTP2SessionSettings.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2SessionSettings~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTP2SessionSettings.swiftdeps"
+  },
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTPContentCompression.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPContentCompression.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPContentCompression.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPContentCompression~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPContentCompression.swiftdeps"
+  },
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTPMultiplexer.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPMultiplexer.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPMultiplexer.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPMultiplexer~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPMultiplexer.swiftdeps"
+  },
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTPServer.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPServer.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPServer.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPServer~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPServer.swiftdeps"
+  },
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTPServerEx.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPServerEx.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPServerEx.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPServerEx~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPServerEx.swiftdeps"
+  },
+  "/home/ubuntu/MusicMatchServer/.build/checkouts/Perfect-HTTPServer.git-7111465793996875100/Sources/PerfectHTTPServer/HTTPServerExConfig.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPServerExConfig.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPServerExConfig.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPServerExConfig~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/PerfectHTTPServer.build/HTTPServerExConfig.swiftdeps"
   }
 }

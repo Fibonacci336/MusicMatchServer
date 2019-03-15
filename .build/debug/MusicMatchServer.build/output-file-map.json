@@ -1,41 +1,41 @@
 {
   "": {
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/master.swiftdeps"
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/master.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/arguments.swift": {
-    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/arguments.d",
-    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/arguments.swift.o",
-    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/arguments~partial.swiftmodule",
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/arguments.swiftdeps"
+  "/home/ubuntu/MusicMatchServer/Sources/MySQLFunctions.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/MySQLFunctions.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/MySQLFunctions.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/MySQLFunctions~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/MySQLFunctions.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/main.swift": {
-    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/main.d",
-    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/main.swift.o",
-    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/main~partial.swiftmodule",
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/main.swiftdeps"
+  "/home/ubuntu/MusicMatchServer/Sources/PerfectHandlers.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/PerfectHandlers.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/PerfectHandlers.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/PerfectHandlers~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/PerfectHandlers.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/MySQLFunctions.swift": {
-    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/MySQLFunctions.d",
-    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/MySQLFunctions.swift.o",
-    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/MySQLFunctions~partial.swiftmodule",
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/MySQLFunctions.swiftdeps"
+  "/home/ubuntu/MusicMatchServer/Sources/ServerTimer.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/ServerTimer.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/ServerTimer.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/ServerTimer~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/ServerTimer.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/PerfectHandlers.swift": {
-    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/PerfectHandlers.d",
-    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/PerfectHandlers.swift.o",
-    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/PerfectHandlers~partial.swiftmodule",
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/PerfectHandlers.swiftdeps"
+  "/home/ubuntu/MusicMatchServer/Sources/Stock.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/Stock.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/Stock.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/Stock~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/Stock.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/ServerTimer.swift": {
-    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/ServerTimer.d",
-    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/ServerTimer.swift.o",
-    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/ServerTimer~partial.swiftmodule",
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/ServerTimer.swiftdeps"
+  "/home/ubuntu/MusicMatchServer/Sources/arguments.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/arguments.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/arguments.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/arguments~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/arguments.swiftdeps"
   },
-  "/Users/Fibonacci/Documents/MusicMatchServer/Sources/Stock.swift": {
-    "dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/Stock.d",
-    "object": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/Stock.swift.o",
-    "swiftmodule": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/Stock~partial.swiftmodule",
-    "swift-dependencies": "/Users/Fibonacci/Documents/MusicMatchServer/.build/debug/MusicMatchServer.build/Stock.swiftdeps"
+  "/home/ubuntu/MusicMatchServer/Sources/main.swift": {
+    "dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/main.d",
+    "object": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/main.swift.o",
+    "swiftmodule": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/main~partial.swiftmodule",
+    "swift-dependencies": "/home/ubuntu/MusicMatchServer/.build/x86_64-unknown-linux/debug/MusicMatchServer.build/main.swiftdeps"
   }
 }
