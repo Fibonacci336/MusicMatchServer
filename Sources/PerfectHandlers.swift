@@ -307,13 +307,9 @@ func restJSONHandler(_ request: HTTPRequest, response: HTTPResponse) {
     
     
     do{
-        let dict = try getDataFromDatabase(with: request)
-        if(dict.isEmpty){
-            response.appendBody(string: "true")
-        }else{
-            let jsonString = try dictionary.jsonEncodedString()
-            response.appendBody(string: jsonString)
-        }
+        let dict = try getDataFromDatabase(with: statement)
+        let jsonString = try dict.jsonEncodedString()
+        response.appendBody(string: jsonString)
         
     }catch{
         response.appendBody(string: "false")
@@ -434,7 +430,7 @@ func getVideoThumbnailFromOSX(videoURL : String) throws -> Image{
         return image
     }else{
         print("Returning Nil Thumbnail for Video " + videoURL)
-        throw ServerError.couldNotAccessImage
+        throw ServerError.generic("Could not access image")
     }
     
 }

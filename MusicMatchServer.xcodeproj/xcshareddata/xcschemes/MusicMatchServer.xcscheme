@@ -14,133 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_PerfectLib"
-               BuildableName = "PerfectLib.framework"
-               BlueprintName = "PerfectLib"
-               ReferencedContainer = "container:MusicMatchServer.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_COpenSSL"
-               BuildableName = "COpenSSL.framework"
-               BlueprintName = "COpenSSL"
-               ReferencedContainer = "container:MusicMatchServer.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_PerfectThread"
-               BuildableName = "PerfectThread.framework"
-               BlueprintName = "PerfectThread"
-               ReferencedContainer = "container:MusicMatchServer.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_PerfectNet"
-               BuildableName = "PerfectNet.framework"
-               BlueprintName = "PerfectNet"
-               ReferencedContainer = "container:MusicMatchServer.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_PerfectHTTP"
-               BuildableName = "PerfectHTTP.framework"
-               BlueprintName = "PerfectHTTP"
-               ReferencedContainer = "container:MusicMatchServer.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_CHTTPParser"
-               BuildableName = "CHTTPParser.framework"
-               BlueprintName = "CHTTPParser"
-               ReferencedContainer = "container:MusicMatchServer.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_PerfectHTTPServer"
-               BuildableName = "PerfectHTTPServer.framework"
-               BlueprintName = "PerfectHTTPServer"
-               ReferencedContainer = "container:MusicMatchServer.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_MySQL"
-               BuildableName = "MySQL.framework"
-               BlueprintName = "MySQL"
-               ReferencedContainer = "container:MusicMatchServer.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_PerfectNotifications"
-               BuildableName = "PerfectNotifications.framework"
-               BlueprintName = "PerfectNotifications"
-               ReferencedContainer = "container:MusicMatchServer.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "______Target_MusicMatchServer"
+               BlueprintIdentifier = "MusicMatchServer::MusicMatchServer"
                BuildableName = "MusicMatchServer"
                BlueprintName = "MusicMatchServer"
                ReferencedContainer = "container:MusicMatchServer.xcodeproj">
@@ -168,15 +42,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "______Target_PerfectLib"
-            BuildableName = "PerfectLib.framework"
-            BlueprintName = "PerfectLib"
+            BlueprintIdentifier = "MusicMatchServer::MusicMatchServer"
+            BuildableName = "MusicMatchServer"
+            BlueprintName = "MusicMatchServer"
             ReferencedContainer = "container:MusicMatchServer.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
