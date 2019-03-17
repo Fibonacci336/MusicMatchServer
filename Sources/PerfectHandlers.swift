@@ -295,46 +295,33 @@ func recieveLocalUsers(_ request: HTTPRequest, response: HTTPResponse) {
 }
 
 func restJSONHandler(_ request: HTTPRequest, response: HTTPResponse) {
-    do{
-        let mysql = try initializeDatabaseConnection()
-        defer {
-            mysql.close()
-        }
-        print("Getting REST Query")
-        let statement = request.postBodyString!
-        
-        if statement.contains(string: "SELECT"){
-            print("Returning Data From REST Query")
-        }else if statement.contains(string: "UPDATE"){
-            print("Updating Server Data")
-        }
-        
-        let query = mysql.query(statement: statement)
-        if(query){
-            var dictionary = [String : [String?]]()
-            if let queryResults = mysql.storeResults(){
-                var index = 0
-                queryResults.forEachRow{ row in
-                    print(row)
-                    dictionary[String(index)] = row
-                    index+=1
-                }
-                
-                do{
-                    let jsonString = try dictionary.jsonEncodedString()
-                    response.appendBody(string: jsonString)
-                }catch{
-                    print("Could not encode dictionary")
-                }
-            }else{
-                response.appendBody(string: "true")
-            }
-        }
-    }catch{
-        print("Could not initialize database connection")
-        response.appendBody(string: "false")
+    
+    print("Getting REST Query")
+    let statement = request.postBodyString!
+    
+    if statement.contains(string: "SELECT"){
+        print("Returning Data From REST Query")
+    }else if statement.contains(string: "UPDATE"){
+        print("Updating Server Data")
     }
+    
+    
+    do{
+        let dict = try getDataFromDatabase(with: request)
+        if(dict.isEmpty){
+            response.appendBody(string: "true")
+        }else{
+            let jsonString = try dictionary.jsonEncodedString()
+            response.appendBody(string: jsonString)
+        }
+        
+    }catch{
+        response.appendBody(string: "false")
+        print("Could not encode dictionary")
+    }
+    
     response.completed()
+    
 }
 
 
