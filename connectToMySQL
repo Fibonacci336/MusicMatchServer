@@ -1,0 +1,1 @@
+mysql -h mysql -h fibonacciinstance.ceqqk1kcroae.us-west-2.rds.amazonaws.com -P 3306 -u fibonacci -p
