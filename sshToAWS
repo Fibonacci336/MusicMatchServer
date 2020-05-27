@@ -1,1 +1,1 @@
-ssh -i ../MusicMatchInstance.pem ubuntu@ec2-34-217-179-244.us-west-2.compute.amazonaws.com
+ssh -i MusicMatchKeyPair.pem ubuntu@ec2-34-210-29-111.us-west-2.compute.amazonaws.com

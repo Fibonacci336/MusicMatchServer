@@ -1,3 +1,4 @@
+// swift-tools-version:5.0
 //
 //  Package.swift
 //  PerfectTemplate
@@ -20,14 +21,17 @@
 import PackageDescription
 
 let package = Package(
-	name: "MusicMatchServer",
-	targets: [],
-	dependencies: [
-	              	.Package(url:"https://github.com/PerfectlySoft/Perfect-HTTPServer.git", majorVersion: 3),
-			.Package(url:"https://github.com/PerfectlySoft/Perfect-MySQL.git", majorVersion: 3),
-                      	.Package(url:"https://github.com/PerfectlySoft/Perfect-Notifications.git", majorVersion: 3),
-                      	.Package(url: "https://github.com/twostraws/SwiftGD.git", majorVersion: 2)
-                      
+    name: "MusicMatchServer",
+    products: [
+        .library(name: "MusicMatchServer", targets: ["MusicMatchServer"])
+    ],
+    dependencies: [
+        .package(url: "https://github.com/PerfectlySoft/Perfect-HTTPServer.git", from: "3.0.0"),
+        .package(url: "https://github.com/PerfectlySoft/Perfect-MySQL.git", from: "3.0.0"),
+        .package(url: "https://github.com/PerfectlySoft/Perfect-Notifications.git", from: "3.0.0"),
+        .package(url: "https://github.com/twostraws/SwiftGD.git", .exact("2.4.0"))
+    ],
+    targets: [
+        .target(name: "MusicMatchServer", dependencies: ["PerfectHTTPServer", "PerfectMySQL", "PerfectNotifications", "SwiftGD"], path: "Sources")
     ]
-
 )

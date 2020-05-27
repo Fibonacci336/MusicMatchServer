@@ -101,10 +101,10 @@ class StockRefreshTimer : ServerTimer{
             } else {
                 
                 if let dataString = String.init(data: data!, encoding: String.Encoding.utf8){
-                    if let jsonDictionary = try? dataString.jsonDecode() as! [String : Any]{
+                    if let jsonDictionary = try? dataString.jsonDecode() as? [String : Any]{
                         let queryDict = jsonDictionary["query"] as! [String : Any]
                         let resultsDict = queryDict["results"] as! [String : Any]
-                        var quoteDict = resultsDict["quote"] as! [String : Any]
+                        let quoteDict = resultsDict["quote"] as! [String : Any]
                         
                         do{
                             var isNull = try quoteDict["Name"].jsonEncodedString() == "null"
@@ -133,11 +133,11 @@ class StockRefreshTimer : ServerTimer{
                         let last = Float(dict["LastTradePriceOnly"]!)!
                         let range = dict["DaysRange"]!
                         let company = dict["Name"]!
-                        let rangeArray = range.characters.split(separator: "-").map(String.init)
+                        let rangeArray = range.split(separator: "-").map(String.init)
                         let open = Float(rangeArray[0].replacingOccurrences(of: " ", with: ""))!
                         let close = Float(rangeArray[1].replacingOccurrences(of: " ", with: ""))!
                         let stock = Stock(stockSymbol: symbol, company: company, lastPrice: last, lowPrice: low, highPrice: high, openPrice: open, closePrice: close)
-                        if let findStockIndex = stockArray.index(where: { return $0.stockSymbol == symbol }){
+                        if let findStockIndex = stockArray.firstIndex(where: { return $0.stockSymbol == symbol }){
                             stockArray[findStockIndex] = stock
                             print("Refreshed Stock: " + symbol)
                         }else{

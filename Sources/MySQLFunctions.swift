@@ -67,9 +67,7 @@ func deleteColumn(_ name : String, mysql : MySQL, table : String){
 func initializeUserLogInData(){
     do{
         let mysql = try initializeDatabaseConnection()
-        defer {
-            mysql.close()
-        }
+
         let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS UserLogInData (UUID TEXT, FullName TEXT, Email TEXT,Password TEXT);")
         guard tableSuccess else {
             print(mysql.errorMessage())
@@ -87,9 +85,7 @@ func initializeUserLogInData(){
 func initializeMessagesData(){
     do{
         let mysql = try initializeDatabaseConnection()
-        defer {
-            mysql.close()
-        }
+
         let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS Messages (MessageUUID TEXT, Sender TEXT, Recipient TEXT, MessageContent TEXT, SendDate DATETIME, Status TEXT, MessageType TEXT);")
         
         guard tableSuccess else {
@@ -106,9 +102,7 @@ func initializeMessagesData(){
 func initializeUserData(){
     do{
         let mysql = try initializeDatabaseConnection()
-        defer {
-            mysql.close()
-        }
+
         //FIX
         let tableSuccess = mysql.query(statement: "CREATE TABLE IF NOT EXISTS Users (UserType TEXT, UserName TEXT, UUID TEXT, BirthDate DATE, MusicType TEXT, BandPosition TEXT, UserMedia TEXT, CurrentLat DOUBLE, CurrentLong DOUBLE, Available INT, Bio TEXT, LookingFor TEXT, DistanceUnit TEXT, DeviceToken TEXT, LastLogin DATETIME);")
         

@@ -35,14 +35,14 @@ import Foundation
 
 // host where mysql server is
 
-//#if os(Linux)
+#if os(Linux)
 let HOST = "fibonacciinstance.ceqqk1kcroae.us-west-2.rds.amazonaws.com"
 let USER = "fibonacci"
-//#else
-//let HOST = "127.0.0.1"
+#else
+let HOST = "127.0.0.1"
 //// mysql username
-//let USER = "root"
-//#endif
+let USER = "root"
+#endif
 // mysql root password
 let PASSWORD = "123qweasdzxC"
 // database name
@@ -55,7 +55,7 @@ var currentURL = "http://0.0.0.0:8181/"
 public func PerfectServerModuleInit() {
     
     do{
-        let mysql = try initializeDatabaseConnection()
+        _ = try initializeDatabaseConnection()
     }catch{
         print("Could not initialize database connection or created database")
     }
@@ -84,7 +84,7 @@ func stockListHandler(_ request : HTTPRequest, response : HTTPResponse){
 func messageHandler(_ request : HTTPRequest, response : HTTPResponse){
     print("Handling Message Request")
     
-    if let dict = try? request.postBodyString!.jsonDecode() as! [String : String]{
+    if let dict = try? request.postBodyString!.jsonDecode() as? [String : String]{
         print(dict)
         let messageUUID = dict["messageUUID"]
         let senderUUID = dict["sender"]
@@ -97,7 +97,7 @@ func messageHandler(_ request : HTTPRequest, response : HTTPResponse){
         
         
         let messageDataRequest = "INSERT INTO Messages (MessageUUID, Sender, Recipient, MessageContent, SendDate, Status, MessageType) VALUES (\"\(messageUUID!)\", \"\(senderUUID!)\", \"\(recipientUUID!)\", \"\(messageBody!)\", \"\(date!)\", \"\(status!)\", \"\(messageType!)\");"
-        let data = try? getDataFromDatabase(with: messageDataRequest)
+        _ = try? getDataFromDatabase(with: messageDataRequest)
         
         sendMessageNotification(message: messageBody!, recipientUUID: recipientUUID!, senderUUID: senderUUID!)
         
@@ -107,24 +107,21 @@ func messageHandler(_ request : HTTPRequest, response : HTTPResponse){
     
 }
 
-func getDataFromDatabase(with request : String) throws -> [Int : [String?]]{
+func getDataFromDatabase(with request : String) throws -> [String : [String?]]{
     
     guard request != "" else{
         print("Empty Request")
         throw DatabaseError.emptyRequestError
     }
     let mysql = try initializeDatabaseConnection()
-    defer {
-        mysql.close()
-    }
     
     let query = mysql.query(statement: request)
     if(query){
-        var dictionary = [Int : [String?]]()
+        var dictionary = [String : [String?]]()
         if let queryResults = mysql.storeResults(){
             var index = 0
             queryResults.forEachRow{ row in
-                dictionary[index] = row
+                dictionary[String(index)] = row
                 index+=1
             }
             
@@ -157,12 +154,14 @@ func sendSilentMessageNotification(recipientDeviceToken : String){
 
 func sendMessageNotification(message : String, recipientUUID : String, senderUUID : String){
     let senderDataRequest = "SELECT UserName,DeviceToken FROM Users WHERE UUID=\"\(senderUUID)\" OR UUID=\"\(recipientUUID)\";"
-    if let data = try? getDataFromDatabase(with: senderDataRequest){
+    if let stringKeyData = try? getDataFromDatabase(with: senderDataRequest){
         
-        guard !data.isEmpty else{
+        guard !stringKeyData.isEmpty else{
             print("Empty Dictionary")
             return
         }
+        
+        let data = Dictionary(uniqueKeysWithValues: stringKeyData.map{key, val in (Int(key), val)})
         
         
         let senderUser = data[0]
@@ -203,7 +202,7 @@ func fileUpload(_ request : HTTPRequest, response : HTTPResponse){
     
     print("Handling File Upload Request")
     
-    print(request.postFileUploads)
+    print(request.postFileUploads as Any)
     
     print("Media Type: " + request.urlVariables.first!.value)
     let upload = request.postFileUploads![0]
@@ -225,7 +224,7 @@ func fileUpload(_ request : HTTPRequest, response : HTTPResponse){
 
 func recieveLocalUsers(_ request: HTTPRequest, response: HTTPResponse) {
     let requestArray = request.postBodyString?.components(separatedBy: ",")
-    var currentUUID = requestArray![0]
+    let currentUUID = requestArray![0]
     let userRange : Double = Double((requestArray?[1])!)!
     
     var currentLat = Double(requestArray![2])!
@@ -235,9 +234,6 @@ func recieveLocalUsers(_ request: HTTPRequest, response: HTTPResponse) {
     var currentDict = [String : [String?]]()
     do{
         let mysql = try initializeDatabaseConnection()
-        defer {
-            mysql.close()
-        }
         
         //If uploaded coordinates are 0,0(invalid), check server for last updated coordinates
         if currentLat == 0 && currentLong == 0{
@@ -257,13 +253,14 @@ func recieveLocalUsers(_ request: HTTPRequest, response: HTTPResponse) {
         
         print("MySQL Query Did Succeed?: \(mysql.query(statement: mysqlStatement))")
         
-        var userArray = getUsersInArea(currentLat: currentLat, currentLong: currentLong, range: userRange)!
+        let userArray = getUsersInArea(currentLat: currentLat, currentLong: currentLong, range: userRange, currentUUID: currentUUID)!
         
         var returnDict = [String : [String?]]()
         
         for i in 0..<userArray.keys.count{
             let UUID = userArray[i]
-            let statement = "SELECT UserType,UserName,BirthDate,MusicType,BandPosition,UserMedia,Available,UUID, CurrentLat, CurrentLong, DistanceUnit, LastLogin FROM Users where UUID=\"" + UUID! + "\";"
+            
+            let statement = "SELECT UserType,UserName,BirthDate,MusicType,BandPosition,UserMedia,Available,UUID, CurrentLat, CurrentLong, Bio, LookingFor, DistanceUnit, LastLogin FROM Users where UUID=\"" + UUID! + "\";"
             let query = mysql.query(statement: statement)
             
             if(query){
@@ -285,7 +282,7 @@ func recieveLocalUsers(_ request: HTTPRequest, response: HTTPResponse) {
         response.appendBody(string: jsonString)
         print("Successfully Converted Dictionary to String")
     }catch JSONConversionError.notConvertible(let key){
-        print("Not convertible \(key)")
+        print("Not convertible \(String(describing: key))")
     }catch JSONConversionError.invalidKey(let key){
         print("Invalid Key \(key)")
     }catch{
@@ -305,15 +302,17 @@ func restJSONHandler(_ request: HTTPRequest, response: HTTPResponse) {
         print("Updating Server Data")
     }
     
+    var dict : [String : [String?]]? = nil
     
     do{
-        let dict = try getDataFromDatabase(with: statement)
-        let jsonString = try dict.jsonEncodedString()
+        dict = try getDataFromDatabase(with: statement)
+        let jsonString = try dict!.jsonEncodedString()
         response.appendBody(string: jsonString)
         
-    }catch{
+    }catch let e{
         response.appendBody(string: "false")
-        print("Could not encode dictionary")
+        print("REST query failed with error: \(e.localizedDescription)")
+        print(dict as Any)
     }
     
     response.completed()
@@ -464,23 +463,20 @@ func saveImage(_ image : Image, locationPath : String){
 }
 #endif
 
-func getUsersInArea(currentLat : Double, currentLong : Double, range : Double) -> [Int : String]?{
+func getUsersInArea(currentLat : Double, currentLong : Double, range : Double, currentUUID : String) -> [Int : String]?{
     
     do{
         let mysql = try initializeDatabaseConnection()
-        defer {
-            mysql.close()
-        }
         
         let formula = "111.045* DEGREES(ACOS(COS(RADIANS(\(currentLat))) * COS(RADIANS(CurrentLat)) * COS(RADIANS(\(currentLong)) - RADIANS(CurrentLong)) + SIN(RADIANS(\(currentLat))) * SIN(RADIANS(CurrentLat))))"
         let statement = "SELECT UUID,CurrentLat,CurrentLong, Available FROM Users WHERE " + formula
-        let fullStatement = statement + " <= \(range) AND Available=1;"
+        let fullStatement = statement + " <= \(range) AND Available=1 AND UUID != \"\(currentUUID)\";"
         print("Executing User Query")
         print(mysql.query(statement: fullStatement))
         let results = mysql.storeResults()
         var uuidArray = [Int : String]()
         var index = 0
-        print(results?.numRows())
+        print(results?.numRows() as Any)
         results?.forEachRow{ row in
             uuidArray[index] = row[0]
             index+=1
@@ -560,23 +556,20 @@ func deleteUser(_ request: HTTPRequest, response: HTTPResponse) {
         
         return
     }
-    defer {
-        mysql.close()
-    }
     
     let request1 = "DELETE FROM Users WHERE UUID=\"\(uuid)\"; "
     let request2 = "DELETE FROM UserLogInData WHERE UUID=\"\(uuid)\"; "
     let request3 = "DELETE FROM Messages WHERE Sender=\"\(uuid)\"; "
     let request4 = "DELETE FROM Messages WHERE Recipient=\"\(uuid)\"; "
     
-    let succeeded = mysql.query(statement: "SELECT UserMedia FROM Users WHERE UUID=\"\(uuid)\";")
+    _ = mysql.query(statement: "SELECT UserMedia FROM Users WHERE UUID=\"\(uuid)\";")
     
     if let queryResults = mysql.storeResults(){
         queryResults.forEachRow{ row in
             
             if let rowValue = row[0]{
-                if let dict = try? row[0]?.jsonDecode() as! [String : String]{
-                    for (fileName, fileType) in dict{
+                if let dict = try? rowValue.jsonDecode() as? [String : String]{
+                    for (fileName, _) in dict{
                         let file = File("webroot/" + fileName)
                         file.delete()
                     }

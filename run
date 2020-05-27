@@ -7,19 +7,29 @@ clean () {
 buildFailed () {
 	echo "Build Failed"
 }
+openXcode () {
+        echo "Opening Xcode"
+        swift package generate-xcodeproj
+	open MusicMatchServer.xcodeproj
+}
 
 buildSucessful () {
 	echo "Build Succeeded!"
-	./.build/debug/MusicMatchServer
+	if [[ $* == *"-xcode"* ]]
+	then
+		openXcode
+	else 
+		./.build/debug/MusicMatchServer
+	fi
 }
 
 ./tryStartMySQL
 
-if [[ $1 = -clean ]]
+if [[ $* = *"-clean"* ]]
 then
 	clean
 fi
-if [[ $1 = -mysql ]]
+if [[ $* = *"-mysql"* ]]
 then
 	./fixmysql.sh
 fi
