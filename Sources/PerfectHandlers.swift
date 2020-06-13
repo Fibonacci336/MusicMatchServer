@@ -175,6 +175,7 @@ func fileUpload(_ request : HTTPRequest, response : HTTPResponse){
     print(request.postFileUploads as Any)
     
     print("Media Type: " + request.urlVariables.first!.value)
+    
     let upload = request.postFileUploads![0]
     
     guard upload.fileName != "" else{

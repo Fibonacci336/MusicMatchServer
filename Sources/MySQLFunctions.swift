@@ -145,15 +145,23 @@ func checkForExtraMedia(mysqlStatement : String){
 
     if decodedUMDict.keys.count != jsonResult.keys.count{
         
-        for (imageName, _) in jsonResult{
-            if decodedUMDict.keys.contains(imageName){
+        for (itemName, itemType) in jsonResult{
+            if decodedUMDict.keys.contains(itemName){
                 continue
             }
             do{
-                try FileManager.default.removeItem(at: URL(fileURLWithPath: webRoot + "/" + imageName))
-                print("Removed \(imageName)")
+                try FileManager.default.removeItem(at: URL(fileURLWithPath: webRoot + "/" + itemName))
+                print("Removed \(itemName)")
+                if itemType.contains(string: "video"){
+                    //Remove thumbnail as well
+                    var thumbnailName = itemName
+                    thumbnailName.removeLast(3)
+                    thumbnailName += "png"
+                    try FileManager.default.removeItem(at: URL(fileURLWithPath: webRoot + "/" + thumbnailName))
+                    print("Removed Video Thumbnail \(thumbnailName)")
+                }
             }catch let e{
-                print("Failed to remove \(imageName) with error: \(e.localizedDescription)")
+                print("Failed to remove \(itemName) with error: \(e.localizedDescription)")
             }
             
         }
