@@ -107,36 +107,6 @@ func messageHandler(_ request : HTTPRequest, response : HTTPResponse){
     
 }
 
-func getDataFromDatabase(with request : String) throws -> [String : [String?]]{
-    
-    guard request != "" else{
-        print("Empty Request")
-        throw DatabaseError.emptyRequestError
-    }
-    let mysql = try initializeDatabaseConnection()
-    
-    let query = mysql.query(statement: request)
-    if(query){
-        var dictionary = [String : [String?]]()
-        if let queryResults = mysql.storeResults(){
-            var index = 0
-            queryResults.forEachRow{ row in
-                dictionary[String(index)] = row
-                index+=1
-            }
-            
-            return dictionary
-        }else{
-            return dictionary
-        }
-    }else{
-        print("Request Failed")
-        throw DatabaseError.failedRequestError
-    }
-    
-    
-}
-
 
 func sendSilentMessageNotification(recipientDeviceToken : String){
     let notificationArray = [APNSNotificationItem.contentAvailable]
@@ -298,8 +268,11 @@ func restJSONHandler(_ request: HTTPRequest, response: HTTPResponse) {
     
     if statement.contains(string: "SELECT"){
         print("Returning Data From REST Query")
-    }else if statement.contains(string: "UPDATE"){
+    }
+    if statement.contains(string: "UPDATE"){
         print("Updating Server Data")
+        
+        checkForExtraMedia(mysqlStatement: statement)
     }
     
     var dict : [String : [String?]]? = nil
